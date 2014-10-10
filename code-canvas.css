@@ -1,4 +1,11 @@
-/* CODE stylesheet for Canvas */
+/****************************************** CODE OVERRIDES *******************************************/
+
+.page-title {
+    display: none;
+}
+
+
+/****************************************** HEADINGS *******************************************/
 
 .code-h2 {
     background-color: #ffe6ea;
@@ -6,6 +13,18 @@
     padding: 5px;
     color: #8a0017;
     display: block;
+}
+
+.code-h2-box {
+    background-color: #8d3c4a;
+    border: 1px solid #FFFFFF;
+    float: right;
+    color: #ffffff;
+    height: 60px;
+    width: 80px;
+    margin-top: -20px;
+    text-align: center;
+    padding-top: 20px;
 }
 
 .code-h3 {
@@ -21,9 +40,69 @@
 .code-h5 {
     color: #8a0017;
     padding-top: 10px;
-    font-size: 120%;
 }
 
-.page-title {
-    display: none;
+
+/******************************************* PANELS & INFO BOXES *******************************************/
+
+.code-alert {
+    background-color: #ffeaea;
+    padding: 10px;
+    margin: 10px 0 -360px 0;
+    border: 1px solid #eed3d7;
+    display: block;
+    color: #a34140;
 }
+
+.code-note {
+    background-color: #fcf8e3;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #fbeed5;
+    display: block;
+}
+
+/* w/ left border */
+.code-panel-grey {
+    background-color: #f3f3f3;
+    padding: 15px 10px 10px 10px;
+    margin: 10px 0 20px 0;
+    border-left: 1px solid #dfdfdf;
+    border-radius: 4px;
+    display: block;
+}
+
+
+/******************************************* TABLES *******************************************/
+
+.code-table-w100 {
+    width: 100%
+}
+
+.code-table-w800 {
+    width: 800px;
+}
+
+/* video on the left */
+.code-table-video {
+    padding: 10px 0;
+    float: left;
+    width: 560px;
+    height: 315px;
+}
+
+/* img */
+.code-table-img {
+    padding: 10px;
+}
+
+/* img on the left */
+.code-table-img-l {
+    float: left;
+}
+
+.code-table-td-text {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
