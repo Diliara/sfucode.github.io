@@ -43,31 +43,38 @@
 
 /******************************************* PANELS & INFO BOXES *******************************************/
 
-.code-alert {
-    background-color: #ffeaea;
+.code-infoblock {
     padding: 10px;
-    /*   margin: 10px 0 -360px 0; */
-    border: 1px solid #eed3d7;
     display: block;
-    color: #a34140;
+    margin: 10px 0 20px 0;
+
 }
 
-.code-note {
-    background-color: #fcf8e3;
-    padding: 10px;
-    margin: 10px 0 20px 0;
-    border: 1px solid #fbeed5;
-    display: block;
+.code-infoblock-alert {
+    background-color: #ffeaea;
+    border: 1px solid #eed3d7;
+    color: #a34140;
+    /*   margin: 10px 0 -360px 0; */
 }
+
+.code-infoblock-note {
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    color: #8a6f19;
+}
+
+.code-panel {
+    padding: 15px 10px 10px 10px;
+    display: block;
+    margin: 10px 0 20px 0;
+}
+
 
 /* w/ left border */
-.code-panel-grey {
-    background-color: #f3f3f3;
-    padding: 15px 10px 10px 10px;
-    margin: 10px 0 20px 0;
+.code-panel-default-lb {
     border-left: 1px solid #dfdfdf;
     border-radius: 4px;
-    display: block;
+    background-color: #f3f3f3;
 }
 
 /******************************************* TABLES *******************************************/
