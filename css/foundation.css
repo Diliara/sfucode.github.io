@@ -1,3 +1,4 @@
+/*
 meta.foundation-version {
   font-family: "/5.4.6/"; }
 
@@ -33,7 +34,7 @@ html, body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-/*
+
 html,
 body {
   font-size: 100%; }
@@ -99,6 +100,7 @@ select {
   width: 100%; }
 */
 .code-row {
+background-color: #db93db;  /* testing if it works on Canvas */
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -151,7 +153,7 @@ select {
 
 [class*="code-column"] + [class*="code-column"].end {
   float: left; }
-
+/*
 @media only screen {
   .code-small-push-0 {
     position: relative;
@@ -1431,4 +1433,4 @@ select {
       clear: none; }
     .code-large-block-grid-12 > li:nth-of-type(12n+1) {
       clear: both; } }
- 
+ */
