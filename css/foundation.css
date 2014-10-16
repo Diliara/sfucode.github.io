@@ -1,4 +1,4 @@
-
+/*
 meta.foundation-version {
     font-family: "/5.4.6/"; }
 
@@ -27,6 +27,7 @@ meta.foundation-data-attribute-namespace {
 
 html, body {
     height: 100%; }
+    */
 
 #wiki_page_show *,
 #wiki_page_show *:before,
@@ -34,6 +35,7 @@ html, body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
+
 /*
 html,
 body {
