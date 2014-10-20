@@ -1,5 +1,5 @@
 /****************************************** CODE OVERRIDES *******************************************/
 
-.page-title {
+#wiki_page_show h2 .page-title {
     display: none;
 }

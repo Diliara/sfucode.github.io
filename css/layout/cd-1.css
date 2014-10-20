@@ -20,6 +20,7 @@
   padding-top: 8px; }
 #cd-1 h3 {
   color: #008f8f;
+  padding-top: 10px;
   border-bottom: 1px solid rgba(77, 77, 77, 0.3);
   line-height: 32px;
   padding-top: 8px; }
@@ -70,5 +71,13 @@
 #cd-1 .mark {
   padding: .2em;
   background-color: #fcf8e3; }
+#cd-1 dl {
+  position: relative; }
+#cd-1 dt {
+  padding-top: 0.5em; }
+#cd-1 .img-centered {
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em; }
 
 /*# sourceMappingURL=cd-1.css.map */
