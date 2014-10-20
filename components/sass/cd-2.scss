@@ -15,8 +15,7 @@ $color-lightest: #ffffff;
 
   // ****************************************** GENERAL *******************************************
 
-  margin: -10px -10px -10px 0;
-
+  margin: -10px -10px 0 -10px;
 
   // ****************************************** HEADINGS *******************************************
 
@@ -31,19 +30,19 @@ $color-lightest: #ffffff;
       text-align: right;
 
     }
-    /*
-      .banner-box {
-        background-color: darken($color-base, 2%);
-        border: 1px solid $color-lightest;
-        float: right;
-        color: $color-lightest;
-        height: 55px;
-        width: 80px;
-        margin-top: -25px;
-        text-align: center;
-        padding-top: 23px;
-      }
-    */
+
+    //  .banner-box {
+    //    background-color: darken($color-base, 2%);
+    //    border: 1px solid $color-lightest;
+    //    float: right;
+    //    color: $color-lightest;
+    //    height: 55px;
+    //   width: 80px;
+    //    margin-top: -25px;
+    //    text-align: center;
+    //    padding-top: 23px;
+    //  }
+
   }
 
   h2 {

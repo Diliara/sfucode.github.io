@@ -1,26 +1,12 @@
 #cd-2 {
-  margin: -10px -10px -10px 0; }
-  #cd-2 .banner {
-    /*
-      .banner-box {
-        background-color: darken($color-base, 2%);
-        border: 1px solid $color-lightest;
-        float: right;
-        color: $color-lightest;
-        height: 55px;
-        width: 80px;
-        margin-top: -25px;
-        text-align: center;
-        padding-top: 23px;
-      }
-    */ }
-    #cd-2 .banner h2 {
-      background-color: #454545;
-      color: #ffffff;
-      border: 1px solid #ffffff;
-      padding: 10px 20px 10px 0;
-      display: block;
-      text-align: right; }
+  margin: -10px -10px 0 -10px; }
+  #cd-2 .banner h2 {
+    background-color: #454545;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 10px 20px 10px 0;
+    display: block;
+    text-align: right; }
   #cd-2 h2 {
     color: #900; }
   #cd-2 h3 {
