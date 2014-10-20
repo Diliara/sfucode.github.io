@@ -1,5 +1,13 @@
+@charset "UTF-8";
 #cd-2 {
-  margin: -10px -10px 0 -10px; }
+  margin: -10px -10px 0 -10px;
+  counter-reset: h3counter; }
+  #cd-2 h3.nocount:before {
+    content: none !important;
+    counter-increment: none !important; }
+  #cd-2 h3:before {
+    content: counter(h3counter) ".  ";
+    counter-increment: h3counter; }
   #cd-2 .banner h2 {
     background-color: #454545;
     color: #ffffff;

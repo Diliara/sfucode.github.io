@@ -17,6 +17,36 @@ $color-lightest: #ffffff;
 
   margin: -10px -10px 0 -10px;
 
+  counter-reset: h3counter;
+
+  //h2 {
+  //  counter-reset: h3counter;
+  //}
+
+  h3.nocount:before {
+    content: none !important;
+    counter-increment: none !important;
+  }
+
+  //h4.nocount:before {
+  //  content: none !important;
+  //  counter-increment: none !important;
+  //}
+
+  h3:before {
+    content: counter(h3counter) ".\0000a0\0000a0";
+    counter-increment: h3counter;
+  }
+
+  //h3 {
+  //  counter-reset: h4counter;
+  //}
+
+  //h4:before {
+  //  content: counter(h3counter) "." counter(h4counter) "\0000a0\0000a0";
+  //  counter-increment: h4counter;
+  //}
+
   // ****************************************** HEADINGS *******************************************
 
   .banner {
