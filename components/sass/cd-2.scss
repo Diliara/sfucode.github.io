@@ -144,25 +144,25 @@ $color-lightest: #ffffff;
   }
 
   // video on the left
-  .tbl-vid {
+  .tbl-vid-left {
     padding: 10px 0;
     float: left;
-    width: 560px;
-    height: 315px;
   }
 
-  .tbl-img {
-    padding: 10px;
-    margin-bottom: 20px;
+  .tbl-img-right {
+    //padding: 10px;
+    //margin-bottom: 20px;
+    padding: 0 10px;
   }
 
   // img on the left
-  .tbl-img-l {
+  .tbl-img-left {
     float: left;
   }
 
   .tbl-txt {
     padding: 0 10px 0 20px;
+    //padding-left: 20px; padding-right: 10px;
   }
 
   // ******************************************* TEXT *******************************************
@@ -194,9 +194,32 @@ $color-lightest: #ffffff;
     text-align: center;
     padding-top: 2em;
     padding-bottom: 2em;
+    //display: block; margin-left: auto; margin-right: auto;
   }
 
   .cd-video {
     margin-bottom: 1.5em;
+  }
+
+  blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee;
+  }
+
+  blockquote footer, blockquote small, blockquote .small {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #777;
+  }
+
+  blockquote footer:before, blockquote small:before, blockquote .small:before {
+    content: '\2014 \00A0';
+  }
+
+  blockquote:before, blockquote:after {
+    content: "";
   }
 }
