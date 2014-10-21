@@ -24,14 +24,14 @@
     line-height: 26px;
     padding-top: 14px; }
   #cd-2 h4 {
-    color: #2a7db4, 5%;
+    color: #2a7db4;
     padding-top: 10px; }
   #cd-2 h5 {
     color: #256f9f;
     padding-top: 10px; }
   #cd-2 .infoblock {
     padding: 10px;
-    display: block;
+    display: inline-block;
     margin: 10px 0 20px 0; }
   #cd-2 .infoblock-alert {
     background-color: #ffeaea;
@@ -86,11 +86,12 @@
     padding: 10px 20px;
     margin: 0 0 20px;
     border-left: 5px solid #eee; }
-  #cd-2 blockquote footer {
+  #cd-2 blockquote cite {
     display: block;
     font-size: 80%;
-    color: #777; }
-  #cd-2 blockquote footer:before {
+    color: #777;
+    font-style: italic; }
+  #cd-2 blockquote cite:before {
     content: '\2014 \00A0'; }
 
 /*# sourceMappingURL=cd-2.css.map */

@@ -89,7 +89,7 @@ $color-lightest: #ffffff;
   }
 
   h4 {
-    color: $color-secondary, 5%;
+    color: $color-secondary;
     padding-top: 10px;
   }
 
@@ -102,7 +102,7 @@ $color-lightest: #ffffff;
 
   .infoblock {
     padding: 10px;
-    display: block;
+    display: inline-block;
     margin: 10px 0 20px 0;
 
   }
@@ -211,13 +211,14 @@ $color-lightest: #ffffff;
     border-left: 5px solid #eee;
   }
 
-  blockquote footer {
+  blockquote cite {
     display: block;
     font-size: 80%;
     color: #777;
+    font-style: italic;
   }
 
-  blockquote footer:before {
+  blockquote cite:before {
     content: '\2014 \00A0';
   }
 
