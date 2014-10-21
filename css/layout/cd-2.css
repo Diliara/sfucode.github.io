@@ -24,10 +24,10 @@
     line-height: 26px;
     padding-top: 14px; }
   #cd-2 h4 {
-    color: #256f9f;
+    color: #2a7db4, 5%;
     padding-top: 10px; }
   #cd-2 h5 {
-    color: #20608b;
+    color: #256f9f;
     padding-top: 10px; }
   #cd-2 .infoblock {
     padding: 10px;
@@ -50,9 +50,11 @@
     border-radius: 4px;
     background-color: #f3f3f3; }
   #cd-2 .tbl-w100 {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 10px; }
   #cd-2 .tbl-w800 {
-    width: 800px; }
+    width: 800px;
+    margin-bottom: 10px; }
   #cd-2 .tbl-vid-left {
     padding: 10px 0;
     float: left; }
@@ -74,22 +76,21 @@
   #cd-2 .img-centered {
     text-align: center;
     padding-top: 2em;
-    padding-bottom: 2em; }
+    padding-bottom: 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
   #cd-2 .cd-video {
     margin-bottom: 1.5em; }
   #cd-2 blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
-    font-size: 17.5px;
     border-left: 5px solid #eee; }
-  #cd-2 blockquote footer, #cd-2 blockquote small, #cd-2 blockquote .small {
+  #cd-2 blockquote footer {
     display: block;
     font-size: 80%;
-    line-height: 1.42857143;
     color: #777; }
-  #cd-2 blockquote footer:before, #cd-2 blockquote small:before, #cd-2 blockquote .small:before {
+  #cd-2 blockquote footer:before {
     content: '\2014 \00A0'; }
-  #cd-2 blockquote:before, #cd-2 blockquote:after {
-    content: ""; }
 
 /*# sourceMappingURL=cd-2.css.map */
