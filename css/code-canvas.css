@@ -1,3 +1,6 @@
-@import url("layout/overrides.css");
-@import url("layout/cd-1.css");
-@import url("layout/cd-2.css");
+/* Themes */
+@import url("themes/cd-1.css");
+@import url("themes/cd-2.css");
+
+/* Canvas style overrides */
+@import url("overrides.css");
