@@ -8,6 +8,10 @@
 
 */
 
-.context-course_16998 .user_content .page-title, .context-course_18331 .user_content .page-title {
+.context-course_16998, .context-course_18331 {
+
+  .user_content .page-title {
     display: none;
+  }
+
 }
