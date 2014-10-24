@@ -2,7 +2,12 @@
 # Will be parsed by jekyll
 ---
 
-@import "_cd-1";
-@import "_cd-2";
-@import "_overrides";
-@import "_adam";
+/* Themes */
+@import "cd-1";
+@import "cd-2";
+
+/* Canvas style overrides */
+@import "overrides";
+
+/* Testing */
+@import "adam";
