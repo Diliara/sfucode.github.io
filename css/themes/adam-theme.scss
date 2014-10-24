@@ -1,11 +1,10 @@
 ---
-# should render a css file in same dir
+# this ensures Jekyll reads the file to be transformed into CSS later
 ---
 
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+@import "_adam.css";
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
+.content {
+  width: 80%;
+  margin: 0 auto;
 }
