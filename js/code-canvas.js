@@ -6,6 +6,6 @@
     document.body.appendChild(script_jquery);
 
     var script_halloween = document.createElement('script');
-    script_halloween.src = 'http://sfucode.github.io/js/halloween.js';
+    script_halloween.src = 'https://sfucode.github.io/js/halloween.js';
     document.body.appendChild(script_halloween);
 })();
