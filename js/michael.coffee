@@ -2,10 +2,14 @@
 #CoffeeScript
 ---
 
+$.cachedScript = (url, options) ->
+  
+  options = $.extend(options or {},
+    dataType: "script"
+    cache: true
+    url: url
+  )
+  
+  $.ajax options
 
-
-fill = (container, liquid = "coffee") ->
-  "Filling the #{container} with #{liquid}..."
-
-alert fill("cup")
-
+$.cachedScript "michael2.js"
