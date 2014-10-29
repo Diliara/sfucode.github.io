@@ -140,13 +140,13 @@ $color-lightest: #ffffff;
 
   .tbl-img-right {
     //padding: 10px;
-    //margin-bottom: 20px;
     padding: 0 10px 10px 10px;
   }
 
   // img on the left
   .tbl-img-left {
     float: left;
+    margin-bottom: 20px;
   }
 
   .tbl-txt {
