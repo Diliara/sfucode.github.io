@@ -2,14 +2,12 @@
 #CoffeeScript
 ---
 
-$.cachedScript = (url, options) ->
-  
+jQuery.cachedScript = (url, options) ->
   options = $.extend(options or {},
     dataType: "script"
     cache: true
     url: url
   )
-  
-  $.ajax options
+  jQuery.ajax options
 
 $.cachedScript "michael2.js"
