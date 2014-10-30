@@ -2,6 +2,8 @@
 #CoffeeScript
 ---
 
+// Code that gets and loads the js file:
+
 jQuery.cachedScript = (url, options) ->
   options = $.extend(options or {},
     dataType: "script"
@@ -10,4 +12,9 @@ jQuery.cachedScript = (url, options) ->
   )
   jQuery.ajax options
 
-$.cachedScript "/js/michael.js"
+// Add this code below to include a js file:
+//
+// $.cachedScript "/js/YOUR_FILE_HERE.js"
+//
+// (DO NOT TOUCH ABOVE THIS COMMENT)
+
