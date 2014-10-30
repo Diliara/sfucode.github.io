@@ -10,4 +10,4 @@ jQuery.cachedScript = (url, options) ->
   )
   jQuery.ajax options
 
-$.cachedScript "/js/michael2.js"
+$.cachedScript "/js/michael.js"
