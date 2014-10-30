@@ -10,7 +10,4 @@ jQuery.cachedScript = (url, options) ->
   )
   jQuery.ajax options
 
-/*	Code to include js files:
-	$.cachedScript "/js/YOUR_FILE.js" 
-*/
-
+$.cachedScript "/js/michael2.js"
