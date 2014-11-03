@@ -139,7 +139,6 @@ $color-lightest: #ffffff;
   }
 
   .tbl-img-right {
-    //padding: 10px;
     padding: 0 10px 10px 10px;
   }
 
@@ -151,8 +150,14 @@ $color-lightest: #ffffff;
 
   .tbl-txt {
     padding: 0 10px 0 20px;
-    //padding-left: 20px; padding-right: 10px;
   }
+
+  .tbl-txt-centered-bold {
+    text-align: center;
+    font-weight: bold;
+  }
+
+
 
   // ******************************************* TEXT *******************************************
 
