@@ -5,10 +5,17 @@ $color-secondary: #2a7db4;
 $color-greyscale: #666666;
 $color-lightest: #ffffff;
 
+
 @mixin text-border-fix {
   //decrease space between text and border
   line-height: 26px;
   padding-top: 14px
+}
+
+@mixin infoblock($display) {
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  display: $display;
 }
 
 // for modules
@@ -16,7 +23,8 @@ $color-lightest: #ffffff;
 
   // ****************************************** GENERAL *******************************************
 
-  margin: -10px -10px 0 -10px;
+  //messes up syllabus margins
+  //margin: -10px -10px 0 -10px;
 
   counter-reset: h3counter;
 
@@ -88,24 +96,26 @@ $color-lightest: #ffffff;
 
   // ******************************************* PANELS & INFO BOXES *******************************************
 
-  .infoblock {
-    padding: 10px;
-    display: inline-block;
-    margin: 10px 0 20px 0;
-
-  }
 
   .infoblock-alert {
     background-color: #ffeaea;
     border: 1px solid #eed3d7;
     color: #a34140;
-    //  margin: 10px 0 -360px 0;
+    @include infoblock(inline-block);
   }
 
   .infoblock-note {
     background-color: #fcf8e3;
     border: 1px solid #fbeed5;
     color: #8a6f19;
+    @include infoblock(inline-block);
+  }
+
+  .infoblock-full {
+    background-color: #e4f7fa;
+    border: 1px solid #c9e1f7;
+    color: #2d3b7a;
+    @include infoblock(block);
   }
 
   .panel {
