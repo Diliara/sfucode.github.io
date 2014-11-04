@@ -64,12 +64,19 @@ $color-lightest: #ffffff;
       background-color: darken($color-greyscale, 13%);
       color: $color-lightest;
       border: 1px solid $color-lightest;
-      padding: 10px 20px 10px 0;
+      padding: 12px 30px 10px 0;
       display: block;
       text-align: right;
+      margin: 0;
     }
 
+    background-color: #353535;
+    margin: -20px -40px 0 -30px;
+
   }
+
+
+
 
   h2 {
     color: $color-base;
@@ -83,6 +90,7 @@ $color-lightest: #ffffff;
     //font-size: 23px;
     @include text-border-fix;
   }
+
 
   h4 {
     color: $color-secondary;
