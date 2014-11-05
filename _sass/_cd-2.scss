@@ -5,7 +5,6 @@ $color-secondary: #2a7db4;
 $color-greyscale: #666666;
 $color-lightest: #ffffff;
 
-
 @mixin text-border-fix {
   //decrease space between text and border
   line-height: 26px;
@@ -75,9 +74,6 @@ $color-lightest: #ffffff;
 
   }
 
-
-
-
   h2 {
     color: $color-base;
     //font-size: 26px;
@@ -91,7 +87,6 @@ $color-lightest: #ffffff;
     @include text-border-fix;
   }
 
-
   h4 {
     color: $color-secondary;
     padding-top: 10px;
@@ -103,7 +98,6 @@ $color-lightest: #ffffff;
   }
 
   // ******************************************* PANELS & INFO BOXES *******************************************
-
 
   .infoblock-alert {
     background-color: #ffeaea;
@@ -175,8 +169,6 @@ $color-lightest: #ffffff;
     text-align: center;
     font-weight: bold;
   }
-
-
 
   // ******************************************* TEXT *******************************************
 
