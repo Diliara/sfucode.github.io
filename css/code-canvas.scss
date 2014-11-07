@@ -1,15 +1,13 @@
 ---
-# Will be parsed by jekyll
+# Sass
+#
+# Use this code to bring in a sass file (do not include underscore in filename):
+# @import "FILENAME";
+#
 ---
-// Testing
-//@import "adam";
-//@import "michael";
 
 // Themes
-@import "cd-1";
-@import "cd-2";
 
-@import "print";
 
 // Overrides
 @import "overrides";
