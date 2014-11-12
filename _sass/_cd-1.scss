@@ -1,6 +1,6 @@
 //This comment will not be output to CSS file
 
-$color-base: #900;
+$color-base: #993300;
 $color-lightest: #ffffff;
 
 @mixin text-border-fix {
@@ -16,23 +16,22 @@ $color-lightest: #ffffff;
   .banner {
 
     h2 {
-      background-color: lighten($color-base, 66%);
+      background-color: darken($color-greyscale, 13%);
+      color: $color-lightest;
       border: 1px solid $color-lightest;
-      padding: 8px 5px 8px 5px;
+      padding: 10px 20px 10px 0;
       display: block;
+      text-align: right;
+      //margin: 0;
     }
 
-    .banner-box {
-      background-color: darken($color-base, 2%);
-      border: 1px solid $color-lightest;
-      float: right;
-      color: $color-lightest;
-      height: 55px;
-      width: 80px;
-      margin-top: -25px;
-      text-align: center;
-      padding-top: 23px;
+    background-color: #353535;
+    margin: -16px -40px 0 -30px;
+
+    img {
+      padding-bottom: 1px;
     }
+
   }
 
   h2 {
@@ -44,13 +43,14 @@ $color-lightest: #ffffff;
 
   h3 {
     color: darken(invert($color-base), 42%);
-    padding-top: 10px;
     border-bottom: 1px solid rgba(grayscale($color-base), 0.3); //light grey
+    text-transform: uppercase;
     @include text-border-fix;
   }
 
   h4 {
     color: darken(invert($color-base), 45%);
+    /* color: #960; */
     padding-top: 10px;
   }
 
@@ -155,6 +155,23 @@ $color-lightest: #ffffff;
     text-align: center;
     padding-top: 2em;
     padding-bottom: 2em;
+  }
+
+  blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #eee;
+  }
+
+  blockquote cite {
+    display: block;
+    font-size: 80%;
+    color: #777;
+    font-style: italic;
+  }
+
+  blockquote cite:before {
+    content: '\2014 \00A0';
   }
 
 }
