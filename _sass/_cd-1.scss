@@ -7,8 +7,8 @@ $color-greyscale: #666666;
 
 @mixin text-border-fix {
   //decrease space between text and border
-  line-height: 32px;
-  padding-top: 8px
+  line-height: 26px;
+  padding-top: 14px
 }
 
 #cd-1 {
@@ -21,14 +21,14 @@ $color-greyscale: #666666;
       background-color: darken($color-greyscale, 13%);
       color: $color-lightest;
       border: 1px solid $color-lightest;
-      padding: 10px 20px 10px 0;
+      padding: 12px 30px 10px 0;
       display: block;
       text-align: right;
       //margin: 0;
     }
 
     background-color: #353535;
-    margin: -16px -40px 0 -30px;
+    margin: -15px -40px 0 -30px;
 
     img {
       padding-bottom: 1px;
