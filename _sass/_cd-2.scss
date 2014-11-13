@@ -1,0 +1,226 @@
+//This comment will not be output to CSS file
+
+$color-base: #900;
+$color-secondary: #2a7db4;
+$color-greyscale: #666666;
+$color-lightest: #ffffff;
+
+@mixin text-border-fix {
+  //decrease space between text and border
+  line-height: 26px;
+  padding-top: 14px
+}
+
+@mixin infoblock($display) {
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  display: $display;
+}
+
+// for modules
+#cd-2 {
+
+  // ****************************************** GENERAL *******************************************
+
+  //messes up syllabus margins
+  //margin: -10px -10px 0 -10px;
+
+  counter-reset: h3counter;
+
+  //h2 {
+  //  counter-reset: h3counter;
+  //}
+
+  h3.nocount:before {
+    content: none !important;
+    counter-increment: none !important;
+  }
+
+  //h4.nocount:before {
+  //  content: none !important;
+  //  counter-increment: none !important;
+  //}
+
+  h3:before {
+    content: counter(h3counter) ".\0000a0\0000a0";
+    counter-increment: h3counter;
+  }
+
+  //h3 {
+  //  counter-reset: h4counter;
+  //}
+
+  //h4:before {
+  //  content: counter(h3counter) "." counter(h4counter) "\0000a0\0000a0";
+  //  counter-increment: h4counter;
+  //}
+
+  // ****************************************** HEADINGS *******************************************
+
+  .banner {
+
+    h2 {
+      background-color: darken($color-greyscale, 13%);
+      color: $color-lightest;
+      padding: 12px 30px 10px 0;
+      display: block;
+      text-align: right;
+      margin: 0;
+    }
+
+    background-color: #353535;
+    margin: -15px -40px 0 -30px;
+
+  }
+
+  h2 {
+    color: $color-base;
+  }
+
+  h3 {
+    color: $color-base;
+    text-transform: uppercase;
+    border-bottom: 2px solid lighten($color-greyscale, 50%);
+    //font-size: 23px;
+    @include text-border-fix;
+  }
+
+  h4 {
+    color: $color-secondary;
+    padding-top: 10px;
+  }
+
+  h5 {
+    color: darken($color-secondary, 8%);
+    padding-top: 10px;
+  }
+
+  // ******************************************* PANELS & INFO BOXES *******************************************
+
+  .infoblock-alert {
+    background-color: #ffeaea;
+    border: 1px solid #eed3d7;
+    color: #a34140;
+    @include infoblock(inline-block);
+  }
+
+  .infoblock-note {
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    color: #8a6f19;
+    @include infoblock(inline-block);
+  }
+
+  .infoblock-full {
+    background-color: #e4f7fa;
+    border: 1px solid #c9e1f7;
+    color: #2d3b7a;
+    @include infoblock(block);
+  }
+
+  .panel {
+    padding: 15px 10px 10px 10px;
+    display: block;
+    margin: 10px 0 20px 0;
+  }
+
+  // w/ left border
+  .panel-default-lb {
+    border-left: 1px solid #dfdfdf;
+    border-radius: 4px;
+    background-color: #f3f3f3;
+  }
+
+  // ******************************************* TABLES *******************************************
+
+  .tbl-w100 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .tbl-w800 {
+    width: 800px;
+    margin-bottom: 10px;
+  }
+
+  // video on the left
+  .tbl-vid-left {
+    padding: 10px 0;
+    float: left;
+  }
+
+  .tbl-img-right {
+    padding: 0 10px 10px 10px;
+  }
+
+  // img on the left
+  .tbl-img-left {
+    float: left;
+    margin-bottom: 20px;
+  }
+
+  .tbl-txt {
+    padding: 0 10px 0 20px;
+  }
+
+  .tbl-txt-centered-bold {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  // ******************************************* TEXT *******************************************
+
+  .txt-i {
+    font-style: italic;
+  }
+
+  //.lead {
+  //
+  //}
+
+  .mark {
+    padding: .2em;
+    background-color: #fcf8e3;
+  }
+
+  dl {
+    position: relative;
+  }
+
+  dt {
+    padding-top: 0.5em;
+  }
+
+  // ******************************************* MEDIA *******************************************
+
+  .img-centered {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vid {
+    margin-bottom: 1.5em;
+  }
+
+  blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #eee;
+  }
+
+  blockquote cite {
+    display: block;
+    font-size: 80%;
+    color: #777;
+    font-style: italic;
+  }
+
+  blockquote cite:before {
+    content: '\2014 \00A0';
+  }
+
+}
