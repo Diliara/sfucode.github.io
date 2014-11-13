@@ -36,7 +36,7 @@ $color-greyscale: #666666;
   }
 
   h3 {
-    color: darken($color-base);
+    color: darken($color-base, 1%);
     border-bottom: 1px solid rgba(grayscale($color-base), 0.3); //light grey
     text-transform: uppercase;
     @include text-border-fix;
