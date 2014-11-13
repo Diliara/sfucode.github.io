@@ -1,0 +1,27 @@
+//This comment will not be output to CSS file
+
+// ******************************************* SETUP for Print *******************************************
+
+@media print {
+
+  #cd-1, #cd-2 {
+
+    // ******************************************* PRINT *******************************************
+
+    .hidden-print {
+      display: none;
+    }
+
+    .page-break {
+      page-break-after: always;
+    }
+
+    // avoiding image break
+    figure, .no-split-for-print {
+      page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+      page-break-after: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+      page-break-inside: avoid; /* or 'auto' */
+    }
+
+  }
+}
