@@ -36,15 +36,14 @@ $color-greyscale: #666666;
   }
 
   h3 {
-    color: darken($color-base, 42%);
+    color: darken($color-base);
     border-bottom: 1px solid rgba(grayscale($color-base), 0.3); //light grey
     text-transform: uppercase;
     @include text-border-fix;
   }
 
   h4 {
-    color: darken($color-base, 45%);
-    /* color: #960; */
+    color: darken($color-base, 10%);
     padding-top: 10px;
   }
 
