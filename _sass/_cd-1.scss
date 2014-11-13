@@ -1,0 +1,170 @@
+//This comment will not be output to CSS file
+
+$color-base: #993300;
+$color-lightest: #ffffff;
+$color-greyscale: #666666;
+
+
+@mixin text-border-fix {
+  //decrease space between text and border
+  line-height: 26px;
+  padding-top: 14px
+}
+
+#cd-1 {
+
+  // ****************************************** HEADINGS *******************************************
+
+  .banner {
+
+    h2 {
+      background-color: darken($color-greyscale, 13%);
+      color: $color-lightest;
+      padding: 12px 30px 10px 0;
+      display: block;
+      text-align: right;
+      margin: 0;
+    }
+
+    background-color: #353535;
+    margin: -15px -40px 0 -30px;
+
+  }
+
+  h2 {
+    color: $color-base;
+  }
+
+  h3 {
+    color: darken($color-base, 1%);
+    border-bottom: 1px solid rgba(grayscale($color-base), 0.3); //light grey
+    text-transform: uppercase;
+    @include text-border-fix;
+  }
+
+  h4 {
+    color: darken($color-base, 10%);
+    padding-top: 10px;
+  }
+
+  h5 {
+    color: darken(invert($color-base), 48%);
+    padding-top: 10px;
+  }
+
+  // ******************************************* PANELS & INFO BOXES *******************************************
+
+  .infoblock {
+    padding: 10px;
+    display: block;
+    margin: 10px 0 20px 0;
+
+  }
+
+  .infoblock-alert {
+    background-color: #ffeaea;
+    border: 1px solid #eed3d7;
+    color: #a34140;
+    //  margin: 10px 0 -360px 0;
+  }
+
+  .infoblock-note {
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    color: #8a6f19;
+  }
+
+  .panel {
+    padding: 15px 10px 10px 10px;
+    display: block;
+    margin: 10px 0 20px 0;
+  }
+
+  // w/ left border
+  .panel-default-lb {
+    border-left: 1px solid #dfdfdf;
+    border-radius: 4px;
+    background-color: #f3f3f3;
+  }
+
+  // ******************************************* TABLES *******************************************
+
+  .tbl-w100 {
+    width: 100%
+  }
+
+  .tbl-w800 {
+    width: 800px;
+  }
+
+  // video on the left
+  .tbl-vid {
+    padding: 10px 0;
+    float: left;
+    width: 560px;
+    height: 315px;
+  }
+
+  .tbl-img {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  // img on the left
+  .tbl-img-l {
+    float: left;
+  }
+
+  .tbl-txt {
+    padding: 0 10px 0 20px;
+  }
+
+  // ******************************************* TEXT *******************************************
+
+  .txt-i {
+    font-style: italic;
+  }
+
+  .lead {
+
+  }
+
+  .mark {
+    padding: .2em;
+    background-color: #fcf8e3;
+  }
+
+  dl {
+    position: relative;
+  }
+
+  dt {
+    padding-top: 0.5em;
+  }
+
+  // ******************************************* IMGs *******************************************
+
+  .img-centered {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #eee;
+  }
+
+  blockquote cite {
+    display: block;
+    font-size: 80%;
+    color: #777;
+    font-style: italic;
+  }
+
+  blockquote cite:before {
+    content: '\2014 \00A0';
+  }
+
+}
