@@ -62,7 +62,6 @@ $color-lightest: #ffffff;
     h2 {
       background-color: darken($color-greyscale, 13%);
       color: $color-lightest;
-      border: 1px solid $color-lightest;
       padding: 12px 30px 10px 0;
       display: block;
       text-align: right;
@@ -76,7 +75,6 @@ $color-lightest: #ffffff;
 
   h2 {
     color: $color-base;
-    //font-size: 26px;
   }
 
   h3 {

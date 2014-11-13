@@ -33,20 +33,17 @@ $color-greyscale: #666666;
 
   h2 {
     color: $color-base;
-    border-bottom: 1px solid rgba(grayscale($color-base), 0.3); //light grey
-    @include text-border-fix;
-
   }
 
   h3 {
-    color: darken(invert($color-base), 42%);
+    color: darken($color-base, 42%);
     border-bottom: 1px solid rgba(grayscale($color-base), 0.3); //light grey
     text-transform: uppercase;
     @include text-border-fix;
   }
 
   h4 {
-    color: darken(invert($color-base), 45%);
+    color: darken($color-base, 45%);
     /* color: #960; */
     padding-top: 10px;
   }
