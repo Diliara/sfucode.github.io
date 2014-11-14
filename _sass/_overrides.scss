@@ -3,3 +3,21 @@
 // These are core overrides which affect all courses
 //
 
+*
+
+Removed automatic page header for the following courses:
+
+ Spring 2015:
+ FPA289 on production canvas & canvas-test: 18331
+ EDUC326 on production canvas: 18312
+ HSCI330 on production canvas & canvas-test: 18353
+
+*/
+
+.context-course_18331, .context-course_18312, .context-course_18353 {
+
+  .user_content .page-title {
+    display: none;
+  }
+
+}
