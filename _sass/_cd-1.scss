@@ -1,9 +1,11 @@
 //This comment will not be output to CSS file
 
-$color-base: #993300;
+$color-base: #BB4003;
+$color-secondary: #BA8D00;
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
-
+$color-emph: #20AD03;
+$color-alert: #FD0000;
 
 @mixin text-border-fix {
   //decrease space between text and border
@@ -43,36 +45,16 @@ $color-greyscale: #666666;
   }
 
   h4 {
-    color: darken($color-base, 10%);
+    color: $color-secondary;
     padding-top: 10px;
   }
 
   h5 {
-    color: darken(invert($color-base), 48%);
+    color: darken($color-secondary, 48%);
     padding-top: 10px;
   }
 
   // ******************************************* PANELS & INFO BOXES *******************************************
-
-  .infoblock {
-    padding: 10px;
-    display: block;
-    margin: 10px 0 20px 0;
-
-  }
-
-  .infoblock-alert {
-    background-color: #ffeaea;
-    border: 1px solid #eed3d7;
-    color: #a34140;
-    //  margin: 10px 0 -360px 0;
-  }
-
-  .infoblock-note {
-    background-color: #fcf8e3;
-    border: 1px solid #fbeed5;
-    color: #8a6f19;
-  }
 
   .panel {
     padding: 15px 10px 10px 10px;
@@ -121,18 +103,12 @@ $color-greyscale: #666666;
 
   // ******************************************* TEXT *******************************************
 
-  .txt-i {
+  .emph {
     font-style: italic;
-  }
-
-  .lead {
+    color: $color-emph;
 
   }
 
-  .mark {
-    padding: .2em;
-    background-color: #fcf8e3;
-  }
 
   dl {
     position: relative;
@@ -140,14 +116,6 @@ $color-greyscale: #666666;
 
   dt {
     padding-top: 0.5em;
-  }
-
-  // ******************************************* IMGs *******************************************
-
-  .img-centered {
-    text-align: center;
-    padding-top: 2em;
-    padding-bottom: 2em;
   }
 
   blockquote {
@@ -165,6 +133,33 @@ $color-greyscale: #666666;
 
   blockquote cite:before {
     content: '\2014 \00A0';
+  }
+
+  // ******************************************* Annotation *******************************************
+
+  .highlight {
+    padding: .2em;
+    background-color: rgba($color-emph, 0.5);
+  }
+
+  .comment {
+    color: $color-alert;
+    font-style: italic;
+    font-size: 16px;
+  }
+
+  .comment:before {
+    content: " -- ";
+  }
+
+
+
+  // ******************************************* IMGs *******************************************
+
+  .img-centered {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
 
 }
