@@ -2,15 +2,23 @@
 
 $color-base: #BB4003;
 $color-secondary: #BA8D00;
+$color-emph: #20AD03;
+
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
-$color-emph: #20AD03;
-$color-alert: #FD0000;
+
+$color-comment: #0216fd;
 
 @mixin text-border-fix {
   //decrease space between text and border
   line-height: 26px;
   padding-top: 14px
+}
+
+
+@mixin round($amount) {
+  -moz-border-radius:$amount;  // rounds corners for firefox
+  border-radius:$amount;  //rounds corners for other browsers
 }
 
 #cd-1 {
@@ -103,10 +111,10 @@ $color-alert: #FD0000;
 
   // ******************************************* TEXT *******************************************
 
-  .emph {
-    font-style: italic;
-    color: $color-emph;
-
+  .highlight-emph {
+    padding: .05em .4em;
+    background-color: rgba($color-emph, 0.2);
+    @include round(6px);
   }
 
 
@@ -137,13 +145,14 @@ $color-alert: #FD0000;
 
   // ******************************************* Annotation *******************************************
 
-  .highlight {
-    padding: .2em;
-    background-color: rgba($color-emph, 0.5);
+  .highlight-comment {
+    padding: .05em .4em;
+    background-color: rgba($color-comment, 0.2);
+    @include round(6px);
   }
 
   .comment {
-    color: $color-alert;
+    color: $color-comment;
     font-style: italic;
     font-size: 16px;
   }
