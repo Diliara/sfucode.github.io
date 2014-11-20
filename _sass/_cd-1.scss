@@ -5,10 +5,10 @@ $color-secondary: #BA8D00;
 $color-emph: #20AD03;
 $color-alert: #ad0026;
 
-$color-log: #FAE0B3;
-$color-peer: #c1e8fc;
-$color-read: #F7F7C6;
-$color-assignment: #D9FAE3;
+$color-log: #fbfbca; //yellow
+$color-peer: #c1e8fc; //blue
+$color-read: #fbe1b4; //orange
+$color-assignment: #D9FAE3; //green
 
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
@@ -43,7 +43,7 @@ $color-comment: #0216fd;
     }
 
     background-color: #353535;
-    margin: -15px -40px 0 -30px;
+    margin: -15px -40px 30px -30px;
 
   }
 
@@ -64,11 +64,13 @@ $color-comment: #0216fd;
   h4 {
     color: $color-secondary;
     padding-top: 10px;
+    text-transform: uppercase;
   }
 
   //sub-sub-headers
   h5 {
-    color: darken(invert($color-base), 48%);
+    color: lighten($color-secondary, 5%);
+    font-size: 15px;
     padding-top: 10px;
   }
 
@@ -124,6 +126,15 @@ $color-comment: #0216fd;
   .tbl-w100 {
     width: 100%
   }
+
+  table thead, table tfoot {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
 
   // ******************************************* TEXT *******************************************
 
