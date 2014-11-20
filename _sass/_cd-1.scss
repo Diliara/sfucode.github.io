@@ -2,7 +2,7 @@
 
 $color-base: #BB4003;
 $color-secondary: #BA8D00;
-$color-emph: #20AD03;
+$color-emph: #53bda6;
 $color-alert: #ad0026;
 
 $color-log: #fbfbca;
@@ -139,8 +139,15 @@ $color-comment: #0216fd;
   }
 
   table {
-    border: solid 1px #ddd;
+    border: solid 1px rgba($color-greyscale, 0.2);
     margin-bottom: 1.25em;
+    margin-left: 0;
+    border-collapse: separate;
+    border-spacing: 2px;
+  }
+
+  td {
+    padding: 0.5625em 0.625em;
   }
 
   // ******************************************* TEXT *******************************************
