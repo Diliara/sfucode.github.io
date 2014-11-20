@@ -6,7 +6,9 @@ $color-emph: #20AD03;
 $color-alert: #ad0026;
 
 
+
 $color-log: #FAE0B3;
+$color-peer: #c1e8fc;
 
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
@@ -76,6 +78,7 @@ $color-comment: #0216fd;
     padding: 10px 20px;
     display: block;
     margin: 10px 0 20px 0;
+    border: 1px solid #d9d9d9;
 
     h5 {
       border-bottom: 1px solid rgba($color-greyscale, 0.2);
@@ -83,8 +86,8 @@ $color-comment: #0216fd;
       padding-top: 0;
     }
 
-    .alert {
-      font-weight: bold;
+    .due {
+     // font-weight: bold;
       color: $color-alert;
     }
 
@@ -96,9 +99,14 @@ $color-comment: #0216fd;
     background-color: rgba($color-log, 0.8);
   }
 
+  .panel-peer {
+    @include round(4px);
+    background-color: rgba($color-peer, 0.5);
+  }
+
   .panel-default {
     border-radius: 4px;
-    background-color: rgba($color-greyscale, 0.2);
+    background-color: rgba($color-greyscale, 0.04);
   }
 
   // ******************************************* TABLES *******************************************
