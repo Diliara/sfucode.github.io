@@ -5,10 +5,14 @@ $color-secondary: #BA8D00;
 $color-emph: #20AD03;
 $color-alert: #ad0026;
 
-$color-log: #fbfbca; //yellow
-$color-peer: #c1e8fc; //blue
-$color-read: #fbe1b4; //orange
-$color-assignment: #D9FAE3; //green
+$color-log: #fbfbca;
+//yellow
+$color-peer: #c1e8fc;
+//blue
+$color-read: #fbe1b4;
+//orange
+$color-assignment: #D9FAE3;
+//green
 
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
@@ -21,10 +25,9 @@ $color-comment: #0216fd;
   padding-top: 14px
 }
 
-
 @mixin round($amount) {
-  -moz-border-radius:$amount;  // rounds corners for firefox
-  border-radius:$amount;  //rounds corners for other browsers
+  -moz-border-radius: $amount; // rounds corners for firefox
+  border-radius: $amount; //rounds corners for other browsers
 }
 
 #cd-1 {
@@ -69,8 +72,9 @@ $color-comment: #0216fd;
 
   //sub-sub-headers
   h5 {
-    color: lighten($color-secondary, 5%);
-    font-size: 15px;
+    //color: lighten($color-secondary, 5%); //yellow
+    color: darken(invert($color-base), 30%); //blue
+    font-size: 15.5px;
     padding-top: 10px;
   }
 
@@ -89,10 +93,9 @@ $color-comment: #0216fd;
     }
 
     .due {
-     // font-weight: bold;
+      // font-weight: bold;
       color: $color-alert;
     }
-
 
   }
 
@@ -135,6 +138,10 @@ $color-comment: #0216fd;
     background-color: #f9f9f9;
   }
 
+  table {
+    border: solid 1px #ddd;
+    margin-bottom: 1.25em;
+  }
 
   // ******************************************* TEXT *******************************************
 
@@ -143,8 +150,6 @@ $color-comment: #0216fd;
     background-color: rgba($color-emph, 0.2);
     @include round(6px);
   }
-
-
 
   dl {
     position: relative;
@@ -188,8 +193,6 @@ $color-comment: #0216fd;
   .comment:before {
     content: " -- ";
   }
-
-
 
   // ******************************************* IMGs *******************************************
 
