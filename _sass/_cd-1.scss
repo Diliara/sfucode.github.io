@@ -5,10 +5,10 @@ $color-secondary: #BA8D00;
 $color-emph: #20AD03;
 $color-alert: #ad0026;
 
-
-
 $color-log: #FAE0B3;
 $color-peer: #c1e8fc;
+$color-read: #F7F7C6;
+$color-assignment: #D9FAE3;
 
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
@@ -104,9 +104,19 @@ $color-comment: #0216fd;
     background-color: rgba($color-peer, 0.5);
   }
 
+  .panel-read {
+    @include round(4px);
+    background-color: rgba($color-read, 0.8);
+  }
+
+  .panel-assignment {
+    @include round(4px);
+    background-color: rgba($color-assignment, 0.8);
+  }
+
   .panel-default {
     border-radius: 4px;
-    background-color: rgba($color-greyscale, 0.04);
+    background-color: rgba($color-greyscale, 0.03);
   }
 
   // ******************************************* TABLES *******************************************
@@ -174,8 +184,10 @@ $color-comment: #0216fd;
 
   .img-centered {
     text-align: center;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0;
   }
 
 }
