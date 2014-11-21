@@ -1,0 +1,174 @@
+//This comment will not be output to CSS file
+
+$color-base: #900;
+$color-secondary: #2a7db4;
+$color-emph: #53bda6;
+$color-alert: #ad0026;
+
+$color-log: #fbfbca;
+$color-peer: #c1e8fc;
+$color-read: #fbe1b4;
+$color-assignment: #D9FAE3;
+
+$color-lightest: #ffffff;
+$color-greyscale: #666666;
+
+$color-comment: #0216fd;
+
+@mixin text-border-fix {
+  //decrease space between text and border
+  line-height: 26px;
+  padding-top: 14px
+}
+
+@mixin round($amount) {
+  -moz-border-radius: $amount; // rounds corners for firefox
+  border-radius: $amount; //rounds corners for other browsers
+}
+
+#cd-3 {
+
+  // ****************************************** HEADINGS *******************************************
+
+  .banner {
+
+    h2 {
+      background-color: darken($color-greyscale, 13%);
+      color: $color-lightest;
+      padding: 12px 30px 10px 0;
+      display: block;
+      text-align: right;
+      margin: 0;
+    }
+
+    background-color: #353535;
+    margin: -15px -40px 30px -30px;
+
+  }
+
+  //page title
+  h2 {
+    color: $color-base;
+    text-transform: uppercase;
+    //font-weight: bold;
+  }
+
+  //headers in the page
+  h3 {
+    color: darken($color-base, 1%);
+    border-bottom: 1px solid rgba($color-greyscale, 0.2);
+    //text-transform: uppercase;
+    @include text-border-fix;
+    font-weight: bold;
+
+  }
+
+  //sub-headers
+  h4 {
+    color: $color-secondary;
+    padding-top: 10px;
+    //text-transform: uppercase;
+    font-weight: bold;
+
+  }
+
+  //sub-sub-headers
+  h5 {
+    color: darken($color-secondary, 10%);
+    font-size: 15.5px;
+    padding-top: 10px;
+    font-weight: bold;
+
+  }
+
+  // ******************************************* PANELS & INFO BOXES *******************************************
+
+  .panel {
+    padding: 10px 20px;
+    display: block;
+    margin: 10px 0 20px 0;
+    border: 1px solid #d9d9d9;
+
+    h5 {
+      border-bottom: 1px solid rgba($color-greyscale, 0.2);
+      //text-transform: uppercase;
+      padding-top: 0;
+    }
+
+  }
+
+  .panel-default {
+    @include round(4px);
+    background-color: rgba($color-greyscale, 0.08);
+  }
+
+  // ******************************************* TABLES *******************************************
+
+  .tbl-w100 {
+    width: 100%
+  }
+
+  table thead, table tfoot {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  table {
+    border: solid 1px rgba($color-greyscale, 0.2);
+    margin-bottom: 1.25em;
+    margin-left: 0;
+    border-collapse: separate;
+    border-spacing: 2px;
+  }
+
+  td {
+    padding: 0.5625em 0.625em;
+  }
+
+  // ******************************************* TEXT *******************************************
+
+  .highlight-emph {
+    padding: .05em .4em;
+    background-color: rgba($color-emph, 0.2);
+    @include round(6px);
+  }
+
+  dl {
+    position: relative;
+  }
+
+  dt {
+    padding-top: 0.5em;
+  }
+
+  blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #eee;
+  }
+
+  blockquote cite {
+    display: block;
+    font-size: 80%;
+    color: #777;
+    font-style: italic;
+  }
+
+  blockquote cite:before {
+    content: '\2014 \00A0';
+  }
+
+  // ******************************************* IMGs *******************************************
+
+  .img-centered {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0;
+  }
+
+}
