@@ -17,6 +17,11 @@ $color-lightest: #ffffff;
   display: $display;
 }
 
+@mixin round($amount) {
+  -moz-border-radius: $amount; // rounds corners for firefox
+  border-radius: $amount; //rounds corners for other browsers
+}
+
 // for modules
 #cd-2 {
 
@@ -69,7 +74,7 @@ $color-lightest: #ffffff;
     }
 
     background-color: #353535;
-    margin: -15px -40px 0 -30px;
+    margin: -15px -40px 30px -30px;
 
   }
 
@@ -119,16 +124,21 @@ $color-lightest: #ffffff;
   }
 
   .panel {
-    padding: 15px 10px 10px 10px;
+    padding: 10px 20px;
     display: block;
     margin: 10px 0 20px 0;
+    border: 1px solid #d9d9d9;
+
+    h5 {
+      border-bottom: 1px solid rgba($color-greyscale, 0.2);
+      text-transform: uppercase;
+      padding-top: 0;
+    }
   }
 
-  // w/ left border
-  .panel-default-lb {
-    border-left: 1px solid #dfdfdf;
-    border-radius: 4px;
-    background-color: #f3f3f3;
+  .panel-default {
+    @include round(4px);
+    background-color: rgba($color-greyscale, 0.03);
   }
 
   // ******************************************* TABLES *******************************************
@@ -168,20 +178,11 @@ $color-lightest: #ffffff;
     font-weight: bold;
   }
 
+  .tbl-border {
+    border: 1px solid #d8d8d8;
+  }
+
   // ******************************************* TEXT *******************************************
-
-  .txt-i {
-    font-style: italic;
-  }
-
-  //.lead {
-  //
-  //}
-
-  .mark {
-    padding: .2em;
-    background-color: #fcf8e3;
-  }
 
   dl {
     position: relative;
@@ -203,6 +204,7 @@ $color-lightest: #ffffff;
   }
 
   .vid {
+    margin-top: 1em;
     margin-bottom: 1.5em;
   }
 
