@@ -2,91 +2,189 @@
 <html>
 <head>
     <link href="../css/code-canvas.css" rel="stylesheet" type="text/css">
+    <link href="vendors/prism/prism.css" rel="stylesheet" type="text/css">
     <link href="https://canvas.sfu.ca/assets/vendor_legacy_normal_contrast.css" rel="stylesheet" type="text/css">
+    <title>cd-2 theme</title>
 
     <style>
         body {
             padding: 20px;
         }
+        code {
+            color: #07a;
+            font-size: 12px;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            background-color: #f5f2f0;
+        }
     </style>
 
-    <title>cd-2 theme</title>
 </head>
-
 <body>
 <div id="cd-2">
 
     <div class="banner">
-        <h2>H2 in BANNER HEADING </h2>
+        <h2>#cd-2 theme </h2>
     </div>
 
-
-    <h3>H3 Heading</h3>
-
-    <h3>H3 Heading</h3>
+    <p>Wrap your content in a div with a <code>#cd-2</code> id</p>
 
 
-    <h3>H3 Heading</h3>
+    <h3>Banner</h3>
 
 
-    <h3>H3 Heading</h3>
+<pre><code class="language-markup">&lt;div class="banner">
+    &lt;h2>Banner placeholder (like on the top of this page)&lt;/h2>
+&lt;/div></code></pre>
 
+
+    <h3>Typography</h3>
     <h4>H4 Heading</h4>
-    <h4>H4 Heading</h4>
-    <h4>H4 Heading</h4>
-
     <h5>H5 Heading</h5>
-    <h5>H5 Heading</h5>
-    <h5>H5 Heading</h5>
+    <p>H2 is allocated for page title (usually within the banner). H3 are for main sections (section headings on this page)</p>
+    <p>H3s are automatically numbered.</p>
+
+<pre><code class="language-markup">&lt;h3>Typography&lt;/h3>
+&lt;h4>H4 Heading&lt;/h4>
+&lt;h5>H5 Heading&lt;/h5></code></pre>
 
 
-    <hr>
-
-    <p>Paragraph: Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies
-        vehicula.</p>
-
-    <p>Paragraph: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi
-        erat gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
-        odio sem nec elit.</p>
 
 
-    <hr>
-
-    <p><span class="infoblock-note"> some note here </span></p>
-
-    <p><span class="infoblock-alert"><strong>!!!</strong> some alert message here</span></p>
-
-    <p><span class="infoblock-full">Wide note</span></p>
+    <p>Paragraph example: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 
 
-    <blockquote>Some quote here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis purus quis nulla pulvinar commodo. <cite>Source</cite></blockquote>
 
+    <h5>Description List</h5>
 
-    <div class="panel panel-default-lb">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis purus quis nulla pulvinar commodo. Vestibulum viverra quam justo, ac pretium magna consectetur at. Quisque ut massa et
-            ex
-            sagittis tempus. Quisque nec lobortis ante. Aliquam erat volutpat. Quisque pharetra, quam nec auctor ullamcorper, nulla erat commodo arcu, non semper odio velit et ligula. Nunc sed
-            consequat
-            ex. Vestibulum nec purus pharetra dolor pharetra ultrices id id diam. Vestibulum placerat at dolor et varius. Mauris sem augue, iaculis vel nibh quis, ultricies elementum diam. Suspendisse
-            ipsum dolor, placerat ac mauris eget, efficitur eleifend arcu. Vivamus tincidunt tellus est. Phasellus eget vulputate tellus. Donec ullamcorper nunc quis aliquet porttitor. Sed euismod,
-            enim
-            id iaculis viverra, lectus diam rhoncus turpis, ut efficitur sem ligula pharetra sem. Pellentesque venenatis et turpis nec tempus.</p>
-    </div>
+<pre><code class="language-markup">&lt;dl>
+    &lt;dt>Item&lt;/dt>
+    &lt;dd>- description here.&lt;/dd>
+    &lt;dt>Item 2&lt;/dt>
+    &lt;dd>- description 2 here.&lt;/dd>
+&lt;/dl></code></pre>
 
-    <hr>
-    <p>Description List</p>
     <dl>
-        <dt>Pitch</dt>
-        <dd>- a specific note that we can hear as having a frequency which we can sing back. Most instruments produce pitches; many percussion instruments (i.e drums and bells) do not.</dd>
+        <dt>Item</dt>
+        <dd>- description here.</dd>
 
-        <dt>Phrase</dt>
-        <dd>- melodies can be broken down into phrases, just as a story can be broken down into sentences. A phrase can be thought of as the longest period a singer can sing.</dd>
+        <dt>Item 2</dt>
+        <dd>- description 2 here.</dd>
 
     </dl>
-    <hr>
+
+    <h5>Quote</h5>
+
+<pre><code class="language-markup">&lt;blockquote>
+    Some quote here. &lt;cite>Source&lt;/cite>
+&lt;/blockquote></code></pre>
+
+    <blockquote>Some quote here. <cite>Source</cite></blockquote>
+
+    <h3>Information Blocks and panels</h3>
+
+    <pre><code class="language-markup">&lt;span class="infoblock-note"> some note here &lt;/span>
+        &lt;span class="infoblock-alert">&lt;strong>!!!&lt;/strong> some alert message here&lt;/span>
+        &lt;span class="infoblock-full">Wide note&lt;/span></code></pre>
+
+    <span class="infoblock-note"> some note here </span>
+    <span class="infoblock-alert"><strong>!!!</strong> some alert message here</span>
+    <span class="infoblock-full">A wide note here</span>
+
+
+    <pre><code class="language-markup">&lt;div class="panel panel-default">
+        &lt;h5>Title here&lt;/h5>
+        &lt;p>Some content that requires to be visually separated from the main content. &lt;/p>
+        &lt;div></code></pre>
+
+    <div class="panel panel-default">
+        <h5>Title here</h5>
+        <p>Some content that requires to be visually separated from the main content.</p>
+    </div>
+
+
+    <h3>Table</h3>
+    <!-- Do not change default table background! Tables are used for video & image pairs -->
+    <p><code>.tbl-w100</code> class spans the table across the page.</p>
+<pre><code class="language-markup">&lt;table class="tbl-w100">
+&lt;thead>
+    &lt;tr>
+        &lt;th>Column 1&lt;/th>
+        &lt;th>Column 2&lt;/th>
+    &lt;/tr>
+&lt;/thead>
+&lt;tbody>
+    &lt;tr>
+        &lt;td class="tbl-txt-centered-bold">1&lt;/td>
+        &lt;td>Some content&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td class="tbl-txt-centered-bold">2&lt;/td>
+        &lt;td>Some content&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td class="tbl-txt-centered-bold">3&lt;/td>
+        &lt;td>Some content&lt;/td>
+    &lt;/tr>
+&lt;/tbody>
+&lt;/table></code></pre>
+
+    <table class="tbl-w100">
+        <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="tbl-txt-centered-bold">1</td>
+            <td>Some content</td>
+        </tr>
+        <tr>
+            <td class="tbl-txt-centered-bold">2</td>
+            <td>Some content</td>
+        </tr>
+        <tr>
+            <td class="tbl-txt-centered-bold">3</td>
+            <td>Some content</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3>Images</h3>
+
+    <pre><code class="language-markup">&lt;img class="img-centered" src="http://placehold.it/350x150" /></code></pre>
+
+
+    <img class="img-centered" src="http://placehold.it/350x150" alt="img-centered"/>
+
+
+    <h3>Videos</h3>
+
+
+    <pre><code class="language-markup">&lt;div class="vid hidden-print">
+    &lt;iframe src="https://www.youtube.com/embed/XQu8TTBmGhA" width="560" height="315">&lt;/iframe>
+&lt;/div></code></pre>
+
+    <div class="vid hidden-print">
+        <iframe src="https://www.youtube.com/embed/XQu8TTBmGhA" width="560" height="315"></iframe>
+    </div>
+
+    <p><code>.vid</code> class provides space at the top &amp; bottom of the video.</p>
+
+
+    <h3>Print Styles</h3>
+
+    <p>Content wrapped in <code>.hidden-print</code> class will not be displayed for printed pages. Should be used for multimedia.</p>
+    <p><code>.page-break</code> class splits content to the next page.</p>
+    <p><code>.no-split-for-print</code> class can be used to avoid page break within different elements, such as tables.</p>
+
+
+
 
 </div>
 
+<script src="vendors/prism/prism.js"></script>
 </body>
 
 </html>

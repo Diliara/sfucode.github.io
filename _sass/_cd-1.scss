@@ -6,13 +6,9 @@ $color-emph: #53bda6;
 $color-alert: #ad0026;
 
 $color-log: #fbfbca;
-//yellow
 $color-peer: #c1e8fc;
-//blue
 $color-read: #fbe1b4;
-//orange
 $color-assignment: #D9FAE3;
-//green
 
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
@@ -120,7 +116,7 @@ $color-comment: #0216fd;
   }
 
   .panel-default {
-    border-radius: 4px;
+    @include round(4px);
     background-color: rgba($color-greyscale, 0.03);
   }
 

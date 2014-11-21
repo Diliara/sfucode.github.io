@@ -2,6 +2,7 @@
 <html>
 <head>
     <link href="../css/code-canvas.css" rel="stylesheet" type="text/css">
+    <link href="vendors/prism/prism.css" rel="stylesheet" type="text/css">
     <link href="https://canvas.sfu.ca/assets/vendor_legacy_normal_contrast.css" rel="stylesheet" type="text/css">
     <title>cd-1 theme</title>
 
@@ -9,232 +10,201 @@
         body {
             padding: 20px;
         }
+        code {
+            color: #07a;
+            font-size: 12px;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            background-color: #f5f2f0;
+        }
     </style>
-
 
 </head>
 <body>
+
 <div id="cd-1">
 
 <div class="banner">
-    <h2>H2 in BANNER HEADING <span class="banner-box">0X 0X</span></h2>
+    <h2>#cd-1 theme </h2>
 </div>
 
-<p>If you are using image for a banner, than use H2 Heading</p>
-
-<h2>H2 Heading</h2>
+<p>Wrap your content in a div with a <code>#cd-1</code> id</p>
 
 
-<h3>H3 Heading</h3>
+<h3>Banner</h3>
+
+
+<pre><code class="language-markup">&lt;div class="banner">
+    &lt;h2>Banner placeholder (like on the top of this page)&lt;/h2>
+&lt;/div></code></pre>
+
+
+<h3>Typography</h3>
 <h4>H4 Heading</h4>
 <h5>H5 Heading</h5>
+<p>H2 is allocated for page title (usually within the banner). H3 are for main sections (section headings on this page)</p>
 
-<hr>
+<pre><code class="language-markup">&lt;h3>Typography&lt;/h3>
+&lt;h4>H4 Heading&lt;/h4>
+&lt;h5>H5 Heading&lt;/h5></code></pre>
 
-<p>Paragraph: Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies
-    vehicula.</p>
 
-<p>Paragraph: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi
+<p>Paragraph example: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi
     erat gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
     odio sem nec elit.</p>
 
+<pre><code class="language-markup">&lt;span class="highlight-emph">Something emphasized.&lt;/span></code></pre>
 
-<hr>
+<p>Phasellus ut eros placerat eros lobortis eleifend. <span class="highlight-emph">Something emphasized.</span> Vivamus id fermentum sapien, quis laoreet sem. Integer sed feugiat leo, nec efficitur ex. Nullam aliquet finibus turpis sollicitudin vulputate. Ut sed sapien ante. Etiam eros velit, imperdiet vitae est quis, egestas venenatis odio. Suspendisse potenti. Sed malesuada at dolor quis condimentum.</p>
 
-<p><span class="infoblock infoblock-note"> some note here </span></p>
+<h5>Description List</h5>
 
-<p><span class="infoblock infoblock-alert"><strong>!!!</strong> some alert message here</span></p>
+<pre><code class="language-markup">&lt;dl>
+    &lt;dt>Item&lt;/dt>
+    &lt;dd>- description here.&lt;/dd>
+    &lt;dt>Item 2&lt;/dt>
+    &lt;dd>- description 2 here.&lt;/dd>
+&lt;/dl></code></pre>
 
-
-<blockquote>Some quote here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis purus quis nulla pulvinar commodo. <cite>Source</cite></blockquote>
-
-<div class="panel panel-default-lb">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis purus quis nulla pulvinar commodo. Vestibulum viverra quam justo, ac pretium magna consectetur at. Quisque ut massa et
-        ex
-        sagittis tempus. Quisque nec lobortis ante. Aliquam erat volutpat. Quisque pharetra, quam nec auctor ullamcorper, nulla erat commodo arcu, non semper odio velit et ligula. Nunc sed
-        consequat
-        ex. Vestibulum nec purus pharetra dolor pharetra ultrices id id diam. Vestibulum placerat at dolor et varius. Mauris sem augue, iaculis vel nibh quis, ultricies elementum diam. Suspendisse
-        ipsum dolor, placerat ac mauris eget, efficitur eleifend arcu. Vivamus tincidunt tellus est. Phasellus eget vulputate tellus. Donec ullamcorper nunc quis aliquet porttitor. Sed euismod,
-        enim
-        id iaculis viverra, lectus diam rhoncus turpis, ut efficitur sem ligula pharetra sem. Pellentesque venenatis et turpis nec tempus.</p>
-</div>
-
-<hr>
-<p>Description List</p>
 <dl>
-    <dt>Pitch</dt>
-    <dd>- a specific note that we can hear as having a frequency which we can sing back. Most instruments produce pitches; many percussion instruments (i.e drums and bells) do not.</dd>
+    <dt>Item</dt>
+    <dd>- description here.</dd>
 
-    <dt>Phrase</dt>
-    <dd>- melodies can be broken down into phrases, just as a story can be broken down into sentences. A phrase can be thought of as the longest period a singer can sing.</dd>
+    <dt>Item 2</dt>
+    <dd>- description 2 here.</dd>
 
 </dl>
-<hr>
 
-<table>
+<h5>Quote</h5>
+
+<pre><code class="language-markup">&lt;blockquote>
+    Some quote here. &lt;cite>Source&lt;/cite>
+&lt;/blockquote></code></pre>
+
+<blockquote>Some quote here. <cite>Source</cite></blockquote>
+
+    <h3>Panels</h3>
+
+<pre><code class="language-markup">&lt;div class="panel panel-default">
+    &lt;h5>Default&lt;/h5>
+    &lt;p>Some content that requires to be visually separated from the main content. &lt;/p>
+    &lt;p class="due">DUE DATE or some other important information. &lt;/p>
+&lt;div></code></pre>
+
+    <div class="panel panel-default">
+        <h5>Default</h5>
+        <p>Some content that requires to be visually separated from the main content.</p>
+        <p class="due">DUE DATE or some other important information.</p>
+    </div>
+
+    <hr>
+    <p>Replace <code>panel-default</code> with <code>panel-log</code></p>
+
+    <div class="panel panel-log">
+        <h5>Log</h5>
+        <p>Some content that requires to be visually separated from the main content.</p>
+        <p class="due">DUE DATE or some other important information.</p>
+    </div>
+
+    <hr>
+    <p>Replace <code>panel-default</code> with <code>panel-read</code></p>
+    <div class="panel panel-read">
+        <h5>Read</h5>
+        <p>Some content that requires to be visually separated from the main content.</p>
+        <p class="due">DUE DATE or some other important information.</p>
+    </div>
+
+    <hr>
+    <p>Replace <code>panel-default</code> with <code>panel-assignment</code></p>
+    <div class="panel panel-assignment">
+        <h5>Assignment</h5>
+        <p>Some content that requires to be visually separated from the main content.</p>
+        <p class="due">DUE DATE or some other important information.</p>
+    </div>
+
+    <hr>
+    <p>Replace <code>panel-default</code> with <code>panel-peer</code></p>
+    <div class="panel panel-peer">
+        <h5>Peer</h5>
+        <p>Some content that requires to be visually separated from the main content.</p>
+        <p class="due">DUE DATE or some other important information.</p>
+    </div>
+
+
+<h3>Table</h3>
+
+    <p><code>.tbl-w100</code> class spans the table across the page.</p>
+<pre><code class="language-markup">&lt;table class="tbl-w100">
+&lt;thead>
+    &lt;tr>
+        &lt;th>Column 1&lt;/th>
+        &lt;th>Column 2&lt;/th>
+    &lt;/tr>
+&lt;/thead>
+&lt;tbody>
+    &lt;tr>
+        &lt;td>1&lt;/td>
+        &lt;td>Some content&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>2&lt;/td>
+        &lt;td>Some content&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>3&lt;/td>
+        &lt;td>Some content&lt;/td>
+    &lt;/tr>
+&lt;/tbody>
+&lt;/table></code></pre>
+
+<table class="tbl-w100">
     <thead>
     <tr>
-        <th>Week</th>
-        <th>Section</th>
-        <th>Reading</th>
-        <th>Activities/Assignments</th>
-    </tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+      </tr>
     </thead>
     <tbody>
     <tr>
         <td>1</td>
-        <td colspan="2">
-            <p style="text-align: center;">Read Course Syllabus and become familiar with course components.</p>
-        </td>
-        <td>
-            <ul>
-                <li>Explore Canvas</li>
-                <li>Post your Introduction to your class and to your group</li>
-            </ul>
-        </td>
+        <td>Some content</td>
     </tr>
     <tr>
         <td>2</td>
-        <td>1: Choice Theory</td>
-        <td>&nbsp;</td>
-        <td>
-            <ul>
-                <li>Week 2: Progress log task</li>
-                <li>Week 2: Peer interaction task</li>
-            </ul>
-        </td>
+        <td>Some content</td>
     </tr>
     <tr>
         <td>3</td>
-        <td>2: Type Theory</td>
-        <td><strong>Textbook</strong><br/>
-            <ul>
-                <li>pp. 1-17</li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li>Week 3: Peer interaction task 1</li>
-                <li>Week 3: Peer interaction task 2</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>&nbsp;</td>
-        <td><strong>Textbook</strong><br/>
-            <ul>
-                <li>pp. 26-36</li>
-                <li>pp. 37-46</li>
-                <li>pp. 76-78</li>
-                <li>pp.47-57</li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li>Week 4: Peer interaction task 1</li>
-                <li>Week 4: Peer interaction task 2</li>
-                <li><strong>Week 4: Peer Editing Task</strong></li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>3: Narratives</td>
-        <td>
-            <ul>
-                <li>Davies, Hogan, &amp; Clandinin, "Classroom Management: Restoring Our Relationships"</li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li>Week 5: Peer interaction task</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td>6</td>
-        <td>4: Understanding Students with Special Needs</td>
-        <td>
-            <ul>
-                <li><span>Weinstein, C. &amp; Romano, M. (2015) &ldquo;</span><span>Knowing Your Students and Their Special Needs"</span></li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li>Week 6: Progress log task 1</li>
-                <li>Week 6: Progress log task 2</li>
-                <li>Assignment 1???</li>
-            </ul>
-        </td>
+        <td>Some content</td>
     </tr>
     </tbody>
 </table>
 
-<div class="panel panel-default">
-    <h5>Default</h5>
-    <p>Sed sit amet nunc aliquet, placerat enim ac, lacinia eros. Nulla facilisi. Proin nulla est, porta quis orci eu, iaculis tempor erat. Aenean dapibus orci at justo dictum condimentum. In ac vulputate augue. Duis quis euismod turpis. Aenean ut lacus ut quam finibus elementum vitae sit amet lacus. Mauris eget vehicula risus. Morbi eu ex in nunc sagittis iaculis. Nunc lobortis tristique efficitur. Vestibulum fringilla pretium nibh, viverra lacinia felis vehicula ac. Phasellus volutpat nisi id sem posuere, eget congue quam mollis. Praesent eget pulvinar sem, in mollis est. Cras eget convallis ante. Donec ut lectus mi. Nullam consequat, risus et sagittis rhoncus, nibh ipsum congue felis, a tincidunt mi felis quis orci.</p>
-</div>
 
-<div class="panel panel-log">
-    <h5>Week 6: Reading and Progress Log Tasks</h5>
+<h3>Images</h3>
 
-    <p class="comment">This is a comment from a PD</p>
+<pre><code class="language-markup">&lt;img class="img-centered" src="http://placehold.it/350x150" /></code></pre>
 
-    <p>Please read Weinstein, C. &amp; Romano, M. (2015) <span class="highlight-comment">This is a text to be changed</span>
-        <span class="comment">need to link </span> all of the chapter and choose whichever one of the particular needs
-        are the most important for you to deal with given your present or future teaching situation.</p>
+<img class="img-centered" src="http://placehold.it/350x150" alt="img-centered"/>
 
-    <p>Select the need and find three articles or chapters which also inform the teacher about the needs of this group of students. </p>
-    <ul>
-        <li>Summarize the main points of each of your readings.</li>
-        <li>What ideas do they have in common?</li>
-        <li>Are there any conflicting ideas? If so, describe them.</li>
-        <li>Based on your reading, write a letter to yourself promising three things you WILL NOT do and three things you WILL DO regarding the students with special needs. Send the letter
-            to yourself and read it in two years.
-        </li>
-        <li>Exchange letters with two group members and discuss similarities and differences.</li>
-        <li>Imagine you are a student with special needs in your classroom. Write a poem such a student would write in his or her private journal. The poem should reflect how the
-            student feels in your classroom.
-        </li>
-    </ul>
-    <p>Submit your responses to this section to your tutor marker for evaluation and grading via <em><strong>Assignments</strong> </em>tool in the left-hand navigation bar. The tutor
-        marker will evaluate how you summarize and analyze the 3 articles and will check that you have completed the peer interaction tasks.</p>
+<h3>Development Notes</h3>
 
-    <p class="due">COMPLETE BY SUNDAY OF WEEK 7</p>
-</div>
-
-<div class="panel panel-read">
-    <h5>Reading</h5>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus mauris sed justo bibendum feugiat. Praesent quis neque congue mauris ultrices fringilla. Suspendisse quis leo non ipsum
-        convallis malesuada at ac libero. Quisque eu turpis tincidunt ipsum sagittis ornare. Sed varius diam non metus lacinia pellentesque. Nam nec elit interdum, dictum mi non, suscipit arcu.
-        Aliquam posuere dapibus orci, id blandit tortor. Morbi nec scelerisque nisl. Ut facilisis sodales sem, vitae volutpat velit lobortis sit amet.</p>
-</div>
-
-<div class="panel panel-assignment">
-    <h5>Assignment</h5>
-
-    <p>Ut aliquam mi sit amet dui finibus, sed pulvinar nunc luctus. Nam sagittis ligula et nisl tempor pharetra. Nam rutrum sem non nunc rutrum, nec porttitor turpis lacinia. Cras ornare luctus
-        risus, sit amet aliquet leo commodo non. Sed quis ipsum sit amet erat hendrerit efficitur eget at sapien. Aliquam vitae dictum nisi, non pellentesque dui. Interdum et malesuada fames ac ante
-        ipsum primis in faucibus. Donec velit erat, sagittis nec sapien sodales, commodo maximus purus.
-
-    </p>
-</div>
+<pre><code class="language-markup">&lt;span class="highlight-comment">This is a text to be changed&lt;/span>
+&lt;span class="comment">comment from PD &lt;/span></code></pre>
 
 
-<div class="panel panel-peer">
-    <h5>Peer</h5>
+<p>Some contents some content some content <span class="highlight-comment">This is a text to be changed</span><span class="comment">comment from PD </span> some more content...</p>
 
-    <p>Integer vulputate augue ante, id tincidunt velit dignissim imperdiet. Ut congue arcu massa, sed iaculis purus venenatis lobortis. Nam in egestas velit, at dignissim turpis. Fusce aliquam
-        porttitor enim eget convallis. Mauris nec nisl at ante sollicitudin tempor. Etiam in euismod purus, lobortis viverra metus. Nam pellentesque convallis tortor, quis mollis risus. Pellentesque
-        mauris nunc, tincidunt a felis eu, vehicula efficitur est. Nam quis magna massa. Fusce congue turpis justo, et tincidunt turpis interdum a. Quisque convallis eget dui vel sodales. Suspendisse
-        eget feugiat velit.</p>
-</div>
+<h3>Print Styles</h3>
 
-<p class="highlight-emph">Remember, always, that evaluation is a method of teaching. If it does not teach, it is not doing its job.</p>
+<p>Content wrapped in <code>.hidden-print</code> class will not be displayed for printed pages. Should be used for multimedia.</p>
+<p><code>.page-break</code> class splits content to the next page.</p>
+<p><code>.no-split-for-print</code> class can be used to avoid page break within different elements, such as tables.</p>
 
 
 </div>
+
+
+
+<script src="vendors/prism/prism.js"></script>
 </body>
 </html>
