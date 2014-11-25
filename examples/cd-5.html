@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../css/code-canvas.css" rel="stylesheet" type="text/css">
+    <link href="vendors/prism/prism.css" rel="stylesheet" type="text/css">
+    <link href="https://canvas.sfu.ca/assets/vendor_legacy_normal_contrast.css" rel="stylesheet" type="text/css">
+    <title>cd-5 theme</title>
+
+    <style>
+        body {
+            padding: 20px;
+        }
+        code {
+            color: #07a;
+            font-size: 12px;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            background-color: #f5f2f0;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="cd-5">
+
+<div class="banner">
+    <h2>#cd-5 theme </h2>
+</div>
+
+<p>Wrap your content in a div with a <code>#cd-5</code> id</p>
+
+
+<h3>Banner</h3>
+
+
+<pre><code class="language-markup">&lt;div class="banner">
+    &lt;h2>Banner placeholder (like on the top of this page)&lt;/h2>
+&lt;/div></code></pre>
+
+
+<h3>Typography</h3>
+<h4>H4 Heading</h4>
+<h5>H5 Heading</h5>
+<p>H2 is allocated for page title (usually within the banner). H3 are for main sections (section headings on this page)</p>
+
+<pre><code class="language-markup">&lt;h3>Typography&lt;/h3>
+&lt;h4>H4 Heading&lt;/h4>
+&lt;h5>H5 Heading&lt;/h5></code></pre>
+
+
+<p>Paragraph example: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi
+    erat gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+    odio sem nec elit.</p>
+
+
+
+<h5>Ordered List</h5>
+
+<p>Ordered list with extra space between list items (for listed items with a lot of content).</p>
+
+<pre><code class="language-markup">&lt;ol>
+    &lt;li>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie metus sit amet euismod varius. Donec vulputate, lectus eget malesuada convallis, odio lectus elementum ipsum, eget tristique ligula arcu hendrerit neque. Proin suscipit vel urna at tincidunt. Mauris egestas non dolor quis sollicitudin.&lt;/li>
+    &lt;li>Item 2. Maecenas iaculis mollis lacus, vel sagittis ex laoreet eleifend. Aliquam eget hendrerit nisi. Fusce et orci quis nisl gravida pretium. Cras porttitor enim eros, finibus elementum eros porta sit amet. Integer nec pretium sapien, nec tempor risus. Praesent at risus ac turpis maximus pretium.&lt;/li>
+&lt;/ol></code></pre>
+
+<ol>
+    <li>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie metus sit amet euismod varius. Donec vulputate, lectus eget malesuada convallis, odio lectus elementum ipsum, eget tristique ligula arcu hendrerit neque. Proin suscipit vel urna at tincidunt. Mauris egestas non dolor quis sollicitudin.</li>
+    <li>Item 2. Maecenas iaculis mollis lacus, vel sagittis ex laoreet eleifend. Aliquam eget hendrerit nisi. Fusce et orci quis nisl gravida pretium. Cras porttitor enim eros, finibus elementum eros porta sit amet. Integer nec pretium sapien, nec tempor risus. Praesent at risus ac turpis maximus pretium.</li>
+</ol>
+
+    <h5>Bibliography List</h5>
+
+    <p>Bibliography list with indentation.</p>
+
+<pre><code class="language-markup">&lt;ul class="bibl">
+    &lt;li>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie metus sit amet euismod varius. Donec vulputate, lectus eget malesuada convallis, odio lectus elementum ipsum, eget tristique ligula arcu hendrerit neque. Proin suscipit vel urna at tincidunt. Mauris egestas non dolor quis sollicitudin.&lt;/li>
+    &lt;li>Item 2. Maecenas iaculis mollis lacus, vel sagittis ex laoreet eleifend. Aliquam eget hendrerit nisi. Fusce et orci quis nisl gravida pretium. Cras porttitor enim eros, finibus elementum eros porta sit amet. Integer nec pretium sapien, nec tempor risus. Praesent at risus ac turpis maximus pretium.&lt;/li>
+&lt;/ul></code></pre>
+
+    <ul class="bibl">
+        <li>Item 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie metus sit amet euismod varius. Donec vulputate, lectus eget malesuada convallis, odio lectus elementum ipsum, eget tristique ligula arcu hendrerit neque. Proin suscipit vel urna at tincidunt. Mauris egestas non dolor quis sollicitudin.</li>
+        <li>Item 2. Maecenas iaculis mollis lacus, vel sagittis ex laoreet eleifend. Aliquam eget hendrerit nisi. Fusce et orci quis nisl gravida pretium. Cras porttitor enim eros, finibus elementum eros porta sit amet. Integer nec pretium sapien, nec tempor risus. Praesent at risus ac turpis maximus pretium.</li>
+    </ul>
+
+
+<h5>Description List</h5>
+
+<pre><code class="language-markup">&lt;dl>
+    &lt;dt>Item&lt;/dt>
+    &lt;dd>- description here.&lt;/dd>
+    &lt;dt>Item 2&lt;/dt>
+    &lt;dd>- description 2 here.&lt;/dd>
+&lt;/dl></code></pre>
+
+<dl>
+    <dt>Item</dt>
+    <dd>- description here.</dd>
+
+    <dt>Item 2</dt>
+    <dd>- description 2 here.</dd>
+
+</dl>
+
+<h5>Quote</h5>
+
+<pre><code class="language-markup">&lt;blockquote>
+    Some quote here. &lt;cite>Source&lt;/cite>
+&lt;/blockquote></code></pre>
+
+<blockquote>Some quote here. <cite>Source</cite></blockquote>
+
+    <h3>Panels</h3>
+
+<pre><code class="language-markup">&lt;span class="panel panel-default">Some content that requires to be visually separated from the main content.&lt;span></code></pre>
+
+<span class="panel panel-default">Some content that requires to be visually separated from the main content. </span>
+
+
+<hr>
+<p>Replace <code>panel-default</code> with <code>panel-answer</code></p>
+
+<span class="panel panel-answer">Some content that requires to be visually separated from the main content.</span>
+
+
+
+
+<h3>Table</h3>
+
+    <p><code>.tbl-w100</code> class spans the table across the page.</p>
+<pre><code class="language-markup">&lt;table>
+&lt;thead>
+    &lt;tr>
+        &lt;th>Column 1&lt;/th>
+        &lt;th>Column 2&lt;/th>
+    &lt;/tr>
+&lt;/thead>
+&lt;tbody>
+    &lt;tr>
+        &lt;td>1&lt;/td>
+        &lt;td>Some content&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>2&lt;/td>
+        &lt;td>Some content&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>3&lt;/td>
+        &lt;td>Some content&lt;/td>
+    &lt;/tr>
+&lt;/tbody>
+&lt;/table></code></pre>
+
+<table>
+    <thead>
+    <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Some content</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Some content</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Some content</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<h3>Images</h3>
+
+    <pre><code class="language-markup">&lt;div class="img-centered">
+    &lt;img src="http://placehold.it/350x150" alt="centered image"/>
+    &lt;p>&lt;strong>Figure X:&lt;/strong> Caption&lt;/p>
+&lt;/div></code></pre>
+
+    <div class="img-centered">
+        <img src="http://placehold.it/350x150" alt="centered image"/>
+        <p><strong>Figure X:</strong> Caption</p>
+    </div>
+
+
+<h3>Print Styles</h3>
+
+<p>Content wrapped in <code>.hidden-print</code> class will not be displayed for printed pages. Should be used for multimedia.</p>
+<p><code>.page-break</code> class splits content to the next page.</p>
+<p><code>.no-split-for-print</code> class can be used to avoid page break within different elements, such as tables.</p>
+
+
+</div>
+
+
+
+<script src="vendors/prism/prism.js"></script>
+</body>
+</html>
