@@ -149,6 +149,12 @@ $color-greyscale: #666666;
     text-indent: -2em;
   }
 
+  /*
+  .no-bullet {
+    list-style-type: none;
+  }
+  */
+
 
   blockquote {
     padding: 10px 20px;
@@ -175,6 +181,21 @@ $color-greyscale: #666666;
 
   // ******************************************* Annotation *******************************************
 
+  .highlight-comment {
+    padding: .05em .4em;
+    background-color: rgba($color-comment, 0.2);
+    @include round(6px);
+  }
+
+  .comment {
+    color: $color-comment;
+    font-style: italic;
+    font-size: 16px;
+  }
+
+  .comment:before {
+    content: " -- ";
+  }
 
   // ******************************************* IMGs *******************************************
 
