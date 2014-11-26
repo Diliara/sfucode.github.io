@@ -32,16 +32,34 @@ $color-comment: #0216fd;
 
   .banner {
 
-    h2 {
-      background-color: darken($color-greyscale, 13%);
-      color: $color-lightest;
-      padding: 12px 30px 10px 0;
-      display: block;
-      text-align: right;
-      margin: 0;
+    img {
+      width: 100%;
+      position: relative;
+      padding: 2px 0;
     }
 
-    background-color: #353535;
+    h2 {
+      color: $color-lightest;
+      font-family: "Myriad Pro";
+      position: absolute;
+      top: -3px;
+      left: 685px;
+
+      .module {
+        font-weight: 600;
+      }
+
+      .title {
+        font-size: 16px;
+        position: absolute;
+        top: 25px;
+        text-transform: uppercase;
+        width: 410px;
+      }
+
+    }
+
+    background-color: darken($color-greyscale, 12%);
     margin: -15px -40px 30px -30px;
 
   }
