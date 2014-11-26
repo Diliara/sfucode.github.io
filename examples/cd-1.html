@@ -17,220 +17,242 @@
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             background-color: #f5f2f0;
         }
+
+        .banner h2 {
+            top: 3px !important;
+            /* because of the padding on this page */
+        }
+
+        /* local media query */
+        @media only screen and (max-width: 980px) {
+            .banner h2 {
+                left:  20px !important;
+            }
+        }
+
     </style>
 
 </head>
 <body>
 
 <div id="cd-1">
+<!--
+<div class="banner">
+    <img alt="banner" src="http://placehold.it/1130x70/474747/&text=+"/>
+    <h2><span class="module">Module #:</span> cd-1 theme <br> <span class="title">Wrap your content in a div with a #cd-1 id</span></h2>
+</div>
+-->
 
-    <div class="banner">
-
-        <img alt="banner" src="http://placehold.it/1130x70"/>
-
-        <h2><span class="module">Module #:</span> cd-1 theme <br> <span class="title">Title here</span></h2>
+<div class="banner">
+     <h2>#cd-1 theme</h2>
+</div>
 
 
-    </div>
-
-    <p>Wrap your content in a div with a <code>#cd-1</code> id</p>
+<p>Wrap your content in a div with a <code>#cd-1</code> id</p>
 
 
-    <h3>Banner</h3>
+<h3>Banner</h3>
 
 
 <pre><code class="language-markup">&lt;div class="banner">
     &lt;h2>Banner placeholder (like on the top of this page)&lt;/h2>
-    &lt;/div></code></pre>
+&lt;/div></code></pre>
 
 
-    <h3>Typography</h3>
-    <h4>H4 Heading</h4>
-    <h5>H5 Heading</h5>
+<p>For an image + text combination:</p>
+<pre><code class="language-markup">&lt;div class="banner">
+    &lt;img alt="banner" src=""/>
+    &lt;h2>&lt;span class="module">Module #:&lt;/span> Week # &lt;br> &lt;span class="title">Module title&lt;/span>&lt;/h2>
+&lt;/div></code></pre>
 
-    <p>H2 is allocated for page title (usually within the banner). H3 are for main sections (section headings on this page)</p>
+
+<h3>Typography</h3>
+<h4>H4 Heading</h4>
+<h5>H5 Heading</h5>
+
+<p>H2 is allocated for page title (usually within the banner). H3 are for main sections (section headings on this page)</p>
 
 <pre><code class="language-markup">&lt;h3>Typography&lt;/h3>
-    &lt;h4>H4 Heading&lt;/h4>
-    &lt;h5>H5 Heading&lt;/h5></code></pre>
+&lt;h4>H4 Heading&lt;/h4>
+&lt;h5>H5 Heading&lt;/h5></code></pre>
 
 
-    <p>Paragraph example: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus,
-        nisi
-        erat gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
-        odio sem nec elit.</p>
+<p>Paragraph example: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus,
+    nisi
+    erat gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+    odio sem nec elit.</p>
 
-    <pre><code class="language-markup">&lt;span class="highlight-emph">Something emphasized.&lt;/span></code></pre>
+<pre><code class="language-markup">&lt;span class="highlight-emph">Something emphasized.&lt;/span></code></pre>
 
-    <p>Phasellus ut eros placerat eros lobortis eleifend. <span class="highlight-emph">Something emphasized.</span> Vivamus id fermentum sapien, quis laoreet sem. Integer sed feugiat leo, nec
-        efficitur ex. Nullam aliquet finibus turpis sollicitudin vulputate. Ut sed sapien ante. Etiam eros velit, imperdiet vitae est quis, egestas venenatis odio. Suspendisse potenti. Sed malesuada
-        at dolor quis condimentum.</p>
+<p>Phasellus ut eros placerat eros lobortis eleifend. <span class="highlight-emph">Something emphasized.</span> Vivamus id fermentum sapien, quis laoreet sem. Integer sed feugiat leo, nec
+    efficitur ex. Nullam aliquet finibus turpis sollicitudin vulputate. Ut sed sapien ante. Etiam eros velit, imperdiet vitae est quis, egestas venenatis odio. Suspendisse potenti. Sed malesuada
+    at dolor quis condimentum.</p>
 
-    <h5>Description List</h5>
+<h5>Description List</h5>
 
 <pre><code class="language-markup">&lt;dl>
     &lt;dt>Item&lt;/dt>
     &lt;dd>- description here.&lt;/dd>
     &lt;dt>Item 2&lt;/dt>
     &lt;dd>- description 2 here.&lt;/dd>
-    &lt;/dl></code></pre>
+&lt;/dl></code></pre>
 
-    <dl>
-        <dt>Item</dt>
-        <dd>- description here.</dd>
+<dl>
+    <dt>Item</dt>
+    <dd>- description here.</dd>
 
-        <dt>Item 2</dt>
-        <dd>- description 2 here.</dd>
+    <dt>Item 2</dt>
+    <dd>- description 2 here.</dd>
 
-    </dl>
+</dl>
 
-    <h5>Quote</h5>
+<h5>Quote</h5>
 
 <pre><code class="language-markup">&lt;blockquote>
     Some quote here. &lt;cite>Source&lt;/cite>
-    &lt;/blockquote></code></pre>
+&lt;/blockquote></code></pre>
 
-    <blockquote>Some quote here. <cite>Source</cite></blockquote>
+<blockquote>Some quote here. <cite>Source</cite></blockquote>
 
-    <h3>Panels</h3>
+<h3>Panels</h3>
 
 <pre><code class="language-markup">&lt;div class="panel panel-default">
     &lt;h5>Default&lt;/h5>
     &lt;p>Some content that requires to be visually separated from the main content. &lt;/p>
     &lt;p class="due">DUE DATE or some other important information. &lt;/p>
-    &lt;div></code></pre>
+&lt;div></code></pre>
 
-    <div class="panel panel-default">
-        <h5>Default</h5>
+<div class="panel panel-default">
+    <h5>Default</h5>
 
-        <p>Some content that requires to be visually separated from the main content.</p>
+    <p>Some content that requires to be visually separated from the main content.</p>
 
-        <p class="due">DUE DATE or some other important information.</p>
-    </div>
+    <p class="due">DUE DATE or some other important information.</p>
+</div>
 
-    <hr>
-    <p>Replace <code>panel-default</code> with <code>panel-log</code></p>
+<hr>
+<p>Replace <code>panel-default</code> with <code>panel-log</code></p>
 
-    <div class="panel panel-log">
-        <h5>Log</h5>
+<div class="panel panel-log">
+    <h5>Log</h5>
 
-        <p>Some content that requires to be visually separated from the main content.</p>
+    <p>Some content that requires to be visually separated from the main content.</p>
 
-        <p class="due">DUE DATE or some other important information.</p>
-    </div>
+    <p class="due">DUE DATE or some other important information.</p>
+</div>
 
-    <hr>
-    <p>Replace <code>panel-default</code> with <code>panel-read</code></p>
+<hr>
+<p>Replace <code>panel-default</code> with <code>panel-read</code></p>
 
-    <div class="panel panel-read">
-        <h5>Read</h5>
+<div class="panel panel-read">
+    <h5>Read</h5>
 
-        <p>Some content that requires to be visually separated from the main content.</p>
+    <p>Some content that requires to be visually separated from the main content.</p>
 
-        <p class="due">DUE DATE or some other important information.</p>
-    </div>
+    <p class="due">DUE DATE or some other important information.</p>
+</div>
 
-    <hr>
-    <p>Replace <code>panel-default</code> with <code>panel-assignment</code></p>
+<hr>
+<p>Replace <code>panel-default</code> with <code>panel-assignment</code></p>
 
-    <div class="panel panel-assignment">
-        <h5>Assignment</h5>
+<div class="panel panel-assignment">
+    <h5>Assignment</h5>
 
-        <p>Some content that requires to be visually separated from the main content.</p>
+    <p>Some content that requires to be visually separated from the main content.</p>
 
-        <p class="due">DUE DATE or some other important information.</p>
-    </div>
+    <p class="due">DUE DATE or some other important information.</p>
+</div>
 
-    <hr>
-    <p>Replace <code>panel-default</code> with <code>panel-peer</code></p>
+<hr>
+<p>Replace <code>panel-default</code> with <code>panel-peer</code></p>
 
-    <div class="panel panel-peer">
-        <h5>Peer</h5>
+<div class="panel panel-peer">
+    <h5>Peer</h5>
 
-        <p>Some content that requires to be visually separated from the main content.</p>
+    <p>Some content that requires to be visually separated from the main content.</p>
 
-        <p class="due">DUE DATE or some other important information.</p>
-    </div>
+    <p class="due">DUE DATE or some other important information.</p>
+</div>
 
 
-    <h3>Table</h3>
+<h3>Table</h3>
 
-    <p><code>.tbl-w100</code> class spans the table across the page.</p>
+<p><code>.tbl-w100</code> class spans the table across the page.</p>
 <pre><code class="language-markup">&lt;table class="tbl-w100">
-    &lt;thead>
+&lt;thead>
     &lt;tr>
-    &lt;th>Column 1&lt;/th>
-    &lt;th>Column 2&lt;/th>
+        &lt;th>Column 1&lt;/th>
+        &lt;th>Column 2&lt;/th>
     &lt;/tr>
-    &lt;/thead>
-    &lt;tbody>
+&lt;/thead>
+&lt;tbody>
     &lt;tr>
-    &lt;td>1&lt;/td>
-    &lt;td>Some content&lt;/td>
-    &lt;/tr>
-    &lt;tr>
-    &lt;td>2&lt;/td>
-    &lt;td>Some content&lt;/td>
+        &lt;td>1&lt;/td>
+        &lt;td>Some content&lt;/td>
     &lt;/tr>
     &lt;tr>
-    &lt;td>3&lt;/td>
-    &lt;td>Some content&lt;/td>
+        &lt;td>2&lt;/td>
+        &lt;td>Some content&lt;/td>
     &lt;/tr>
-    &lt;/tbody>
-    &lt;/table></code></pre>
+        &lt;tr>
+        &lt;td>3&lt;/td>
+        &lt;td>Some content&lt;/td>
+    &lt;/tr>
+&lt;/tbody>
+&lt;/table></code></pre>
 
-    <table class="tbl-w100">
-        <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>1</td>
-            <td>Some content</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Some content</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Some content</td>
-        </tr>
-        </tbody>
-    </table>
+<table class="tbl-w100">
+    <thead>
+    <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Some content</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Some content</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Some content</td>
+    </tr>
+    </tbody>
+</table>
 
 
-    <h3>Images</h3>
+<h3>Images</h3>
 
-    <pre><code class="language-markup">&lt;div class="img-centered">
-        &lt;img src="http://placehold.it/350x150" alt="centered image"/>
-        &lt;p>&lt;strong>Figure X:&lt;/strong> Caption&lt;/p>
-        &lt;/div></code></pre>
+<pre><code class="language-markup">&lt;div class="img-centered">
+    &lt;img src="http://placehold.it/350x150" alt="centered image"/>
+    &lt;p>&lt;strong>Figure X:&lt;/strong> Caption&lt;/p>
+&lt;/div></code></pre>
 
-    <div class="img-centered">
-        <img src="http://placehold.it/350x150" alt="centered image"/>
+<div class="img-centered">
+    <img src="http://placehold.it/350x150" alt="centered image"/>
 
-        <p><strong>Figure X:</strong> Caption</p>
-    </div>
+    <p><strong>Figure X:</strong> Caption</p>
+</div>
 
-    <h3>Development Notes</h3>
+<h3>Development Notes</h3>
 
 <pre><code class="language-markup">&lt;span class="highlight-comment">This is a text to be changed&lt;/span>
-    &lt;span class="comment">comment from PD &lt;/span></code></pre>
+&lt;span class="comment">comment on a "to do" item&lt;/span></code></pre>
 
 
-    <p>Some contents some content some content <span class="highlight-comment">This is a text to be changed</span><span class="comment">comment from PD </span> some more content...</p>
+<p>Some contents some content some content <span class="highlight-comment">This is a text to be changed</span><span class="comment">comment on a "to do" item </span> some more content...</p>
 
-    <h3>Print Styles</h3>
+<h3>Print Styles</h3>
 
-    <p>Content wrapped in <code>.hidden-print</code> class will not be displayed for printed pages. Should be used for multimedia.</p>
+<p>Content wrapped in <code>.hidden-print</code> class will not be displayed for printed pages. Should be used for multimedia.</p>
 
-    <p><code>.page-break</code> class splits content to the next page.</p>
+<p><code>.page-break</code> class splits content to the next page.</p>
 
-    <p><code>.no-split-for-print</code> class can be used to avoid page break within different elements, such as tables.</p>
+<p><code>.no-split-for-print</code> class can be used to avoid page break within different elements, such as tables.</p>
 
 
 </div>
