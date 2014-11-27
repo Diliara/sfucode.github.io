@@ -128,6 +128,7 @@ $color-greyscale: #666666;
 
   }
 
+
   .panel-default {
     @include round(4px);
     background-color: rgba($color-greyscale, 0.03);
@@ -188,7 +189,7 @@ $color-greyscale: #666666;
   }
 
   .no-space {
-    li {
+     :not(:first-child) {
       padding-top: 0;
     }
   }
