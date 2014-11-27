@@ -1,7 +1,7 @@
 //This comment will not be output to CSS file
 
-$color-base: #BB4003;
-$color-secondary: #BA8D00;
+$color-base: #ee4235;
+$color-secondary: #3161a0;
 
 $color-answer: #c1e8fc;
 
@@ -59,12 +59,12 @@ $color-greyscale: #666666;
 
   //page title
   h2 {
-    color: $color-base;
+    color: darken($color-base, 15%);
   }
 
   //headers in the page
   h3 {
-    color: darken($color-base, 1%);
+    color: darken($color-base, 15%);
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
     text-transform: uppercase;
     @include text-border-fix;
@@ -100,19 +100,15 @@ $color-greyscale: #666666;
     @include icon-before-h3;
   }
 
-
-
   //sub-headers
   h4 {
     color: $color-secondary;
     padding-top: 10px;
-    text-transform: uppercase;
   }
 
   //sub-sub-headers
   h5 {
-    //color: lighten($color-secondary, 5%); //yellow
-    color: darken(invert($color-base), 30%); //blue
+    color: darken($color-secondary, 10%);
     font-size: 15.5px;
     padding-top: 10px;
   }
@@ -126,9 +122,8 @@ $color-greyscale: #666666;
     //border: 1px solid #d9d9d9;
 
     h5 {
-      border-bottom: 1px solid rgba($color-greyscale, 0.2);
-      text-transform: uppercase;
       padding-top: 0;
+      text-decoration: underline;
     }
 
   }
