@@ -15,11 +15,7 @@ $color-greyscale: #666666;
 
 $color-comment: #0216fd;
 
-@mixin text-border-fix {
-  //decrease space between text and border
-  line-height: 26px;
-  padding-top: 14px
-}
+
 
 @mixin round($amount) {
   -moz-border-radius: $amount; // rounds corners for firefox
@@ -75,7 +71,9 @@ $color-comment: #0216fd;
     color: darken($color-base, 1%);
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
     text-transform: uppercase;
-    @include text-border-fix;
+    padding-top: 14px;
+      //decrease space between text and border
+    line-height: 26px;
   }
 
   //sub-headers

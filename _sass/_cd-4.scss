@@ -5,7 +5,6 @@ $color-secondary: #BA8D00;
 
 $color-answer: #c1e8fc;
 
-
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
 
@@ -18,6 +17,13 @@ $color-greyscale: #666666;
 @mixin round($amount) {
   -moz-border-radius: $amount; // rounds corners for firefox
   border-radius: $amount; //rounds corners for other browsers
+}
+
+@mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
+  //right _ _ width
+  -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  box-shadow: $x $y $radius $spread rgba($color, $opacity);
 }
 
 #cd-4 {
@@ -53,6 +59,25 @@ $color-greyscale: #666666;
     @include text-border-fix;
   }
 
+  .guide {
+    border-bottom: none !important;
+    @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+  }
+
+  .guide:before {
+    content: '';
+    background: url(../img/your_guide.png) left top no-repeat;
+    display: inline-block;
+    background-size: 29px 32px;
+    height: 29px;
+    width: 32px;
+    margin-right: 5px;
+    vertical-align: bottom;
+    margin-bottom: -2px;
+
+
+  }
+
   //sub-headers
   h4 {
     color: $color-secondary;
@@ -83,7 +108,6 @@ $color-greyscale: #666666;
     }
 
   }
-
 
   .panel-default {
     @include round(4px);
@@ -140,7 +164,6 @@ $color-greyscale: #666666;
     padding-top: 0.5em;
   }
 
-
   blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
@@ -159,7 +182,6 @@ $color-greyscale: #666666;
   }
 
   // ******************************************* Annotation *******************************************
-
 
   // ******************************************* IMGs *******************************************
 
