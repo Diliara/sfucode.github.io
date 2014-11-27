@@ -103,12 +103,14 @@ $color-greyscale: #666666;
   //sub-headers
   h4 {
     color: $color-secondary;
+    text-decoration: underline;
     padding-top: 10px;
   }
 
   //sub-sub-headers
   h5 {
     color: darken($color-secondary, 10%);
+    text-decoration: underline;
     padding-top: 10px;
   }
 
@@ -122,7 +124,6 @@ $color-greyscale: #666666;
 
     h5 {
       padding-top: 0;
-      text-decoration: underline;
     }
 
   }
@@ -184,6 +185,12 @@ $color-greyscale: #666666;
 
   ol li {
     padding-top: 0.5em;
+  }
+
+  .no-space {
+    li {
+      padding-top: 0;
+    }
   }
 
   blockquote {
