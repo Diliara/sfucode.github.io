@@ -109,7 +109,6 @@ $color-greyscale: #666666;
   //sub-sub-headers
   h5 {
     color: darken($color-secondary, 10%);
-    font-size: 15.5px;
     padding-top: 10px;
   }
 
@@ -136,6 +135,10 @@ $color-greyscale: #666666;
   .panel-answer {
     @include round(4px);
     background-color: rgba($color-answer, 0.2);
+  }
+
+  .panel-pushed {
+    margin-left: 28px;
   }
 
   // ******************************************* TABLES *******************************************
