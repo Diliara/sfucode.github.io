@@ -26,6 +26,17 @@ $color-greyscale: #666666;
   box-shadow: $x $y $radius $spread rgba($color, $opacity);
 }
 
+@mixin icon-before-h3 {
+  content: '';
+  display: inline-block;
+  background-size: 29px 32px;
+  height: 29px;
+  width: 32px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  margin-bottom: -2px;
+}
+
 #cd-4 {
 
   // ****************************************** HEADINGS *******************************************
@@ -59,24 +70,32 @@ $color-greyscale: #666666;
     @include text-border-fix;
   }
 
-  .guide {
+  .guide, .objectives, .problems, .solutions {
     border-bottom: none !important;
     @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
   }
 
   .guide:before {
-    content: '';
     background: url(../img/your_guide.png) left top no-repeat;
-    display: inline-block;
-    background-size: 29px 32px;
-    height: 29px;
-    width: 32px;
-    margin-right: 5px;
-    vertical-align: bottom;
-    margin-bottom: -2px;
-
-
+    @include icon-before-h3;
   }
+
+  .objectives:before {
+    background: url(../img/learning_objectives.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .problems:before {
+    background: url(../img/practice_problems.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .solutions:before {
+    background: url(../img/practice_problems_solutions.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+
 
   //sub-headers
   h4 {
