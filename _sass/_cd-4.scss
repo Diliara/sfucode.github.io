@@ -1,10 +1,9 @@
 //This comment will not be output to CSS file
 
-$color-base: #BB4003;
-$color-secondary: #BA8D00;
+$color-base: #ee4235;
+$color-secondary: #3161a0;
 
 $color-answer: #c1e8fc;
-
 
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
@@ -18,6 +17,24 @@ $color-greyscale: #666666;
 @mixin round($amount) {
   -moz-border-radius: $amount; // rounds corners for firefox
   border-radius: $amount; //rounds corners for other browsers
+}
+
+@mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
+  //right _ _ width
+  -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  box-shadow: $x $y $radius $spread rgba($color, $opacity);
+}
+
+@mixin icon-before-h3 {
+  content: '';
+  display: inline-block;
+  background-size: 29px 32px;
+  height: 29px;
+  width: 32px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  margin-bottom: -2px;
 }
 
 #cd-4 {
@@ -42,29 +59,58 @@ $color-greyscale: #666666;
 
   //page title
   h2 {
-    color: $color-base;
+    color: darken($color-base, 15%);
   }
 
   //headers in the page
   h3 {
-    color: darken($color-base, 1%);
+    color: darken($color-base, 15%);
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
     text-transform: uppercase;
     @include text-border-fix;
   }
 
+  .guide, .objectives, .slides, .problems, .solutions {
+    border-bottom: none !important;
+    @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+  }
+
+  .guide:before {
+    background: url(../img/your_guide.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .slides:before {
+    background: url(../img/slides.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .objectives:before {
+    background: url(../img/learning_objectives.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .problems:before {
+    background: url(../img/practice_problems.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .solutions:before {
+    background: url(../img/practice_problems_solutions.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+
   //sub-headers
   h4 {
     color: $color-secondary;
+    text-decoration: underline;
     padding-top: 10px;
-    text-transform: uppercase;
   }
 
   //sub-sub-headers
   h5 {
-    //color: lighten($color-secondary, 5%); //yellow
-    color: darken(invert($color-base), 30%); //blue
-    font-size: 15.5px;
+    color: darken($color-secondary, 10%);
+    text-decoration: underline;
     padding-top: 10px;
   }
 
@@ -77,8 +123,6 @@ $color-greyscale: #666666;
     //border: 1px solid #d9d9d9;
 
     h5 {
-      border-bottom: 1px solid rgba($color-greyscale, 0.2);
-      text-transform: uppercase;
       padding-top: 0;
     }
 
@@ -93,6 +137,10 @@ $color-greyscale: #666666;
   .panel-answer {
     @include round(4px);
     background-color: rgba($color-answer, 0.2);
+  }
+
+  .panel-pushed {
+    margin-left: 28px;
   }
 
   // ******************************************* TABLES *******************************************
@@ -140,6 +188,11 @@ $color-greyscale: #666666;
     padding-top: 0.5em;
   }
 
+  .no-space {
+     :not(:first-child) {
+      padding-top: 0;
+    }
+  }
 
   blockquote {
     padding: 10px 20px;
@@ -159,7 +212,6 @@ $color-greyscale: #666666;
   }
 
   // ******************************************* Annotation *******************************************
-
 
   // ******************************************* IMGs *******************************************
 
