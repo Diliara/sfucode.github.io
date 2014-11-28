@@ -18,6 +18,24 @@ $color-greyscale: #666666;
   border-radius: $amount; //rounds corners for other browsers
 }
 
+@mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
+  //right _ _ width
+  -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  box-shadow: $x $y $radius $spread rgba($color, $opacity);
+}
+
+@mixin icon-before-h3 {
+  content: '';
+  display: inline-block;
+  background-size: 29px 32px;
+  height: 29px;
+  width: 32px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  margin-bottom: -2px;
+}
+
 #cd-5 {
 
   // ****************************************** HEADINGS *******************************************
@@ -71,17 +89,51 @@ $color-greyscale: #666666;
     padding-top: 10px;
   }
 
-  // ******************************************* PANELS & INFO BOXES *******************************************
 
+  .i-summary, .i-required, .i-recommended, .i-narratives, .i-description, .i-reference, .i-circle {
+    border-bottom: none !important;
+    @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+  }
+
+  .i-required:before {
+    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    @include icon-before-h3;
+  }
+  .i-summary:before {
+    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    @include icon-before-h3;
+  }
+  .i-recommended:before {
+    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    @include icon-before-h3;
+  }
+  .i-narratives:before {
+    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    @include icon-before-h3;
+  }
+  .i-description:before {
+    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    @include icon-before-h3;
+  }
+  .i-reference:before {
+    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    @include icon-before-h3;
+  }
+  .i-circle:before {
+    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  // ******************************************* PANELS & INFO BOXES *******************************************
+  /*
   .panel {
     padding: 10px 20px;
     display: block;
     margin: 10px 0 20px 0;
-    //border: 1px solid #d9d9d9;
+     border: 1px solid #d9d9d9;
 
     h5 {
-      //border-bottom: 1px solid rgba($color-greyscale, 0.2);
-      padding-top: 0;
+       padding-top: 0;
     }
 
   }
@@ -90,7 +142,7 @@ $color-greyscale: #666666;
     @include round(4px);
     background-color: rgba($color-greyscale, 0.03);
   }
-
+ */
   // ******************************************* TABLES *******************************************
 
   .tbl-w100 {
@@ -152,16 +204,11 @@ $color-greyscale: #666666;
     text-indent: -2em;
   }
 
-  /*
-  .no-bullet {
-    list-style-type: none;
-  }
-  */
 
   blockquote {
     padding: 10px 20px;
     border-left: none;
-    quotes: "\201C""\201D""\2018""\2019";
+    //quotes: "\201C""\201D""\2018""\2019";
     margin: 10px 0 20px 0;
     @include round(4px);
     background-color: rgba($color-greyscale, 0.02);
@@ -181,7 +228,7 @@ $color-greyscale: #666666;
 
     p:first-child {
       margin-top: -10px;
-     }
+    }
 
     p:nth-last-child(2) {
       margin-bottom: 7px;
@@ -203,15 +250,13 @@ $color-greyscale: #666666;
 
   blockquote:before {
     color: #ccc;
-    content: open-quote;
+    //content: open-quote;
+    content: '\201C';
     font-size: 4em;
     line-height: 0.1em;
     margin-right: 0.25em;
     vertical-align: -0.4em;
   }
-
-
-
 
   // ******************************************* Annotation *******************************************
 
