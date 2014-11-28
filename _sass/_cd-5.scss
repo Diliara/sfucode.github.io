@@ -1,9 +1,8 @@
 //This comment will not be output to CSS file
 
-$color-base: #1a38bb;
+$color-base: #903232;
 $color-secondary: #ba6900;
 $color-emph: #fbfbca;
-
 
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
@@ -25,17 +24,24 @@ $color-greyscale: #666666;
 
   .banner {
 
+    img {
+      position: relative;
+      //padding: 2px 0;
+      max-width: none !important;
+    }
+
     h2 {
-      background-color: darken($color-greyscale, 13%);
       color: $color-lightest;
+      font-family: "Myriad Pro";
       padding: 12px 30px 10px 0;
       display: block;
       text-align: right;
       margin: 0;
     }
 
-    background-color: #353535;
+    background-color: $color-base;
     margin: -15px -40px 30px -30px;
+    min-height: 68px;
 
   }
 
@@ -74,19 +80,16 @@ $color-greyscale: #666666;
     //border: 1px solid #d9d9d9;
 
     h5 {
-      border-bottom: 1px solid rgba($color-greyscale, 0.2);
+      //border-bottom: 1px solid rgba($color-greyscale, 0.2);
       padding-top: 0;
     }
 
   }
 
-
   .panel-default {
     @include round(4px);
     background-color: rgba($color-greyscale, 0.03);
   }
-
-
 
   // ******************************************* TABLES *******************************************
 
@@ -155,29 +158,60 @@ $color-greyscale: #666666;
   }
   */
 
-
   blockquote {
     padding: 10px 20px;
-    margin: 0 0 20px;
-    border-left: 5px solid #eee;
+    border-left: none;
+    quotes: "\201C""\201D""\2018""\2019";
+    margin: 10px 0 20px 0;
+    @include round(4px);
+    background-color: rgba($color-greyscale, 0.02);
+
+    h5:first-child {
+      margin-top: -20px;
+      margin-left: 40px;
+    }
+
+    p {
+      line-height: inherit;
+      font-weight: inherit;
+      margin-left: 40px;
+      margin-bottom: 7px;
+
+    }
+
+    p:first-child {
+      margin-top: -10px;
+     }
+
+    p:nth-last-child(2) {
+      margin-bottom: 7px;
+    }
+
+    cite {
+      display: block;
+      font-size: 80%;
+      color: #777;
+      font-style: italic;
+      margin-left: 40px;
+    }
+
+    cite:before {
+      content: '\2014 \00A0';
+    }
+
   }
 
-  blockquote p {
-    margin: inherit;
-    line-height: inherit;
-    font-weight: inherit;
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
   }
 
-  blockquote cite {
-    display: block;
-    font-size: 80%;
-    color: #777;
-    font-style: italic;
-  }
 
-  blockquote cite:before {
-    content: '\2014 \00A0';
-  }
+
 
   // ******************************************* Annotation *******************************************
 
