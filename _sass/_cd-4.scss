@@ -76,27 +76,27 @@ $color-greyscale: #666666;
   }
 
   .guide:before {
-    background: url(../img/your_guide.png) left top no-repeat;
+    background: url(../img/1/your_guide.png) left top no-repeat;
     @include icon-before-h3;
   }
 
   .slides:before {
-    background: url(../img/slides.png) left top no-repeat;
+    background: url(../img/1/slides.png) left top no-repeat;
     @include icon-before-h3;
   }
 
   .objectives:before {
-    background: url(../img/learning_objectives.png) left top no-repeat;
+    background: url(../img/1/learning_objectives.png) left top no-repeat;
     @include icon-before-h3;
   }
 
   .problems:before {
-    background: url(../img/practice_problems.png) left top no-repeat;
+    background: url(../img/1/practice_problems.png) left top no-repeat;
     @include icon-before-h3;
   }
 
   .solutions:before {
-    background: url(../img/practice_problems_solutions.png) left top no-repeat;
+    background: url(../img/1/practice_problems_solutions.png) left top no-repeat;
     @include icon-before-h3;
   }
 

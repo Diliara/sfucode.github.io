@@ -96,31 +96,31 @@ $color-greyscale: #666666;
   }
 
   .i-required:before {
-    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    background: url(../img/2/required_readings.png) left top no-repeat;
     @include icon-before-h3;
   }
   .i-summary:before {
-    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    background: url(../img/2/unit_summary.png) left top no-repeat;
     @include icon-before-h3;
   }
   .i-recommended:before {
-    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    background: url(../img/2/recommended_readings.png) left top no-repeat;
     @include icon-before-h3;
   }
   .i-narratives:before {
-    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    background: url(../img/2/narratives.png) left top no-repeat;
     @include icon-before-h3;
   }
   .i-description:before {
-    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    background: url(../img/2/unit_description.png) left top no-repeat;
     @include icon-before-h3;
   }
   .i-reference:before {
-    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    background: url(../img/2/reference.png) left top no-repeat;
     @include icon-before-h3;
   }
   .i-circle:before {
-    background: url(http://placekitten.com/g/29/32) left top no-repeat;
+    background: url(../img/2/reflective_circle_practices.png) left top no-repeat;
     @include icon-before-h3;
   }
 
