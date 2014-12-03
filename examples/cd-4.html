@@ -147,9 +147,25 @@
 
 <span class="panel panel-default">Some content that requires to be visually separated from the main content. </span>
 
-<p>Replace <code>panel-default</code> with <code>panel-answer</code></p>
 
-<span class="panel panel-answer">Some content that requires to be visually separated from the main content.</span>
+
+
+<h3>Buttons &amp; Interactive Panels</h3>
+
+<p>Replace <code>.panel-default</code> with <code>.panel-answer</code>. Should be in a <code>div</code> tag. <code>.panel-answer</code> is hidden by default.</p>
+
+
+<pre><code class="language-markup">&lt;span id="get-answer-1" class="button-answer">Answer&lt;/span>
+&lt;div id="answer-1" class="panel panel-answer">Some content initially hidden and visible after Answer button is clicked.&lt;/div></code></pre>
+<p>List of ids that are included in the theme. An id should be unique within a page:</p>
+<ul>
+    <li><code>#get-answer-1</code> and <code>#answer-1</code></li>
+</ul>
+
+<span id="get-answer-1" class="button-answer">Answer</span>
+<div id="answer-1" class="panel panel-answer">Some content initially hidden and visible after Answer button is clicked.</div>
+
+
 
 
 
@@ -229,5 +245,14 @@
 
 
 <script src="vendors/prism/prism.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#get-answer-1").click(function () {
+            $("#answer-1").slideToggle();
+        });
+    });
+</script>
 </body>
 </html>
