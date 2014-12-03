@@ -1,3 +1,6 @@
+---
+---
+
 # Show all siblings of .show-hide-btn. Mainly for displaying answers.
 
 $(document).ready ->
