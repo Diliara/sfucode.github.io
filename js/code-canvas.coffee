@@ -20,4 +20,4 @@ jQuery.cachedScript = (url, options) ->
 # (DO NOT TOUCH ABOVE THIS LINE) #
 #                                #
 
-$.cachedScript "/js/show-hide-btn.js"
+$.cachedScript "show-hide-btn.js"
