@@ -1,7 +1,8 @@
 //This comment will not be output to CSS file
 
 $color-base: #ee4235;
-$color-secondary: #3161a0;
+//#3062A3 - blue ee4235 - red
+$color-secondary: #3062A3; // #3161a0;
 
 $color-answer: #c1e8fc;
 
@@ -65,6 +66,7 @@ $color-greyscale: #666666;
   //headers in the page
   h3 {
     color: darken($color-base, 15%);
+    //color: $color-base;
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
     text-transform: uppercase;
     @include text-border-fix;
@@ -128,7 +130,6 @@ $color-greyscale: #666666;
 
   }
 
-
   .panel-default {
     @include round(4px);
     background-color: rgba($color-greyscale, 0.03);
@@ -137,10 +138,29 @@ $color-greyscale: #666666;
   .panel-answer {
     @include round(4px);
     background-color: rgba($color-answer, 0.2);
+    display: none;
+    margin-top: 0;
   }
 
   .panel-pushed {
     margin-left: 28px;
+  }
+
+  // ******************************************* BUTTONS *******************************************
+
+  .button-answer {
+    @include round(3px);
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin: 8px 0;
+    display: inline-block;
+    padding: 7px 22px;
+    background-color: lighten(adjust_hue($color-secondary, -11%), 5%); //#1E83C3
+    color: #fff;
+    cursor: pointer;
+    //text-decoration: none;
+    text-align: center;
+
   }
 
   // ******************************************* TABLES *******************************************
@@ -189,7 +209,7 @@ $color-greyscale: #666666;
   }
 
   .no-space {
-     :not(:first-child) {
+    :not(:first-child) {
       padding-top: 0;
     }
   }
