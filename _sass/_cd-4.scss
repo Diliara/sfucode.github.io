@@ -142,6 +142,10 @@ $color-greyscale: #666666;
     margin-top: 0;
   }
 
+  .panel-answer p:last-child {
+    margin-bottom: 0;
+  }
+
   .panel-pushed {
     margin-left: 28px;
   }

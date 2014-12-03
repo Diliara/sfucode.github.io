@@ -16,6 +16,9 @@
             font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
             background-color: #f5f2f0;
         }
+
+
+
     </style>
 
 </head>
@@ -152,18 +155,28 @@
 
 <h3>Buttons &amp; Interactive Panels</h3>
 
-<p>Replace <code>.panel-default</code> with <code>.panel-answer</code>. Should be in a <code>div</code> tag. <code>.panel-answer</code> is hidden by default.</p>
+<p>Wrap the button and the answer in a <code>div</code> tag. <code>.panel-answer</code> is hidden by default.</p>
+<!-- Alternatively I can put one more class to a wrapping div and hide in css all children except the button -->
+
+<pre><code class="language-markup">&lt;div>
+    &lt;span class="button-answer show-hide-btn">Answer 1&lt;/span>
+    &lt;div class="panel panel-answer">&lt;p>Some content initially hidden and visible after Answer button is clicked.&lt;/p>&lt;/div>
+&lt;/div></code></pre>
 
 
-<pre><code class="language-markup">&lt;span id="get-answer-1" class="button-answer">Answer&lt;/span>
-&lt;div id="answer-1" class="panel panel-answer">Some content initially hidden and visible after Answer button is clicked.&lt;/div></code></pre>
-<p>List of ids that are included in the theme. An id should be unique within a page:</p>
-<ul>
-    <li><code>#get-answer-1</code> and <code>#answer-1</code></li>
-</ul>
 
-<span id="get-answer-1" class="button-answer">Answer</span>
-<div id="answer-1" class="panel panel-answer">Some content initially hidden and visible after Answer button is clicked.</div>
+ <div>
+     <span class="button-answer show-hide-btn">Answer 1</span>
+     <div class="panel panel-answer"><p>Some content initially hidden and visible after Answer button is clicked.</p></div>
+ </div>
+<div>
+    <span class="button-answer show-hide-btn">Answer 2</span>
+    <div class="panel panel-answer"><p>Some content initially hidden and visible after Answer button is clicked.</p><p>More</p></div>
+</div>
+
+
+
+
 
 
 
@@ -249,8 +262,9 @@
 
 <script>
     $(document).ready(function () {
-        $("#get-answer-1").click(function () {
-            $("#answer-1").slideToggle();
+        $(".show-hide-btn").click(function () {
+            var showHideThis = $(this).parent().children().not(".show-hide-btn");
+            showHideThis.slideToggle();
         });
     });
 </script>
