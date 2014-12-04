@@ -20,5 +20,9 @@ jQuery.cachedScript = (url, options) ->
 # (DO NOT TOUCH ABOVE THIS LINE) #
 #                                #
 
+# Where are the files?
+fileLocation = "https://repo.code.sfu.ca/canvas/js/"
+
+# Scripts to be loaded
 $.cachedScript "show-hide-btn.js"
-$.cachedScript "https://repo.code.sfu.ca/canvas/js/alert.js"
+$.cachedScript fileLocation + "alert.js"
