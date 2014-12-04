@@ -4,7 +4,7 @@
 
 message = 
   domain: window.location.hostname
-  text: "I'm Working!"}
+  text: "I'm Working!"
 
 # Send the message in a popup:
 #alert message.text
