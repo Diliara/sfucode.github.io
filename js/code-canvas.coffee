@@ -25,4 +25,3 @@ fileLocation = "https://repo.code.sfu.ca/canvas/js/"
 
 # Scripts to be loaded
 $.cachedScript fileLocation + "show-hide-btn.js"
-$.cachedScript fileLocation + "alert.js"
