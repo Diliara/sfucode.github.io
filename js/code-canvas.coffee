@@ -21,4 +21,4 @@ jQuery.cachedScript = (url, options) ->
 #                                #
 
 $.cachedScript "show-hide-btn.js"
-$.cachedScript "./alert.js"
+$.cachedScript "https://repo.code.sfu.ca/canvas/js/alert.js"
