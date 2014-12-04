@@ -25,12 +25,12 @@ jQuery.cachedScript = (url, options) ->
   )
   jQuery.ajax options
 
+# Let us know it's working:
+$.cachedScript "alert.js"
+
 #                                #
 # (DO NOT TOUCH ABOVE THIS LINE) #
 #                                #
-
-# Let us know it's working
-$.cachedScript "alert.js"
 
 # Scripts to be loaded
 $.cachedScript "show-hide-btn.js"
