@@ -2,7 +2,7 @@
 # CoffeeScript
 #
 # Add this code to include a js file:
-# $.cachedScript "/js/YOUR_FILE_HERE.js"
+# $.cachedScript "YOUR_FILE_HERE.js"
 #
 ---
 
