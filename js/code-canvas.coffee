@@ -6,13 +6,21 @@
 #
 ---
 
+# Where are the files?
+
+switch window.location.hostname
+	when "canvas-test.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
+	when "canvas-stage.sfu.ca" then fileLocation = "http://sfucode.github.io/js/"
+	when "canvas.sfu.ca" then fileLocation = "http://sfucode.github.io/js/"
+	else fileLocation = ""
+
 # Code that gets and loads the js file:
 
 jQuery.cachedScript = (url, options) ->
   options = $.extend(options or {},
     dataType: "script"
     cache: true
-    url: url
+    url: fileLocation + url
   )
   jQuery.ajax options
 
@@ -20,9 +28,7 @@ jQuery.cachedScript = (url, options) ->
 # (DO NOT TOUCH ABOVE THIS LINE) #
 #                                #
 
-# Where are the files?
-fileLocation = "https://repo.code.sfu.ca/canvas/js/"
 
 # Scripts to be loaded
-$.cachedScript fileLocation + "show-hide-btn.js"
-$.cachedScript fileLocation + "alert.js"
+$.cachedScript "show-hide-btn.js"
+$.cachedScript "alert.js"
