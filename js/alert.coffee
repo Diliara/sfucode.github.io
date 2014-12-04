@@ -7,7 +7,7 @@ message =
   text: "I'm Working!"
 
 # Send the message test in a popup:
-alert message.text
+#alert message.text
 
 # Send the message to console:
 console.log message
