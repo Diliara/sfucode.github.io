@@ -2,7 +2,7 @@
 # CoffeeScript
 #
 # Add this code to include a js file:
-# $.cachedScript fileLocation + "YOUR_FILE_HERE.js"
+# $.cachedScript "YOUR_FILE_HERE.js"
 #
 ---
 
@@ -31,4 +31,3 @@ jQuery.cachedScript = (url, options) ->
 
 # Scripts to be loaded
 $.cachedScript "show-hide-btn.js"
-$.cachedScript "alert.js"
