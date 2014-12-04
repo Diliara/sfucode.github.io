@@ -2,7 +2,7 @@
 # CoffeeScript
 #
 # Add this code to include a js file:
-# $.cachedScript "YOUR_FILE_HERE.js"
+# $.cachedScript fileLocation + "YOUR_FILE_HERE.js"
 #
 ---
 
@@ -24,5 +24,5 @@ jQuery.cachedScript = (url, options) ->
 fileLocation = "https://repo.code.sfu.ca/canvas/js/"
 
 # Scripts to be loaded
-$.cachedScript "show-hide-btn.js"
+$.cachedScript fileLocation + "show-hide-btn.js"
 $.cachedScript fileLocation + "alert.js"
