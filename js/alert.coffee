@@ -1,4 +1,4 @@
 ---
 # Alert you to its working
 ---
-alert "I'm Working!"
+alert window.location.hostname
