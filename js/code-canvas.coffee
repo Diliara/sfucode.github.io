@@ -13,7 +13,7 @@ switch window.location.hostname
 	when "canvas-stage.sfu.ca" then fileLocation = "http://sfucode.github.io/js/"
 	when "canvas.sfu.ca" then fileLocation = "http://sfucode.github.io/js/"
 	when "repo.code.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
-	when "localhost" then fileLocation = "/js/"
+	when "localhost", "127.0.0.1" then fileLocation = "/js/"
 	else fileLocation = ""
 
 # Code that gets and loads the js file:
