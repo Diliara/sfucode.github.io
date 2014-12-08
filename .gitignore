@@ -38,6 +38,7 @@ Thumbs.db
 *.sass-cache*
 *.map
 
-# Ignore the Jekyll serve directory #
+# Jekyll #
 #####################################
-/_site/
+_site/
+.sass-cache/
