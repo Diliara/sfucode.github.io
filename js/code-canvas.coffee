@@ -33,4 +33,14 @@ $.cachedScript "alert.js"
 #                                #
 
 # Scripts to be loaded
-$.cachedScript "show-hide-btn.js"
+# using js without coffee
+#$.cachedScript "show-hide-btn.js"
+
+script = document.createElement("script")
+script.src = "http://sfucode.github.io/js/show-hide-js.js"
+document.body.appendChild script
+
+#document.body.appendChild document.createElement("script").src = "http://sfucode.github.io/js/show-hide-js.js"
+#document.body.appendChild(document.createElement("script").src = "http://sfucode.github.io/js/show-hide-js.js");
+
+
