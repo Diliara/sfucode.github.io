@@ -33,5 +33,7 @@ $.cachedScript "alert.js"
 #                                #
 
 # Scripts to be loaded
-$.cachedScript "show-hide-btn.js"
+#$.cachedScript "show-hide-btn.js"
+
+$.cachedScript "js-load-timer.js"
 
