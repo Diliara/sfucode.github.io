@@ -1,22 +1,20 @@
 ---
 ---
 
-$(".show-hide-btn").css "background-color", "red"
+$(document).ready ->
+  $(".show-hide-btn").css "background-color", "red"
+  message =
+    domain: window.location.hostname
+    text: "I'm Working!"
 
-message =
-  domain: window.location.hostname
-  text: "I'm Working!"
+  $(".show-hide-btn").click ->
+    $(this).css "background-color", "black"
+    $(this).parent().children().not(".show-hide-btn").slideToggle()
+    alert message.text
+    return
 
-# Show all siblings of .show-hide-btn. Mainly for displaying answers.
-$(".show-hide-btn").click ->
-  $(this).css "background-color", "black"
-  $(this).parent().children().not(".show-hide-btn").slideToggle()
-  alert message.text
+  console.log message
   return
-
-# Send the message to console:
-console.log message
-
 
 
 ### OLD
