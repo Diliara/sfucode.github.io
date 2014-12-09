@@ -5,32 +5,35 @@
 # $.cachedScript "YOUR_FILE_HERE.js"
 #
 ---
-# Where are the files?
 
-switch window.location.hostname
-  when "canvas-test.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
-  when "canvas-stage.sfu.ca" then fileLocation = "http://sfucode.github.io/js/"
-  when "canvas.sfu.ca" then fileLocation = "http://sfucode.github.io/js/"
-  when "repo.code.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
-  when "localhost", "127.0.0.1" then fileLocation = "/js/"
-  else fileLocation = ""
+jQuery ($) ->
 
-# Code that gets and loads the js file:
+  # Where are the files?
 
-jQuery.cachedScript = (url, options) ->
-  options = $.extend(options or {},
-    dataType: "script"
-    cache: true
-    url: fileLocation + url
-  )
-  jQuery.ajax options
+  switch window.location.hostname
+    when "canvas-test.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
+    when "canvas-stage.sfu.ca" then fileLocation = "http://sfucode.github.io/js/"
+    when "canvas.sfu.ca" then fileLocation = "http://sfucode.github.io/js/"
+    when "repo.code.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
+    when "localhost", "127.0.0.1" then fileLocation = "/js/"
+    else fileLocation = ""
 
-# Let us know it's working:
-$.cachedScript "alert.js"
+  # Code that gets and loads the js file:
 
-#                                #
-# (DO NOT TOUCH ABOVE THIS LINE) #
-#                                #
+  jQuery.cachedScript = (url, options) ->
+    options = $.extend(options or {},
+      dataType: "script"
+      cache: true
+      url: fileLocation + url
+    )
+    jQuery.ajax options
 
-# Scripts to be loaded
-$.cachedScript "show-hide-btn.js"
+  # Let us know it's working:
+  $.cachedScript "alert.js"
+
+  #                                #
+  # (DO NOT TOUCH ABOVE THIS LINE) #
+  #                                #
+
+  # Scripts to be loaded
+  $.cachedScript "show-hide-btn.js"
