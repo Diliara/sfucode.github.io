@@ -1,6 +1,8 @@
 ---
 ---
 
+$(".show-hide-btn").css "background-color", "red"
+
 message =
   domain: window.location.hostname
   text: "I'm Working!"
