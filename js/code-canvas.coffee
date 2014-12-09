@@ -37,10 +37,10 @@ $.cachedScript "alert.js"
 #$.cachedScript "show-hide-btn.js"
 
 script = document.createElement("script")
-script.src = "https://sfucode.github.io/js/show-hide-js.js"
+script.src = "https://repo.code.sfu.ca/canvas/js/show-hide-btn-js.js"
 document.body.appendChild script
 
-#document.body.appendChild document.createElement("script").src = "http://sfucode.github.io/js/show-hide-js.js"
-#document.body.appendChild(document.createElement("script").src = "http://sfucode.github.io/js/show-hide-js.js");
+#document.body.appendChild document.createElement("script").src = "https://sfucode.github.io/js/show-hide-js.js"
+#document.body.appendChild(document.createElement("script").src = "https://sfucode.github.io/js/show-hide-js.js");
 
 
