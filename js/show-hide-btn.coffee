@@ -2,12 +2,12 @@
 ---
 
 $(document).ready ->
-  $(".show-hide-btn").css "background-color", "red"
+  $("span.show-hide-btn.button-answer").css "background-color", "red"
   message =
     domain: window.location.hostname
     text: "I'm Working!"
 
-  $(".show-hide-btn").click ->
+  $("span.show-hide-btn.button-answer").click ->
     $(this).css "background-color", "black"
     $(this).parent().children().not(".show-hide-btn").slideToggle()
     alert message.text
