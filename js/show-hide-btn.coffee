@@ -1,20 +1,22 @@
 ---
 ---
 
-$(document).ready ->
-  $("span.show-hide-btn.button-answer").css "background-color", "red"
-  message =
-    domain: window.location.hostname
-    text: "I'm Working!"
+(($) ->
 
-  $("span.show-hide-btn.button-answer").click ->
-    $(this).css "background-color", "black"
-    $(this).parent().children().not(".show-hide-btn").slideToggle()
-    alert message.text
+  # executed right now
+  $ ->
+
+    # executed only when the DOM is ready
+    $(".show-hide-btn").css "background-color", "red"
+    $(".show-hide-btn").click ->
+      $(this).css "background-color", "black"
+      $(this).parent().children().not(".show-hide-btn").slideToggle()
+      return
+
     return
 
-  console.log message
   return
+) jQuery
 
 
 ### OLD
