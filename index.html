@@ -47,9 +47,19 @@
             background-color: rgba(102, 102, 102, 0.03)
         }
 
+        .panel {
+            padding: 10px 20px 0 20px;
+            display: block;
+            margin: 10px 0 20px 0;
+            border: 1px solid #d9d9d9;
+        }
+
         .panel-answer {
             display: none;
+            margin-top: 0;
         }
+
+
 
     </style>
 </head>
@@ -87,7 +97,7 @@
 <div>
     <span class="button show-hide-btn">Answer 1</span>
 
-    <div class="panel-answer"><p>Some content initially hidden and visible after Answer button is clicked.</p></div>
+    <div class="panel panel-answer"><p>Some content initially hidden and visible after Answer button is clicked.</p></div>
 </div>
 <div>
     <span class="button button-answer show-hide-btn">Answer 2</span>
@@ -98,6 +108,8 @@
 </div>
 
 <script src="examples/vendors/prism/prism.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 <script src="js/show-hide-btn.js"></script>
 
 </body>
