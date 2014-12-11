@@ -2,7 +2,6 @@
 ---
 
 jQuery ($) ->
-  $(".show-hide-btn").css "background-color", "green"
   $(".show-hide-btn").click ->
     $(this).parent().children().not(".show-hide-btn").slideToggle()
 
@@ -20,8 +19,4 @@ $ ->
     return
 
   return
-
-window.ready ->
-  $(".show-hide-btn").click ->
-    $(this).parent().children().not(".show-hide-btn").slideToggle()
 ###
