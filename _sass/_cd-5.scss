@@ -89,7 +89,6 @@ $color-greyscale: #666666;
     padding-top: 10px;
   }
 
-
   .i-summary, .i-required, .i-recommended, .i-narratives, .i-description, .i-reference, .i-circle {
     border-bottom: none !important;
     @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
@@ -125,24 +124,41 @@ $color-greyscale: #666666;
   }
 
   // ******************************************* PANELS & INFO BOXES *******************************************
-  /*
+
   .panel {
     padding: 10px 20px;
     display: block;
     margin: 10px 0 20px 0;
-     border: 1px solid #d9d9d9;
+    border: 1px solid #d9d9d9;
+    @include round(4px);
 
     h5 {
-       padding-top: 0;
+      padding-top: 0;
     }
 
   }
 
   .panel-default {
-    @include round(4px);
     background-color: rgba($color-greyscale, 0.03);
   }
- */
+
+  // ******************************************* BUTTONS *******************************************
+
+  .button {
+    @include round(3px);
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin: 8px 0;
+    display: inline-block;
+    padding: 7px 22px;
+    text-align: center;
+
+    cursor: pointer;
+
+    border: 1px solid rgba($color-greyscale, 0.03);
+    background-color: rgba($color-greyscale, 0.03);
+  }
+
   // ******************************************* TABLES *******************************************
 
   .tbl-w100 {
@@ -203,7 +219,6 @@ $color-greyscale: #666666;
     list-style-type: none;
     text-indent: -2em;
   }
-
 
   blockquote {
     padding: 10px 20px;
@@ -285,5 +300,15 @@ $color-greyscale: #666666;
     margin-right: auto;
     padding: 10px 0;
   }
+
+  // ******************************************* for JS *******************************************
+
+  // #1: show-hide-btn
+
+  .panel-answer {
+    display: none;
+  }
+
+  // ------------------
 
 }
