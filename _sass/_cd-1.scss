@@ -15,8 +15,6 @@ $color-greyscale: #666666;
 
 $color-comment: #0216fd;
 
-
-
 @mixin round($amount) {
   -moz-border-radius: $amount; // rounds corners for firefox
   border-radius: $amount; //rounds corners for other browsers
@@ -72,7 +70,7 @@ $color-comment: #0216fd;
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
     text-transform: uppercase;
     padding-top: 14px;
-      //decrease space between text and border
+    //decrease space between text and border
     line-height: 26px;
   }
 
@@ -98,6 +96,7 @@ $color-comment: #0216fd;
     display: block;
     margin: 10px 0 20px 0;
     border: 1px solid #d9d9d9;
+    @include round(4px);
 
     h5 {
       border-bottom: 1px solid rgba($color-greyscale, 0.2);
@@ -113,27 +112,39 @@ $color-comment: #0216fd;
   }
 
   .panel-log {
-    @include round(4px);
     background-color: rgba($color-log, 0.8);
   }
 
   .panel-peer {
-    @include round(4px);
     background-color: rgba($color-peer, 0.5);
   }
 
   .panel-read {
-    @include round(4px);
     background-color: rgba($color-read, 0.8);
   }
 
   .panel-assignment {
-    @include round(4px);
     background-color: rgba($color-assignment, 0.8);
   }
 
   .panel-default {
-    @include round(4px);
+    background-color: rgba($color-greyscale, 0.03);
+  }
+
+  // ******************************************* BUTTONS *******************************************
+
+  .button {
+    @include round(3px);
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin: 8px 0;
+    display: inline-block;
+    padding: 7px 22px;
+    text-align: center;
+
+    cursor: pointer;
+
+    border: 1px solid rgba($color-greyscale, 0.03);
     background-color: rgba($color-greyscale, 0.03);
   }
 
@@ -223,5 +234,15 @@ $color-comment: #0216fd;
     margin-right: auto;
     padding: 10px 0;
   }
+
+  // ******************************************* for JS *******************************************
+
+  // #1: show-hide-btn
+
+  .panel-answer {
+    display: none;
+  }
+
+  // ------------------
 
 }

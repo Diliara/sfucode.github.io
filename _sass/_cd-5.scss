@@ -18,6 +18,24 @@ $color-greyscale: #666666;
   border-radius: $amount; //rounds corners for other browsers
 }
 
+@mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
+  //right _ _ width
+  -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  box-shadow: $x $y $radius $spread rgba($color, $opacity);
+}
+
+@mixin icon-before-h3 {
+  content: '';
+  display: inline-block;
+  background-size: 29px 32px;
+  height: 29px;
+  width: 32px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  margin-bottom: -2px;
+}
+
 #cd-5 {
 
   // ****************************************** HEADINGS *******************************************
@@ -40,7 +58,7 @@ $color-greyscale: #666666;
     }
 
     background-color: $color-base;
-    margin: -15px -40px 30px -30px;
+    margin: -15px -40px 30px -50px;
     min-height: 68px;
 
   }
@@ -71,23 +89,73 @@ $color-greyscale: #666666;
     padding-top: 10px;
   }
 
+  .i-summary, .i-required, .i-recommended, .i-narratives, .i-description, .i-reference, .i-circle {
+    border-bottom: none !important;
+    @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+  }
+
+  .i-required:before {
+    background: url(../img/2/required_readings.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+  .i-summary:before {
+    background: url(../img/2/unit_summary.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+  .i-recommended:before {
+    background: url(../img/2/recommended_readings.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+  .i-narratives:before {
+    background: url(../img/2/narratives.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+  .i-description:before {
+    background: url(../img/2/unit_description.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+  .i-reference:before {
+    background: url(../img/2/reference.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+  .i-circle:before {
+    background: url(../img/2/reflective_circle_practices.png) left top no-repeat;
+    @include icon-before-h3;
+  }
+
   // ******************************************* PANELS & INFO BOXES *******************************************
 
   .panel {
     padding: 10px 20px;
     display: block;
     margin: 10px 0 20px 0;
-    //border: 1px solid #d9d9d9;
+    border: 1px solid #d9d9d9;
+    @include round(4px);
 
     h5 {
-      //border-bottom: 1px solid rgba($color-greyscale, 0.2);
       padding-top: 0;
     }
 
   }
 
   .panel-default {
-    @include round(4px);
+    background-color: rgba($color-greyscale, 0.03);
+  }
+
+  // ******************************************* BUTTONS *******************************************
+
+  .button {
+    @include round(3px);
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin: 8px 0;
+    display: inline-block;
+    padding: 7px 22px;
+    text-align: center;
+
+    cursor: pointer;
+
+    border: 1px solid rgba($color-greyscale, 0.03);
     background-color: rgba($color-greyscale, 0.03);
   }
 
@@ -152,16 +220,10 @@ $color-greyscale: #666666;
     text-indent: -2em;
   }
 
-  /*
-  .no-bullet {
-    list-style-type: none;
-  }
-  */
-
   blockquote {
     padding: 10px 20px;
     border-left: none;
-    quotes: "\201C""\201D""\2018""\2019";
+    //quotes: "\201C""\201D""\2018""\2019";
     margin: 10px 0 20px 0;
     @include round(4px);
     background-color: rgba($color-greyscale, 0.02);
@@ -181,7 +243,7 @@ $color-greyscale: #666666;
 
     p:first-child {
       margin-top: -10px;
-     }
+    }
 
     p:nth-last-child(2) {
       margin-bottom: 7px;
@@ -203,15 +265,13 @@ $color-greyscale: #666666;
 
   blockquote:before {
     color: #ccc;
-    content: open-quote;
+    //content: open-quote;
+    content: '\201C';
     font-size: 4em;
     line-height: 0.1em;
     margin-right: 0.25em;
     vertical-align: -0.4em;
   }
-
-
-
 
   // ******************************************* Annotation *******************************************
 
@@ -240,5 +300,15 @@ $color-greyscale: #666666;
     margin-right: auto;
     padding: 10px 0;
   }
+
+  // ******************************************* for JS *******************************************
+
+  // #1: show-hide-btn
+
+  .panel-answer {
+    display: none;
+  }
+
+  // ------------------
 
 }

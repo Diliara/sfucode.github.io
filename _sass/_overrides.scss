@@ -7,19 +7,28 @@
 
 Removed automatic page header for the following courses:
 
+ Examples sandbox: 19207
+
  Spring 2015:
  FPA289 on production canvas & canvas-test: 18331
  EDUC326 on production canvas: 18312
  HSCI330 on production canvas & canvas-test: 18353
  GDBA Orientation on production: 18964 [temp on canvas-test: 18891]
+ BUS555 on production: 18815
  CRJ448 on production: 18985
 
 */
 
-.context-course_18331, .context-course_18312, .context-course_18353, .context-course_18964, .context-course_18985 {
+.context-course_18331, .context-course_18312, .context-course_18353, .context-course_18964, .context-course_18985, .context-course_18815, .context-course_19207 {
 
   .user_content .page-title {
     display: none;
   }
 
+}
+/* fixing revision panel for the courses that use themes with fixed banner (cd-1, cd-5) */
+.context-course_18985, .context-course_18312 {
+  .pages.show.revisions .show-revisions {
+    z-index: 1;
+  }
 }

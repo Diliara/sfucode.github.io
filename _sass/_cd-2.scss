@@ -121,6 +121,7 @@ $color-lightest: #ffffff;
     border: 1px solid #c9e1f7;
     color: #2d3b7a;
     @include infoblock(block);
+
   }
 
   .panel {
@@ -128,6 +129,7 @@ $color-lightest: #ffffff;
     display: block;
     margin: 10px 0 20px 0;
     border: 1px solid #d9d9d9;
+    @include round(4px);
 
     h5 {
       border-bottom: 1px solid rgba($color-greyscale, 0.2);
@@ -137,7 +139,23 @@ $color-lightest: #ffffff;
   }
 
   .panel-default {
-    @include round(4px);
+    background-color: rgba($color-greyscale, 0.03);
+  }
+
+  // ******************************************* BUTTONS *******************************************
+
+  .button {
+    @include round(3px);
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin: 8px 0;
+    display: inline-block;
+    padding: 7px 22px;
+    text-align: center;
+
+    cursor: pointer;
+
+    border: 1px solid rgba($color-greyscale, 0.03);
     background-color: rgba($color-greyscale, 0.03);
   }
 
@@ -224,5 +242,15 @@ $color-lightest: #ffffff;
   blockquote cite:before {
     content: '\2014 \00A0';
   }
+
+  // ******************************************* for JS *******************************************
+
+  // #1: show-hide-btn
+
+  .panel-answer {
+    display: none;
+  }
+
+  // ------------------
 
 }
