@@ -153,24 +153,34 @@
 
 
 
-<h3>Buttons &amp; Interactive Panels</h3>
+<h3>Buttons</h3>
+
+<pre><code class="language-markup">&lt;span class="button">Button&lt;/span></code></pre>
+
+<span class="button">Button</span>
+
+<pre><code class="language-markup">&lt;span class="button button-answer">Button&lt;/span></code></pre>
+
+<span class="button button-answer">Button Answer</span>
+
+<h3>Interactive Elements</h3>
+<h5>Show-Hide Answer</h5>
 
 <p>Wrap the button and the answer in a <code>div</code> tag. <code>.panel-answer</code> is hidden by default.</p>
 <!-- Alternatively I can put one more class to a wrapping div and hide in css all children except the button -->
 
 <pre><code class="language-markup">&lt;div>
-    &lt;span class="button-answer show-hide-btn">Answer 1&lt;/span>
+    &lt;span class="button button-answer show-hide-btn">Answer 1&lt;/span>
     &lt;div class="panel panel-answer">&lt;p>Some content initially hidden and visible after Answer button is clicked.&lt;/p>&lt;/div>
 &lt;/div></code></pre>
 
 
-
  <div>
-     <span class="button-answer show-hide-btn">Answer 1</span>
+     <span class="button button-answer show-hide-btn">Answer 1</span>
      <div class="panel panel-answer"><p>Some content initially hidden and visible after Answer button is clicked.</p></div>
  </div>
 <div>
-    <span class="button-answer show-hide-btn">Answer 2</span>
+    <span class="button button-answer show-hide-btn">Answer 2</span>
     <div class="panel panel-answer"><p>Some content initially hidden and visible after Answer button is clicked.</p><p>More</p></div>
 </div>
 

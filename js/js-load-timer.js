@@ -21,7 +21,6 @@ switch (window.location.hostname) {
         path = "";
 }
 
-//document.body.style.background = '#D5D5D5';
 console.log("I am in js-load-timer.js file")
 
 
