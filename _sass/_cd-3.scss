@@ -183,6 +183,16 @@ $color-comment: #0216fd;
     padding: 10px 0;
   }
 
+  img {
+    border: solid 4px #FFFFFF;
+    box-shadow: 1px 1px 2px 2px #DADADA;
+    @include round(3px);
+   }
+
+  img + p {
+    padding-top: 10px;
+  }
+
   // ******************************************* for JS ******************************************
 
   // #1: show-hide-btn
@@ -190,7 +200,6 @@ $color-comment: #0216fd;
   .panel-answer {
     display: none;
   }
-
 
   // ------------------
 }
