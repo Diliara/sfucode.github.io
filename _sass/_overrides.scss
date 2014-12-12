@@ -28,7 +28,7 @@ Removed automatic page header for the following courses:
 }
 /* fixing revision panel for the courses that use themes with fixed banner (cd-1, cd-5) */
 .context-course_18985, .context-course_18312 {
-  .pages.show.revisions .show-revisions {
+  .show-revisions {
     z-index: 1;
   }
 }
