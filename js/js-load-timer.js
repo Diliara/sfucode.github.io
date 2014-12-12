@@ -5,10 +5,10 @@ switch (window.location.hostname) {
         path = "https://repo.code.sfu.ca/canvas/js/";
         break;
     case "canvas-stage.sfu.ca":
-        path = "http://sfucode.github.io/js/";
+        path = "https://sfucode.github.io/js/";
         break;
     case "canvas.sfu.ca":
-        path = "http://sfucode.github.io/js/";
+        path = "https://sfucode.github.io/js/";
         break;
     case "repo.code.sfu.ca":
         path = "https://repo.code.sfu.ca/canvas/js/";
