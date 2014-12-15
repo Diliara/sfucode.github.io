@@ -5,8 +5,8 @@
 
 switch window.location.hostname
   when "canvas-test.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
-  when "canvas-stage.sfu.ca" then fileLocation = "http://sfucode.github.io/js/"
-  when "canvas.sfu.ca" then fileLocation = "http://sfucode.github.io/js/"
+  when "canvas-stage.sfu.ca" then fileLocation = "https://sfucode.github.io/js/"
+  when "canvas.sfu.ca" then fileLocation = "https://sfucode.github.io/js/"
   when "repo.code.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
   when "localhost", "127.0.0.1" then fileLocation = "/js/"
   else fileLocation = ""
@@ -59,6 +59,8 @@ jQuery.runScript = (url, options) ->
   )
   jQuery.ajax options
 
+# Code that checks the page type and then calls for the script to run #
+
 cachedScript = (url, type, options) ->
   if pageLoaded.length == 0
     delay 100, -> cachedScript(arguments)
@@ -80,20 +82,18 @@ $ ->
   pageLoaded = pageContentCheck(wrappers)
   cachedScript "alert.js"
 
-  #                                #
-  # (DO NOT TOUCH ABOVE THIS LINE) #
-  #                                #
-
-
-  # Scripts to be loaded
+  # How to load a script:
   #
-  # Add this code to include a js file (make sure to include TWO Spaces:
+  # Add this code to include a js file (make sure to include >TWO< Spaces:
   #   cachedScript "YOUR_FILE_HERE.js"
   # or
   #   cachedScript "YOUR_FILE_HERE.js", "type of page"
   # or
   #   cachedScript "YOUR_FILE_HERE.js", ["array", "of", "page", "types"]
   #
+  #                                #
+  # (DO NOT TOUCH ABOVE THIS LINE) #
+  #                                #
 
   cachedScript "show-hide-btn.js", "wiki"
 
