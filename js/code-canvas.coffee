@@ -48,8 +48,8 @@ wrappers =
 
 pageContentCheck = (elements) ->
   for count, element of elements
-    console.log jQuery(element.id).html().length
-    if jQuery(element.id).html().length > 1 then element.name else
+    console.log "Test: " + $(element.id).html()
+    if $(element.id).html() then element.name else
 
 # Code that gets and loads the js file: #
 
