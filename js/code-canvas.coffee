@@ -65,7 +65,7 @@ jQuery.runScript = (url, options) ->
 cachedScript = (url, type, options) ->
   pageLoaded = pageContentCheck(wrappers)
   if pageLoaded.length == 0    
-    delay 100, -> cachedScript(arguments...)
+    delay 100, -> cachedScript(url, type, options)
   else
     if type?
       if typeIsArray type
