@@ -14,6 +14,7 @@ switch window.location.hostname
 # Stuff to check to see if page content has loaded: #
 
 delay = (ms, func) ->
+  console.log "Waiting..."
   setTimeout func, ms
 
 typeIsArray = Array.isArray || ( value ) -> return {}.toString.call( value ) is '[object Array]'
