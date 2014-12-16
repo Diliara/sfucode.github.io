@@ -21,7 +21,6 @@ $color-comment: #0216fd;
   border-radius: $amount; //rounds corners for other browsers
 }
 
-
 @mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
   //right _ _ width
   -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
@@ -47,7 +46,7 @@ $color-comment: #0216fd;
   .banner {
 
     h2 {
-      background-color: darken($color-greyscale, 13%);
+      background-color: $color-base;
       color: $color-lightest;
       padding: 12px 30px 10px 0;
       display: block;
@@ -55,8 +54,16 @@ $color-comment: #0216fd;
       margin: 0;
     }
 
-    background-color: #353535;
-    margin: -15px -40px 30px -30px;
+    /*
+    background-color: #C51230;
+    margin: -15px -40px 30px -30px; */
+    margin-bottom: 30px;
+
+    img {
+      border: none;
+      box-shadow: none;
+      @include round(0);
+    }
 
   }
 
@@ -136,6 +143,7 @@ $color-comment: #0216fd;
     display: block;
     margin: 10px 0 20px 0;
     border: 1px solid #d9d9d9;
+    padding-bottom: 0;
     @include round(4px);
 
     h5 {
@@ -209,6 +217,24 @@ $color-comment: #0216fd;
     padding-top: 0.5em;
   }
 
+  // Space between ordered list items
+  ol {
+    position: relative;
+  }
+
+  ol li {
+    padding-top: 0.5em;
+    ol li, ul li {
+      padding-top: 0;
+    }
+  }
+
+  .no-space {
+    :not(:first-child) {
+      padding-top: 0;
+    }
+  }
+
   blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
@@ -240,7 +266,7 @@ $color-comment: #0216fd;
     border: solid 4px #FFFFFF;
     box-shadow: 1px 1px 2px 2px #DADADA;
     @include round(3px);
-   }
+  }
 
   img + p {
     padding-top: 10px;
