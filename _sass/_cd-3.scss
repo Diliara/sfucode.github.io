@@ -46,7 +46,11 @@ $color-comment: #0216fd;
   .banner {
 
     h2 {
+      /*
+      Set this up after GDBA orientation is over:
       background-color: $color-base;
+      */
+      background-color: darken($color-greyscale, 13%);
       color: $color-lightest;
       padding: 12px 30px 10px 0;
       display: block;
