@@ -65,16 +65,20 @@ cachedScript = (url, type, options) ->
   if pageLoaded.length == 0
     delay 100, -> cachedScript(arguments)
   else
-    console.log "Page Type: " + pageLoaded
     if type?
       if typeIsArray type
         for y, z of pageLoaded
           for w, x of type
-            if x == z then $.runScript url, options
+            if x == z 
+              console.log "Loading: " + url + " (" + z + ")"
+              $.runScript url, options
       else
         for y, z of pageLoaded
-          if type == z then $.runScript url, options
+          if type == z 
+            console.log "Loading: " + url + " (" + z + ")"
+            $.runScript url, options
     else
+      console.log "Loading: " + url
       $.runScript url, options
 
 $ ->
