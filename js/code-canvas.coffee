@@ -47,7 +47,7 @@ wrappers =
 
 pageContentCheck = (elements) ->
   for count, element of elements
-    if $(element.id).html() then element.name else
+    if jQuery(element.id).html() then element.name else
 
 # Code that gets and loads the js file: #
 
