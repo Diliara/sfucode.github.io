@@ -98,7 +98,7 @@ $ ->
 
   # How to load a script:
   #
-  # Add this code to include a js file (make sure to include >TWO< Spaces:
+  # Add this code to include a js file (make sure to include >TWO< Spaces):
   #   cachedScript "YOUR_FILE_HERE.js"
   # or
   #   cachedScript "YOUR_FILE_HERE.js", "type of page"
