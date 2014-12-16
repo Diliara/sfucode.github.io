@@ -21,6 +21,24 @@ $color-comment: #0216fd;
   border-radius: $amount; //rounds corners for other browsers
 }
 
+@mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
+  //right _ _ width
+  -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  box-shadow: $x $y $radius $spread rgba($color, $opacity);
+}
+
+@mixin icon-before-h3 {
+  content: '';
+  display: inline-block;
+  background-size: 29px 32px;
+  height: 29px;
+  width: 32px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  margin-bottom: -2px;
+}
+
 #cd-3 {
 
   // ****************************************** HEADINGS *******************************************
@@ -28,6 +46,10 @@ $color-comment: #0216fd;
   .banner {
 
     h2 {
+      /*
+      Set this up after GDBA orientation is over:
+      background-color: $color-base;
+      */
       background-color: darken($color-greyscale, 13%);
       color: $color-lightest;
       padding: 12px 30px 10px 0;
@@ -36,8 +58,16 @@ $color-comment: #0216fd;
       margin: 0;
     }
 
-    background-color: #353535;
-    margin: -15px -40px 30px -30px;
+    /*
+    background-color: #C51230;
+    margin: -15px -40px 30px -30px; */
+    margin-bottom: 30px;
+
+    img {
+      border: none;
+      box-shadow: none;
+      @include round(0);
+    }
 
   }
 
@@ -73,7 +103,41 @@ $color-comment: #0216fd;
     font-size: 15.5px;
     padding-top: 10px;
     font-weight: bold;
+  }
 
+  .i-video, .i-overview, .i-objectives, .i-slides, .i-readings, .i-assignments {
+    border-bottom: none !important;
+    @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+  }
+
+  .i-video:before {
+    background: url(../img/3/i-video.jpg) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .i-overview:before {
+    background: url(../img/3/i-overview.jpg) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .i-objectives:before {
+    background: url(../img/3/i-objectives.jpg) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .i-slides:before {
+    background: url(../img/3/i-slides.jpg) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .i-readings:before {
+    background: url(../img/3/i-readings.jpg) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .i-assignments:before {
+    background: url(../img/3/i-assignments.jpg) left top no-repeat;
+    @include icon-before-h3;
   }
 
   // ******************************************* PANELS & INFO BOXES *******************************************
@@ -83,6 +147,7 @@ $color-comment: #0216fd;
     display: block;
     margin: 10px 0 20px 0;
     border: 1px solid #d9d9d9;
+    padding-bottom: 0;
     @include round(4px);
 
     h5 {
@@ -156,6 +221,24 @@ $color-comment: #0216fd;
     padding-top: 0.5em;
   }
 
+  // Space between ordered list items
+  ol {
+    position: relative;
+  }
+
+  ol li {
+    padding-top: 0.5em;
+    ol li, ul li {
+      padding-top: 0;
+    }
+  }
+
+  .no-space {
+    :not(:first-child) {
+      padding-top: 0;
+    }
+  }
+
   blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
@@ -187,7 +270,7 @@ $color-comment: #0216fd;
     border: solid 4px #FFFFFF;
     box-shadow: 1px 1px 2px 2px #DADADA;
     @include round(3px);
-   }
+  }
 
   img + p {
     padding-top: 10px;

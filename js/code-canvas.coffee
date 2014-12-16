@@ -1,11 +1,7 @@
 ---
 # CoffeeScript
-#
-# Add this code to include a js file:
-# $.cachedScript "YOUR_FILE_HERE.js"
-#
 ---
-# Where are the files?
+# Where are the js files? #
 
 switch window.location.hostname
   when "canvas-test.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
@@ -15,9 +11,55 @@ switch window.location.hostname
   when "localhost", "127.0.0.1" then fileLocation = "/js/"
   else fileLocation = ""
 
-# Code that gets and loads the js file:
+# Function to use setTimeout: #
 
-jQuery.cachedScript = (url, options) ->
+delay = (ms, func) ->
+  console.log "Waiting..."
+  setTimeout func, ms
+
+# Function to check if something is an array: #
+
+typeIsArray = Array.isArray || ( value ) -> return {}.toString.call( value ) is '[object Array]'
+
+# What page elements are we testing for? #
+
+wrappers = 
+  [
+    { # Course Front Page
+      name: "front"
+      id: "#course_home_content"
+    }
+    { # Wiki Page
+      name: "wiki"
+      id: "#wiki_page_show"
+    }
+    { # Discussion
+      name: "discussion"
+      id: "#discussion_topic"
+    }
+    { # Syllabus
+      name: "syllabus"
+      id: "#course_syllabus"
+    }
+    { # Assignment
+      name: "assignment"
+      id: "#assignment_show"
+    }
+  ]
+
+# Need to globably initialize the pageLoaded variable #
+
+pageLoaded = ""
+
+# Function to check for the page elements above: #
+
+pageContentCheck = (elements) ->
+  for count, element of elements
+    if $(element.id).html() then element.name else
+
+# Function to get and load the js files: #
+
+jQuery.runScript = (url, options) ->
   options = $.extend(options or {},
     dataType: "script"
     cache: true
@@ -25,15 +67,47 @@ jQuery.cachedScript = (url, options) ->
   )
   jQuery.ajax options
 
-# Let us know it's working:
-$.cachedScript "alert.js"
+# Function that checks to see if the page elements have loaded their content: #
 
-#                                #
-# (DO NOT TOUCH ABOVE THIS LINE) #
-#                                #
+cachedScript = (url, type, options) ->
+  pageLoaded = pageContentCheck(wrappers)
+  if pageLoaded.length == 0    
+    delay 100, -> cachedScript(url, type, options)
+  else
+    if type?
+      if typeIsArray type
+        for y, z of pageLoaded
+          for w, x of type
+            if x == z 
+              console.log "Loading: " + url + " (" + z + ")"
+              $.runScript url, options
+      else
+        for y, z of pageLoaded
+          if type == z 
+            console.log "Loading: " + url + " (" + z + ")"
+            $.runScript url, options
+    else
+      console.log "Loading: " + url
+      $.runScript url, options
 
-# Scripts to be loaded
-#$.cachedScript "show-hide-btn.js"
+# Code that loads when the document is ready: #
 
-$.cachedScript "js-load-timer.js"
+$ ->
+  console.log "CODE-Canvas Checking In"
+  cachedScript "alert.js"
+
+  # How to load a script:
+  #
+  # Add this code to include a js file (make sure to include >TWO< Spaces):
+  #   cachedScript "YOUR_FILE_HERE.js"
+  # or
+  #   cachedScript "YOUR_FILE_HERE.js", "type of page"
+  # or
+  #   cachedScript "YOUR_FILE_HERE.js", ["array", "of", "page", "types"]
+  #
+  #                                #
+  # (DO NOT TOUCH ABOVE THIS LINE) #
+  #                                #
+
+  cachedScript "show-hide-btn.js", "wiki"
 
