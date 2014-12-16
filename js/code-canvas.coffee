@@ -48,7 +48,6 @@ wrappers =
 
 pageContentCheck = (elements) ->
   for count, element of elements
-    console.log "Test: " + $(element.id).html()
     if $(element.id).html() then element.name else
 
 # Code that gets and loads the js file: #
@@ -64,7 +63,8 @@ jQuery.runScript = (url, options) ->
 # Code that checks the page type and then calls for the script to run #
 
 cachedScript = (url, type, options) ->
-  if pageLoaded.length == 0
+  pageLoaded = pageContentCheck(wrappers)
+  if pageLoaded.length == 0    
     delay 100, -> cachedScript(arguments)
   else
     if type?
@@ -85,7 +85,6 @@ cachedScript = (url, type, options) ->
 
 $ ->
   console.log "CODE-Canvas Checking In"
-  pageLoaded = pageContentCheck(wrappers)
   cachedScript "alert.js"
 
   # How to load a script:
