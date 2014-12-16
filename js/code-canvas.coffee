@@ -1,7 +1,7 @@
 ---
 # CoffeeScript
 ---
-# Where are the files? #
+# Where are the js files? #
 
 switch window.location.hostname
   when "canvas-test.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
@@ -11,15 +11,17 @@ switch window.location.hostname
   when "localhost", "127.0.0.1" then fileLocation = "/js/"
   else fileLocation = ""
 
-# Stuff to check to see if page content has loaded: #
+# Function to use setTimeout: #
 
 delay = (ms, func) ->
   console.log "Waiting..."
   setTimeout func, ms
 
+# Function to check if something is an array: #
+
 typeIsArray = Array.isArray || ( value ) -> return {}.toString.call( value ) is '[object Array]'
 
-pageLoaded = ""
+# What page elements are we testing for? #
 
 wrappers = 
   [
@@ -45,12 +47,17 @@ wrappers =
     }
   ]
 
+# Need to globably initialize the pageLoaded variable #
+
+pageLoaded = ""
+
+# Function to check for the page elements above: #
 
 pageContentCheck = (elements) ->
   for count, element of elements
     if $(element.id).html() then element.name else
 
-# Code that gets and loads the js file: #
+# Function to get and load the js files: #
 
 jQuery.runScript = (url, options) ->
   options = $.extend(options or {},
@@ -60,7 +67,7 @@ jQuery.runScript = (url, options) ->
   )
   jQuery.ajax options
 
-# Code that checks the page type and then calls for the script to run #
+# Function that checks to see if the page elements have loaded their content: #
 
 cachedScript = (url, type, options) ->
   pageLoaded = pageContentCheck(wrappers)
@@ -82,6 +89,8 @@ cachedScript = (url, type, options) ->
     else
       console.log "Loading: " + url
       $.runScript url, options
+
+# Code that loads when the document is ready: #
 
 $ ->
   console.log "CODE-Canvas Checking In"
