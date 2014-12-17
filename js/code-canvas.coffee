@@ -23,15 +23,15 @@ typeIsArray = Array.isArray || ( value ) -> return {}.toString.call( value ) is 
 
 # What page elements are we testing for? #
 
-wrappers = 
+wrappers =
   [
-    { # Course Front Page
-      name: "front"
-      id: "#course_home_content"
-    }
     { # Wiki Page
       name: "wiki"
       id: "#wiki_page_show"
+    }
+    { # Course Front Page
+      name: "front"
+      id: "#course_home_content"
     }
     { # Discussion
       name: "discussion"
@@ -71,7 +71,7 @@ jQuery.runScript = (url, options) ->
 
 cachedScript = (url, type, options) ->
   pageLoaded = pageContentCheck(wrappers)
-  if pageLoaded.length == 0    
+  if pageLoaded.length == 0
     delay 100, -> cachedScript(url, type, options)
   else
     console.log "Found: " + pageLoaded
@@ -79,13 +79,13 @@ cachedScript = (url, type, options) ->
       if typeIsArray type
         for y, z of pageLoaded
           for w, x of type
-            if x == z 
+            if x == z
               console.log "Loading: " + url + " (" + z + ")"
               $.runScript url, options
               return
       else
         for y, z of pageLoaded
-          if type == z 
+          if type == z
             console.log "Loading: " + url + " (" + z + ")"
             $.runScript url, options
             return
