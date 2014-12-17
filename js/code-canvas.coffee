@@ -29,10 +29,6 @@ wrappers =
       name: "wiki"
       id: "#wiki_page_show"
     }
-    { # Course Front Page
-      name: "front"
-      id: "#course_home_content"
-    }
     { # Discussion
       name: "discussion"
       id: "#discussion_topic"
