@@ -1,5 +1,6 @@
 ---
 # CoffeeScript
+# Author: Michael Goldberg
 ---
 # Where are the js files? #
 
