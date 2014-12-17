@@ -74,6 +74,7 @@ cachedScript = (url, type, options) ->
   if pageLoaded.length == 0    
     delay 100, -> cachedScript(url, type, options)
   else
+    console.log "Found: " + pageLoaded
     if type?
       if typeIsArray type
         for y, z of pageLoaded
@@ -81,14 +82,17 @@ cachedScript = (url, type, options) ->
             if x == z 
               console.log "Loading: " + url + " (" + z + ")"
               $.runScript url, options
+              return
       else
         for y, z of pageLoaded
           if type == z 
             console.log "Loading: " + url + " (" + z + ")"
             $.runScript url, options
+            return
     else
       console.log "Loading: " + url
       $.runScript url, options
+      return
 
 # Code that loads when the document is ready: #
 
