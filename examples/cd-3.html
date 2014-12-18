@@ -28,45 +28,57 @@
     <!-- <img alt="banner" src="http://placehold.it/1130x70/C51230/ffffff/&text=Banner+image+for+cd3+theme"/>-->
 </div>
 
-
-
 <p>Wrap your content in a div with a <code>#cd-3</code> id</p>
 
 
 <h3>Banner</h3>
-
+<h4>1 - With Text</h4>
 
 <pre><code class="language-markup">&lt;div class="banner">
-    &lt;h2>Banner placeholder (like on the top of this page).&lt;/h2>
+    &lt;h2>#cd-3 theme&lt;/h2>
 &lt;/div></code></pre>
-    <p>The <code>.banner</code> spans across the page width.</p>
+    <p>The <code>.banner</code> sets up default style for banner placeholder with grey background. The example with <code>h2</code> is on the top of this page</p>
+
+<h4>2 - With Image</h4>
+
+<pre><code class="language-markup">&lt;div class="banner">
+    &lt;img alt="banner" src=""/>
+&lt;/div></code></pre>
+<p>The banner image should be within <code>.banner</code> class. The rest of the images in this theme have automatic border.</p>
 
 
-<h3>Icons</h3>
-<pre><code class="language-markup">&lt;h3 class="i-video">Video&lt;/h3>
-&lt;h3 class="i-overview">Overview&lt;/h3>
-&lt;h3 class="i-objectives">Objectives&lt;/h3>
-&lt;h3 class="i-slides">Slides&lt;/h3>
-&lt;h3 class="i-readings">Readings&lt;/h3>
-&lt;h3 class="i-assignments">Assignments&lt;/h3></code></pre>
+<div class="banner">
+    <img alt="banner" src="http://placehold.it/1130x70/900/ffffff/&text=This+is+banner+image+for+cd3+theme"/>
+</div>
 
 
-<h3 class="i-video">Video</h3>
-<h3 class="i-overview">Overview</h3>
-<h3 class="i-objectives">Objectives</h3>
-<h3 class="i-slides">Slides</h3>
-<h3 class="i-readings">Readings</h3>
-<h3 class="i-assignments">Assignments</h3>
+<h4>3 - With Text &amp; Red Background</h4>
+
+<pre><code class="language-markup">&lt;div class="banner">
+    &lt;h2 class="red">Text&lt;/h2>
+&lt;/div></code></pre>
+<p>Use <code>.red</code> class to change the default background to red.</p>
 
 
-    <h3>Typography</h3>
-<h4>H4 Heading</h4>
+<div class="banner">
+    <h2 class="red">Text</h2>
+</div>
+
+
+
+<h3>Typography</h3>
+<h4>Headings</h4>
 <h5>H5 Heading</h5>
-<p>H2 is allocated for page title (usually within the banner). H3 are for main sections (section headings on this page)</p>
 
 <pre><code class="language-markup">&lt;h3>Typography&lt;/h3>
-&lt;h4>H4 Heading&lt;/h4>
+&lt;h4>Headings&lt;/h4>
 &lt;h5>H5 Heading&lt;/h5></code></pre>
+<p>H2 is allocated for page title (usually within the banner). H3 are for main sections (section headings on this page)</p>
+
+<!-- >&lt;h2>H2 Heading&lt;/h2> -->
+ <!--<h2>H2 Heading</h2>-->
+
+
 
 
 <p>Paragraph example: Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi
@@ -78,7 +90,7 @@
 <p>Phasellus ut eros placerat eros lobortis eleifend. <span class="highlight-emph">Something emphasized.</span> Vivamus id fermentum sapien, quis laoreet sem. Integer sed feugiat leo, nec efficitur ex. Nullam aliquet finibus turpis sollicitudin vulputate. Ut sed sapien ante. Etiam eros velit, imperdiet vitae est quis, egestas venenatis odio. Suspendisse potenti. Sed malesuada at dolor quis condimentum.</p>
 
 
-    <h5>Ordered List</h5>
+    <h4>Ordered List</h4>
 
     <p>Ordered list with extra space between list items (for listed items with a lot of content).</p>
 
@@ -112,7 +124,7 @@
         <li>Item 3</li>
     </ol>
 
-<h5>Description List</h5>
+<h4>Description List</h4>
 
 <pre><code class="language-markup">&lt;dl>
     &lt;dt>Item&lt;/dt>
@@ -130,7 +142,7 @@
 
 </dl>
 
-<h5>Quote</h5>
+<h4>Quote</h4>
 
 <pre><code class="language-markup">&lt;blockquote>
     Some quote here. &lt;cite>Source&lt;/cite>
@@ -138,7 +150,28 @@
 
 <blockquote>Some quote here. <cite>Source</cite></blockquote>
 
-    <h3>Panels</h3>
+
+<h3>Icons for H3 Headings</h3>
+<pre><code class="language-markup">&lt;h3 class="i-video">Video&lt;/h3>
+&lt;h3 class="i-overview">Overview&lt;/h3>
+&lt;h3 class="i-objectives">Objectives&lt;/h3>
+&lt;h3 class="i-slides">Slides&lt;/h3>
+&lt;h3 class="i-readings">Readings&lt;/h3>
+&lt;h3 class="i-assignments">Assignments&lt;/h3></code></pre>
+
+
+<h3 class="i-video">Video</h3>
+<h3 class="i-overview">Overview</h3>
+<h3 class="i-objectives">Objectives</h3>
+<h3 class="i-slides">Slides</h3>
+<h3 class="i-readings">Readings</h3>
+<h3 class="i-assignments">Assignments</h3>
+
+
+
+
+
+<h3>Panels</h3>
 
 <pre><code class="language-markup">&lt;div class="panel panel-default">
     &lt;h5>Default&lt;/h5>

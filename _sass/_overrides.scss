@@ -3,40 +3,12 @@
 // These are core overrides which affect all courses
 //
 
-/*
 
-Removed automatic page header for the following courses:
-
- Examples sandbox: 19207
-
- Spring 2015:
- FPA289 on production canvas & canvas-test: 18331
- HSCI330 on production canvas & canvas-test: 18353
-
- EDUC326 on production canvas: 18312
-
- CRJ448 on production: 18985
-
- GDBA Orientation on production: 18964 [temp on canvas-test: 18891]
-
- on production:
- BUS555: 18815
- BUS556: 18814
-
- on production for Turnitin pages
- BUS510: 18963
- BUS552: 18992
- BUS557: 18989
-
-*/
-
-.context-course_18331, .context-course_18312, .context-course_18353, .context-course_18964, .context-course_18985, .context-course_18815, .context-course_19207, .context-course_18814, .context-course_18963 , .context-course_18992 , .context-course_18989 {
-
-  .user_content .page-title {
+/* Remove auto-generated headers from wiki pages */
+  #wiki_page_show .page-title {
     display: none;
   }
 
-}
 /* fixing revision panel for the courses that use themes with fixed banner (cd-1, cd-5) */
 .context-course_18985, .context-course_18312 {
   .show-revisions {
