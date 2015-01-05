@@ -21,8 +21,7 @@ $color-comment: #0216fd;
   border-radius: $amount; //rounds corners for other browsers
 }
 
-@mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
-  //right _ _ width
+@mixin box-shadow($x, $y, $radius, $spread, $color, $opacity) {
   -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
   -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
   box-shadow: $x $y $radius $spread rgba($color, $opacity);
@@ -47,7 +46,7 @@ $color-comment: #0216fd;
 
     h2 {
       /*
-      Set this up after GDBA orientation is over:
+      Set this up after GDBA orientation is over (instead of .red color below):
       background-color: $color-base;
       */
       background-color: darken($color-greyscale, 13%);
@@ -69,7 +68,13 @@ $color-comment: #0216fd;
       @include round(0);
     }
 
+    .red {
+      background-color: $color-base;
+    }
+
   }
+
+
 
   //page title
   h2 {
@@ -105,9 +110,9 @@ $color-comment: #0216fd;
     font-weight: bold;
   }
 
-  .i-video, .i-overview, .i-objectives, .i-slides, .i-readings, .i-assignments {
+  .i-video, .i-overview, .i-objectives, .i-slides, .i-readings, .i-assignments, .i-discussions {
     border-bottom: none !important;
-    @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+    @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
   }
 
   .i-video:before {
@@ -137,6 +142,11 @@ $color-comment: #0216fd;
 
   .i-assignments:before {
     background: url(../img/3/i-assignments.jpg) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .i-discussions:before {
+    background: url(../img/3/i-discussion.jpg) left top no-repeat;
     @include icon-before-h3;
   }
 
@@ -268,7 +278,7 @@ $color-comment: #0216fd;
 
   img {
     border: solid 4px #FFFFFF;
-    box-shadow: 1px 1px 2px 2px #DADADA;
+    @include box-shadow(1px, 1px, 2px, 2px, $color-greyscale, 0.1);
     @include round(3px);
   }
 
