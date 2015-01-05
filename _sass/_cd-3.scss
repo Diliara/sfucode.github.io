@@ -110,7 +110,7 @@ $color-comment: #0216fd;
     font-weight: bold;
   }
 
-  .i-video, .i-overview, .i-objectives, .i-slides, .i-readings, .i-assignments {
+  .i-video, .i-overview, .i-objectives, .i-slides, .i-readings, .i-assignments, .i-discussions {
     border-bottom: none !important;
     @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
   }
@@ -142,6 +142,11 @@ $color-comment: #0216fd;
 
   .i-assignments:before {
     background: url(../img/3/i-assignments.jpg) left top no-repeat;
+    @include icon-before-h3;
+  }
+
+  .i-discussions:before {
+    background: url(../img/3/i-discussion.jpg) left top no-repeat;
     @include icon-before-h3;
   }
 
