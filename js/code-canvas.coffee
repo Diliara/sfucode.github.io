@@ -111,4 +111,8 @@ $ ->
   #                                #
 
   cachedScript "show-hide-btn.js", "wiki"
+  cachedScript "app_TOC.js", "wiki"
+  cachedScript "app_wideNav.js", "wiki"
+
+
 
