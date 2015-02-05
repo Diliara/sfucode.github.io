@@ -111,7 +111,7 @@ $ ->
   #                                #
 
   cachedScript "show-hide-btn.js", "wiki"
-  cachedScript "side-nav.js", "wiki"
+  cachedScript "build-nav.js", "wiki"
 
 
 
