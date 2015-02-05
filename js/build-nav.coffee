@@ -31,7 +31,7 @@ buildBookmarks = (navSection, sBookMarkNode) ->
     console.log 'section : ' + sectionCount + ' - ' + $(this).text()
     $('#outline').append '<li>' + $(this).text() + '</li>'
     $(this).replaceWith '<h3 id=\'section_' + sectionCount + '\'>' + $(this).html()
-    oList.append $('<li class=\'side-nav-section\' id=\'to_section_' + sectionCount++ + '\'><a>' + $(this).text() + '</a></li>')
+    oList.append $('<li class=\'side-nav-section\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
     return
   $('#' + sBookMarkNode).append oList
   return
