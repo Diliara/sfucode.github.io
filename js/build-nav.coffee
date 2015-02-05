@@ -1,7 +1,6 @@
 ---
-# Alert you to its working
+# Builds side nav and attaches it to #inPageNav
 ---
-
 
 
 buildLinks = ->
@@ -39,10 +38,3 @@ buildBookmarks = (navSection, sBookMarkNode) ->
 
 buildBookmarks 'h3', 'inPageNav'
 buildLinks()
-
-scrollingTo = (targetID) ->
-  container = $('html, body')
-  scrollTo = $(targetID)
-  container.scrollTop scrollTo.offset().top - container.offset().top
-  return
-
