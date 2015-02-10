@@ -1,5 +1,5 @@
 ---
-# Builds side nav and attaches it to #inPageNav
+# Builds nav menu and attaches it to #inPageNav
 ---
 
 
@@ -25,16 +25,21 @@ buildLinks = ->
   return
 
 buildBookmarks = (navSection, sBookMarkNode) ->
+  oList = undefined
+  sectionCount = undefined
+  fromSectionCount = undefined
   sectionCount = 0
-  oList = $('<ul class=\'side-nav custom-side-nav\'>')
+  fromSectionCount = 0
+  oList = $('<ul class=\'nav-list\'>')
   $('div:not([id=inPageNav]) ' + navSection).each ->
     console.log 'section : ' + sectionCount + ' - ' + $(this).text()
-    $('#outline').append '<li>' + $(this).text() + '</li>'
-    $(this).replaceWith '<h3 id=\'section_' + sectionCount + '\'>' + $(this).html()
-    oList.append $('<li class=\'side-nav-section\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
+    $(this).before '<div class="here" id=\'section_' + sectionCount + '\'>'
+    oList.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
     return
   $('#' + sBookMarkNode).append oList
   return
 
 buildBookmarks 'h3', 'inPageNav'
 buildLinks()
+$('#inPageNav').next().last().append '<div class="extra-space"></div>'
+
