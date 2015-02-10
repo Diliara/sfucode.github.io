@@ -1,0 +1,70 @@
+.section-identifier {
+  height: 10px;
+  visibility: hidden;
+}
+
+body {
+  padding: 20px;
+}
+
+#inPageNav {
+  padding-right: 10px;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+
+}
+
+/* Inline Lists */
+.nav-list {
+  margin: 0 0 0 -20px;
+  padding: 8px 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #f2f2f2;
+
+}
+
+.nav-list > li {
+  list-style: none;
+  float: left;
+  margin-left: 1.375em;
+  display: block;
+  padding: 5px;
+}
+
+.nav-list > li > * {
+  display: block;
+}
+
+.nav-list > li > a {
+  text-decoration: none;
+  color: #999;
+
+}
+
+.fixed {
+  position: fixed;
+  padding-left: 15px;
+  top: 0;
+}
+
+/*
+.fixed + * {
+    padding-top: 70px;
+}
+*/
+
+.active {
+  background-color: #0078a0;
+
+}
+
+.active > a {
+  color: #fff !important;
+}
+
+.extra-space {
+  height:800px;
+
+}

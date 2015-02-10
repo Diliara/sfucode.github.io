@@ -33,7 +33,7 @@ buildBookmarks = (navSection, sBookMarkNode) ->
   oList = $('<ul class=\'nav-list\'>')
   $('div:not([id=inPageNav]) ' + navSection).each ->
     console.log 'section : ' + sectionCount + ' - ' + $(this).text()
-    $(this).before '<div class="here" id=\'section_' + sectionCount + '\'>'
+    $(this).before '<div class="section-identifier" id=\'section_' + sectionCount + '\'>'
     oList.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
     return
   $('#' + sBookMarkNode).append oList

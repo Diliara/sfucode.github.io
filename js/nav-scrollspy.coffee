@@ -1,6 +1,7 @@
 ---
 # Catches menu on the page and fixes it on top + activates scroll spy
 ---
+
 $('#inPageNav').each ->
   content = $(this).next()
   contentPosition = content.position()
@@ -25,9 +26,9 @@ $('h3').prev().each ->
       activeSectionName = 'from_' + activeSectionID
       $('.active').removeClass 'active'
       $('#' + activeSectionName).addClass 'active'
-      # console.log('entering ' + activeSectionID);
+        console.log('entering ' + activeSectionID);
       return
     onLeave: (element, position) ->
-      # console.log('leaving ' + element.id);
+        console.log('leaving ' + element.id);
       return
   return
