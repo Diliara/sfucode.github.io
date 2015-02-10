@@ -11,17 +11,17 @@
   padding-right: 10px;
   right: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 999999;
 }
 
 /* Inline Lists */
 
 .nav-list {
   margin: 0 0 0 -20px;
-  padding: 8px 0;
+  padding: 4px 0;
   list-style: none;
   overflow: hidden;
-  background-color: #f2f2f2;
+  background-color: #f0f0f0;
   > li {
     list-style: none;
     float: left;
@@ -46,14 +46,14 @@
   top: 0;
   margin-top: -20px;
 }
-/*
+
 .active {
-  background-color: #0078a0;
+ /* background-color: #0078a0; */
   > a {
     color: #fff !important;
   }
 }
-*/
+
 
 .extra-space {
   height: 800px;
