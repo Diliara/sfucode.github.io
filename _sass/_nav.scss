@@ -4,7 +4,6 @@
 
 .section-identifier {
   height: 10px;
-  visibility: hidden;
 }
 
 #inPageNav {
@@ -48,7 +47,6 @@
 }
 
 .active {
- /* background-color: #0078a0; */
   > a {
     color: #fff !important;
   }
