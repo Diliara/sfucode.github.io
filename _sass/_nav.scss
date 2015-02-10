@@ -42,16 +42,18 @@
 
 .fixed {
   position: fixed;
-  padding-left: 15px;
+  padding-left: 190px;
   top: 0;
+  margin-top: -20px;
 }
-
+/*
 .active {
   background-color: #0078a0;
   > a {
     color: #fff !important;
   }
 }
+*/
 
 .extra-space {
   height: 800px;
