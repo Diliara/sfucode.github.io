@@ -1,22 +1,9 @@
 ---
+# CoffeeScript
 ---
 
-jQuery ($) ->
-  $(".show-hide-btn").click ->
-    $(this).parent().children().not(".show-hide-btn").slideToggle()
-
-
-
-
-### OLD
-
-$ ->
-  # executed only when the DOM is ready
-  $(".show-hide-btn").css "background-color", "green"
-  $(".show-hide-btn").click ->
-    $(this).css "background-color", "black"
-    $(this).parent().children().not(".show-hide-btn").slideToggle()
-    return
-
-  return
-###
+(($) ->
+	$(".show-hide-btn").click ->
+		$(this).siblings().slideToggle()
+		$(".show-hide-btn.only-one").not(this).siblings().slideUp()
+) jQuery
