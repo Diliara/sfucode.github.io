@@ -111,7 +111,10 @@ $ ->
   #                                #
 
   cachedScript "show-hide-btn.js"
-
+  cachedScript "build-nav.js", "wiki"
+  cachedScript "vendors/jquery-scrollspy.js", "wiki"
+  cachedScript "nav-scrollspy.js", "wiki"
+  
 
 
 
