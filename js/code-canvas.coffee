@@ -111,8 +111,3 @@ $ ->
   #                                #
 
   cachedScript "show-hide-btn.js"
-
-
-
-
-
