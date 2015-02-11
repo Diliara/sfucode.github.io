@@ -1,42 +1,46 @@
-//This comment will not be output to CSS file
 
-$color-base: #903232;
-$color-secondary: #ba6900;
-$color-emph: #fbfbca;
-
-$color-lightest: #ffffff;
-$color-greyscale: #666666;
-
-@mixin text-border-fix {
-  //decrease space between text and border
-  line-height: 26px;
-  padding-top: 14px
-}
-
-@mixin round($amount) {
-  -moz-border-radius: $amount; // rounds corners for firefox
-  border-radius: $amount; //rounds corners for other browsers
-}
-
-@mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
-  //right _ _ width
-  -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
-  -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
-  box-shadow: $x $y $radius $spread rgba($color, $opacity);
-}
-
-@mixin icon-before-h3 {
-  content: '';
-  display: inline-block;
-  background-size: 29px 32px;
-  height: 29px;
-  width: 32px;
-  margin-right: 5px;
-  vertical-align: bottom;
-  margin-bottom: -2px;
-}
 
 #cd-5 {
+
+  @import "cd-0"; //default theme
+
+  //This comment will not be output to CSS file
+
+  $color-base: #903232;
+  $color-secondary: #ba6900;
+  $color-emph: #fbfbca;
+
+  $color-lightest: #ffffff;
+  $color-greyscale: #666666;
+
+  @mixin text-border-fix {
+    //decrease space between text and border
+    line-height: 26px;
+    padding-top: 14px
+  }
+
+  @mixin round($amount) {
+    -moz-border-radius: $amount; // rounds corners for firefox
+    border-radius: $amount; //rounds corners for other browsers
+  }
+
+  @mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
+    //right _ _ width
+    -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+    -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+    box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  }
+
+  @mixin icon-before-h3 {
+    content: '';
+    display: inline-block;
+    background-size: 29px 32px;
+    height: 29px;
+    width: 32px;
+    margin-right: 5px;
+    vertical-align: bottom;
+    margin-bottom: -2px;
+  }
 
   // ****************************************** HEADINGS *******************************************
 
