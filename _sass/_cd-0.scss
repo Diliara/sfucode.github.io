@@ -37,7 +37,7 @@ $color-greyscale: #666666;
 
 // ****************************************** ICONS *******************************************
 
-.i-man-book-read, .i-man-paper-show, .i-book, .i-man-paper-write, .i-papers, .i-man-r, .i-monitor-venn, .i-man-ab, .i-video, .i-question, .i-target, .i-slides, .i-materials, .i-checklist, .i-discussions {
+.i-man-book-read, .i-man-paper-show, .i-book, .i-man-paper-write, .i-papers, .i-man-r, .i-monitor-venn, .i-man-ab, .i-video, .i-question, .i-target, .i-slides, .i-materials, .i-checklist, .i-discussions, .i-not-to-read, .i-exclamation-point, .i-spss, .i-open-book {
   border-bottom: none !important;
   @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
 }
@@ -114,6 +114,26 @@ $color-greyscale: #666666;
 
 .i-discussions:before {
   background: url(../img/3/i-discussion.jpg) left top no-repeat;
+  @include icon-before-el;
+}
+
+.i-not-to-read:before {
+  background: url(../img/3/i-not-to-read.png) left top no-repeat;
+  @include icon-before-el;
+}
+
+.i-exclamation-point:before {
+  background: url(../img/3/i-exclamation-point.png) left top no-repeat;
+  @include icon-before-el;
+}
+
+.i-spss:before {
+  background: url(../img/3/i-spss.png) left top no-repeat;
+  @include icon-before-el;
+}
+
+.i-open-book:before {
+  background: url(../img/3/i-open-book.png) left top no-repeat;
   @include icon-before-el;
 }
 
