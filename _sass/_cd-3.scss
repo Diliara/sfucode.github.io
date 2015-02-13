@@ -152,7 +152,7 @@ $color-comment: #0216fd;
 
   .i-discussions:before {
     background: url(../img/3/i-discussion.jpg) left top no-repeat;
-    @include icon-before-h3;
+    @include icon-before-el;
   }
 
   // ******************************************* PANELS & INFO BOXES *******************************************
