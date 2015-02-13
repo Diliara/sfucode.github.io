@@ -27,7 +27,7 @@ $color-comment: #0216fd;
   box-shadow: $x $y $radius $spread rgba($color, $opacity);
 }
 
-@mixin icon-before-h3 {
+@mixin icon-before-el {
   content: '';
   display: inline-block;
   background-size: 29px 32px;
@@ -117,32 +117,37 @@ $color-comment: #0216fd;
 
   .i-video:before {
     background: url(../img/3/i-video.jpg) left top no-repeat;
-    @include icon-before-h3;
+    @include icon-before-el;
   }
 
   .i-overview:before {
     background: url(../img/3/i-overview.jpg) left top no-repeat;
-    @include icon-before-h3;
+    @include icon-before-el;
   }
 
   .i-objectives:before {
     background: url(../img/3/i-objectives.jpg) left top no-repeat;
-    @include icon-before-h3;
+    @include icon-before-el;
   }
 
   .i-slides:before {
     background: url(../img/3/i-slides.jpg) left top no-repeat;
-    @include icon-before-h3;
+    @include icon-before-el;
   }
 
   .i-readings:before {
     background: url(../img/3/i-readings.jpg) left top no-repeat;
-    @include icon-before-h3;
+    @include icon-before-el;
   }
 
   .i-assignments:before {
     background: url(../img/3/i-assignments.jpg) left top no-repeat;
-    @include icon-before-h3;
+    @include icon-before-el;
+  }
+
+  .i-discussions:before {
+    background: url(../img/3/i-discussion.jpg) left top no-repeat;
+    @include icon-before-el;
   }
 
   .i-discussions:before {
