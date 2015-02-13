@@ -114,7 +114,3 @@ $ ->
   # cachedScript "build-nav.js", "wiki"
   # cachedScript "vendors/jquery-scrollspy.js", "wiki"
   # cachedScript "nav-scrollspy.js", "wiki"
-  
-
-
-
