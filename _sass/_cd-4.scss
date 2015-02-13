@@ -28,7 +28,7 @@ $color-greyscale: #666666;
   box-shadow: $x $y $radius $spread rgba($color, $opacity);
 }
 
-@mixin icon-before-h3 {
+@mixin icon-before-el {
   content: '';
   display: inline-block;
   background-size: 29px 32px;
@@ -80,27 +80,27 @@ $color-greyscale: #666666;
 
   .guide:before {
     background: url(../img/1/your_guide.png) left top no-repeat;
-    @include icon-before-h3;
+    @include icon-before-el;
   }
 
   .slides:before {
     background: url(../img/1/slides.png) left top no-repeat;
-    @include icon-before-h3;
+    @include icon-before-el;
   }
 
   .objectives:before {
     background: url(../img/1/learning_objectives.png) left top no-repeat;
-    @include icon-before-h3;
+    @include icon-before-el;
   }
 
   .problems:before {
     background: url(../img/1/practice_problems.png) left top no-repeat;
-    @include icon-before-h3;
+    @include icon-before-el;
   }
 
   .solutions:before {
     background: url(../img/1/practice_problems_solutions.png) left top no-repeat;
-    @include icon-before-h3;
+    @include icon-before-el;
   }
 
   //sub-headers

@@ -27,7 +27,7 @@ $color-greyscale: #666666;
 @mixin icon-before-el {
   content: '';
   display: inline-block;
-  background-size: 29px 32px;
+  background-size: 32px 29px;
   height: 29px;
   width: 32px;
   margin-right: 5px;
@@ -35,12 +35,40 @@ $color-greyscale: #666666;
   margin-bottom: -2px;
 }
 
+@mixin icon-large {
+  background-size: 98px 87px;
+  height: 87px;
+  width: 98px;
+}
+
 // ****************************************** ICONS *******************************************
 
-.i-man-book-read, .i-man-paper-show, .i-book, .i-man-paper-write, .i-papers, .i-man-r, .i-monitor-venn, .i-man-ab, .i-video, .i-question, .i-target, .i-slides, .i-materials, .i-checklist, .i-discussions, .i-not-to-read, .i-exclamation-point, .i-spss, .i-open-book {
-  border-bottom: none !important;
-  @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+$icons: man-book-read, man-paper-show, book, man-paper-write, papers, man-r, monitor-venn, man-ab, video, question, target, slides, materials, checklist, discussions, not-to-read, exclamation-point, spss, open-book;
+
+$selector: ();
+
+/* h3.i-exclamation-point */
+@each $item in $icons {
+  $selector: $selector, unquote('.i-#{$item}');
+  h3.i-#{$item} {
+    @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+  }
 }
+
+#{$selector} {
+  border-bottom: none !important;
+}
+
+/*  @at-root conflicts with importing styles into one another */
+
+/* Clean up like this later:
+$icons: ('man-book-read', 'man-paper-show', 'book');
+@for $i from 0 to length($icons) {
+  .color-#{$i} {
+    color: unquote(nth($icons, $i+1));
+  }
+}
+*/
 
 .i-man-book-read:before {
   background: url(../img/2/required_readings.png) left top no-repeat;
@@ -135,6 +163,35 @@ $color-greyscale: #666666;
 .i-open-book:before {
   background: url(../img/3/i-open-book.png) left top no-repeat;
   @include icon-before-el;
+}
+
+// -- sizing of the icons --
+
+.icon-large:before {
+  @include icon-large;
+}
+
+p.icon-large:before {
+  @include icon-large;
+  /* border: 1px solid #ff00ff; */
+  padding-right: 85px;
+}
+
+h3.icon-large {
+ /* inline is for vertical-align: middle to work in :before */
+  display: inline;
+
+  &:before {
+    vertical-align: middle;
+  }
+
+}
+
+
+.icon-large {
+/*  color: blue; */
+  display: inline-flex;
+
 }
 
 // ******************************************* PANELS & INFO BOXES *******************************************
