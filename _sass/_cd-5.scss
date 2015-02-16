@@ -61,6 +61,47 @@
     padding-top: 10px;
   }
 
+
+
+
+
+
+
+  // ****************************************** NEW ICONS *******************************************
+
+  $icons: man-book-read, man-paper-show, book, man-paper-write, papers, man-r, monitor-venn;
+
+  $selector: ();
+
+  @each $item in $icons {
+    $selector: $selector, unquote('.i-#{$item}');
+    h3.i-#{$item} {
+      @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+    }
+
+    .i-#{$item}:before {
+      background: url(../img/icons/cd-5/#{$item}.png) left top no-repeat;
+      @include icon-before-el;
+    }
+
+  }
+
+  #{$selector} {
+    border-bottom: none !important;
+  }
+
+
+
+
+
+
+
+
+
+
+  // ****************************************** OLD ICONS *******************************************
+
+
   .i-summary, .i-required, .i-recommended, .i-narratives, .i-description, .i-reference, .i-circle {
     border-bottom: none !important;
     @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
