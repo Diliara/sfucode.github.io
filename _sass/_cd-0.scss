@@ -18,7 +18,6 @@ $color-greyscale: #666666;
 }
 
 @mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
-  //right _ _ width
   -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
   -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
   box-shadow: $x $y $radius $spread rgba($color, $opacity);
@@ -27,18 +26,30 @@ $color-greyscale: #666666;
 @mixin icon-before-el {
   content: '';
   display: inline-block;
-  background-size: 31px 29px;
-  height: 29px;
+  background-size: 29px 32px;
   width: 32px;
+  height: 31px;
   margin-right: 5px;
   vertical-align: bottom;
   margin-bottom: -2px;
 }
 
 @mixin icon-large {
-  background-size: 98px 87px;
-  height: 87px;
-  width: 98px;
+  background-size: 58px 64px; /* 98px 87px; */
+  width: 58px; /* 98px; */
+  height: 64px; /* 87px; */
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
+}
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
 }
 
 // ****************************************** ICONS *******************************************
@@ -66,7 +77,7 @@ $selector: ();
   border-bottom: none !important;
 }
 
-// -- icon as an image (original size) --
+// -- icon-large --
 
 .icon-large:before {
   @include icon-large;
@@ -74,8 +85,9 @@ $selector: ();
 
 p.icon-large:before {
   @include icon-large;
-  /* border: 1px solid #ff00ff; */
-  padding-right: 85px;
+/*  border: 1px solid #ff00ff; */
+  padding-right: 65px;
+  max-width: 90px;
 }
 
 h3.icon-large {
