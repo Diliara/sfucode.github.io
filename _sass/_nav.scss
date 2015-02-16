@@ -20,9 +20,10 @@
     padding: 4px 0 4px 0;
     list-style: none;
     overflow: hidden;
-    background-color: #eef5fa;
+    background-color:rgba(238, 245, 250, 0.9) ;
     width: 1100px;
     font-size: 12px;
+    display: flex;
     > li {
       list-style: none;
       float: left;
