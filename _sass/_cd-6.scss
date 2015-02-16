@@ -1,47 +1,11 @@
 
-
 #cd-6 {
 
   @import "cd-0"; //default theme
 
-  //This comment will not be output to CSS file
-
   $color-base: #903232;
   $color-secondary: #996600;
-  $color-emph: #fbfbca;
   $color-standout: #996600;
-
-  $color-lightest: #ffffff;
-  $color-greyscale: #666666;
-
-  @mixin text-border-fix {
-    //decrease space between text and border
-    line-height: 26px;
-    padding-top: 14px
-  }
-
-  @mixin round($amount) {
-    -moz-border-radius: $amount; // rounds corners for firefox
-    border-radius: $amount; //rounds corners for other browsers
-  }
-
-  @mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
-    //right _ _ width
-    -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
-    -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
-    box-shadow: $x $y $radius $spread rgba($color, $opacity);
-  }
-
-  @mixin icon-before-el {
-    content: '';
-    display: inline-block;
-    background-size: 29px 32px;
-    height: 29px;
-    width: 32px;
-    margin-right: 5px;
-    vertical-align: bottom;
-    margin-bottom: -2px;
-  }
 
   // ****************************************** HEADINGS *******************************************
 
@@ -68,12 +32,10 @@
 
   }
 
-  //page title
   h2 {
     color: $color-base;
   }
 
-  //headers in the page
   h3 {
     color: $color-secondary;
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
@@ -81,20 +43,45 @@
     @include text-border-fix;
   }
 
-  //sub-headers
   h4 {
     color: $color-secondary;
     padding-top: 10px;
   }
 
-  //sub-sub-headers
   h5 {
     color: darken($color-secondary, 5%);
     font-size: 15.5px;
     padding-top: 10px;
   }
 
-  
+
+
+
+
+  // ****************************************** NEW ICONS *******************************************
+
+  $icons: book;
+
+  $selector: ();
+
+  @each $item in $icons {
+    $selector: $selector, unquote('.i-#{$item}');
+    h3.i-#{$item} {
+      @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+    }
+
+    .i-#{$item}:before {
+      background: url(../img/icons/cd-6/#{$item}.png) left top no-repeat;
+      @include icon-before-el;
+    }
+
+  }
+
+  #{$selector} {
+    border-bottom: none !important;
+  }
+
+
 
   // ******************************************* PANELS & INFO BOXES *******************************************
 
