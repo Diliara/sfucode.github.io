@@ -21,12 +21,14 @@
     list-style: none;
     overflow: hidden;
     background-color: #eef5fa;
+    width: 1100px;
+    font-size: 12px;
     > li {
       list-style: none;
       float: left;
-      margin-right: 1.375em;
+      margin-right: 1.2em;
       display: block;
-      padding: 3px;
+      padding: 2px;
       > {
         * {
           display: block;
