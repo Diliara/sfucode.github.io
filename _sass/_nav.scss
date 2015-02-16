@@ -20,20 +20,20 @@
     padding: 4px 0 4px 0;
     list-style: none;
     overflow: hidden;
-    background-color: #f0f0f0;
+    background-color: #eef5fa;
     > li {
       list-style: none;
       float: left;
       margin-right: 1.375em;
       display: block;
-      padding: 5px;
+      padding: 3px;
       > {
         * {
           display: block;
         }
         a {
           text-decoration: none;
-          color: #C61D11;
+          color: #0088CC;
           &:hover {
             text-decoration: underline;
 
@@ -58,7 +58,7 @@
 
   .active {
     > a {
-      color: #0088CC !important;
+      color: #C61D11 !important;
     }
   }
 
