@@ -8,7 +8,7 @@
 
   #inPageNav {
     right: 0;
-    left: 0;
+    left: 10px;
     margin: -37px 0 0 -15px;
     z-index: 999999;
   }
@@ -20,16 +20,17 @@
     padding: 4px 0 4px 0;
     list-style: none;
     overflow: hidden;
-    background-color:rgba(238, 245, 250, 0.9) ;
-    width: 1100px;
+    background-color: rgba(238, 245, 250, 0.9);
+    width: 1090px;
     font-size: 12px;
     display: flex;
     > li {
+      align-self: center;
       list-style: none;
       float: left;
-      margin-right: 1.2em;
       display: block;
       padding: 2px;
+      margin: auto;
       > {
         * {
           display: block;
@@ -44,11 +45,11 @@
         }
 
       }
-
+      /*
       &:first-child {
         padding-left: 20px;
-
       }
+      */
     }
   }
 
