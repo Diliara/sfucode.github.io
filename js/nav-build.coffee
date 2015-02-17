@@ -40,7 +40,7 @@ buildBookmarks = (navSection, sBookMarkNode) ->
     else
       oList.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
     return
-  $('.' + sBookMarkNode).append oList
+  $('.' + sBookMarkNode).html(oList)
   return
 
 buildBookmarks 'h3', 'build-nav'

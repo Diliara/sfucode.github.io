@@ -3,17 +3,33 @@
 # Scrollspy catches menu on the page & fixes it on top + activates scrollspy for menu items
 ---
 
-$('#fixtop-nav').each ->
+$nav = $('#fixtop-nav')
+navHeight = $nav.height()
+console.log 'navHeight ' + navHeight
+
+$spaceForLinks = $('.section-identifier')
+$singleWordInNav = $('.space-right')
+
+# 1 line => $spaceForLinks.height sets to 5
+# 2 lines => $spaceForLinks.height is 10 (default)
+# 3 lines => $spaceForLinks.height sets to 30
+if navHeight > 70
+  $spaceForLinks.css 'height', 30
+else if navHeight <= 32
+  $spaceForLinks.css 'height', 5
+  $singleWordInNav.css 'padding-right', 0
+
+$nav.each ->
   content = $(this).nextAll()
   contentPosition = content.position()
   $(this).scrollspy
     min: contentPosition.top
     max: contentPosition.top + content.first().parent().height()
     onEnter: ->
-      $('#fixtop-nav').addClass 'fixed'
+      $nav.addClass 'fixed'
       return
     onLeave: ->
-      $('#fixtop-nav').removeClass 'fixed'
+      $nav.removeClass 'fixed'
       $('.active').removeClass 'active'
       return
   return
@@ -35,4 +51,4 @@ $('h3').prev().each ->
   return
   return
 
-$('#fixtop-nav').next().last().append '<div class="extra-space"></div>'
+$nav.nextAll().parent().append '<div class="extra-space"></div>'
