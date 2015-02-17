@@ -1,4 +1,5 @@
 ---
+# Works with .build-nav
 # Builds nav menu and attaches it to .build-nav
 ---
 
@@ -44,5 +45,4 @@ buildBookmarks = (navSection, sBookMarkNode) ->
 
 buildBookmarks 'h3', 'build-nav'
 buildLinks()
-$('.build-nav').next().last().append '<div class="extra-space"></div>'
 

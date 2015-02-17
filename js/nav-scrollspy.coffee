@@ -1,5 +1,6 @@
 ---
-# Scrollspy catches menu on the page & fixes it on top (#fixtop-nav) + activates scrollspy for menu items
+# Works with #fixtop-nav
+# Scrollspy catches menu on the page & fixes it on top + activates scrollspy for menu items
 ---
 
 $('#fixtop-nav').each ->
@@ -33,3 +34,5 @@ $('h3').prev().each ->
       #console.log('leaving ' + element.id);
   return
   return
+
+$('#fixtop-nav').next().last().append '<div class="extra-space"></div>'

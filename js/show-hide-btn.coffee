@@ -1,5 +1,5 @@
 ---
-# CoffeeScript
+# works with .show-hide-btn
 ---
 
 (($) ->
