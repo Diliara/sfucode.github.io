@@ -113,8 +113,9 @@ $ ->
   #vendors
   cachedScript "vendors/jquery-scrollspy.js"
 
-  #ours
-  cachedScript "show-hide-btn.js"
-  cachedScript "build-nav.js"
+  #CODE
+  cachedScript "btn-show-hide.js"
+
+  cachedScript "nav-build.js"
   cachedScript "nav-scrollspy.js"
 

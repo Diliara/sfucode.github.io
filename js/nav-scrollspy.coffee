@@ -1,18 +1,18 @@
 ---
-# Catches menu on the page and fixes it on top + activates scroll spy
+# Scrollspy catches menu on the page & fixes it on top (#fixtop-nav) + activates scrollspy for menu items
 ---
 
-$('#inPageNav').each ->
+$('#fixtop-nav').each ->
   content = $(this).next()
   contentPosition = content.position()
   $(this).scrollspy
     min: contentPosition.top
     max: contentPosition.top + content.height()
     onEnter: ->
-      $('#inPageNav').addClass 'fixed'
+      $('#fixtop-nav').addClass 'fixed'
       return
     onLeave: ->
-      $('#inPageNav').removeClass 'fixed'
+      $('#fixtop-nav').removeClass 'fixed'
       $('.active').removeClass 'active'
       return
   return
@@ -31,5 +31,5 @@ $('h3').prev().each ->
       return
     onLeave: (element, position) ->
       #console.log('leaving ' + element.id);
-      return
+  return
   return

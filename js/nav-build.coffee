@@ -1,5 +1,5 @@
 ---
-# Builds nav menu and attaches it to #inPageNav
+# Builds nav menu and attaches it to .build-nav
 ---
 
 
@@ -12,7 +12,7 @@ buildLinks = ->
     scrollingTo sectionName[event.data.param]
     return
 
-  $('div:not([id=inPageNav]) ' + 'h3').each ->
+  $('h3').each ->
     to_sectionName[h3Counter] = '#to_section_' + h3Counter
     sectionName[h3Counter] = '#section_' + h3Counter
     h3Counter++
@@ -31,15 +31,15 @@ buildBookmarks = (navSection, sBookMarkNode) ->
   sectionCount = 0
   fromSectionCount = 0
   oList = $('<ul class=\'nav-list\'>')
-  $('div:not([id=inPageNav]) ' + navSection).each ->
+  $(navSection).each ->
     console.log 'section : ' + sectionCount + ' - ' + $(this).text()
     $(this).before '<div class="section-identifier" id=\'section_' + sectionCount + '\'>'
     oList.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
     return
-  $('#' + sBookMarkNode).append oList
+  $('.' + sBookMarkNode).append oList
   return
 
-buildBookmarks 'h3', 'inPageNav'
+buildBookmarks 'h3', 'build-nav'
 buildLinks()
-$('#inPageNav').next().last().append '<div class="extra-space"></div>'
+$('.build-nav').next().last().append '<div class="extra-space"></div>'
 
