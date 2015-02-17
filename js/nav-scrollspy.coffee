@@ -16,7 +16,6 @@ $('#fixtop-nav').each ->
       $('#fixtop-nav').removeClass 'fixed'
       $('.active').removeClass 'active'
       return
-  console.log('min: '+contentPosition.top+' max: 'content.first().parent().height())
   return
 
 $('h3').prev().each ->
