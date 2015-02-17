@@ -31,6 +31,8 @@
       display: block;
       padding: 2px;
       margin: auto;
+      min-width: 70px;
+
       > {
         * {
           display: block;
@@ -52,6 +54,9 @@
       */
     }
   }
+
+
+
 
   .fixed {
     position: fixed;
