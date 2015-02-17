@@ -4,11 +4,11 @@
 ---
 
 $('#fixtop-nav').each ->
-  content = $(this).after()
+  content = $(this).nextAll()
   contentPosition = content.position()
   $(this).scrollspy
     min: contentPosition.top
-    max: contentPosition.top + content.height()
+    max: contentPosition.top + content.first().parent().height()
     onEnter: ->
       $('#fixtop-nav').addClass 'fixed'
       return
@@ -16,6 +16,7 @@ $('#fixtop-nav').each ->
       $('#fixtop-nav').removeClass 'fixed'
       $('.active').removeClass 'active'
       return
+  console.log('min: '+contentPosition.top+' max: 'content.first().parent().height())
   return
 
 $('h3').prev().each ->
