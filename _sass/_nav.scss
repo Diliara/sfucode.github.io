@@ -5,10 +5,8 @@
   #fixtop-nav {
 
     // positioning within canvas page
-    right: 0;
-    left: 10px;
-    margin: -37px 0 0 -15px;
-
+    left: -15px;
+    max-width: 1100px;
     z-index: 999999;
 
     // how it looks in cd-4
@@ -18,7 +16,6 @@
       list-style: none;
       overflow: hidden;
       background-color: rgba(238, 245, 250, 0.9);
-      width: 1080px;
       font-size: 12px;
       display: flex;
       > li {
