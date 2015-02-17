@@ -34,7 +34,10 @@ buildBookmarks = (navSection, sBookMarkNode) ->
   $(navSection).each ->
     console.log 'section : ' + sectionCount + ' - ' + $(this).text()
     $(this).before '<div class="section-identifier" id=\'section_' + sectionCount + '\'>'
-    oList.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
+    if $(this).text().split(' ').length == 1
+      oList.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a class=\'space-right\' href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
+    else
+      oList.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
     return
   $('.' + sBookMarkNode).append oList
   return
