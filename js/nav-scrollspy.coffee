@@ -4,7 +4,7 @@
 ---
 
 $('#fixtop-nav').each ->
-  content = $(this).next()
+  content = $(this).after()
   contentPosition = content.position()
   $(this).scrollspy
     min: contentPosition.top
