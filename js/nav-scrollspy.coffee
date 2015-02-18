@@ -10,19 +10,22 @@ navHeight = $nav.height()
 $spaceForLinks = $('.section-identifier')
 $singleWordInNav = $('.space-right')
 
-#something requires offSet (canvas lms?)
-offsetSpace = 50
-  
-# <32 = 1 line => $spaceForLinks.height sets to 5 => offsetSpace = 200
-# 2 lines => $spaceForLinks.height is 10 (default) => offsetSpace = 50 (default)
-# >70 = 3 lines => $spaceForLinks.height sets to 30 => offsetSpace = 0
+#default (offset space for canvas lms UI)
+#todo: make the numbers relative to the wikipage
+offsetSpace = 95
+
+# .section-identifier height has to update relative to the # of lines in the nav (height) & the "jumping" interaction in nav-build.js
+# offsetSpace has to update relative to the # of lines in the nav (height) & space allocated for .section-identifier
+# <32 = 1 line => $spaceForLinks.height sets to 5 => offsetSpace = 160
+# default = 2 lines => $spaceForLinks.height is 10 => offsetSpace = 95
+# >70 = 3 lines => $spaceForLinks.height sets to 30 => offsetSpace = 80
 if navHeight > 70
   $spaceForLinks.css 'height', 30
-  offsetSpace = 0
+  offsetSpace = 80
 else if navHeight <= 32
   $spaceForLinks.css 'height', 5
   $singleWordInNav.css 'padding-right', 0
-  offsetSpace = 180
+  offsetSpace = 155
   
 
 $nav.each ->
@@ -50,40 +53,35 @@ $spaceForLinks.each ->
   
   console.log '// ' + $(this).attr("id") + ': ' + $(this).next().text()
   console.log 'identifierPosition top: ' + identifierPosition.top
-  #console.log 'navHeight: ' + navHeight
-  #console.log 'this height: ' + $(this).height()
   console.log 'offsetSpace: ' + offsetSpace
-  #console.log '-----------------------------'
   console.log 'min: ' + (identifierPosition.top + offsetSpace)
-  #console.log '\n'
-  
+
   #console.log 'identifierPosition top: ' + identifierPosition.top
-  #console.log 'navHeight: ' + navHeight
-  #console.log 'this height: ' + $(this).height()
-  #console.log 'sectionContentFirstPosition: ' + sectionContentFirstPosition.top
-  #console.log 'sectionContentLastPosition: ' + sectionContentLastPosition.top
-  #console.log 'sectionContentLastPosition Height: ' + sectionContent.last().height()
   #console.log 'offsetSpace: ' + offsetSpace
   #console.log 'sectionContent height: ' + sectionContentHeight
-  #console.log '-----------------------------'
-  console.log 'max: ' + (identifierPosition.top + offsetSpace + sectionContentHeight)
-  #console.log '\n'
+  ##console.log '['
+  ##console.log 'sectionContentFirstPosition: ' + sectionContentFirstPosition.top
+  ##console.log 'sectionContentLastPosition: ' + sectionContentLastPosition.top
+  ##console.log 'sectionContentLastPosition Height: ' + sectionContent.last().height()
+  ##console.log ']'
+  console.log 'this height: ' + $(this).height()
+  console.log 'max: ' + (identifierPosition.top + offsetSpace + sectionContentHeight + $(this).height())
   
   console.log '////////////////////////////// \n\n'
 
   $(this).scrollspy
     min: identifierPosition.top + offsetSpace
-    max: identifierPosition.top + offsetSpace + sectionContentHeight
+    max: identifierPosition.top + offsetSpace + sectionContentHeight + $(this).height()
     onEnter: (element) ->
       activeSectionID = element.id
       activeSectionName = 'from_' + activeSectionID
       $('.active').removeClass 'active'
       $('#' + activeSectionName).addClass 'active'
-      console.log 'entering ' + activeSectionID
+      #console.log 'entering ' + activeSectionID
       return
     onLeave: (element) ->
       #currentSectionID = element.id
-      console.log 'leaving ' + currentSectionID 
+      #console.log 'leaving ' + currentSectionID 
       #prevSectionID = currentSectionID.replace(/\d+$/, (a) ->
         ##a can be -1, no section is active
         #a - 1
