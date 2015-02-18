@@ -42,8 +42,10 @@ $nav.each ->
 
 # $('h3').prev() '.section-identifier'
 $spaceForLinks.each ->
-  sectionContent = $(this).nextUntil('.section-identifier').first().parent()
-  sectionContentHeight = sectionContent.height()
+  sectionContent = $(this).nextUntil('.section-identifier')
+  sectionContentFirstPosition =  sectionContent.position()
+  sectionContentLastPosition = sectionContent.last().position()
+  sectionContentHeight =  sectionContentLastPosition.top - sectionContentFirstPosition.top + sectionContent.last().height()
   identifierPosition = $(this).position()
   
   console.log 'identifierPosition top: ' + identifierPosition.top
