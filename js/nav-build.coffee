@@ -1,48 +1,30 @@
 ---
-# Works with .build-nav
-# Builds nav menu and attaches it to .build-nav
+# Works with .nav-build
+# Builds nav menu and attaches it to .nav-build
 ---
 
-
-buildLinks = ->
-  h3Counter = 0
-  to_sectionName = []
-  sectionName = []
-
-  jumpingToSectionFunction = (event) ->
-    scrollingTo sectionName[event.data.param]
-    return
-
-  $('h3').each ->
-    to_sectionName[h3Counter] = '#to_section_' + h3Counter
-    sectionName[h3Counter] = '#section_' + h3Counter
-    h3Counter++
-    return
-  totalNumberOfSections = h3Counter
-  i = 0
-  while i < totalNumberOfSections
-    $(to_sectionName[i]).click { param: i }, jumpingToSectionFunction
-    i++
-  return
-
-buildBookmarks = (navSection, sBookMarkNode) ->
-  oList = undefined
-  sectionCount = undefined
-  fromSectionCount = undefined
+buildAndEnableNavigation = (sections, navPlaceholder) ->
   sectionCount = 0
   fromSectionCount = 0
-  oList = $('<ul class=\'nav-list\'>')
-  $(navSection).each ->
+  listOfLinks = $('<ul class=\'nav-list\'>')
+
+  $(sections).each ->
     console.log 'section : ' + sectionCount + ' - ' + $(this).text()
+
+    #Placing links (section ids) within the content (above each section)
     $(this).before '<div class="section-identifier" id=\'section_' + sectionCount + '\'>'
+
+    #Building up list of linked sections (with hrefs)
     if $(this).text().split(' ').length == 1
-      oList.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a class=\'space-right\' href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
+      listOfLinks.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a class=\'space-right\' href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
     else
-      oList.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
+      listOfLinks.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
     return
-  $('.' + sBookMarkNode).html(oList)
+
+  #Placing a list of linked sections
+  $('.' + navPlaceholder).html(listOfLinks)
   return
 
-buildBookmarks 'h3', 'build-nav'
-buildLinks()
+buildAndEnableNavigation 'h3', 'nav-build'
+
 

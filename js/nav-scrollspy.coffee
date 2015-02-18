@@ -1,16 +1,16 @@
 ---
-# Works with #fixtop-nav
+# Works with #nav-scrollspy
 # Scrollspy catches menu on the page & fixes it on top + activates scrollspy for menu items
 ---
 
-$nav = $('#fixtop-nav')
+$nav = $('#nav-scrollspy')
 navHeight = $nav.height()
 #console.log 'navHeight ' + navHeight
 
 $spaceForLinks = $('.section-identifier')
 $singleWordInNav = $('.space-right')
 
-#something requires offSet (canvas?)
+#something requires offSet (canvas lms?)
 offsetSpace = 50
   
 # <32 = 1 line => $spaceForLinks.height sets to 5 => offsetSpace = 100
@@ -23,8 +23,6 @@ else if navHeight <= 32
   $spaceForLinks.css 'height', 5
   $singleWordInNav.css 'padding-right', 0
   offsetSpace = 100
-  
-  
   
 
 $nav.each ->
@@ -51,7 +49,6 @@ $spaceForLinks.each ->
   #console.log 'this height: ' + $(this).height()
   #console.log 'sectionContent height: ' + sectionContent.height()
   
-  
 
   $(this).scrollspy
     min: identifierPosition.top + navHeight + $(this).height() + offsetSpace
@@ -61,15 +58,21 @@ $spaceForLinks.each ->
       activeSectionName = 'from_' + activeSectionID
       $('.active').removeClass 'active'
       $('#' + activeSectionName).addClass 'active'
-      console.log 'entering ' + activeSectionID
+      #console.log 'entering ' + activeSectionID
       return
     onLeave: (element) ->
       currentSectionID = element.id
-      console.log 'leaving ' + currentSectionID
+      #console.log 'leaving ' + currentSectionID
       prevSectionID = currentSectionID.replace(/\d+$/, (a) ->
+        #a can be -1, no section is active
         a - 1
+        #eliminating a = -1
+        #a = a - 1
+        #if a - 1 < 0
+        # a = 0
+        #a
       )
-      console.log 'prevSectionID ' + prevSectionID
+      #console.log 'prevSectionID ' + prevSectionID
       prevSectionName = 'from_' + prevSectionID
       $('.active').removeClass 'active'
       $('#' + prevSectionName).addClass 'active'
