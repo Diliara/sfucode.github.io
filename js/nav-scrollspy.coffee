@@ -45,9 +45,20 @@ $spaceForLinks.each ->
   sectionContent = $(this).nextUntil('.section-identifier').first().parent()
   sectionContentHeight = sectionContent.height()
   identifierPosition = $(this).position()
-  #console.log 'identifierPosition top ' + identifierPosition.top
-  #console.log 'this height: ' + $(this).height()
-  #console.log 'sectionContent height: ' + sectionContent.height()
+  
+  console.log 'identifierPosition top: ' + identifierPosition.top
+  console.log 'navHeight: ' + navHeight
+  console.log 'this height: ' + $(this).height()
+  console.log 'offsetSpace: ' + offsetSpace
+  console.log '-----------------------------'
+  console.log 'min: ' + identifierPosition.top + navHeight + $(this).height() + offsetSpace + '\n'
+
+  console.log 'identifierPosition top: ' + identifierPosition.top
+  console.log 'navHeight: ' + navHeight
+  console.log 'this height: ' + $(this).height()
+  console.log 'sectionContent height: ' + sectionContent.height()
+  console.log '-----------------------------'
+  console.log 'max: ' + identifierPosition.top + navHeight + $(this).height() + sectionContentHeight + '\n\n'
   
 
   $(this).scrollspy
@@ -58,24 +69,24 @@ $spaceForLinks.each ->
       activeSectionName = 'from_' + activeSectionID
       $('.active').removeClass 'active'
       $('#' + activeSectionName).addClass 'active'
-      #console.log 'entering ' + activeSectionID
+      console.log 'entering ' + activeSectionID
       return
     onLeave: (element) ->
-      currentSectionID = element.id
-      #console.log 'leaving ' + currentSectionID
-      prevSectionID = currentSectionID.replace(/\d+$/, (a) ->
-        #a can be -1, no section is active
-        a - 1
-        #eliminating a = -1
-        #a = a - 1
-        #if a - 1 < 0
-        # a = 0
-        #a
-      )
+      #currentSectionID = element.id
+      console.log 'leaving ' + currentSectionID
+      #prevSectionID = currentSectionID.replace(/\d+$/, (a) ->
+        ##a can be -1, no section is active
+        #a - 1
+        ##eliminating a = -1
+        ##a = a - 1
+        ##if a - 1 < 0
+        ## a = 0
+        ##a
+      #)
       #console.log 'prevSectionID ' + prevSectionID
-      prevSectionName = 'from_' + prevSectionID
-      $('.active').removeClass 'active'
-      $('#' + prevSectionName).addClass 'active'
+      #prevSectionName = 'from_' + prevSectionID
+      #$('.active').removeClass 'active'
+      #$('#' + prevSectionName).addClass 'active'
   return
   return
 
