@@ -58,6 +58,9 @@ $spaceForLinks.each ->
   console.log 'identifierPosition top: ' + identifierPosition.top
   console.log 'navHeight: ' + navHeight
   console.log 'this height: ' + $(this).height()
+  console.log 'sectionContentFirstPosition: ' + sectionContentFirstPosition.top
+  console.log 'sectionContentLastPosition: ' + sectionContentLastPosition.top
+  console.log 'sectionContentLastPosition Height: ' + sectionContent.last().height()
   console.log 'sectionContent height: ' + sectionContent.height()
   console.log '-----------------------------'
   console.log 'max: ' + (identifierPosition.top + navHeight + $(this).height() + sectionContentHeight) + '\n\n'
