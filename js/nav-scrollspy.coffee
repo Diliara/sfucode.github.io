@@ -97,5 +97,3 @@ $SectionIdentifier.each ->
       #$('#' + prevSectionName).addClass 'active'
   return
   return
-
-$nav.nextAll().parent().append '<div class="extra-space"></div>'
