@@ -13,7 +13,7 @@ $singleWordInNav = $('.space-right')
 #something requires offSet (canvas lms?)
 offsetSpace = 50
   
-# <32 = 1 line => $spaceForLinks.height sets to 5 => offsetSpace = 100
+# <32 = 1 line => $spaceForLinks.height sets to 5 => offsetSpace = 200
 # 2 lines => $spaceForLinks.height is 10 (default) => offsetSpace = 50 (default)
 # >70 = 3 lines => $spaceForLinks.height sets to 30 => offsetSpace = 0
 if navHeight > 70
@@ -22,7 +22,7 @@ if navHeight > 70
 else if navHeight <= 32
   $spaceForLinks.css 'height', 5
   $singleWordInNav.css 'padding-right', 0
-  offsetSpace = 100
+  offsetSpace = 180
   
 
 $nav.each ->
@@ -48,13 +48,13 @@ $spaceForLinks.each ->
   sectionContentHeight =  sectionContentLastPosition.top - sectionContentFirstPosition.top + sectionContent.last().height()
   identifierPosition = $(this).position()
   
-  console.log '// ' + $(this).id + ': ' + $(this).next().text()
-  #console.log 'identifierPosition top: ' + identifierPosition.top
+  console.log '// ' + $(this).attr("id") + ': ' + $(this).next().text()
+  console.log 'identifierPosition top: ' + identifierPosition.top
   #console.log 'navHeight: ' + navHeight
   #console.log 'this height: ' + $(this).height()
-  #console.log 'offsetSpace: ' + offsetSpace
+  console.log 'offsetSpace: ' + offsetSpace
   #console.log '-----------------------------'
-  console.log 'min: ' + (identifierPosition.top + navHeight + $(this).height() + offsetSpace)
+  console.log 'min: ' + (identifierPosition.top + offsetSpace)
   #console.log '\n'
   
   #console.log 'identifierPosition top: ' + identifierPosition.top
@@ -63,16 +63,17 @@ $spaceForLinks.each ->
   #console.log 'sectionContentFirstPosition: ' + sectionContentFirstPosition.top
   #console.log 'sectionContentLastPosition: ' + sectionContentLastPosition.top
   #console.log 'sectionContentLastPosition Height: ' + sectionContent.last().height()
+  #console.log 'offsetSpace: ' + offsetSpace
   #console.log 'sectionContent height: ' + sectionContentHeight
   #console.log '-----------------------------'
-  console.log 'max: ' + (identifierPosition.top + navHeight + $(this).height() + sectionContentHeight)
+  console.log 'max: ' + (identifierPosition.top + offsetSpace + sectionContentHeight)
   #console.log '\n'
   
   console.log '////////////////////////////// \n\n'
 
   $(this).scrollspy
-    min: identifierPosition.top + navHeight + $(this).height() + offsetSpace
-    max: identifierPosition.top + navHeight + $(this).height() + sectionContentHeight
+    min: identifierPosition.top + offsetSpace
+    max: identifierPosition.top + offsetSpace + sectionContentHeight
     onEnter: (element) ->
       activeSectionID = element.id
       activeSectionName = 'from_' + activeSectionID
