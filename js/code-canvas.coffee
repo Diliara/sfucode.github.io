@@ -110,8 +110,12 @@ $ ->
   # (DO NOT TOUCH ABOVE THIS LINE) #
   #                                #
 
+  #vendors
+  cachedScript "vendors/jquery-scrollspy.js"
+
+  #CODE
   cachedScript "show-hide-btn.js"
-  #cachedScript "build-nav.js"
-  #cachedScript "vendors/jquery-scrollspy.js"
-  #cachedScript "nav-scrollspy.js"
+
+  cachedScript "nav-build.js"
+  cachedScript "nav-scrollspy.js"
 

@@ -1,60 +1,77 @@
-#cd-1, #cd-2, #cd-3, #cd-4, #cd-5 {
-// ******************************************* SETUP for navigation *******************************************
+#cd-4 {
 
+  // ******************************************* SETUP for navigation *******************************************
 
-.section-identifier {
-  height: 10px;
-}
+  #nav-scrollspy {
 
-#inPageNav {
-  right: 0;
-  left: 0;
-  margin: -20px  -25px -20px -5px;
-  z-index: 999999;
-}
+    // positioning within canvas page
+    left: -15px;
+    max-width: 1100px;
+    /* min-width: 1000px; */
+    z-index: 999999;
 
-/* Inline Lists */
-
-.nav-list {
-  margin: 0 0 0 -20px;
-  padding: 4px 0 4px 15px;
-  list-style: none;
-  overflow: hidden;
-  background-color: #f0f0f0;
-  > li {
-    list-style: none;
-    float: left;
-    margin-left: 1.375em;
-    display: block;
-    padding: 5px;
-    > {
-      * {
+    // how it looks in cd-4
+    .nav-list {
+      margin: 17px 0 0 0;
+      padding: 4px 0 4px 0;
+      list-style: none;
+      overflow: hidden;
+      background-color: rgba(238, 245, 250, 0.9);
+      font-size: 12px;
+      display: flex;
+      > li {
+        align-self: center;
+        list-style: none;
+        float: left;
         display: block;
-      }
-      a {
-        text-decoration: none;
-        color: #999;
+        padding: 2px;
+        margin: auto;
+        /* min-width: 70px; */
+
+        > {
+          * {
+            display: block;
+          }
+          a {
+            text-decoration: none;
+            color: #0088CC;
+            &:hover {
+              text-decoration: underline;
+            }
+            &.space-right {
+              padding-right: 25px;
+            }
+          }
+
+        }
+
+        &.active {
+          > a {
+            color: #C61D11 !important;
+          }
+        }
+
       }
     }
+
   }
-}
 
-.fixed {
-  position: fixed;
-  padding-left: 190px;
-  top: 0;
-  margin-top: -20px;
-}
-
-.active {
-  > a {
-    color: #fff !important;
+  .fixed {
+    position: fixed;
+    padding-left: 190px;
+    top: 0;
+    margin-top: -20px;
+    width: 100%;
   }
-}
 
+  // content -------------
 
-.extra-space {
-  height: 800px;
-}
+  .section-identifier {
+    height: 10px;
+  }
+
+  .extra-space {
+    height: 800px;
+  }
 
 }
