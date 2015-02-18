@@ -51,15 +51,16 @@ $spaceForLinks.each ->
   console.log 'this height: ' + $(this).height()
   console.log 'offsetSpace: ' + offsetSpace
   console.log '-----------------------------'
-  console.log 'min: ' + identifierPosition.top + navHeight + $(this).height() + offsetSpace + '\n'
+  console.log 'min: ' + (identifierPosition.top + navHeight + $(this).height() + offsetSpace) + '\n\n'
 
   console.log 'identifierPosition top: ' + identifierPosition.top
   console.log 'navHeight: ' + navHeight
   console.log 'this height: ' + $(this).height()
   console.log 'sectionContent height: ' + sectionContent.height()
   console.log '-----------------------------'
-  console.log 'max: ' + identifierPosition.top + navHeight + $(this).height() + sectionContentHeight + '\n\n'
+  console.log 'max: ' + (identifierPosition.top + navHeight + $(this).height() + sectionContentHeight) + '\n\n'
   
+  console.log '////////////////////////////// \n\n'
 
   $(this).scrollspy
     min: identifierPosition.top + navHeight + $(this).height() + offsetSpace
