@@ -9,8 +9,9 @@ buildAndEnableNavigation = (sections, navPlaceholder) ->
   listOfLinks = $('<ul class=\'nav-list\'>')
 
   $(sections).each ->
-    console.log 'section : ' + sectionCount + ' - ' + $(this).text()
-
+    #console.log 'section : ' + sectionCount + ' - ' + $(this).text()
+    console.log '\n'
+    
     #Placing links (section ids) within the content (above each section)
     $(this).before '<div class="section-identifier" id=\'section_' + sectionCount + '\'>'
 
