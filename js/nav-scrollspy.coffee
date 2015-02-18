@@ -48,23 +48,25 @@ $spaceForLinks.each ->
   sectionContentHeight =  sectionContentLastPosition.top - sectionContentFirstPosition.top + sectionContent.last().height()
   identifierPosition = $(this).position()
   
-  console.log '\nh3: ' + $(this).next().text() + '\n'
-  console.log 'identifierPosition top: ' + identifierPosition.top
-  console.log 'navHeight: ' + navHeight
-  console.log 'this height: ' + $(this).height()
-  console.log 'offsetSpace: ' + offsetSpace
-  console.log '-----------------------------'
-  console.log 'min: ' + (identifierPosition.top + navHeight + $(this).height() + offsetSpace) + '\n\n'
-
-  console.log 'identifierPosition top: ' + identifierPosition.top
-  console.log 'navHeight: ' + navHeight
-  console.log 'this height: ' + $(this).height()
-  console.log 'sectionContentFirstPosition: ' + sectionContentFirstPosition.top
-  console.log 'sectionContentLastPosition: ' + sectionContentLastPosition.top
-  console.log 'sectionContentLastPosition Height: ' + sectionContent.last().height()
-  console.log 'sectionContent height: ' + sectionContentHeight
-  console.log '-----------------------------'
-  console.log 'max: ' + (identifierPosition.top + navHeight + $(this).height() + sectionContentHeight) + '\n\n'
+  console.log '// ' + $(this).id + ': ' + $(this).next().text()
+  #console.log 'identifierPosition top: ' + identifierPosition.top
+  #console.log 'navHeight: ' + navHeight
+  #console.log 'this height: ' + $(this).height()
+  #console.log 'offsetSpace: ' + offsetSpace
+  #console.log '-----------------------------'
+  console.log 'min: ' + (identifierPosition.top + navHeight + $(this).height() + offsetSpace)
+  #console.log '\n'
+  
+  #console.log 'identifierPosition top: ' + identifierPosition.top
+  #console.log 'navHeight: ' + navHeight
+  #console.log 'this height: ' + $(this).height()
+  #console.log 'sectionContentFirstPosition: ' + sectionContentFirstPosition.top
+  #console.log 'sectionContentLastPosition: ' + sectionContentLastPosition.top
+  #console.log 'sectionContentLastPosition Height: ' + sectionContent.last().height()
+  #console.log 'sectionContent height: ' + sectionContentHeight
+  #console.log '-----------------------------'
+  console.log 'max: ' + (identifierPosition.top + navHeight + $(this).height() + sectionContentHeight)
+  #console.log '\n'
   
   console.log '////////////////////////////// \n\n'
 
@@ -80,7 +82,7 @@ $spaceForLinks.each ->
       return
     onLeave: (element) ->
       #currentSectionID = element.id
-      console.log 'leaving ' + currentSectionID
+      console.log 'leaving ' + currentSectionID 
       #prevSectionID = currentSectionID.replace(/\d+$/, (a) ->
         ##a can be -1, no section is active
         #a - 1
