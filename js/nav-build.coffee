@@ -26,6 +26,8 @@ buildAndEnableNavigation = (sections, navPlaceholder) ->
   $('.' + navPlaceholder).html(listOfLinks)
   return
 
-buildAndEnableNavigation 'h3', 'nav-build'
+
+if $('.nav-build')[0]
+  buildAndEnableNavigation 'h3', 'nav-build'
 
 
