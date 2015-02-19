@@ -1,4 +1,4 @@
-//This comment will not be output to CSS file
+//cd-0 (default theme)
 
 $color-comment: #0216fd;
 $color-emph: #fbfbca;
@@ -77,15 +77,9 @@ $selector: ();
   border-bottom: none !important;
 }
 
-// -- icon-large --
-
-.icon-large:before {
-  @include icon-large;
-}
-
 p.icon-large:before {
   @include icon-large;
-/*  border: 1px solid #ff00ff; */
+  /*  border: 1px solid #ff00ff; */
   padding-right: 65px;
   max-width: 90px;
 }
@@ -93,16 +87,19 @@ p.icon-large:before {
 h3.icon-large {
   /* inline is for vertical-align: middle to work in :before */
   display: inline;
-
   &:before {
     vertical-align: middle;
   }
-
 }
 
 .icon-large {
   /*  color: blue; */
   display: inline-flex;
+
+  &:before {
+    @include icon-large;
+  }
+
 }
 
 // ******************************************* PANELS & INFO BOXES *******************************************
@@ -190,71 +187,15 @@ dt {
 }
 
 // Space between list items
-ol, ul {
-  position: relative;
-}
-
-ol li, ul li {
-  padding-top: 0.5em;
-}
+// theme-specific
 
 .bibl {
   list-style-type: none;
   text-indent: -2em;
 }
 
-blockquote {
-  padding: 10px 20px;
-  border-left: none;
-  //quotes: "\201C""\201D""\2018""\2019";
-  margin: 10px 0 20px 0;
-  @include round(4px);
-  background-color: rgba($color-greyscale, 0.02);
-
-  h5:first-child {
-    margin-top: -20px;
-    margin-left: 40px;
-  }
-
-  p {
-    line-height: inherit;
-    font-weight: inherit;
-    margin-left: 40px;
-    margin-bottom: 7px;
-
-  }
-
-  p:first-child {
-    margin-top: -10px;
-  }
-
-  p:nth-last-child(2) {
-    margin-bottom: 7px;
-  }
-
-  cite {
-    display: block;
-    font-size: 80%;
-    color: #777;
-    font-style: italic;
-    margin-left: 40px;
-  }
-
-  cite:before {
-    content: '\2014 \00A0';
-  }
-
-}
-
-blockquote:before {
-  color: #ccc;
-  //content: open-quote;
-  content: '\201C';
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
+// blockquote theme-specific
+// design a simple default one
 
 // ******************************************* Annotation *******************************************
 
@@ -268,10 +209,9 @@ blockquote:before {
   color: $color-comment;
   font-style: italic;
   font-size: 16px;
-}
-
-.comment:before {
-  content: " -- ";
+  &:before {
+    content: " -- ";
+  }
 }
 
 // ******************************************* IMGs *******************************************
