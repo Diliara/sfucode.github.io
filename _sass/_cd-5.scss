@@ -137,6 +137,7 @@
     padding: 10px 20px;
     margin: 10px 0 20px 0;
     border: 1px solid #d9d9d9;
+    display: block;
     @include round(4px);
 
     h5 {
@@ -233,7 +234,8 @@
 
 
 
+  // ---------------------------------------------------------------------------------------------
 
-  // ------------------
+  @import "cd-z"; //default theme
 
 }
