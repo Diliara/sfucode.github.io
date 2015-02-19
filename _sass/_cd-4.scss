@@ -94,8 +94,8 @@
 
   .panel {
     padding: 10px 20px;
-    margin: 10px 0 20px 0;
     display: block;
+    margin: 10px 0 20px 0;
     @include round(4px);
 
     h5 {
@@ -111,12 +111,11 @@
   .panel-answer {
     margin-top: 0;
     border: 1px solid rgba($color-answer, 0.3);
-
-    p:last-child {
-      margin-bottom: 0;
-    }
   }
 
+  .panel-answer p:last-child {
+    margin-bottom: 0;
+  }
 
   .panel-pushed {
     margin-left: 28px;
@@ -184,11 +183,6 @@
   }
 
 
-  // ---------------------------------------------------------------------------------------------
-
-  //@import "cd-z"; //default theme
-  .panel-answer {
-    display: none;
-  }
+  // ------------------
 
 }
