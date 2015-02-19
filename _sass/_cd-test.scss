@@ -47,3 +47,8 @@ $color-greyscale: #666666;
 }
 
 
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}

@@ -1,16 +1,10 @@
-
-$color-base: #ee4235;
-$color-secondary: #3062A3;
-
-$color-answer: #c1e8fc;
-
-
-
-
-
 #cd-4 {
-
   @import "cd-test"; //test import
+
+  $color-base: #ee4235;
+  $color-secondary: #3062A3;
+
+  $color-answer: #c1e8fc;
 
 
   // ****************************************** HEADINGS *******************************************
