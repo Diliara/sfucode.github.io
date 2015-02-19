@@ -236,6 +236,10 @@
 
   // ---------------------------------------------------------------------------------------------
 
-  @import "cd-z"; //default theme
+  //@import "cd-z"; //default theme
+
+  .panel-answer {
+    display: none;
+  }
 
 }
