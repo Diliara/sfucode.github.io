@@ -95,7 +95,6 @@
   .panel {
     padding: 10px 20px;
     margin: 10px 0 20px 0;
-    display: block;
     @include round(4px);
 
     h5 {
@@ -182,11 +181,6 @@
       }
     }
   }
-
-
-  // ---------------------------------------------------------------------------------------------
-
-  @import "cd-z"; //default theme
 
 
 }
