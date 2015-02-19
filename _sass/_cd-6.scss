@@ -84,7 +84,6 @@
 
   .panel {
     padding: 10px 20px;
-    display: block;
     margin: 10px 0 20px 0;
     border: 1px solid #d9d9d9;
     @include round(4px);
@@ -240,11 +239,5 @@
     margin-right: 0.25em;
     vertical-align: -0.4em;
   }
-
-
-
-  // ---------------------------------------------------------------------------------------------
-
-  @import "cd-z"; //default theme
 
 }
