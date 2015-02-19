@@ -1,11 +1,47 @@
+//This comment will not be output to CSS file
+
+$color-base: #ee4235;
+//#3062A3 - blue ee4235 - red
+$color-secondary: #3062A3;
+// #3161a0;
+
+$color-answer: #c1e8fc;
+
+$color-lightest: #ffffff;
+$color-greyscale: #666666;
+
+@mixin text-border-fix {
+  //decrease space between text and border
+  line-height: 26px;
+  padding-top: 14px
+}
+
+@mixin round($amount) {
+  -moz-border-radius: $amount; // rounds corners for firefox
+  border-radius: $amount; //rounds corners for other browsers
+}
+
+@mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
+  //right _ _ width
+  -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  box-shadow: $x $y $radius $spread rgba($color, $opacity);
+}
+
+@mixin icon-before-el {
+  content: '';
+  display: inline-block;
+  background-size: 29px 32px;
+  height: 29px;
+  width: 32px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  margin-bottom: -2px;
+}
+
 #cd-4 {
 
   @import "cd-0"; //default theme
-
-  $color-base: #ee4235;
-  $color-secondary: #3062A3;
-
-  $color-answer: #c1e8fc;
 
 
   // ****************************************** HEADINGS *******************************************
