@@ -112,6 +112,10 @@ $ ->
 
   #vendors
   cachedScript "vendors/jquery-scrollspy.js"
+  cachedScript "vendors/prism.js"
+  cachedScript "vendors/prism-vb.js"
+
+
 
   #CODE
   cachedScript "show-hide-btn.js"
