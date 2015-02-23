@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="../css/code-canvas.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div id="cd-4">
+
+
+<pre class="language-vb"><code >
+
+    Public Class Form1
+    Dim avg As Double
+    Sub Average_of_3(x As Double, y As Double, z As Double)
+    avg = (x + y + z) / 3
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, _
+    ByVal e As System.EventArgs)
+    Dim a As Double, b As Double, c As Double
+    a = TextBox1.Text
+    b = TextBox2.Text
+    c = TextBox3.Text
+    Call Average_of_3(a, b, c)
+    TextBox4.Text = avg
+    End Sub
+    End Class
+</code>
+</pre>
+
+
+<pre class="language-markup"><code>
+    &lt;img class="img-centered"/>
+</code>
+</pre>
+
+
+<pre class="language-markup"><code>&lt;span class="highlight-comment">This is a text to be changed&lt;/span>
+    &lt;span class="comment">comment on a "to do" item&lt;/span></code></pre>
+
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- if we wannna use code-canvas instead, the js-load-timer should be modified -->
+<script src="../js/vendors/prism.js"></script>
+<script src="../js/vendors/prism-vb.js"></script>
+
+<!-- <script src="../js/code-canvas.js"></script>-->
+
+</body>
+</html>
