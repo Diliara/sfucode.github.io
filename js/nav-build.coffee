@@ -6,7 +6,7 @@
 buildAndEnableNavigation = (sections, navPlaceholder) ->
   sectionCount = 0
   fromSectionCount = 0
-  listOfLinks = $('<ul class=\'nav-list\'>')
+  listOfLinks = $('<ol class=\'nav-list\'>')
 
   $(sections).each ->
     #console.log 'section : ' + sectionCount + ' - ' + $(this).text()
