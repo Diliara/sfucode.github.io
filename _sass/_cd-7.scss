@@ -115,10 +115,10 @@
   // ******************************************* CODE *******************************************
 
   pre {
-    color: #0606E8;
+    color: darken($color-secondary, 10%);
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
 
-    margin: .5em 0;
+    margin: 1.5em 0;
 
     background-color: #fdfdfd;
   }
