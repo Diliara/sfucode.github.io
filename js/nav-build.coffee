@@ -9,13 +9,16 @@ buildAndEnableNavigation = (sections, navPlaceholder) ->
   listOfLinks = $('<ol class=\'nav-list\'>')
 
   $(sections).each ->
-    #console.log 'section : ' + sectionCount + ' - ' + $(this).text()
+    console.log 'section : ' + sectionCount + ' - ' + $(this).text()
     console.log '\n'
-    
+
+    if sectionCount > 0
+      $(this).before '<p class="top"><a href="#top">top &uarr;</a></p>'
+
+
     #Placing links (section ids) within the content (above each section)
     $(this).before '<div class="section-identifier" id=\'section_' + sectionCount + '\'>'
 
-    $(this).after '<p class="top"><a href="#top">top &uarr;</a></p>'
 
     #Building up list of linked sections (with hrefs)
     if $(this).text().split(' ').length == 1
