@@ -1,0 +1,176 @@
+#cd-7 {
+
+  @import "cd-0"; //default theme
+
+  $color-base: #ee4235;
+  $color-secondary: #3062A3;
+
+  $color-answer: #c1e8fc;
+
+  // ****************************************** HEADINGS *******************************************
+
+  .banner {
+
+    h2 {
+      background-color: darken($color-greyscale, 13%);
+      color: $color-lightest;
+      padding: 12px 30px 10px 0;
+      display: block;
+      text-align: right;
+      margin: 0;
+    }
+
+    margin-bottom: 30px;
+
+    img {
+      border: none;
+      box-shadow: none;
+      @include round(0);
+    }
+
+  }
+
+  h2 {
+    color: darken($color-base, 15%);
+  }
+
+  h3 {
+    color: darken($color-base, 15%);
+    //color: $color-base;
+    border-bottom: 1px solid rgba($color-greyscale, 0.2);
+    text-transform: uppercase;
+    @include text-border-fix;
+  }
+
+  h4 {
+    color: $color-secondary;
+    text-decoration: underline;
+    padding-top: 10px;
+  }
+
+  h5 {
+    color: darken($color-secondary, 10%);
+    text-decoration: underline;
+    padding-top: 10px;
+  }
+
+  // ****************************************** NEW ICONS *******************************************
+
+  $icons: man-paper-write;
+
+  $selector: ();
+
+  @each $item in $icons {
+    $selector: $selector, unquote('.i-#{$item}');
+    h3.i-#{$item} {
+      @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+    }
+
+    .i-#{$item}:before {
+      background: url(../img/icons/cd-7/#{$item}.png) left top no-repeat;
+      @include icon-before-el;
+    }
+
+  }
+
+  #{$selector} {
+    border-bottom: none !important;
+  }
+
+
+
+
+  // ******************************************* PANELS & INFO BOXES *******************************************
+
+  .panel {
+    padding: 10px 20px;
+    margin: 10px 0 20px 0;
+    @include round(4px);
+
+    h5 {
+      padding-top: 0;
+    }
+
+  }
+
+  .panel-default {
+    background-color: rgba($color-greyscale, 0.03);
+  }
+
+  .panel-answer {
+    margin-top: 0;
+    border: 1px solid rgba($color-answer, 0.3);
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .panel-pushed {
+    margin-left: 28px;
+  }
+
+  // ******************************************* BUTTONS *******************************************
+
+  .button {
+    @include round(3px);
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin: 12px 0 20px 0;
+    display: inline-block;
+    padding: 7px 22px;
+    text-align: center;
+
+    cursor: pointer;
+
+    border: 1px solid rgba($color-greyscale, 0.03);
+    background-color: rgba($color-greyscale, 0.03);
+  }
+
+  .button-answer {
+    background-color: lighten(adjust_hue($color-secondary, -11%), 5%); //#1E83C3
+    color: $color-lightest;
+    border: none;
+
+  }
+
+
+  // ******************************************* TEXT *******************************************
+
+
+
+  // Space between ordered list items
+  ol {
+    position: relative;
+  }
+
+  ol li {
+    padding-top: 0.5em;
+  }
+
+  .no-space {
+    :not(:first-child) {
+      padding-top: 0;
+    }
+  }
+
+  blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #eee;
+
+    cite {
+      display: block;
+      font-size: 80%;
+      color: #777;
+      font-style: italic;
+
+      &:before {
+        content: '\2014 \00A0';
+      }
+    }
+  }
+
+
+}
