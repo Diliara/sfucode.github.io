@@ -26,7 +26,9 @@ else if navHeight <= 32
   $SectionIdentifier.css 'height', 5
   $singleWordInNav.css 'padding-right', 0
   offsetSpace = 155
-  
+
+pageWidth = $('#wiki_page_show').width();
+console.log("pageWidth: " + pageWidth);
 
 $nav.each ->
   content = $(this).nextAll()
@@ -36,18 +38,18 @@ $nav.each ->
     max: contentPosition.top + content.first().parent().height()
     onEnter: ->
       $nav.addClass 'fixed'
+      $nav.width(pageWidth);
       return
     onLeave: ->
       $nav.removeClass 'fixed'
       $('.active').removeClass 'active'
+      $nav.maxWidth(1100);
       return
   return
+  return
 
-pageWidth = $('#wiki_page_show').width();
 
-console.log("pageWidth: " + pageWidth);
 
-$('.fixed').css('width', pageWidth);
 
 # $('h3').prev() '.section-identifier'
 $SectionIdentifier.each ->
