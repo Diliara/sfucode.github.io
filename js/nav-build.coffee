@@ -4,8 +4,8 @@
 ---
 
 buildAndEnableNavigation = (sections, navPlaceholder) ->
-  sectionCount = 0
-  fromSectionCount = 0
+  sectionCount = 1
+  fromSectionCount = 1
   listOfLinks = $('<ol class=\'nav-list\'>')
 
   $(sections).each ->
