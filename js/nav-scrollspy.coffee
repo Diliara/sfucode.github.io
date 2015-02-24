@@ -27,11 +27,6 @@ else if navHeight <= 32
   $singleWordInNav.css 'padding-right', 0
   offsetSpace = 155
 
-$(window).on 'load resize', ->
-  pageWidth = $('#wiki_page_show').width()
-  console.log("pageWidth: " + pageWidth)
-
-
 
 $nav.each ->
   content = $(this).nextAll()
@@ -41,14 +36,10 @@ $nav.each ->
     max: contentPosition.top + content.first().parent().height()
     onEnter: ->
       $nav.addClass 'fixed'
-      if navHeight <= 32
-        $nav.width(pageWidth);
       return
     onLeave: ->
       $nav.removeClass 'fixed'
       $('.active').removeClass 'active'
-      if navHeight <= 32
-        $nav.width(pageWidth-50);
       return
   return
   return
