@@ -5,8 +5,6 @@
   $color-base: #ee4235;
   $color-secondary: #3062A3;
 
-  // ****************************************** HEADINGS *******************************************
-
   .banner {
 
     h2 {
@@ -26,6 +24,20 @@
       @include round(0);
     }
 
+  }
+  
+  // ****************************************** HEADINGS *******************************************
+
+  counter-reset: h3counter;
+
+  h3.nocount:before {
+    content: none !important;
+    counter-increment: none !important;
+  }
+
+  h3:before {
+    content: counter(h3counter) ".\0000a0\0000a0";
+    counter-increment: h3counter;
   }
 
   h2 {
