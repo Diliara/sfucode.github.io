@@ -12,7 +12,7 @@ buildAndEnableNavigation = (sections, navPlaceholder) ->
     console.log 'section : ' + sectionCount + ' - ' + $(this).text()
     console.log '\n'
 
-    if sectionCount > 0
+    if sectionCount > 1
       $(this).before '<p class="top"><a href="#top">top &uarr;</a></p>'
 
 
@@ -34,3 +34,6 @@ buildAndEnableNavigation = (sections, navPlaceholder) ->
 
 if $('.nav-build')[0]
   buildAndEnableNavigation 'h3', 'nav-build'
+
+
+$('.nav-build').parent().append '<p class="top"><a href="#top">top &uarr;</a></p>'
