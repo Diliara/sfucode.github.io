@@ -43,7 +43,7 @@ $nav.each ->
     onLeave: ->
       $nav.removeClass 'fixed'
       $('.active').removeClass 'active'
-      $nav.maxWidth(1100);
+      $nav.width(pageWidth-50);
       return
   return
   return
