@@ -43,6 +43,12 @@ $nav.each ->
       return
   return
 
+pageWidth = $('#wiki_page_show').width();
+
+console.log("pageWidth: " + pageWidth);
+
+$('.fixed').css('width', pageWidth);
+
 # $('h3').prev() '.section-identifier'
 $SectionIdentifier.each ->
   sectionContent = $(this).nextUntil('.section-identifier')
