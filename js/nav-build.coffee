@@ -15,6 +15,8 @@ buildAndEnableNavigation = (sections, navPlaceholder) ->
     #Placing links (section ids) within the content (above each section)
     $(this).before '<div class="section-identifier" id=\'section_' + sectionCount + '\'>'
 
+    $(this).after '<p class="top"><a href="#top">top &uarr;</a></p>'
+
     #Building up list of linked sections (with hrefs)
     if $(this).text().split(' ').length == 1
       listOfLinks.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a class=\'space-right\' href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
@@ -29,6 +31,3 @@ buildAndEnableNavigation = (sections, navPlaceholder) ->
 
 if $('.nav-build')[0]
   buildAndEnableNavigation 'h3', 'nav-build'
-
-
-$('.top').html('<p class="top"><a href="#top">top &uarr;</a></p>');
