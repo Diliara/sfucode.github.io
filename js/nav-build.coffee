@@ -31,3 +31,4 @@ if $('.nav-build')[0]
   buildAndEnableNavigation 'h3', 'nav-build'
 
 
+$('.top').html('<p class="top"><a href="#top">top &uarr;</a></p>');
