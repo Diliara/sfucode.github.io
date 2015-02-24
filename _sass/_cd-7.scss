@@ -36,7 +36,6 @@
 
   h3 {
     color: darken($color-base, 15%);
-    //color: $color-base;
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
     text-transform: uppercase;
     @include text-border-fix;
@@ -77,68 +76,11 @@
     border-bottom: none !important;
   }
 
-
-
-
   // ******************************************* PANELS & INFO BOXES *******************************************
-
-  .panel {
-    padding: 10px 20px;
-    margin: 10px 0 20px 0;
-    @include round(4px);
-
-    h5 {
-      padding-top: 0;
-    }
-
-  }
-
-  .panel-default {
-    background-color: rgba($color-greyscale, 0.03);
-  }
-
-  .panel-answer {
-    margin-top: 0;
-    border: 1px solid rgba($color-answer, 0.3);
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-
-  .panel-pushed {
-    margin-left: 28px;
-  }
 
   // ******************************************* BUTTONS *******************************************
 
-  .button {
-    @include round(3px);
-    font-weight: normal;
-    letter-spacing: 1px;
-    margin: 12px 0 20px 0;
-    display: inline-block;
-    padding: 7px 22px;
-    text-align: center;
-
-    cursor: pointer;
-
-    border: 1px solid rgba($color-greyscale, 0.03);
-    background-color: rgba($color-greyscale, 0.03);
-  }
-
-  .button-answer {
-    background-color: lighten(adjust_hue($color-secondary, -11%), 5%); //#1E83C3
-    color: $color-lightest;
-    border: none;
-
-  }
-
-
   // ******************************************* TEXT *******************************************
-
-
 
   // Space between ordered list items
   ol {
@@ -172,33 +114,25 @@
     }
   }
 
-
   // ******************************************* CODE *******************************************
 
+  pre {
+    color: #0606E8;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
 
+    position: relative;
+    margin: .5em 0;
 
-
-    pre {
-      color: rgb(0, 54, 152);
-      font-family: Consolas, Monaco, 'Andale Mono', monospace;
-
-      position: relative;
-      margin: .5em 0;
-
-      background-color: #fdfdfd;
-      background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-      background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-      background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-      background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-      background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-      background-size: 3em 3em;
-      background-origin: content-box;
-      overflow: visible;
-      max-height: 30em;
-    }
-
-
-
-
+    background-color: #fdfdfd;
+    background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+    background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+    background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+    background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+    background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+    background-size: 3em 3em;
+    background-origin: content-box;
+    overflow: visible;
+    max-height: 30em;
+  }
 
 }

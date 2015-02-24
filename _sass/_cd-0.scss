@@ -121,6 +121,15 @@ h3.icon-large {
   background-color: rgba($color-greyscale, 0.03);
 }
 
+.panel-answer {
+  margin-top: 0;
+  border: 1px solid rgba($color-answer, 0.3);
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
 // ******************************************* BUTTONS *******************************************
 
 .button {
