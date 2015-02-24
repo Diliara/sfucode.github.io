@@ -1,126 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="css/code-canvas.css" rel="stylesheet" type="text/css">
-    <title>Testing styles</title>
-
-    <link href="examples/vendors/prism/prism.css" rel="stylesheet" type="text/css">
-    <link href="https://canvas.sfu.ca/assets/vendor_legacy_normal_contrast.css" rel="stylesheet" type="text/css">
-
-    <style>
-        body {
-            padding: 20px;
-        }
-
-        code {
-            color: #07a;
-            font-size: 12px;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background-color: #f5f2f0;
-        }
-
-        .banner h2 {
-            top: 3px !important;
-            /* because of the padding on this page */
-        }
-
-        /* local media query */
-        @media only screen and (max-width: 980px) {
-            .banner h2 {
-                left: 20px !important;
-            }
-        }
-
-
-        /* Default template */
-        .button {
-            -moz-border-radius: 3px;
-            border-radius: 3px;
-            font-weight: normal;
-            letter-spacing: 1px;
-            margin: 8px 0;
-            display: inline-block;
-            padding: 7px 22px;
-            text-align: center;
-            cursor: pointer;
-            border: 1px solid rgba(102, 102, 102, 0.03);
-            background-color: rgba(102, 102, 102, 0.03)
-        }
-
-        .panel {
-            padding: 10px 20px 0 20px;
-            display: block;
-            margin: 10px 0 20px 0;
-            border: 1px solid #d9d9d9;
-        }
-
-        .panel-answer {
-            display: none;
-            margin-top: 0;
-        }
-
-
-
-    </style>
+     <title>CODE CSS/JS Framework</title>
 </head>
 
 <body>
-<h2>SFU CODE Canvas boilerplate</h2>
-<h3>Themes</h3>
-<ol>
-    <li><a href="examples/cd-1.html">#cd-1</a></li>
-    <li><a href="examples/cd-2.html">#cd-2</a></li>
-    <li><a href="examples/cd-3.html">#cd-3</a></li>
-    <li><a href="examples/cd-4.html">#cd-4</a></li>
-    <li><a href="examples/cd-5.html">#cd-5</a></li>
-    <li><a href="examples/icons.html">Icons</a></li>
+<h2>SFU Canvas - CODE CSS/JS Framework</h2>
 
-</ol>
+<p><a href="http://files.code.sfu.ca/framework" target="_blank">files.code.sfu.ca/framework</a></p>
 
-<h3>Interactions</h3>
-
-<h5>Show-hide Answer</h5>
-<ol>
-    <li>Wrap the button and the answer in a <code>div</code> tag.</li>
-    <li>Use <code>.show-hide-btn</code> class creates the interaction.</li>
-    <li>Use <code>.panel-answer</code> class to hide the content by default. </li>
-    <li>Add <code>.button</code>, <code>.panel</code>,  and theme-specific classes for style.</li>
-</ol>
-
-
-
-<!-- Alternatively I can put one more class to a wrapping div and hide in css all children except the button -->
-
-<pre><code class="language-markup">&lt;div>
-    &lt;span class="button show-hide-btn">Answer 1&lt;/span>
-    &lt;div class="panel panel-answer">&lt;p>Some content initially hidden and visible after Answer button is clicked.&lt;/p>&lt;/div>
-&lt;/div></code></pre>
-
-
-<div>
-    <span class="button show-hide-btn">Answer 1</span>
-
-    <div class="panel panel-answer"><p>Some content initially hidden and visible after Answer button is clicked.</p></div>
-</div>
-<div>
-    <span class="button button-answer show-hide-btn">Answer 2</span>
-
-    <div class="panel panel-answer"><p>Some content initially hidden and visible after Answer button is clicked.</p>
-
-        <p>More</p></div>
-</div>
-
-<h3>Automatically Generated Side Navigation</h3>
-<p><a href="examples/nav-build.html">Build Nav</a></p>
-
-
-
-<script src="examples/vendors/prism/prism.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<!-- if we wannna use code-canvas instead, the js-load-timer should be modified -->
-<script src="js/code-canvas.js"></script>
-
+<p><a href="test.html">test</a></p>
 </body>
 
 </html>

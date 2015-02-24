@@ -6,6 +6,10 @@ $color-emph: #fbfbca;
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
 
+
+$color-answer: #c1e8fc;
+
+
 @mixin text-border-fix {
   //decrease space between text and border
   line-height: 26px;
@@ -48,7 +52,7 @@ $color-greyscale: #666666;
 
 // ****************************************** ICONS *******************************************
 
-$icons: icon, man-book-read, man-paper-show, book, man-paper-write, papers, man-r, monitor-venn, man-ab, video, question, target, slides, materials, checklist, discussions, book-x, exclamation, spss;
+$icons: icon, man-book-read, man-paper-show, book, man-paper-write, papers, man-r, monitor-venn, man-ab, video, question, target, slides, materials, checklist, discussions, book-x, exclamation, spssm, man-laptop;
 
 $selector: ();
 
@@ -119,6 +123,15 @@ h3.icon-large {
 
 .panel-default {
   background-color: rgba($color-greyscale, 0.03);
+}
+
+.panel-answer {
+  margin-top: 0;
+  border: 1px solid rgba($color-answer, 0.3);
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 // ******************************************* BUTTONS *******************************************

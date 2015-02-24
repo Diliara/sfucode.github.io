@@ -26,7 +26,7 @@ else if navHeight <= 32
   $SectionIdentifier.css 'height', 5
   $singleWordInNav.css 'padding-right', 0
   offsetSpace = 155
-  
+
 
 $nav.each ->
   content = $(this).nextAll()
@@ -42,6 +42,10 @@ $nav.each ->
       $('.active').removeClass 'active'
       return
   return
+  return
+
+
+
 
 # $('h3').prev() '.section-identifier'
 $SectionIdentifier.each ->
