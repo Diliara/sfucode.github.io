@@ -122,5 +122,5 @@ $ ->
   cachedScript "show-hide-btn.js"
 
   cachedScript "nav-build.js"
-  cachedScript "nav-scrollspy.js"
+  #cachedScript "nav-scrollspy.js"
 
