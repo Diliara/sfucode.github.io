@@ -23,7 +23,7 @@ buildAndEnableNavigation = (sections, navPlaceholder) ->
 
 
     #without nav-scrollspy
-    if $(this).hasClass 'exclude'
+    if !$(this).hasClass('exclude')
       $(this).replaceWith '<h3 id="section_' + sectionCount + '">' + $(this).text() + '</h3>'
 
 
