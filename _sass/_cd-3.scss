@@ -1,52 +1,15 @@
-//This comment will not be output to CSS file
-
-$color-base: #900;
-$color-secondary: #2a7db4;
-$color-emph: #fbfbca;
-$color-alert: #ad0026;
-
-$color-lightest: #ffffff;
-$color-greyscale: #666666;
-
-$color-comment: #0216fd;
-
-@mixin text-border-fix {
-  //decrease space between text and border
-  line-height: 26px;
-  padding-top: 14px
-}
-
-@mixin round($amount) {
-  -moz-border-radius: $amount; // rounds corners for firefox
-  border-radius: $amount; //rounds corners for other browsers
-}
-
-@mixin box-shadow($x, $y, $radius, $spread, $color, $opacity) {
-  -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
-  -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
-  box-shadow: $x $y $radius $spread rgba($color, $opacity);
-}
-
-@mixin icon-before-el {
-  content: '';
-  display: inline-block;
-  background-size: 29px 32px;
-  height: 29px;
-  width: 32px;
-  margin-right: 5px;
-  vertical-align: bottom;
-  margin-bottom: -2px;
-}
-
 #cd-3 {
 
-  // ****************************************** HEADINGS *******************************************
+  @import "cd-0"; //default theme
+
+  $color-base: #900;
+  $color-secondary: #2a7db4;
 
   .banner {
 
     h2 {
       /*
-      Set this up after GDBA orientation is over (instead of .red color below):
+      Set this up after 1151 is over (instead of .red color below):
       background-color: $color-base;
       */
       background-color: darken($color-greyscale, 13%);
@@ -74,7 +37,7 @@ $color-comment: #0216fd;
 
   }
 
-
+  // ****************************************** HEADINGS *******************************************
 
   //page title
   h2 {
@@ -110,14 +73,34 @@ $color-comment: #0216fd;
     font-weight: bold;
   }
 
-  .i-video, .i-overview, .i-objectives, .i-slides, .i-readings, .i-assignments, .i-discussions {
-    border-bottom: none !important;
-    @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+  // ****************************************** NEW ICONS *******************************************
+
+  $icons: slides;
+
+  $selector: ();
+
+  @each $item in $icons {
+    $selector: $selector, unquote('.i-#{$item}');
+    h3.i-#{$item} {
+      @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+    }
+
+    .i-#{$item}:before {
+      background: url(../img/icons/cd-3/#{$item}.png) left top no-repeat;
+      @include icon-before-el;
+    }
+
   }
 
-  .i-video:before {
-    background: url(../img/3/i-video.jpg) left top no-repeat;
-    @include icon-before-el;
+  #{$selector} {
+    border-bottom: none !important;
+  }
+
+  // ****************************************** OLD ICONS *******************************************
+
+  .i-overview, .i-objectives, .i-readings, .i-assignments {
+    border-bottom: none !important;
+    @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
   }
 
   .i-overview:before {
@@ -127,11 +110,6 @@ $color-comment: #0216fd;
 
   .i-objectives:before {
     background: url(../img/3/i-objectives.jpg) left top no-repeat;
-    @include icon-before-el;
-  }
-
-  .i-slides:before {
-    background: url(../img/3/i-slides.jpg) left top no-repeat;
     @include icon-before-el;
   }
 
@@ -145,30 +123,13 @@ $color-comment: #0216fd;
     @include icon-before-el;
   }
 
-  .i-discussions:before {
-    background: url(../img/3/i-discussion.jpg) left top no-repeat;
-    @include icon-before-el;
-  }
-
-  .i-discussions:before {
-    background: url(../img/3/i-discussion.jpg) left top no-repeat;
-    @include icon-before-el;
-  }
-
   // ******************************************* PANELS & INFO BOXES *******************************************
 
   .panel {
-    padding: 10px 20px;
-    display: block;
-    margin: 10px 0 20px 0;
-    border: 1px solid #d9d9d9;
     padding-bottom: 0;
-    @include round(4px);
 
     h5 {
       border-bottom: 1px solid rgba($color-greyscale, 0.2);
-      //text-transform: uppercase;
-      padding-top: 0;
     }
 
   }
@@ -179,66 +140,9 @@ $color-comment: #0216fd;
 
   // ******************************************* BUTTONS *******************************************
 
-  .button {
-    @include round(3px);
-    font-weight: normal;
-    letter-spacing: 1px;
-    margin: 8px 0;
-    display: inline-block;
-    padding: 7px 22px;
-    text-align: center;
-
-    cursor: pointer;
-
-    border: 1px solid rgba($color-greyscale, 0.03);
-    background-color: rgba($color-greyscale, 0.03);
-  }
-
-.show-hide-btn {
-  cursor: pointer;
-}
-
   // ******************************************* TABLES *******************************************
 
-  .tbl-w100 {
-    width: 100%
-  }
-
-  table thead, table tfoot {
-    background-color: #f5f5f5;
-    font-weight: bold;
-  }
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-
-  table {
-    border: solid 1px rgba($color-greyscale, 0.2);
-    margin-bottom: 1.25em;
-    margin-left: 0;
-    border-collapse: separate;
-    border-spacing: 2px;
-  }
-
-  td {
-    padding: 0.5625em 0.625em;
-  }
-
   // ******************************************* TEXT *******************************************
-
-  .highlight-emph {
-    padding: .05em .4em;
-    background-color: rgba($color-emph, 0.8);
-    @include round(6px);
-  }
-
-  dl {
-    position: relative;
-  }
-
-  dt {
-    padding-top: 0.5em;
-  }
 
   // Space between ordered list items
   ol {
@@ -252,38 +156,24 @@ $color-comment: #0216fd;
     }
   }
 
-  .no-space {
-    :not(:first-child) {
-      padding-top: 0;
-    }
-  }
-
   blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
     border-left: 5px solid #eee;
-  }
 
-  blockquote cite {
-    display: block;
-    font-size: 80%;
-    color: #777;
-    font-style: italic;
-  }
+    cite {
+      display: block;
+      font-size: 80%;
+      color: #777;
+      font-style: italic;
 
-  blockquote cite:before {
-    content: '\2014 \00A0';
+      &:before {
+        content: '\2014 \00A0';
+      }
+    }
   }
 
   // ******************************************* IMGs *******************************************
-
-  .img-centered {
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px 0;
-  }
 
   img {
     border: solid 4px #FFFFFF;
@@ -293,14 +183,6 @@ $color-comment: #0216fd;
 
   img + p {
     padding-top: 10px;
-  }
-
-  // ******************************************* for JS ******************************************
-
-  // #1: show-hide-btn
-
-  .panel-answer {
-    display: none;
   }
 
   // ------------------
