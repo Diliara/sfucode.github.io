@@ -17,9 +17,8 @@ buildAndEnableNavigation = (sections, navPlaceholder) ->
 
 
     #Placing links (section ids) within the content (above each section)
-    $(this).before '<div class="section-identifier" id=\'section_' + sectionCount + '\'>'
-    console.log($(this) + '\n --------- \n');
-    #$(this).append '<h3 id="section_' + sectionCount + '">' + $(this).text() + '</h3>'
+    #$(this).before '<div class="section-identifier" id=\'section_' + sectionCount + '\'>'
+    $(this).replaceWith '<h3 id="section_' + sectionCount + '">' + $(this).text() + '</h3>'
 
 
     #Building up list of linked sections (with hrefs)
