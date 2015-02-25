@@ -27,12 +27,12 @@ buildAndEnableNavigation = (sections, navPlaceholder) ->
       $(this).replaceWith '<h3 id="section_' + sectionCount + '">' + $(this).text() + '</h3>'
 
 
-    #Building up list of linked sections (with hrefs)
-    if $(this).text().split(' ').length == 1
-      listOfLinks.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a class=\'space-right\' href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
-    else
-      listOfLinks.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
-    return
+      #Building up list of linked sections (with hrefs)
+      if $(this).text().split(' ').length == 1
+        listOfLinks.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a class=\'space-right\' href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
+      else
+        listOfLinks.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
+      return
 
   #Placing a list of linked sections
   $('.' + navPlaceholder).html(listOfLinks)
