@@ -8,6 +8,7 @@ $color-greyscale: #666666;
 
 
 $color-answer: #c1e8fc;
+$color-alert: #ad0026;
 
 
 @mixin text-border-fix {
@@ -48,6 +49,12 @@ $color-answer: #c1e8fc;
   -webkit-box-sizing: $box-model; // Safari <= 5
   -moz-box-sizing: $box-model; // Firefox <= 19
   box-sizing: $box-model;
+}
+
+@mixin box-shadow($x, $y, $radius, $spread, $color, $opacity) {
+  -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
+  box-shadow: $x $y $radius $spread rgba($color, $opacity);
 }
 
 // ****************************************** ICONS *******************************************
@@ -151,6 +158,10 @@ h3.icon-large {
   background-color: rgba($color-greyscale, 0.03);
 }
 
+.show-hide-btn {
+  cursor: pointer;
+}
+
 // ******************************************* TABLES *******************************************
 
 .tbl-w100 {
@@ -201,6 +212,12 @@ dt {
 
 // Space between list items
 // theme-specific
+
+.no-space {
+  :not(:first-child) {
+    padding-top: 0;
+  }
+}
 
 .bibl {
   list-style-type: none;
