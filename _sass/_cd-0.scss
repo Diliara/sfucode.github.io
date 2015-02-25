@@ -6,10 +6,8 @@ $color-emph: #fbfbca;
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
 
-
 $color-answer: #c1e8fc;
 $color-alert: #ad0026;
-
 
 @mixin text-border-fix {
   //decrease space between text and border
@@ -126,6 +124,10 @@ h3.icon-large {
     padding-top: 0;
   }
 
+  p:last-child {
+    margin-bottom: 0;
+  }
+
 }
 
 .panel-default {
@@ -136,10 +138,13 @@ h3.icon-large {
   margin-top: 0;
   border: 1px solid rgba($color-answer, 0.3);
 
-  p:last-child {
-    margin-bottom: 0;
-  }
 }
+
+/* used in cd-4 */
+.panel-pushed {
+  margin-left: 28px;
+}
+
 
 // ******************************************* BUTTONS *******************************************
 
@@ -259,7 +264,6 @@ dt {
 .panel-answer {
   display: none;
 }
-
 
 // ******************************************* NAV *******************************************
 
