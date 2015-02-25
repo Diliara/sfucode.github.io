@@ -194,6 +194,10 @@ $color-comment: #0216fd;
     background-color: rgba($color-greyscale, 0.03);
   }
 
+.show-hide-btn {
+  cursor: pointer;
+}
+
   // ******************************************* TABLES *******************************************
 
   .tbl-w100 {
