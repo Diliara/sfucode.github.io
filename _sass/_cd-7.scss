@@ -30,7 +30,7 @@
 
   counter-reset: h3counter;
 
-  h3.nocount:before {
+  h3.exclude:before {
     content: none !important;
     counter-increment: none !important;
   }
