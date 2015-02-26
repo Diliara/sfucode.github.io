@@ -22,6 +22,7 @@
     showHideBtnOnlyOne.not(this).siblings().slideUp()
 
   showHideBtnWithArrow.on 'mouseover click', ->
+    console.log 'section content display ' + $(this).siblings().css('display')
     if $(this).siblings().css('display') == 'block'
       $(this).children('.open-arrow').hide()
       $(this).children('.close-arrow').show()
