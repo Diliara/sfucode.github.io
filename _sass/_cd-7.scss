@@ -148,8 +148,17 @@
 
 
   h3 {
-    &.show-hide-btn:hover {
-      color: darken($color-secondary, 1%);
+
+
+    &.show-hide-btn {
+
+      padding: 10px 10px 5px 10px;
+
+      &:hover {
+        color: darken($color-secondary, 1%);
+        background-color: transparentize($color-secondary, 0.96);;
+
+      }
 
     }
 
