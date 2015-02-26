@@ -10,10 +10,10 @@
 
   #Arrows for H3s
 
-  #showHideBtnWithArrow = $('.arrow')
-  showHideBtnWithArrow = $('h3.show-hide-btn')
+  showHideBtnWithArrow = $('.arrow')
+  #showHideBtnWithArrow = $('h3.show-hide-btn')
 
-  showHideBtnWithArrow.append '<span class="show-hide-arrow down-arrow">&or;</span><span class="show-hide-arrow up-arrow">&and;</span>'
+  showHideBtnWithArrow.append '<span class="open-arrow"></span><span class="close-arrow"></span>'
   showHideBtnWithArrow.each ->
     $(this).children().hide()
 
@@ -23,15 +23,15 @@
 
   showHideBtnWithArrow.on 'mouseover click', ->
     if $(this).siblings().css('display') == 'block'
-      $(this).children('.down-arrow').hide()
-      $(this).children('.up-arrow').show()
+      $(this).children('.open-arrow').hide()
+      $(this).children('.close-arrow').show()
     else
-      $(this).children('.down-arrow').show()
-      $(this).children('.up-arrow').hide()
+      $(this).children('.open-arrow').show()
+      $(this).children('.close-arrow').hide()
 
   showHideBtnWithArrow.mouseout ->
-    $(this).children('.up-arrow').hide()
-    $(this).children('.down-arrow').hide()
+    $(this).children('.close-arrow').hide()
+    $(this).children('.open-arrow').hide()
 
 
 ) jQuery
