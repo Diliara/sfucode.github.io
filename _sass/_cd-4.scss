@@ -60,7 +60,7 @@
 
   .guide, .objectives, .slides, .problems, .solutions {
     border-bottom: none !important;
-    @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+    @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
   }
 
   .guide:before {

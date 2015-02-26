@@ -67,7 +67,7 @@
   @each $item in $icons {
     $selector: $selector, unquote('.i-#{$item}');
     h3.i-#{$item} {
-      @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+      @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
     }
 
     .i-#{$item}:before {
@@ -95,7 +95,7 @@
 
   .i-summary, .i-required, .i-recommended, .i-narratives, .i-description, .i-reference, .i-circle {
     border-bottom: none !important;
-    @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+    @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
   }
 
 

@@ -20,11 +20,6 @@ $color-alert: #ad0026;
   border-radius: $amount; //rounds corners for other browsers
 }
 
-@mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
-  -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
-  -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
-  box-shadow: $x $y $radius $spread rgba($color, $opacity);
-}
 
 @mixin icon-before-el {
   content: '';
@@ -55,6 +50,7 @@ $color-alert: #ad0026;
   box-shadow: $x $y $radius $spread rgba($color, $opacity);
 }
 
+
 // ****************************************** ICONS *******************************************
 
 $icons: icon, man-book-read, man-paper-show, book, man-paper-write, papers, man-r, monitor-venn, man-ab, video, question, target, slides, materials, checklist, discussions, book-x, exclamation, spssm, man-laptop;
@@ -66,7 +62,7 @@ $selector: ();
 @each $item in $icons {
   $selector: $selector, unquote('.i-#{$item}');
   h3.i-#{$item} {
-    @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+    @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
   }
 
   .i-#{$item}:before {
@@ -259,15 +255,18 @@ dt {
   padding: 10px 0;
 }
 
-// ------------------
+// ******************************************* FOR JS *******************************************
 
 .panel-answer {
   display: none;
+}
+
+.show-hide-arrow {
+  padding-left: 20px;
 }
 
 // ******************************************* NAV *******************************************
 
 .top {
   float: right;
-
 }
