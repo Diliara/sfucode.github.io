@@ -21,7 +21,7 @@
     $(this).siblings().slideToggle()
     showHideBtnOnlyOne.not(this).siblings().slideUp()
 
-  showHideBtnWithArrow.mouseover ->
+  showHideBtnWithArrow.on 'mouseover click', ->
     if $(this).siblings().css('display') == 'block'
       $(this).children('.down-arrow').hide()
       $(this).children('.up-arrow').show()
@@ -33,10 +33,5 @@
     $(this).children('.up-arrow').hide()
     $(this).children('.down-arrow').hide()
 
-  #showHideBtnWithArrow.click ->
-    #$(this).children().toggle()
-    #showHideBtnWithArrow.not(this).each ->
-      #$(this).children().first().hide()
-      #$(this).children().last().show()
 
 ) jQuery
