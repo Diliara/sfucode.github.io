@@ -2,37 +2,26 @@
 # works with .show-hide-btn
 ---
 
+# Name of arrow images (without extention)
+openArrow = "slider_open"
+closedArrow = "slider_closed"
+
+# Name of arrow class
+arrow = "arrow"
 
 (($) ->
-
-  showHideBtn = $('.show-hide-btn')
-  showHideBtnOnlyOne = $('.show-hide-btn.only-one')
-
-  #Arrows for H3s
-
-  showHideBtnWithArrow = $('.arrow')
-  #showHideBtnWithArrow = $('h3.show-hide-btn')
-
-  showHideBtnWithArrow.append '<span class="open-arrow"></span><span class="close-arrow"></span>'
-  showHideBtnWithArrow.each ->
-    $(this).children().hide()
-
-  showHideBtn.click ->
-    $(this).siblings().slideToggle()
-    showHideBtnOnlyOne.not(this).siblings().slideUp()
-
-  showHideBtnWithArrow.on 'mouseover click', ->
-    console.log 'section content display ' + $(this).siblings().css('display')
-    if $(this).siblings().css('display') == 'block'
-      $(this).children('.open-arrow').hide()
-      $(this).children('.close-arrow').show()
-    else
-      $(this).children('.open-arrow').show()
-      $(this).children('.close-arrow').hide()
-
-  showHideBtnWithArrow.mouseout ->
-    $(this).children('.close-arrow').hide()
-    $(this).children('.open-arrow').hide()
-
-
+    $(".show-hide-btn").click ->
+        $this = $(this)
+        $this.siblings().slideToggle()
+        $(".show-hide-btn.only-one").not(this).each() ->
+            $thisOnlyOne = $(this)
+            $thisOnlyOne.siblings().slideUp()
+            if $thisOnlyOne.hasClass(arrow) and $thisOnlyOne.css("background-image").indexOf(closedArrow) is -1
+                $thisOnlyOne.css "background-image", (index, value) ->
+                    value.replace openArrow, closedArrow
+        if $this.hasClass(arrow)
+            $this.css "background-image", (index, value) ->
+                unless $this.css("background-image").indexOf(closedArrow) is -1
+                    value.replace closedArrow, openArrow
+                else value.replace openArrow, closedArrow
 ) jQuery
