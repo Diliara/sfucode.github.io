@@ -11,10 +11,11 @@ arrow = "arrow"
 
 (($) ->
     $(".show-hide-btn").click ->
+        console.log "Hello from outside"
         $this = $(this)
         $this.siblings().slideToggle()
         $(".show-hide-btn.only-one").not(this).each() ->
-            console.log "Hello from show-hide-btn"
+            console.log "Hello from inside"
             $thisOnlyOne = $(this)
             $thisOnlyOne.siblings().slideUp()
             if $thisOnlyOne.hasClass(arrow) and $thisOnlyOne.css("background-image").indexOf(closedArrow) is -1
