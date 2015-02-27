@@ -261,12 +261,9 @@ dt {
   display: none;
 }
 
-.open-arrow:after {
-  content: '\002228'
-}
-
-.close-arrow:after {
-  content: '\002227'
+.arrow {
+  background-image: url(../img/other/slider_closed.png)
+  background-position: right center
 }
 
 
