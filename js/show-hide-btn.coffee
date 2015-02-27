@@ -15,6 +15,7 @@ arrow = "arrow"
         $this.siblings().slideToggle()
         $(".show-hide-btn.only-one").not(this).each() ->
             $thisOnlyOne = $(this)
+            console.log $thisOnlyOne
             $thisOnlyOne.siblings().slideUp()
             if $thisOnlyOne.hasClass(arrow) and $thisOnlyOne.css("background-image").indexOf(closedArrow) is -1
                 $thisOnlyOne.css "background-image", (index, value) ->
