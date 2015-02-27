@@ -11,12 +11,9 @@ arrow = "arrow"
 
 (($) ->
     $(".show-hide-btn").click ->
-        console.log "Hello from outside"
         $this = $(this)
         $this.siblings().slideToggle()
-        console.log $(".show-hide-btn.only-one").not(this)
-        $(".show-hide-btn.only-one").not(this).each() ->
-            console.log "Hello from inside"
+        $(".show-hide-btn.only-one").not(this).each ->
             $thisOnlyOne = $(this)
             $thisOnlyOne.siblings().slideUp()
             if $thisOnlyOne.hasClass(arrow) and $thisOnlyOne.css("background-image").indexOf(closedArrow) is -1
@@ -28,4 +25,3 @@ arrow = "arrow"
                     value.replace closedArrow, openArrow
                 else value.replace openArrow, closedArrow
 ) jQuery
-
