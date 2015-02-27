@@ -14,6 +14,7 @@ arrow = "arrow"
         console.log "Hello from outside"
         $this = $(this)
         $this.siblings().slideToggle()
+        console.log $(".show-hide-btn.only-one").not(this)
         $(".show-hide-btn.only-one").not(this).each() ->
             console.log "Hello from inside"
             $thisOnlyOne = $(this)
@@ -27,3 +28,4 @@ arrow = "arrow"
                     value.replace closedArrow, openArrow
                 else value.replace openArrow, closedArrow
 ) jQuery
+
