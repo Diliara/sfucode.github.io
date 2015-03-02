@@ -6,10 +6,8 @@ $color-emph: #fbfbca;
 $color-lightest: #ffffff;
 $color-greyscale: #666666;
 
-
 $color-answer: #c1e8fc;
 $color-alert: #ad0026;
-
 
 @mixin text-border-fix {
   //decrease space between text and border
@@ -22,11 +20,6 @@ $color-alert: #ad0026;
   border-radius: $amount; //rounds corners for other browsers
 }
 
-@mixin icon-border-bottom($x, $y, $radius, $spread, $color, $opacity) {
-  -webkit-box-shadow: $x $y $radius $spread rgba($color, $opacity);
-  -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
-  box-shadow: $x $y $radius $spread rgba($color, $opacity);
-}
 
 @mixin icon-before-el {
   content: '';
@@ -57,6 +50,7 @@ $color-alert: #ad0026;
   box-shadow: $x $y $radius $spread rgba($color, $opacity);
 }
 
+
 // ****************************************** ICONS *******************************************
 
 $icons: icon, man-book-read, man-paper-show, book, man-paper-write, papers, man-r, monitor-venn, man-ab, video, question, target, slides, materials, checklist, discussions, book-x, exclamation, spssm, man-laptop;
@@ -68,7 +62,7 @@ $selector: ();
 @each $item in $icons {
   $selector: $selector, unquote('.i-#{$item}');
   h3.i-#{$item} {
-    @include icon-border-bottom(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+    @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
   }
 
   .i-#{$item}:before {
@@ -126,6 +120,10 @@ h3.icon-large {
     padding-top: 0;
   }
 
+  p:last-child {
+    margin-bottom: 0;
+  }
+
 }
 
 .panel-default {
@@ -136,10 +134,13 @@ h3.icon-large {
   margin-top: 0;
   border: 1px solid rgba($color-answer, 0.3);
 
-  p:last-child {
-    margin-bottom: 0;
-  }
 }
+
+/* used in cd-4 */
+.panel-pushed {
+  margin-left: 28px;
+}
+
 
 // ******************************************* BUTTONS *******************************************
 
@@ -254,10 +255,16 @@ dt {
   padding: 10px 0;
 }
 
-// ------------------
+// ******************************************* FOR JS *******************************************
 
 .panel-answer {
   display: none;
+}
+
+.arrow {
+  background-image: url(../img/ui/cd-0/slider_closed.png);
+  background-position: 99% 60%;
+  background-repeat: no-repeat;
 }
 
 
@@ -265,5 +272,4 @@ dt {
 
 .top {
   float: right;
-
 }
