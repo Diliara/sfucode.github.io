@@ -4,7 +4,7 @@
 
 (($) ->
 
-    $("#drag-options").children("li").draggable revert: "invalid"
+    $("#drag-me-options").children("li").draggable revert: "invalid"
     $(".drop-area").droppable
       activeClass: "drop-area-trigger"
       hoverClass: "drop-area-active"
