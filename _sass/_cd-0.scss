@@ -20,7 +20,6 @@ $color-alert: #ad0026;
   border-radius: $amount; //rounds corners for other browsers
 }
 
-
 @mixin icon-before-el {
   content: '';
   display: inline-block;
@@ -49,7 +48,6 @@ $color-alert: #ad0026;
   -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
   box-shadow: $x $y $radius $spread rgba($color, $opacity);
 }
-
 
 // ****************************************** ICONS *******************************************
 
@@ -140,7 +138,6 @@ h3.icon-large {
 .panel-pushed {
   margin-left: 28px;
 }
-
 
 // ******************************************* BUTTONS *******************************************
 
@@ -267,6 +264,44 @@ dt {
   background-repeat: no-repeat;
 }
 
+.drop-area {
+  width: 120px;
+  height: 30px;
+  border-bottom: 2px solid #000000;
+  display: inline-block;
+  margin: 0 1.5em;
+  background-color: rgba(139, 250, 255, 0.27);
+
+}
+
+.drag-me {
+  cursor: pointer;
+  border: 1px dashed rgba(0, 0, 0, 0.54);
+  width: 100px;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+}
+
+.drop-area-trigger {
+  background-color: rgba(255, 249, 125, 0.70);
+
+}
+
+.drop-area-area {
+
+  background-color: rgba(7, 255, 23, 0.40);
+
+}
+
+.drop-area-dropped {
+  background-color: rgba(18, 56, 255, 0.40);
+
+}
+
+.feedback {
+  color: green;
+}
 
 // ******************************************* NAV *******************************************
 
