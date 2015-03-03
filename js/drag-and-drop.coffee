@@ -21,7 +21,7 @@ $(".drag-and-drop").mouseenter ->
 handleDropEventFunction = (event, ui) ->
     item = ui.draggable #item that is being dragged and dropped
     item.addClass 'dropped'
-    item.draggable 'disable'
+    #item.draggable 'disable'
     $(@).droppable 'disable' #do not drop in the same box
     console.log "Dropped item: " + item.attr("class").split(' ')[0]
     $(@).addClass("drop-area-dropped").parent().find(".feedback").html "correct!"
