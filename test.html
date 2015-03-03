@@ -10,35 +10,120 @@
             padding: 20px;
         }
 
-
-
-
-
-
-
     </style>
 
 </head>
 <body>
 <div id="cd-7">
 
-<div class="banner">
-    <h2>#cd-7 theme </h2>
-</div>
+    <div class="banner">
+        <h2>#cd-7 theme </h2>
+    </div>
 
-<ol style="list-style-type: none;" id="drag-me-options">
-    <li id="drag-me-1">Lorem</li>
-    <li id="drag-me-2">Ipsum</li>
-    <li id="drag-me-3">Aliquid</li>
-    <li id="drag-me-4">Accusamus</li>
-</ol>
+    <h3>Navigation Builder</h3>
+
+    <div class="nav-build"></div>
 
 
-<ol id="drop-here-options">
-    <li><span class="drop-area" id="drop-area-1"></span><span>is</span><span class="drop-area"  id="drop-area-2"></span><span class="feedback"></span></li>
-    <li><span class="drop-area" id="drop-area-3"></span><span>is</span><span class="drop-area"  id="drop-area-4"></span><span class="feedback"></span></li>
-</ol>
+    <h3>Drag and Drop</h3>
 
+    <div class="drag-and-drop">
+        <ol class="drag-me-options">
+            <li class="a">Lorem a</li>
+            <li class="b">Ipsum b</li>
+            <li class="c">Sit c</li>
+            <li class="d">Amet d</li>
+        </ol>
+        <ol>
+            <li>
+                <span class="drop-area"></span>
+                <span>is</span>
+                <span class="drop-area"></span>
+                <span class="feedback"></span>
+            </li>
+            <li>
+                <span class="drop-area"></span>
+                <span>is</span>
+                <span class="drop-area"></span>
+                <span class="feedback"></span>
+            </li>
+        </ol>
+    </div>
+
+    <div class="drag-and-drop">
+        <ol class="drag-me-options">
+            <li class="a">Bla a</li>
+            <li class="b">Bla Bla b</li>
+            <li class="c">Hey c</li>
+            <li class="d">There d</li>
+        </ol>
+        <ol>
+            <li>
+                <span class="drop-area"></span>
+                <span>is</span>
+                <span class="drop-area"></span>
+                <span class="feedback"></span>
+            </li>
+            <li>
+                <span class="drop-area"></span>
+                <span>is</span>
+                <span class="drop-area"></span>
+                <span class="feedback"></span>
+            </li>
+        </ol>
+    </div>
+
+
+    <h3>SHow/Hide and Accordion</h3>
+
+
+    <div>
+        <h4 class="show-hide-btn only-one arrow">Click on me only-one </h4>
+
+        <div class="panel panel-answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet magnam molestiae natus omnis pariatur perspiciatis quod veniam! Ab aut, dolores in iusto natus reprehenderit saepe. Eius
+                ipsam non officia ut?</p>
+
+        </div>
+    </div>
+
+    <div><h4 class="show-hide-btn only-one arrow">or on me only-one </h4>
+
+        <div class="panel panel-answer">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cum fugiat in, ipsa maiores necessitatibus provident quaerat! Aliquid cum cupiditate distinctio dolore libero non
+                officiis quaerat, quibusdam quis quo similique.</p>
+        </div>
+    </div>
+
+    <div><h4 class="show-hide-btn only-one arrow">or better on me only-one </h4>
+
+        <div class="panel panel-answer">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium blanditiis enim exercitationem facilis in inventore magni, modi natus odio odit quibusdam quo ratione
+                recusandae sint suscipit temporibus veritatis, vero.</p>
+
+        </div>
+    </div>
+
+
+    <div><h4 class="show-hide-btn arrow">Just dropdown h4 here</h4>
+
+        <div class="panel panel-answer">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium blanditiis enim exercitationem facilis in inventore magni, modi natus odio odit quibusdam quo ratione
+                recusandae sint suscipit temporibus veritatis, vero.</p>
+
+        </div>
+    </div>
+
+
+    <div>
+        <span class="button show-hide-btn">Answer</span>
+        <div class="panel panel-answer">
+            <p>Some content initially hidden and visible after Answer button is clicked.</p>
+        </div>
+    </div>
 
 
 
@@ -51,8 +136,10 @@
 
 <!-- if we wannna use code-canvas instead, the js-load-timer should be modified -->
 <script src="js/code-canvas.js"></script>
+<script src="js/nav-build.js"></script>
+<script src="js/show-hide-btn.js"></script>
 
- <script src="js/drag-and-drop.js"></script>
+<script src="js/drag-and-drop.js"></script>
 
 
 </body>

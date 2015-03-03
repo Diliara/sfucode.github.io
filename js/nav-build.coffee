@@ -9,29 +9,29 @@ buildAndEnableNavigation = (sections, navPlaceholder) ->
   listOfLinks = $('<ol class=\'nav-list\'>')
 
   $(sections).each ->
-    console.log 'section : ' + sectionCount + ' - ' + $(this).text()
-    console.log '\n'
+    #console.log 'section : ' + sectionCount + ' - ' + $(@).text()
+    #console.log '\n'
 
     if sectionCount > 1
-      $(this).before '<p class="top"><a href="#top">top &uarr;</a></p>'
+      $(@).before '<p class="top"><a href="#top">top &uarr;</a></p>'
 
 
     #Placing links (section ids) within the content (above each section)
 
     #for nav-scrollspy (comment out without nav-scrollspy)
-    #$(this).before '<div class="section-identifier" id=\'section_' + sectionCount + '\'>'
+    #$(@).before '<div class="section-identifier" id=\'section_' + sectionCount + '\'>'
 
 
     #without nav-scrollspy
-    if !$(this).hasClass('exclude')
-      $(this).replaceWith '<h3 id="section_' + sectionCount + '">' + $(this).text() + '</h3>'
+    if !$(@).hasClass('exclude')
+      $(@).replaceWith '<h3 id="section_' + sectionCount + '">' + $(@).text() + '</h3>'
 
 
       #Building up list of linked sections (with hrefs)
-      if $(this).text().split(' ').length == 1
-        listOfLinks.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a class=\'space-right\' href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
+      if $(@).text().split(' ').length == 1
+        listOfLinks.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a class=\'space-right\' href=\'#section_' + sectionCount++ + '\'>' + $(@).text() + '</a></li>')
       else
-        listOfLinks.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a href=\'#section_' + sectionCount++ + '\'>' + $(this).text() + '</a></li>')
+        listOfLinks.append $('<li id=\'from_section_' + fromSectionCount++ + '\'><a href=\'#section_' + sectionCount++ + '\'>' + $(@).text() + '</a></li>')
       return
 
   #Placing a list of linked sections

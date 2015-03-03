@@ -264,26 +264,41 @@ dt {
   background-repeat: no-repeat;
 }
 
-#drag-me-options li {
-  cursor: pointer;
-  border: 1px dashed rgba(0, 0, 0, 0.54);
-  width: 100px;
-  margin: 5px;
-  padding: 5px;
-  background-color: white;
+
+.drag-and-drop {
+  border: 1px dotted $color-greyscale;
+  margin-bottom: 10px;
 }
+
+.drag-me-options {
+  list-style-type: none;
+
+  li {
+    cursor: pointer;
+    border: 1px dashed transparentize($color-greyscale, 0.8);
+    width: 100px;
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+  }
+
+  .dropped {
+    border: none;
+  }
+}
+
+
 
 
 .drop-area {
   width: 120px;
   height: 30px;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid $color-greyscale;
   display: inline-block;
   margin: 0 1.5em;
   background-color: rgba(139, 250, 255, 0.27);
 
 }
-
 
 .drop-area-trigger {
   background-color: rgba(255, 249, 125, 0.70);
