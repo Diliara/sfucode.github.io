@@ -30,8 +30,8 @@ handleDropEventFunction = (event, ui) ->
         item.draggable 'disable'
         $(@).droppable 'disable' #do not drop in the same box
 
-        console.log "Dragged and drpped item: " + itemClass
-        console.log "Dropped area: " + dropAreaClass
+        #console.log "Dragged and drpped item: #{itemClass}"
+        #console.log "Dropped area: #{dropAreaClass}"
 
         $(@).addClass("drop-area-dropped")
 
