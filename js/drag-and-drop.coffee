@@ -2,6 +2,11 @@
 # Drag and Drop
 ---
 
+#remove any existing text within the .drop-area
+dropArea = $('.drop-area')
+dropArea.text('')
+
+
 $(".drag-and-drop").mousemove ->
     $(@).children('ol').first().children("li").draggable
         revert: true
