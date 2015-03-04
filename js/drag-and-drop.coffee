@@ -2,7 +2,7 @@
 # Drag and Drop
 ---
 
-$(".drag-and-drop").mouseenter ->
+$(".drag-and-drop").mousemove ->
     $(@).children('ol').first().children("li").draggable
         revert: true
         #cursor: 'move'
