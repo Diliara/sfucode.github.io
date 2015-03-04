@@ -3,8 +3,14 @@
 ---
 
 #remove any existing text within the .drop-area
-dropArea = $('.drop-area')
-dropArea.text('')
+#dropArea = $('.drop-area')
+#dropArea.text('')
+#limiting the scope to under #cd themes
+
+themeNumber = 1 #first theme
+while themeNumber <= 7 #last theme
+  $("#cd-#{themeNumber} .drop-area").text " "
+  themeNumber++
 
 
 $(".drag-and-drop").mousemove ->
