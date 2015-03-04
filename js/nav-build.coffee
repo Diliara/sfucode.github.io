@@ -10,7 +10,7 @@ buildAndEnableNavigation = (sections, navPlaceholder) ->
 
   $(sections).each ->
     sectionTitle = $(@).text()
-    console.log "section : #{sectionCount} - #{sectionTitle}"
+    #console.log "section : #{sectionCount} - #{sectionTitle}"
     #console.log '\n'
 
     if sectionCount > 1
