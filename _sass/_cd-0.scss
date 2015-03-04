@@ -9,6 +9,11 @@ $color-greyscale: #666666;
 $color-answer: #c1e8fc;
 $color-alert: #ad0026;
 
+$color-possible: rgb(216, 211, 213);
+$color-hover: rgb(255, 150, 93);
+$color-trigger: rgb(255, 249, 125);
+$color-dropped: rgb(70, 187, 139);
+
 @mixin text-border-fix {
   //decrease space between text and border
   line-height: 26px;
@@ -264,60 +269,59 @@ dt {
   background-repeat: no-repeat;
 }
 
-
-.drag-and-drop {
-  border: 1px dotted $color-greyscale;
-  margin-bottom: 10px;
-}
-
-.drag-me-options {
-  list-style-type: none;
-
-  li {
-    cursor: pointer;
-    border: 1px dashed transparentize($color-greyscale, 0.8);
-    width: 100px;
-    margin: 5px;
-    padding: 5px;
-    background-color: white;
-  }
-
-  .dropped {
-    border: none;
-    opacity: 1;
-  }
-}
-
-
-
-
 .drop-area {
-  width: 120px;
+  width: 150px;
   height: 30px;
   border-bottom: 2px solid $color-greyscale;
   display: inline-block;
   margin: 0 1.5em;
-  background-color: rgba(139, 250, 255, 0.27);
-
+  background-color: transparentize($color-possible, 0.8);
 }
 
 .drop-area-trigger {
-  background-color: rgba(255, 249, 125, 0.70);
+  background-color: transparentize($color-trigger, 0.8);
 }
 
-.drop-area-active {
-  background-color: rgba(7, 255, 23, 0.40);
+.drop-area-hover {
+  background-color: transparentize($color-hover, 0.8);
 }
 
 .drop-area-dropped {
-  background-color: rgba(18, 56, 255, 0.40);
+  background-color: transparentize($color-dropped, 0.8);
   opacity: 1;
 
 }
 
 .feedback {
-  color: green;
+  color: $color-dropped
 }
+
+.drag-and-drop {
+  border: 1px dotted $color-greyscale;
+  margin-bottom: 10px;
+
+  ol:first-child {
+    list-style-type: none;
+
+    li {
+      cursor: pointer;
+      border: 1px dashed transparentize($color-greyscale, 0.8);
+      display: inline-block;
+      margin: 5px;
+      padding: 5px;
+      background-color: white;
+    }
+
+    .dropped {
+      border: none;
+      opacity: 1;
+      background: none;
+    }
+  }
+
+}
+
+
 
 // ******************************************* NAV *******************************************
 
