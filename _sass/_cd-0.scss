@@ -9,6 +9,11 @@ $color-greyscale: #666666;
 $color-answer: #c1e8fc;
 $color-alert: #ad0026;
 
+$color-possible: rgb(216, 211, 213);
+$color-hover: rgb(188, 241, 255);
+$color-trigger: rgb(255, 254, 197);
+$color-dropped: rgb(70, 187, 139);
+
 @mixin text-border-fix {
   //decrease space between text and border
   line-height: 26px;
@@ -19,7 +24,6 @@ $color-alert: #ad0026;
   -moz-border-radius: $amount; // rounds corners for firefox
   border-radius: $amount; //rounds corners for other browsers
 }
-
 
 @mixin icon-before-el {
   content: '';
@@ -49,7 +53,6 @@ $color-alert: #ad0026;
   -moz-box-shadow: $x $y $radius $spread rgba($color, $opacity);
   box-shadow: $x $y $radius $spread rgba($color, $opacity);
 }
-
 
 // ****************************************** ICONS *******************************************
 
@@ -140,7 +143,6 @@ h3.icon-large {
 .panel-pushed {
   margin-left: 28px;
 }
-
 
 // ******************************************* BUTTONS *******************************************
 
@@ -266,6 +268,59 @@ dt {
   background-position: 99% 60%;
   background-repeat: no-repeat;
 }
+
+.drop-area {
+  width: 150px;
+  height: 30px;
+  border-bottom: 2px solid $color-greyscale;
+  display: inline-block;
+  margin: 0 1.5em;
+  background-color: transparentize($color-possible, 0.8);
+}
+
+.drop-area-trigger {
+  background-color: transparentize($color-trigger, 0.8);
+}
+
+.drop-area-hover {
+  background-color: transparentize($color-hover, 0.8);
+}
+
+.drop-area-dropped {
+  background-color: transparentize($color-dropped, 0.8);
+  opacity: 1;
+
+}
+
+.feedback {
+  color: $color-dropped
+}
+
+.drag-and-drop {
+  border: 1px dotted $color-greyscale;
+  margin-bottom: 10px;
+
+  ol:first-child {
+    list-style-type: none;
+
+    li {
+      cursor: pointer;
+      border: 1px dashed transparentize($color-greyscale, 0.8);
+      display: inline-block;
+      margin: 5px;
+      padding: 5px;
+      background-color: white;
+    }
+
+    .dropped {
+      border: none;
+      opacity: 1;
+      background: none;
+    }
+  }
+
+}
+
 
 
 // ******************************************* NAV *******************************************

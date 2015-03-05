@@ -11,17 +11,15 @@ arrow = "arrow"
 
 (($) ->
     $(".show-hide-btn").click ->
-        $this = $(this)
-        $this.siblings().slideToggle()
+        $(@).siblings().slideToggle()
         $(".show-hide-btn.only-one").not(this).each ->
-            $thisOnlyOne = $(this)
-            $thisOnlyOne.siblings().slideUp()
-            if $thisOnlyOne.hasClass(arrow) and $thisOnlyOne.css("background-image").indexOf(closedArrow) is -1
-                $thisOnlyOne.css "background-image", (index, value) ->
+            $(@).siblings().slideUp()
+            if $(@).hasClass(arrow) and $(@).css("background-image").indexOf(closedArrow) is -1
+                $(@).css "background-image", (index, value) ->
                     value.replace openArrow, closedArrow
-        if $this.hasClass(arrow)
-            $this.css "background-image", (index, value) ->
-                unless $this.css("background-image").indexOf(closedArrow) is -1
+        if $(@).hasClass(arrow)
+            $(@).css "background-image", (index, value) ->
+                unless $(@).css("background-image").indexOf(closedArrow) is -1
                     value.replace closedArrow, openArrow
                 else value.replace openArrow, closedArrow
 ) jQuery

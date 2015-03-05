@@ -29,9 +29,9 @@ else if navHeight <= 32
 
 
 $nav.each ->
-  content = $(this).nextAll()
+  content = $(@).nextAll()
   contentPosition = content.position()
-  $(this).scrollspy
+  $(@).scrollspy
     min: contentPosition.top
     max: contentPosition.top + content.first().parent().height()
     onEnter: ->
@@ -49,13 +49,13 @@ $nav.each ->
 
 # $('h3').prev() '.section-identifier'
 $SectionIdentifier.each ->
-  sectionContent = $(this).nextUntil('.section-identifier')
+  sectionContent = $(@).nextUntil('.section-identifier')
   sectionContentFirstPosition =  sectionContent.position()
   sectionContentLastPosition = sectionContent.last().position()
   sectionContentHeight =  sectionContentLastPosition.top - sectionContentFirstPosition.top + sectionContent.last().height()
-  identifierPosition = $(this).position()
+  identifierPosition = $(@).position()
   
-  #console.log '// ' + $(this).attr("id") + ': ' + $(this).next().text()
+  #console.log '// ' + $(@).attr("id") + ': ' + $(@).next().text()
   #console.log 'identifierPosition top: ' + identifierPosition.top
   #console.log 'offsetSpace: ' + offsetSpace
   #console.log 'min: ' + (identifierPosition.top + offsetSpace)
@@ -68,14 +68,14 @@ $SectionIdentifier.each ->
   ##console.log 'sectionContentLastPosition: ' + sectionContentLastPosition.top
   ##console.log 'sectionContentLastPosition Height: ' + sectionContent.last().height()
   ##console.log ']'
-  #console.log 'this height: ' + $(this).height()
-  #console.log 'max: ' + (identifierPosition.top + offsetSpace + sectionContentHeight + $(this).height())
+  #console.log 'this height: ' + $(@).height()
+  #console.log 'max: ' + (identifierPosition.top + offsetSpace + sectionContentHeight + $(@).height())
   
   #console.log '////////////////////////////// \n\n'
 
-  $(this).scrollspy
+  $(@).scrollspy
     min: identifierPosition.top + offsetSpace
-    max: identifierPosition.top + offsetSpace + sectionContentHeight + $(this).height()
+    max: identifierPosition.top + offsetSpace + sectionContentHeight + $(@).height()
     onEnter: (element) ->
       activeSectionID = element.id
       activeSectionName = 'from_' + activeSectionID

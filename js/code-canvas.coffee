@@ -71,23 +71,23 @@ cachedScript = (url, type, options) ->
   if pageLoaded.length == 0
     delay 100, -> cachedScript(url, type, options)
   else
-    console.log "Found: " + pageLoaded
+    console.log "Found: #{pageLoaded}"
     if type?
       if typeIsArray type
         for y, z of pageLoaded
           for w, x of type
             if x == z
-              console.log "Loading: " + url + " (" + z + ")"
+              console.log "Loading: #{url} (#{z})"
               $.runScript url, options
               return
       else
         for y, z of pageLoaded
           if type == z
-            console.log "Loading: " + url + " (" + z + ")"
+            console.log "Loading: #{url} (#{z})"
             $.runScript url, options
             return
     else
-      console.log "Loading: " + url
+      console.log "Loading: #{url}"
       $.runScript url, options
       return
 
@@ -123,4 +123,7 @@ $ ->
 
   cachedScript "nav-build.js"
   #cachedScript "nav-scrollspy.js"
+
+  #cachedScript "drag-and-drop.js"
+
 
