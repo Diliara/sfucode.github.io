@@ -124,6 +124,6 @@ $ ->
   cachedScript "nav-build.js"
   #cachedScript "nav-scrollspy.js"
 
-  #cachedScript "drag-and-drop.js"
+  cachedScript "drag-and-drop.js"
 
 
