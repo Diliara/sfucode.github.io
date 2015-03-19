@@ -120,10 +120,13 @@ $ ->
 
   #CODE
   cachedScript "show-hide-btn.js"
-
   cachedScript "nav-build.js"
-  #cachedScript "nav-scrollspy.js"
 
+  #CODE Development
   cachedScript "drag-and-drop.js"
+  cachedScript "tabs.js"
 
+
+  #CODE Postponed
+  #cachedScript "nav-scrollspy.js"
 
