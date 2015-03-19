@@ -48,8 +48,8 @@
 
   h3 {
     color: darken($color-base, 15%);
-    border-bottom: 1px solid rgba($color-greyscale, 0.2);
-   /* text-transform: uppercase; */
+    text-transform: uppercase;
+    margin-left: 0.1em;
     }
 
   h4 {
