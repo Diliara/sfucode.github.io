@@ -28,6 +28,7 @@
 
   // ****************************************** HEADINGS *******************************************
 
+  /*
   counter-reset: h3counter;
 
   h3.exclude:before {
@@ -39,6 +40,7 @@
     content: counter(h3counter) ".\0000a0\0000a0";
     counter-increment: h3counter;
   }
+  */
 
   h2 {
     color: darken($color-base, 15%);
@@ -48,9 +50,7 @@
     color: darken($color-base, 15%);
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
    /* text-transform: uppercase; */
-    @include text-border-fix;
-    padding-top: 0;
-  }
+    }
 
   h4 {
     color: $color-secondary;
