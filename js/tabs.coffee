@@ -1,0 +1,5 @@
+---
+# jQuery Tabs
+---
+
+$( "#tabs" ).tabs();
