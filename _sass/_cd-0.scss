@@ -322,9 +322,13 @@ dt {
 }
 
 
-
 // ******************************************* NAV *******************************************
 
 .top {
   float: right;
 }
+
+.ui-tabs-active, &:hover, .ui-tabs-panel {
+  background-color: rgba($color-greyscale, 0.05);
+}
+

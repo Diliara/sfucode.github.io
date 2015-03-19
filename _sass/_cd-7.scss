@@ -47,8 +47,9 @@
   h3 {
     color: darken($color-base, 15%);
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
-    text-transform: uppercase;
+   /* text-transform: uppercase; */
     @include text-border-fix;
+    padding-top: 0;
   }
 
   h4 {
@@ -155,6 +156,12 @@
         background-color: transparentize($color-secondary, 0.97);;
       }
     }
+  }
+
+  // ******************************************* NAV *******************************************
+
+  .ui-tabs-anchor {
+    color: darken($color-base, 15%);
   }
 
 }
