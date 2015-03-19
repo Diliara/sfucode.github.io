@@ -336,8 +336,8 @@ dt {
 }
 
 .ui-tabs-active {
+  background-color:  rgba(250, 250, 250, 1); // rgba($color-greyscale, 0.03);
   border-bottom: none !important;
-  background-color: rgba($color-greyscale, 0.03);
 
   .ui-tabs-anchor {
     color: $color-darkest;
