@@ -4,6 +4,8 @@ $color-comment: #0216fd;
 $color-emph: #fbfbca;
 
 $color-lightest: #ffffff;
+$color-darkest: #000000;
+
 $color-greyscale: #666666;
 
 $color-answer: #c1e8fc;
@@ -13,6 +15,8 @@ $color-possible: rgb(216, 211, 213);
 $color-hover: rgb(188, 241, 255);
 $color-trigger: rgb(255, 254, 197);
 $color-dropped: rgb(70, 187, 139);
+
+
 
 @mixin text-border-fix {
   //decrease space between text and border
@@ -321,7 +325,6 @@ dt {
 
 }
 
-
 // ******************************************* NAV *******************************************
 
 .top {
@@ -329,10 +332,18 @@ dt {
 }
 
 .ui-tabs-panel {
-  background-color: rgba($color-greyscale, 0.05);
+  background-color: rgba($color-greyscale, 0.03);
 }
 
 .ui-tabs-active {
- border-bottom: none !important;
+  border-bottom: none !important;
+  background-color: rgba($color-greyscale, 0.03);
+
+  .ui-tabs-anchor {
+    color: $color-darkest;
+  }
 
 }
+
+
+
