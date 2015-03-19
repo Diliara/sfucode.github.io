@@ -328,7 +328,11 @@ dt {
   float: right;
 }
 
-.ui-tabs-active, &:hover, .ui-tabs-panel {
+.ui-tabs-panel {
   background-color: rgba($color-greyscale, 0.05);
 }
 
+.ui-tabs-active {
+ border-bottom: none !important;
+
+}
