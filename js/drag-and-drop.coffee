@@ -2,10 +2,12 @@
 # Drag and Drop
 ---
 
-#remove any existing text within the .drop-area
-#to do: limiting the scope to under #cd themes
+#limiting the scope to under #cd themes to remove any existing text within the .drop-area
 dropArea = $('.drop-area')
-dropArea.text('')
+currentTheme = $("[id^=cd-]") #looks for an object with an id that starts with cd-
+if currentTheme.attr("id").match(/^cd-([0-9]+)$/) then dropArea.text('')
+
+
 
 
 

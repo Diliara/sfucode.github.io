@@ -1,12 +1,13 @@
-//This comment will not be output to CSS file
-
-// ******************************************* SETUP for Print *******************************************
-
 @media print {
 
-  #cd-1, #cd-2, #cd-3, #cd-4, #cd-5 {
+  $allThemes: 1, 2, 3, 4, 5, 6, 7;
+  $themes: ();
 
-    // ******************************************* PRINT *******************************************
+  @each $theme in $allThemes {
+    $themes: $themes, unquote('#cd-#{$theme}');
+  }
+
+  #{$themes} {
 
     .hidden-print {
       display: none;
@@ -21,6 +22,11 @@
       page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
       page-break-after: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
       page-break-inside: avoid; /* or 'auto' */
+    }
+
+    //show answers for print
+    .panel-answer {
+      display: block;
     }
 
   }

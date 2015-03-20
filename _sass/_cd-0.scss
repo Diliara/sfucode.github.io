@@ -1,23 +1,46 @@
 //cd-0 (default theme)
 
+//$color-base: #900;
+$color-secondary: #2a7db4;
+
 $color-comment: #0216fd;
 $color-emph: #fbfbca;
 
+$color-standout: #996600;
+
 $color-lightest: #ffffff;
+$color-darkest: #000000;
+
 $color-greyscale: #666666;
 
+// for panels
 $color-answer: #c1e8fc;
+$color-log: #fbfbca;
+$color-peer: #c1e8fc;
+$color-read: #fbe1b4;
+$color-assignment: #D9FAE3;
+
 $color-alert: #ad0026;
+$color-note: #8a6f19;
+$color-info: #e4f7fa;
 
 $color-possible: rgb(216, 211, 213);
 $color-hover: rgb(188, 241, 255);
 $color-trigger: rgb(255, 254, 197);
 $color-dropped: rgb(70, 187, 139);
 
+$color-tab: #fbfbfb;
+
 @mixin text-border-fix {
   //decrease space between text and border
   line-height: 26px;
   padding-top: 14px
+}
+
+@mixin infoblock($display) {
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  display: $display;
 }
 
 @mixin round($amount) {
@@ -54,7 +77,10 @@ $color-dropped: rgb(70, 187, 139);
   box-shadow: $x $y $radius $spread rgba($color, $opacity);
 }
 
-// ****************************************** ICONS *******************************************
+// ***************************************** HEADINGS *******************************************
+//banner + h2, other headings, counters... - theme specific
+
+// ****************************************** ICONS *********************************************
 
 $icons: icon, man-book-read, man-paper-show, book, man-paper-write, papers, man-r, monitor-venn, man-ab, video, question, target, slides, materials, checklist, discussions, book-x, exclamation, spssm, man-laptop;
 
@@ -110,7 +136,31 @@ h3.icon-large {
 
 }
 
-// ******************************************* PANELS & INFO BOXES *******************************************
+// *********************************** PANELS & INFO BOXES **************************************
+
+.infoblock-alert {
+  color: $color-alert;
+  background-color: lighten($color-alert, 63%); //should be close to #ffeaea;
+  border: 1px solid rgba($color-alert, 0.1); //should be close to #eed3d7;
+  @include infoblock(inline-block);
+}
+
+.infoblock-note {
+  color: $color-note;
+  background-color: lighten($color-note, 63%); //should be close to #fcf8e3;
+  border: 1px solid rgba($color-note, 0.1); //should be close to #fbeed5;
+  @include infoblock(inline-block);
+}
+
+.infoblock-full {
+  color: darken($color-info, 60%); //should be close to #2d3b7a;
+  background-color: $color-info; //should be #e4f7fa;
+  border: 1px solid rgba(darken($color-info, 20%), 0.4); //should be close to #c9e1f7;
+  @include infoblock(block);
+}
+
+
+
 
 .panel {
   padding: 10px 20px;
@@ -127,6 +177,10 @@ h3.icon-large {
     margin-bottom: 0;
   }
 
+  .due {
+    color: $color-alert;
+  }
+
 }
 
 .panel-default {
@@ -136,7 +190,24 @@ h3.icon-large {
 .panel-answer {
   margin-top: 0;
   border: 1px solid rgba($color-answer, 0.3);
+}
 
+// More Custom Panels (for cd-1)
+
+.panel-log {
+  background-color: rgba($color-log, 0.8);
+}
+
+.panel-peer {
+  background-color: rgba($color-peer, 0.5);
+}
+
+.panel-read {
+  background-color: rgba($color-read, 0.8);
+}
+
+.panel-assignment {
+  background-color: rgba($color-assignment, 0.8);
 }
 
 /* used in cd-4 */
@@ -144,7 +215,7 @@ h3.icon-large {
   margin-left: 28px;
 }
 
-// ******************************************* BUTTONS *******************************************
+// ******************************************* BUTTONS ******************************************
 
 .button {
   @include round(3px);
@@ -165,19 +236,20 @@ h3.icon-large {
   cursor: pointer;
 }
 
+/* default no specific design
+.button-answer {
+}
+*/
+
 // ******************************************* TABLES *******************************************
 
 .tbl-w100 {
   width: 100%
 }
 
-table thead, table tfoot {
-  background-color: #f5f5f5;
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
+.tbl-w800 {
+  width: 800px;
+  margin-bottom: 10px;
 }
 
 table {
@@ -186,6 +258,15 @@ table {
   margin-left: 0;
   border-collapse: separate;
   border-spacing: 2px;
+}
+
+table thead, table tfoot {
+  background-color: darken($color-lightest, 4%); //#f5f5f5;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: darken($color-lightest, 2.5%); //#f9f9f9;
 }
 
 td {
@@ -197,7 +278,36 @@ th {
   padding-right: 0.5em;
 }
 
-// ******************************************* TEXT *******************************************
+// for cd-2
+
+.tbl-vid-left {
+  padding: 10px 0;
+  float: left;
+}
+
+.tbl-img-right {
+  padding: 0 10px 10px 10px;
+}
+
+.tbl-img-left {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.tbl-txt {
+  padding: 0 10px 0 20px;
+}
+
+.tbl-txt-centered-bold {
+  text-align: center;
+  font-weight: bold;
+}
+
+.tbl-border {
+  border: 1px solid darken($color-lightest, 15.3%); //#d8d8d8;
+}
+
+// ********************************************* TEXT *******************************************
 
 .highlight-emph {
   padding: .05em .4em;
@@ -227,10 +337,42 @@ dt {
   text-indent: -2em;
 }
 
-// blockquote theme-specific
-// design a simple default one
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eee;
 
-// ******************************************* Annotation *******************************************
+  cite {
+    display: block;
+    font-size: 80%;
+    color: #777;
+    font-style: italic;
+
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+// ******************************************* IMGs *********************************************
+
+.img-centered {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0;
+}
+
+// for cd-2
+.vid {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+}
+
+// ******************************************* CODE *******************************************
+
+// ***************************************** Annotation *****************************************
 
 .highlight-comment {
   padding: .05em .4em;
@@ -247,27 +389,23 @@ dt {
   }
 }
 
-// ******************************************* IMGs *******************************************
-
-.img-centered {
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 0;
-}
-
 // ******************************************* FOR JS *******************************************
+
+// Show/Hide Answer
 
 .panel-answer {
   display: none;
 }
+
+// Accordion
 
 .arrow {
   background-image: url(../img/ui/cd-0/slider_closed.png);
   background-position: 99% 60%;
   background-repeat: no-repeat;
 }
+
+// Drag & Drop
 
 .drop-area {
   width: 150px;
@@ -321,10 +459,24 @@ dt {
 
 }
 
-
-
-// ******************************************* NAV *******************************************
+// ******************************************* NAV **********************************************
 
 .top {
   float: right;
 }
+
+//.ui-tabs .ui-tabs-nav li:hover
+.ui-tabs-panel, .ui-state-hover {
+  background-color: $color-tab;
+}
+
+.ui-tabs-active {
+  background-color: $color-tab;
+
+  .ui-tabs-anchor {
+    color: $color-darkest;
+  }
+
+}
+
+
