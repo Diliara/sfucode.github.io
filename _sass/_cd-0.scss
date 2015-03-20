@@ -17,7 +17,7 @@ $color-assignment: #D9FAE3;
 
 $color-alert: #ad0026;
 $color-note: #8a6f19;
-$color-info: #2d3b7a;
+$color-info: #e4f7fa;
 
 $color-possible: rgb(216, 211, 213);
 $color-hover: rgb(188, 241, 255);
@@ -135,22 +135,22 @@ h3.icon-large {
 
 .infoblock-alert {
   color: $color-alert;
-  background-color: rgba($color-alert, 0.2); //should be close to #ffeaea;
-  border: opacify($color-alert, 0.4); //should be close to #eed3d7;
-  @include infoblock(block);
+  background-color: lighten($color-alert, 63%); //should be close to #ffeaea;
+  border: 1px solid rgba($color-alert, 0.1); //should be close to #eed3d7;
+  @include infoblock(inline-block);
 }
 
 .infoblock-note {
   color: $color-note;
-  background-color: rgba($color-note, 0.2); //should be close to #fcf8e3;
-  border: opacify($color-note, 0.4); //should be close to #fbeed5;
-  @include infoblock(block);
+  background-color: lighten($color-note, 63%); //should be close to #fcf8e3;
+  border: 1px solid rgba($color-note, 0.1); //should be close to #fbeed5;
+  @include infoblock(inline-block);
 }
 
 .infoblock-full {
-  color: $color-info;
-  background-color: rgba($color-info, 0.2); //should be close to #e4f7fa;
-  border: 1px solid opacify($color-info, 0.4); //should be close to #c9e1f7;
+  color: darken($color-info, 60%); //should be close to #2d3b7a;
+  background-color: $color-info; //should be #e4f7fa;
+  border: 1px solid rgba(darken($color-info, 20%), 0.4); //should be close to #c9e1f7;
   @include infoblock(block);
 }
 
