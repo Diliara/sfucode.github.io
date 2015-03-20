@@ -234,9 +234,7 @@ h3.icon-large {
 }
 
 .button-answer {
-  background-color: lighten(adjust_hue($color-secondary, -11%), 5%);
-  color: $color-lightest;
-  border: none;
+  border: 1px solid rgba($color-answer, 0.3); //default
 }
 
 // ******************************************* TABLES *******************************************

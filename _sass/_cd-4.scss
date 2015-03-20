@@ -89,6 +89,12 @@
     margin: 12px 0 20px 0;
   }
 
+  .button-answer {
+    background-color: lighten(adjust_hue($color-secondary, -11%), 5%);
+    color: $color-lightest;
+    border: none;
+  }
+
   // ********************************************* TEXT *******************************************
 
   // Space between ordered list items
