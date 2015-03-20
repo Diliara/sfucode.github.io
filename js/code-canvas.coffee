@@ -124,7 +124,7 @@ $ ->
 
   #CODE Development
   cachedScript "drag-and-drop.js"
-  cachedScript "tabs.js"
+  #cachedScript "nav-tabs.js"
 
 
   #CODE Postponed
