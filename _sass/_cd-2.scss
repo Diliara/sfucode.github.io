@@ -83,6 +83,13 @@
     margin-bottom: 10px;
   }
 
+  table {
+    border: none;
+  }
+
+  tr:nth-child(even) {
+    background-color: $color-lightest;
+  }
 
   // ******************************************* TEXT *******************************************
 
