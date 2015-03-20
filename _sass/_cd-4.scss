@@ -5,9 +5,7 @@
   $color-base: #ee4235;
   $color-secondary: #3062A3;
 
-  $color-answer: #c1e8fc;
-
-  // ****************************************** HEADINGS *******************************************
+  // ***************************************** HEADINGS *******************************************
 
   .banner {
 
@@ -49,15 +47,10 @@
     padding-top: 10px;
   }
 
-  // ****************************************** NEW ICONS *******************************************
+  // ****************************************** ICONS *********************************************
 
-
-
-
-
-
-  // ****************************************** OLD ICONS *******************************************
-
+  // OLD ICONS *******************************************
+  // Remove when 1151 is over
   .guide, .objectives, .slides, .problems, .solutions {
     border-bottom: none !important;
     @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
@@ -88,39 +81,15 @@
     @include icon-before-el;
   }
 
+  // *********************************** PANELS & INFO BOXES **************************************
 
-  // ******************************************* PANELS & INFO BOXES *******************************************
-
-
-
-  // ******************************************* BUTTONS *******************************************
+  // ******************************************* BUTTONS ******************************************
 
   .button {
-    @include round(3px);
-    font-weight: normal;
-    letter-spacing: 1px;
     margin: 12px 0 20px 0;
-    display: inline-block;
-    padding: 7px 22px;
-    text-align: center;
-
-    cursor: pointer;
-
-    border: 1px solid rgba($color-greyscale, 0.03);
-    background-color: rgba($color-greyscale, 0.03);
   }
 
-  .button-answer {
-    background-color: lighten(adjust_hue($color-secondary, -11%), 5%); //#1E83C3
-    color: $color-lightest;
-    border: none;
-
-  }
-
-
-  // ******************************************* TEXT *******************************************
-
-
+  // ********************************************* TEXT *******************************************
 
   // Space between ordered list items
   ol {
@@ -131,28 +100,7 @@
     padding-top: 0.5em;
   }
 
-  .no-space {
-    :not(:first-child) {
-      padding-top: 0;
-    }
-  }
-
-  blockquote {
-    padding: 10px 20px;
-    margin: 0 0 20px;
-    border-left: 5px solid #eee;
-
-    cite {
-      display: block;
-      font-size: 80%;
-      color: #777;
-      font-style: italic;
-
-      &:before {
-        content: '\2014 \00A0';
-      }
-    }
-  }
+  // ******************************************* IMGs *********************************************
 
 
 }

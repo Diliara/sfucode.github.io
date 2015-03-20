@@ -5,8 +5,7 @@
   $color-base: #903232;
   $color-secondary: #ba6900;
 
-
-  // ****************************************** HEADINGS *******************************************
+  // ***************************************** HEADINGS *******************************************
 
   .banner {
 
@@ -52,13 +51,7 @@
     padding-top: 10px;
   }
 
-
-
-
-
-
-
-  // ****************************************** NEW ICONS *******************************************
+  // ****************************************** ICONS *********************************************
 
   $icons: man-book-read, man-paper-show, book, man-paper-write;
 
@@ -81,24 +74,14 @@
     border-bottom: none !important;
   }
 
+  // OLD ICONS *******************************************
 
-
-
-
-
-
-
-
-
-  // ****************************************** OLD ICONS *******************************************
-
+  // Remove when 1151 is over
 
   .i-summary, .i-required, .i-recommended, .i-narratives, .i-description, .i-reference, .i-circle {
     border-bottom: none !important;
     @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
   }
-
-
 
   .i-required:before {
     background: url(../img/2/required_readings.png) left top no-repeat;
@@ -129,31 +112,13 @@
     @include icon-before-el;
   }
 
+  // *********************************** PANELS & INFO BOXES **************************************
 
+  // ******************************************* BUTTONS ******************************************
 
-  // ******************************************* PANELS & INFO BOXES *******************************************
+  // ******************************************* TABLES *******************************************
 
-
-
-  // ******************************************* BUTTONS *******************************************
-
-  .button {
-    @include round(3px);
-    font-weight: normal;
-    letter-spacing: 1px;
-    margin: 8px 0;
-    display: inline-block;
-    padding: 7px 22px;
-    text-align: center;
-
-    cursor: pointer;
-
-    border: 1px solid rgba($color-greyscale, 0.03);
-    background-color: rgba($color-greyscale, 0.03);
-  }
-
-
-  // ******************************************* TEXT *******************************************
+  // ********************************************* TEXT *******************************************
 
   // Space between list items
   ol, ul {
@@ -165,10 +130,9 @@
   }
 
   blockquote {
-    padding: 10px 20px;
-    border-left: none;
-    //quotes: "\201C""\201D""\2018""\2019";
     margin: 10px 0 20px 0;
+    border-left: none;
+
     @include round(4px);
     background-color: rgba($color-greyscale, 0.02);
 
@@ -194,18 +158,12 @@
     }
 
     cite {
-      display: block;
-      font-size: 80%;
-      color: #777;
-      font-style: italic;
       margin-left: 40px;
-      &:before {
-        content: '\2014 \00A0';
-      }
     }
 
     &:before {
       color: #ccc;
+      //quotes: "\201C""\201D""\2018""\2019";
       //content: open-quote;
       content: '\201C';
       font-size: 4em;
@@ -214,8 +172,10 @@
       vertical-align: -0.4em;
     }
 
-
   }
+
+
+  // ******************************************* IMGs *********************************************
 
 
 }

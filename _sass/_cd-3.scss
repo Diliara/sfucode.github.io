@@ -20,9 +20,6 @@
       margin: 0;
     }
 
-    /*
-    background-color: #C51230;
-    margin: -15px -40px 30px -30px; */
     margin-bottom: 30px;
 
     img {
@@ -37,16 +34,14 @@
 
   }
 
-  // ****************************************** HEADINGS *******************************************
+  // ***************************************** HEADINGS *******************************************
 
-  //page title
   h2 {
     color: $color-base;
     text-transform: uppercase;
     //font-weight: bold;
   }
 
-  //headers in the page
   h3 {
     color: darken($color-base, 1%);
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
@@ -56,7 +51,6 @@
 
   }
 
-  //sub-headers
   h4 {
     color: $color-secondary;
     padding-top: 10px;
@@ -65,7 +59,6 @@
 
   }
 
-  //sub-sub-headers
   h5 {
     color: darken($color-secondary, 10%);
     font-size: 15.5px;
@@ -73,7 +66,7 @@
     font-weight: bold;
   }
 
-  // ****************************************** NEW ICONS *******************************************
+  // ****************************************** ICONS *********************************************
 
   $icons: slides;
 
@@ -96,7 +89,9 @@
     border-bottom: none !important;
   }
 
-  // ****************************************** OLD ICONS *******************************************
+  // OLD ICONS *******************************************
+
+  // Remove when 1151 is over
 
   .i-overview, .i-objectives, .i-readings, .i-assignments {
     border-bottom: none !important;
@@ -123,21 +118,19 @@
     @include icon-before-el;
   }
 
-  // ******************************************* PANELS & INFO BOXES *******************************************
+  // *********************************** PANELS & INFO BOXES **************************************
 
   .panel {
-
     h5 {
       border-bottom: 1px solid rgba($color-greyscale, 0.2);
     }
-
   }
 
-  // ******************************************* BUTTONS *******************************************
+  // ******************************************* BUTTONS ******************************************
 
   // ******************************************* TABLES *******************************************
 
-  // ******************************************* TEXT *******************************************
+  // ********************************************* TEXT *******************************************
 
   // Space between ordered list items
   ol {
@@ -148,23 +141,6 @@
     padding-top: 0.5em;
     ol li, ul li {
       padding-top: 0;
-    }
-  }
-
-  blockquote {
-    padding: 10px 20px;
-    margin: 0 0 20px;
-    border-left: 5px solid #eee;
-
-    cite {
-      display: block;
-      font-size: 80%;
-      color: #777;
-      font-style: italic;
-
-      &:before {
-        content: '\2014 \00A0';
-      }
     }
   }
 
@@ -180,5 +156,4 @@
     padding-top: 10px;
   }
 
-  // ------------------
 }
