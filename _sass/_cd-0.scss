@@ -159,6 +159,9 @@ h3.icon-large {
   @include infoblock(block);
 }
 
+
+
+
 .panel {
   padding: 10px 20px;
   display: block;
@@ -233,9 +236,10 @@ h3.icon-large {
   cursor: pointer;
 }
 
+/* default no specific design
 .button-answer {
-  border: 1px solid rgba($color-answer, 0.3); //default
 }
+*/
 
 // ******************************************* TABLES *******************************************
 
