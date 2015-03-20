@@ -1,26 +1,12 @@
-//This comment will not be output to CSS file
-
-$color-base: #BB4003;
-$color-secondary: #BA8D00;
-$color-emph: #53bda6;
-$color-alert: #ad0026;
-
-$color-log: #fbfbca;
-$color-peer: #c1e8fc;
-$color-read: #fbe1b4;
-$color-assignment: #D9FAE3;
-
-$color-lightest: #ffffff;
-$color-greyscale: #666666;
-
-$color-comment: #0216fd;
-
-@mixin round($amount) {
-  -moz-border-radius: $amount; // rounds corners for firefox
-  border-radius: $amount; //rounds corners for other browsers
-}
-
 #cd-1 {
+
+  @import "cd-0"; //default theme
+
+  $color-base: #BB4003;
+  $color-secondary: #BA8D00;
+
+  $color-emph: #53bda6;
+
 
   // ****************************************** HEADINGS *******************************************
 
@@ -59,12 +45,10 @@ $color-comment: #0216fd;
 
   }
 
-  //page title
   h2 {
     color: $color-base;
   }
 
-  //headers in the page
   h3 {
     color: darken($color-base, 1%);
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
@@ -74,120 +58,65 @@ $color-comment: #0216fd;
     line-height: 26px;
   }
 
-  //sub-headers
   h4 {
     color: $color-secondary;
     padding-top: 10px;
     text-transform: uppercase;
   }
 
-  //sub-sub-headers
   h5 {
-    //color: lighten($color-secondary, 5%); //yellow
     color: darken(invert($color-base), 30%); //blue
     font-size: 15.5px;
     padding-top: 10px;
   }
 
-  // ******************************************* PANELS & INFO BOXES *******************************************
+  // ****************************************** NEW ICONS *******************************************
+
+  $icons: man-ab, man-book-read, man-paper-show;
+
+  $selector: ();
+
+  @each $item in $icons {
+    $selector: $selector, unquote('.i-#{$item}');
+    h3.i-#{$item} {
+      @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
+    }
+
+    .i-#{$item}:before {
+      background: url(../img/icons/cd-1/#{$item}.png) left top no-repeat;
+      @include icon-before-el;
+    }
+
+  }
+
+  #{$selector} {
+    border-bottom: none !important;
+  }
+
+  // ********************************** PANELS & INFO BOXES ****************************************
 
   .panel {
-    padding: 10px 20px;
-    display: block;
-    margin: 10px 0 20px 0;
-    border: 1px solid #d9d9d9;
-    @include round(4px);
 
     h5 {
       border-bottom: 1px solid rgba($color-greyscale, 0.2);
       text-transform: uppercase;
-      padding-top: 0;
-    }
-
-    .due {
-      // font-weight: bold;
-      color: $color-alert;
     }
 
   }
 
-  .panel-log {
-    background-color: rgba($color-log, 0.8);
-  }
-
-  .panel-peer {
-    background-color: rgba($color-peer, 0.5);
-  }
-
-  .panel-read {
-    background-color: rgba($color-read, 0.8);
-  }
-
-  .panel-assignment {
-    background-color: rgba($color-assignment, 0.8);
-  }
-
-  .panel-default {
-    background-color: rgba($color-greyscale, 0.03);
-  }
 
   // ******************************************* BUTTONS *******************************************
 
-  .button {
-    @include round(3px);
-    font-weight: normal;
-    letter-spacing: 1px;
-    margin: 8px 0;
-    display: inline-block;
-    padding: 7px 22px;
-    text-align: center;
 
-    cursor: pointer;
-
-    border: 1px solid rgba($color-greyscale, 0.03);
-    background-color: rgba($color-greyscale, 0.03);
-  }
 
   // ******************************************* TABLES *******************************************
 
-  .tbl-w100 {
-    width: 100%
-  }
 
-  table thead, table tfoot {
-    background-color: #f5f5f5;
-    font-weight: bold;
-  }
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-
-  table {
-    border: solid 1px rgba($color-greyscale, 0.2);
-    margin-bottom: 1.25em;
-    margin-left: 0;
-    border-collapse: separate;
-    border-spacing: 2px;
-  }
-
-  td {
-    padding: 0.5625em 0.625em;
-  }
 
   // ******************************************* TEXT *******************************************
 
   .highlight-emph {
-    padding: .05em .4em;
     background-color: rgba($color-emph, 0.2);
-    @include round(6px);
-  }
-
-  dl {
-    position: relative;
-  }
-
-  dt {
-    padding-top: 0.5em;
   }
 
   blockquote {
@@ -209,40 +138,9 @@ $color-comment: #0216fd;
 
   // ******************************************* Annotation *******************************************
 
-  .highlight-comment {
-    padding: .05em .4em;
-    background-color: rgba($color-comment, 0.2);
-    @include round(6px);
-  }
 
-  .comment {
-    color: $color-comment;
-    font-style: italic;
-    font-size: 16px;
-  }
-
-  .comment:before {
-    content: " -- ";
-  }
 
   // ******************************************* IMGs *******************************************
 
-  .img-centered {
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px 0;
-  }
-
-  // ******************************************* for JS *******************************************
-
-  // #1: show-hide-btn
-
-  .panel-answer {
-    display: none;
-  }
-
-  // ------------------
 
 }

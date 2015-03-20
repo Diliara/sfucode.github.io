@@ -1,66 +1,11 @@
-//This comment will not be output to CSS file
-
-$color-base: #900;
-$color-secondary: #2a7db4;
-$color-greyscale: #666666;
-$color-lightest: #ffffff;
-
-@mixin text-border-fix {
-  //decrease space between text and border
-  line-height: 26px;
-  padding-top: 14px
-}
-
-@mixin infoblock($display) {
-  padding: 10px;
-  margin: 10px 0 20px 0;
-  display: $display;
-}
-
-@mixin round($amount) {
-  -moz-border-radius: $amount; // rounds corners for firefox
-  border-radius: $amount; //rounds corners for other browsers
-}
-
-// for modules
 #cd-2 {
 
-  // ****************************************** GENERAL *******************************************
+  @import "cd-0"; //default theme
 
-  //messes up syllabus margins
-  //margin: -10px -10px 0 -10px;
+  $color-base: #900;
+  $color-secondary: #2a7db4;
 
-  counter-reset: h3counter;
-
-  //h2 {
-  //  counter-reset: h3counter;
-  //}
-
-  h3.nocount:before {
-    content: none !important;
-    counter-increment: none !important;
-  }
-
-  //h4.nocount:before {
-  //  content: none !important;
-  //  counter-increment: none !important;
-  //}
-
-  h3:before {
-    content: counter(h3counter) ".\0000a0\0000a0";
-    counter-increment: h3counter;
-  }
-
-  //h3 {
-  //  counter-reset: h4counter;
-  //}
-
-  //h4:before {
-  //  content: counter(h3counter) "." counter(h4counter) "\0000a0\0000a0";
-  //  counter-increment: h4counter;
-  //}
-
-  // ****************************************** HEADINGS *******************************************
+  // ***************************************** HEADINGS *******************************************
 
   .banner {
 
@@ -76,6 +21,19 @@ $color-lightest: #ffffff;
     background-color: #353535;
     margin: -15px -40px 30px -30px;
 
+  }
+
+  // counter
+  counter-reset: h3counter;
+
+  h3.nocount:before {
+    content: none !important;
+    counter-increment: none !important;
+  }
+
+  h3:before {
+    content: counter(h3counter) ".\0000a0\0000a0";
+    counter-increment: h3counter;
   }
 
   h2 {
@@ -100,131 +58,34 @@ $color-lightest: #ffffff;
     padding-top: 10px;
   }
 
-  // ******************************************* PANELS & INFO BOXES *******************************************
+  // ****************************************** ICONS *********************************************
 
-  .infoblock-alert {
-    background-color: #ffeaea;
-    border: 1px solid #eed3d7;
-    color: #a34140;
-    @include infoblock(inline-block);
-  }
 
-  .infoblock-note {
-    background-color: #fcf8e3;
-    border: 1px solid #fbeed5;
-    color: #8a6f19;
-    @include infoblock(inline-block);
-  }
 
-  .infoblock-full {
-    background-color: #e4f7fa;
-    border: 1px solid #c9e1f7;
-    color: #2d3b7a;
-    @include infoblock(block);
+  // *********************************** PANELS & INFO BOXES **************************************
 
-  }
 
   .panel {
-    padding: 10px 20px;
-    display: block;
-    margin: 10px 0 20px 0;
-    border: 1px solid #d9d9d9;
-    @include round(4px);
 
     h5 {
       border-bottom: 1px solid rgba($color-greyscale, 0.2);
       text-transform: uppercase;
-      padding-top: 0;
     }
   }
 
-  .panel-default {
-    background-color: rgba($color-greyscale, 0.03);
-  }
 
-  // ******************************************* BUTTONS *******************************************
+  // ******************************************* BUTTONS ******************************************
 
-  .button {
-    @include round(3px);
-    font-weight: normal;
-    letter-spacing: 1px;
-    margin: 8px 0;
-    display: inline-block;
-    padding: 7px 22px;
-    text-align: center;
-
-    cursor: pointer;
-
-    border: 1px solid rgba($color-greyscale, 0.03);
-    background-color: rgba($color-greyscale, 0.03);
-  }
 
   // ******************************************* TABLES *******************************************
 
   .tbl-w100 {
-    width: 100%;
     margin-bottom: 10px;
   }
 
-  .tbl-w800 {
-    width: 800px;
-    margin-bottom: 10px;
-  }
-
-  // video on the left
-  .tbl-vid-left {
-    padding: 10px 0;
-    float: left;
-  }
-
-  .tbl-img-right {
-    padding: 0 10px 10px 10px;
-  }
-
-  // img on the left
-  .tbl-img-left {
-    float: left;
-    margin-bottom: 20px;
-  }
-
-  .tbl-txt {
-    padding: 0 10px 0 20px;
-  }
-
-  .tbl-txt-centered-bold {
-    text-align: center;
-    font-weight: bold;
-  }
-
-  .tbl-border {
-    border: 1px solid #d8d8d8;
-  }
 
   // ******************************************* TEXT *******************************************
 
-  dl {
-    position: relative;
-  }
-
-  dt {
-    padding-top: 0.5em;
-  }
-
-  // ******************************************* MEDIA *******************************************
-
-  .img-centered {
-    text-align: center;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .vid {
-    margin-top: 1em;
-    margin-bottom: 1.5em;
-  }
 
   blockquote {
     padding: 10px 20px;
@@ -243,14 +104,16 @@ $color-lightest: #ffffff;
     content: '\2014 \00A0';
   }
 
-  // ******************************************* for JS *******************************************
+  // ******************************************* IMGs *********************************************
 
-  // #1: show-hide-btn
-
-  .panel-answer {
-    display: none;
+  .img-centered {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  // ------------------
 
 }

@@ -5,6 +5,8 @@
   $color-base: #ee4235;
   $color-secondary: #3062A3;
 
+  // ****************************************** HEADINGS *******************************************
+
   .banner {
 
     h2 {
@@ -26,8 +28,7 @@
 
   }
 
-  // ****************************************** HEADINGS *******************************************
-
+  // counter
   /*
   counter-reset: h3counter;
 
@@ -50,7 +51,7 @@
     color: darken($color-base, 15%);
     text-transform: uppercase;
     margin-left: 0.1em;
-    }
+  }
 
   h4 {
     color: $color-secondary;

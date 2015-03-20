@@ -8,8 +8,16 @@ $color-darkest: #000000;
 
 $color-greyscale: #666666;
 
+// for panels
 $color-answer: #c1e8fc;
+$color-log: #fbfbca;
+$color-peer: #c1e8fc;
+$color-read: #fbe1b4;
+$color-assignment: #D9FAE3;
+
 $color-alert: #ad0026;
+$color-note: #8a6f19;
+$color-info: #2d3b7a;
 
 $color-possible: rgb(216, 211, 213);
 $color-hover: rgb(188, 241, 255);
@@ -18,13 +26,16 @@ $color-dropped: rgb(70, 187, 139);
 
 $color-tab: #fbfbfb;
 
-
-
-
 @mixin text-border-fix {
   //decrease space between text and border
   line-height: 26px;
   padding-top: 14px
+}
+
+@mixin infoblock($display) {
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  display: $display;
 }
 
 @mixin round($amount) {
@@ -61,7 +72,10 @@ $color-tab: #fbfbfb;
   box-shadow: $x $y $radius $spread rgba($color, $opacity);
 }
 
-// ****************************************** ICONS *******************************************
+// ***************************************** HEADINGS *******************************************
+//banner + h2, other headings, counters... - theme specific
+
+// ****************************************** ICONS *********************************************
 
 $icons: icon, man-book-read, man-paper-show, book, man-paper-write, papers, man-r, monitor-venn, man-ab, video, question, target, slides, materials, checklist, discussions, book-x, exclamation, spssm, man-laptop;
 
@@ -117,7 +131,28 @@ h3.icon-large {
 
 }
 
-// ******************************************* PANELS & INFO BOXES *******************************************
+// *********************************** PANELS & INFO BOXES **************************************
+
+.infoblock-alert {
+  color: $color-alert;
+  background-color: rgba($color-alert, 0.2); //should be close to #ffeaea;
+  border: opacify($color-alert, 0.4); //should be close to #eed3d7;
+  @include infoblock(block);
+}
+
+.infoblock-note {
+  color: $color-note;
+  background-color: rgba($color-note, 0.2); //should be close to #fcf8e3;
+  border: opacify($color-note, 0.4); //should be close to #fbeed5;
+  @include infoblock(block);
+}
+
+.infoblock-full {
+  color: $color-info;
+  background-color: rgba($color-info, 0.2); //should be close to #e4f7fa;
+  border: 1px solid opacify($color-info, 0.4); //should be close to #c9e1f7;
+  @include infoblock(block);
+}
 
 .panel {
   padding: 10px 20px;
@@ -134,6 +169,10 @@ h3.icon-large {
     margin-bottom: 0;
   }
 
+  .due {
+    color: $color-alert;
+  }
+
 }
 
 .panel-default {
@@ -146,12 +185,30 @@ h3.icon-large {
 
 }
 
+// More Custom Panels (for cd-1)
+
+.panel-log {
+  background-color: rgba($color-log, 0.8);
+}
+
+.panel-peer {
+  background-color: rgba($color-peer, 0.5);
+}
+
+.panel-read {
+  background-color: rgba($color-read, 0.8);
+}
+
+.panel-assignment {
+  background-color: rgba($color-assignment, 0.8);
+}
+
 /* used in cd-4 */
 .panel-pushed {
   margin-left: 28px;
 }
 
-// ******************************************* BUTTONS *******************************************
+// ******************************************* BUTTONS ******************************************
 
 .button {
   @include round(3px);
@@ -178,6 +235,11 @@ h3.icon-large {
   width: 100%
 }
 
+.tbl-w800 {
+  width: 800px;
+  margin-bottom: 10px;
+}
+
 table thead, table tfoot {
   background-color: #f5f5f5;
   font-weight: bold;
@@ -202,6 +264,35 @@ td {
 th {
   padding-left: 0.5em;
   padding-right: 0.5em;
+}
+
+// for cd-2
+
+.tbl-vid-left {
+  padding: 10px 0;
+  float: left;
+}
+
+.tbl-img-right {
+  padding: 0 10px 10px 10px;
+}
+
+.tbl-img-left {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.tbl-txt {
+  padding: 0 10px 0 20px;
+}
+
+.tbl-txt-centered-bold {
+  text-align: center;
+  font-weight: bold;
+}
+
+.tbl-border {
+  border: 1px solid #d8d8d8;
 }
 
 // ******************************************* TEXT *******************************************
@@ -254,7 +345,7 @@ dt {
   }
 }
 
-// ******************************************* IMGs *******************************************
+// ******************************************* IMGs *********************************************
 
 .img-centered {
   text-align: center;
@@ -263,6 +354,13 @@ dt {
   margin-right: auto;
   padding: 10px 0;
 }
+
+// for cd-2
+.vid {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+}
+
 
 // ******************************************* FOR JS *******************************************
 
@@ -328,7 +426,7 @@ dt {
 
 }
 
-// ******************************************* NAV *******************************************
+// ******************************************* NAV **********************************************
 
 .top {
   float: right;
@@ -340,7 +438,7 @@ dt {
 }
 
 .ui-tabs-active {
-  background-color:  $color-tab;
+  background-color: $color-tab;
 
   .ui-tabs-anchor {
     color: $color-darkest;
