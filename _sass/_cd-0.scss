@@ -1,6 +1,6 @@
 //cd-0 (default theme)
 
-$color-base: #900;
+//$color-base: #900;
 $color-secondary: #2a7db4;
 
 $color-comment: #0216fd;
@@ -187,7 +187,6 @@ h3.icon-large {
 .panel-answer {
   margin-top: 0;
   border: 1px solid rgba($color-answer, 0.3);
-
 }
 
 // More Custom Panels (for cd-1)
@@ -371,15 +370,6 @@ blockquote {
 
 // ******************************************* CODE *******************************************
 
-pre {
-  color: darken($color-secondary, 10%);
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
-
-  margin: 1.5em 0;
-
-}
-
-
 // ***************************************** Annotation *****************************************
 
 .highlight-comment {
@@ -412,7 +402,6 @@ pre {
   background-position: 99% 60%;
   background-repeat: no-repeat;
 }
-
 
 // Drag & Drop
 
