@@ -3,8 +3,7 @@
 ---
 
 buildAndEnableNavigation = (sectionsTabs, navPlaceholderTabs) ->
-  sectionTabCount = 1
-  fromsectionTabCount = 1
+  sectionTabCount = 0
   listOfLinksTabs = $("<ul>")
 
   $(sectionsTabs).each ->
