@@ -1,6 +1,6 @@
 @media print {
 
-  $allThemes: 1, 2, 3, 4, 5, 6, 7;
+  $allThemes: 1, 2, 3, 4, 5, 6, 7, x;
   $themes: ();
 
   @each $theme in $allThemes {
