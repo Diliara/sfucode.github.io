@@ -483,6 +483,7 @@ blockquote {
 
 .ui-tabs .ui-tabs-panel {
   border:none;
+  padding: 0;
 }
 
 #tabs-nav h3 {
@@ -491,15 +492,20 @@ blockquote {
 
 }
 
-#tabs-nav li:after {
-  content: " | "
+#tabs-nav .tabs-build {
+  margin-top: 10px;
+
 }
 
-#tabs-nav li:last-child :after {
+#tabs-nav li a:after {
+  content: "\00a0 | "
+}
+
+#tabs-nav li:last-child a:after {
   content: ""
 }
 
-#tabs-nav li {
+#tabs-nav li a {
   padding-right: 5px;
 }
 
@@ -509,6 +515,10 @@ blockquote {
 
 
 }
+
+
+
+
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover, .ui-tabs .ui-tabs-nav li.ui-tabs-active:hover {
   border: none;
