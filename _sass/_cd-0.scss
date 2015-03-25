@@ -463,37 +463,26 @@ blockquote {
 }
 
 #tabs-nav {
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .ui-state-default, .ui-widget-header .ui-state-default {
+    border: none;
+  }
+
   .ui-tabs-panel {
     border: none;
     padding: 0;
     margin-top: 10px;
   }
-  .ui-state-default, .ui-widget-header .ui-state-default {
-    border: none;
-  }
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+
   .tabs-build {
     margin-top: 10px;
   }
-  li {
-    a {
-      &:focus {
-        outline: none;
-      }
-      &:after {
-        content: " | ";
-      }
-    }
-    &:last-child a:after {
-      content: "";
-    }
-    a {
-      padding-right: 5px;
-    }
-  }
+
   .ui-tabs-nav {
     border: none;
     li {
@@ -511,6 +500,24 @@ blockquote {
         border: none;
       }
     }
+  }
+
+  li {
+    a {
+      padding-right: 5px;
+
+      &:focus {
+        outline: none;
+      }
+      &:after {
+        content: " | ";
+      }
+    }
+
+    &:last-child a:after {
+      content: "";
+    }
+
   }
 }
 
