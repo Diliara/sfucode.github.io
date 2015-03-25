@@ -159,9 +159,6 @@ h3.icon-large {
   @include infoblock(block);
 }
 
-
-
-
 .panel {
   padding: 10px 20px;
   display: block;
@@ -482,8 +479,9 @@ blockquote {
 */
 
 .ui-tabs .ui-tabs-panel {
-  border:none;
+  border: none;
   padding: 0;
+  margin-top: 10px;
 }
 
 #tabs-nav h3 {
@@ -495,6 +493,10 @@ blockquote {
 #tabs-nav .tabs-build {
   margin-top: 10px;
 
+}
+
+#tabs-nav li a:focus {
+  outline: none;
 }
 
 #tabs-nav li a:after {
@@ -509,16 +511,10 @@ blockquote {
   padding-right: 5px;
 }
 
-
 .ui-tabs .ui-tabs-nav {
-  border:none;
-
+  border: none;
 
 }
-
-
-
-
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover, .ui-tabs .ui-tabs-nav li.ui-tabs-active:hover {
   border: none;
