@@ -53,26 +53,6 @@
 
   // ****************************************** ICONS *********************************************
 
-  $icons: book;
-
-  $selector: ();
-
-  @each $item in $icons {
-    $selector: $selector, unquote('.i-#{$item}');
-    h3.i-#{$item} {
-      @include box-shadow(20px, 20px, 1.5px, -20px, $color-greyscale, 0.6);
-    }
-
-    .i-#{$item}:before {
-      background: url(../img/icons/cd-6/#{$item}.png) left top no-repeat;
-      @include icon-before-el;
-    }
-
-  }
-
-  #{$selector} {
-    border-bottom: none !important;
-  }
 
   // *********************************** PANELS & INFO BOXES **************************************
 
