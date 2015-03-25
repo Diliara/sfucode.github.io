@@ -480,3 +480,49 @@ blockquote {
 }
 
 */
+
+.ui-tabs .ui-tabs-panel {
+  border:none;
+}
+
+#tabs-nav h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+#tabs-nav li a:after {
+  content: " | "
+}
+
+#tabs-nav li a {
+  padding-right: 5px;
+  margin-right: 5px;
+
+}
+
+
+.ui-tabs .ui-tabs-nav {
+  border:none;
+
+
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover, .ui-tabs .ui-tabs-nav li.ui-tabs-active:hover {
+  border: none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-hover, .ui-tabs .ui-tabs-nav li:hover {
+  border: none;
+
+}
+
+.ui-state-default, .ui-widget-header .ui-state-default {
+  border: none;
+
+}
+
+.ui-tabs .ui-tabs-nav li a {
+  padding: 0;
+
+}
