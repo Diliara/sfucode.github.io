@@ -159,9 +159,6 @@ h3.icon-large {
   @include infoblock(block);
 }
 
-
-
-
 .panel {
   padding: 10px 20px;
   display: block;
@@ -465,18 +462,73 @@ blockquote {
   float: right;
 }
 
-//.ui-tabs .ui-tabs-nav li:hover
-.ui-tabs-panel, .ui-state-hover {
-  background-color: $color-tab;
-}
+#tabs-nav {
 
-.ui-tabs-active {
-  background-color: $color-tab;
+  font-size: inherit;
 
-  .ui-tabs-anchor {
-    color: $color-darkest;
+  h3 {
+    /*
+    margin-top: 0;
+    margin-bottom: 10px;
+    */
   }
 
+  .ui-state-default, .ui-widget-header .ui-state-default {
+    border: none;
+  }
+
+  .ui-tabs-panel {
+    border: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .tabs-build {
+    margin-top: 10px;
+  }
+
+  .ui-tabs-nav {
+    border: none;
+    li {
+      a {
+        padding: 0;
+      }
+
+      &.ui-tabs-active {
+        border: none;
+        &.ui-state-hover, &:hover {
+          border: none;
+        }
+      }
+      &.ui-state-hover, &:hover {
+        border: none;
+      }
+    }
+  }
+
+  li {
+    a {
+      padding-right: 5px;
+
+      &:focus {
+        outline: none;
+      }
+      &:after {
+        content: " | ";
+      }
+
+      &:hover {
+        color: #0088c7;
+        text-decoration: underline;
+
+      }
+    }
+
+    &:last-child a:after {
+      content: "";
+    }
+
+  }
 }
 
 
