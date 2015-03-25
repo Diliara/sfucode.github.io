@@ -463,49 +463,57 @@ blockquote {
 }
 
 #tabs-nav {
+  .ui-tabs .ui-tabs-panel {
+    border: none;
+    padding: 0;
+    margin-top: 10px;
+  }
   h3 {
     margin-top: 0;
     margin-bottom: 0;
   }
-
-  .ui-tabs .ui-tabs-nav, .ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover, .ui-tabs .ui-tabs-nav li.ui-tabs-active:hover, .ui-tabs .ui-tabs-nav li.ui-state-hover, .ui-tabs .ui-tabs-nav li:hover, .ui-state-default, .ui-widget-header .ui-state-default {
-    border: none;
-  }
-
   .tabs-build {
     margin-top: 10px;
   }
-
-  .ui-tabs {
-    .ui-tabs-panel {
-      border: none;
-      padding: 0;
-      margin-top: 10px;
-    }
-    .ui-tabs-nav {
-      li {
-        &:last-child a:after {
-          content: ""
-        }
-
-        a {
-          padding: 0;
-          padding-right: 5px;
-
-          &:focus {
-            outline: none;
-          }
-          &:after {
-            content: "\00a0 | "
-          }
-        }
-
+  li {
+    a {
+      &:focus {
+        outline: none;
+      }
+      &:after {
+        content: " | ";
       }
     }
-
+    &:last-child a:after {
+      content: "";
+    }
+    a {
+      padding-right: 5px;
+    }
   }
-
+  .ui-tabs .ui-tabs-nav {
+    border: none;
+    li.ui-tabs-active {
+      border: none;
+    }
+  }
 }
 
+.ui-tabs .ui-tabs-nav li {
+  &.ui-tabs-active {
+    &.ui-state-hover, &:hover {
+      border: none;
+    }
+  }
+  &.ui-state-hover, &:hover {
+    border: none;
+  }
+}
 
+#tabs-nav .ui-state-default, .ui-widget-header .ui-state-default {
+  border: none;
+}
 
+#tabs-nav .ui-tabs .ui-tabs-nav li a {
+  padding: 0;
+}
