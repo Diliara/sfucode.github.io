@@ -495,10 +495,12 @@ blockquote {
   content: " | "
 }
 
+#tabs-nav li:last-child a:after {
+  content: ""
+}
+
 #tabs-nav li a {
   padding-right: 5px;
-  margin-right: 5px;
-
 }
 
 
