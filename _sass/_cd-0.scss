@@ -491,15 +491,15 @@ blockquote {
 
 }
 
-#tabs-nav li a:after {
+#tabs-nav li:after {
   content: " | "
 }
 
-#tabs-nav li:last-child a:after {
+#tabs-nav li:last-child :after {
   content: ""
 }
 
-#tabs-nav li a {
+#tabs-nav li {
   padding-right: 5px;
 }
 
