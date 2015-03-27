@@ -104,18 +104,9 @@
 
   // ********************************************* TEXT *******************************************
 
-  // Space between ordered list items
-  ol {
-    position: relative;
-  }
-
-  ol li {
-    padding-top: 0.5em;
-  }
-
-  .no-space {
-    :not(:first-child) {
-      padding-top: 0;
+  ul {
+    li {
+      padding-top: 0; //no space
     }
   }
 

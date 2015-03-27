@@ -183,26 +183,21 @@ h3.icon-large {
 .panel-default {
   background-color: rgba($color-greyscale, 0.03);
 }
-
 .panel-answer {
   margin-top: 0;
   border: 1px solid rgba($color-answer, 0.3);
 }
 
-// More Custom Panels (for cd-1)
 
 .panel-log {
   background-color: rgba($color-log, 0.8);
 }
-
 .panel-peer {
   background-color: rgba($color-peer, 0.5);
 }
-
 .panel-read {
   background-color: rgba($color-read, 0.8);
 }
-
 .panel-assignment {
   background-color: rgba($color-assignment, 0.8);
 }
@@ -321,7 +316,12 @@ dt {
 }
 
 // Space between list items
-// theme-specific
+ol, ul {
+  position: relative;
+  li {
+    padding-top: 0.5em;
+  }
+}
 
 .no-space {
   :not(:first-child) {

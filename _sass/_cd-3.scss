@@ -132,13 +132,8 @@
 
   // ********************************************* TEXT *******************************************
 
-  // Space between ordered list items
-  ol {
-    position: relative;
-  }
-
+  // Space between SUBLIST items
   ol li {
-    padding-top: 0.5em;
     ol li, ul li {
       padding-top: 0;
     }
