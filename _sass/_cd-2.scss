@@ -44,7 +44,6 @@
     color: $color-base;
     text-transform: uppercase;
     border-bottom: 2px solid lighten($color-greyscale, 50%);
-    //font-size: 23px;
     @include text-border-fix;
   }
 
@@ -83,20 +82,22 @@
   }
 
   table thead, table tfoot, tr:nth-child(even) {
-    background-color: $color-lightest
+    background-color: $color-lightest;
   }
 
   // ********************************************* TEXT *******************************************
 
+  ol, ul {
+    li {
+      padding-top: 0; //no space
+    }
+  }
+
   // ******************************************* IMGs *********************************************
 
   .img-centered {
-    text-align: center;
     padding-top: 2em;
     padding-bottom: 2em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
 
 }

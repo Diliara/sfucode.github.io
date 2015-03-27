@@ -6,7 +6,7 @@
 buildAndEnableNavigation = (sections, navPlaceholder) ->
   sectionCount = 1
   fromSectionCount = 1
-  listOfLinks = $("<ol class='nav-list'>")
+  listOfLinks = $("<ol class='nav-list no-space'>")
 
   $(sections).each ->
     sectionTitle = $(@).text()

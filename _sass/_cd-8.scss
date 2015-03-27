@@ -1,41 +1,48 @@
-#cd-6 {
+#cd-8 {
 
   @import "cd-0"; //default theme
 
   $color-base: #903232;
-  $color-secondary: #996600;
+  $color-secondary: #2a7db4;
 
   // ***************************************** HEADINGS *******************************************
 
   .banner {
 
-    img {
-      position: relative;
-      max-width: none !important;
-    }
-
     h2 {
+      background-color: $color-base;
       color: $color-lightest;
-      font-family: "Myriad Pro";
       padding: 12px 30px 10px 0;
       display: block;
       text-align: right;
       margin: 0;
     }
 
-    background-color: $color-base;
-    margin: -15px -40px 30px -50px;
-    min-height: 68px;
+    background-color: #353535;
+    margin: -15px -40px 30px -30px;
 
+  }
+
+  // counter
+  counter-reset: h3counter;
+
+  h3.nocount:before {
+    content: none !important;
+    counter-increment: none !important;
+  }
+
+  h3:before {
+    content: counter(h3counter) ".\0000a0\0000a0";
+    counter-increment: h3counter;
   }
 
   h2 {
     color: $color-base;
-    text-transform: uppercase;
   }
 
   h3 {
-    color: $color-secondary;
+    color: $color-base;
+    text-transform: uppercase;
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
     @include text-border-fix;
   }
@@ -46,13 +53,11 @@
   }
 
   h5 {
-    color: darken($color-secondary, 5%);
-    font-size: 15.5px;
+    color: darken($color-secondary, 9%);
     padding-top: 10px;
   }
 
   // ****************************************** ICONS *********************************************
-
 
   // *********************************** PANELS & INFO BOXES **************************************
 
@@ -61,56 +66,9 @@
   // ******************************************* TABLES *******************************************
 
   // ********************************************* TEXT *******************************************
-
-  em {
-    color: $color-standout;
+  dd {
+    margin-left: 20px;
   }
-
-  blockquote {
-    margin: 10px 0 20px 0;
-    border-left: none;
-
-    @include round(4px);
-    background-color: rgba($color-greyscale, 0.02);
-
-    h5:first-child {
-      margin-top: -20px;
-      margin-left: 40px;
-    }
-
-    p {
-      line-height: inherit;
-      font-weight: inherit;
-      margin-left: 40px;
-      margin-bottom: 7px;
-
-    }
-
-    p:first-child {
-      margin-top: -10px;
-    }
-
-    p:nth-last-child(2) {
-      margin-bottom: 7px;
-    }
-
-    cite {
-      margin-left: 40px;
-    }
-
-    &:before {
-      color: #ccc;
-      //quotes: "\201C""\201D""\2018""\2019";
-      //content: open-quote;
-      content: '\201C';
-      font-size: 4em;
-      line-height: 0.1em;
-      margin-right: 0.25em;
-      vertical-align: -0.4em;
-    }
-
-  }
-
   // ******************************************* IMGs *********************************************
 
 }
