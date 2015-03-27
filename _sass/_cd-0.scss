@@ -320,6 +320,9 @@ ol, ul {
   position: relative;
   li {
     padding-top: 0.5em;
+    &:first-child {
+      padding-top: 0;
+    }
   }
 }
 
