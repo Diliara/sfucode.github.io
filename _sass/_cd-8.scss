@@ -3,14 +3,14 @@
   @import "cd-0"; //default theme
 
   $color-base: #903232;
-  $color-secondary: #2a7db4;
+  $color-secondary: #867C45;
 
   // ***************************************** HEADINGS *******************************************
 
   .banner {
 
     h2 {
-      background-color: $color-base;
+      background-color: darken($color-greyscale, 13%);
       color: $color-lightest;
       padding: 12px 30px 10px 0;
       display: block;
@@ -18,8 +18,7 @@
       margin: 0;
     }
 
-    background-color: #353535;
-    margin: -15px -40px 30px -30px;
+    margin-bottom: 30px;
 
   }
 
@@ -41,25 +40,35 @@
   }
 
   h3 {
-    color: $color-base;
-    text-transform: uppercase;
+    color: darken($color-base, 1%);
     border-bottom: 1px solid rgba($color-greyscale, 0.2);
     @include text-border-fix;
+    font-weight: bold;
   }
 
   h4 {
     color: $color-secondary;
     padding-top: 10px;
+    font-weight: bold;
   }
 
   h5 {
-    color: darken($color-secondary, 9%);
+    color: darken($color-secondary, 10%);
     padding-top: 10px;
+    font-size: 15.5px;
+    font-weight: bold;
   }
+
 
   // ****************************************** ICONS *********************************************
 
   // *********************************** PANELS & INFO BOXES **************************************
+
+  .panel {
+    h5 {
+      border-bottom: 1px solid rgba($color-greyscale, 0.2);
+    }
+  }
 
   // ******************************************* BUTTONS ******************************************
 
