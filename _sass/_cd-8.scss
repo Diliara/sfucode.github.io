@@ -5,6 +5,8 @@
   $color-base: #903232;
   $color-secondary: #867C45;
 
+  $color-panel-default: rgb(184, 175, 138);
+
   // ***************************************** HEADINGS *******************************************
 
   .banner {
@@ -59,15 +61,22 @@
     font-weight: bold;
   }
 
-
   // ****************************************** ICONS *********************************************
 
   // *********************************** PANELS & INFO BOXES **************************************
 
   .panel {
+    @include round(0);
+
     h5 {
       border-bottom: 1px solid rgba($color-greyscale, 0.2);
     }
+
+    border: none;
+  }
+
+  .panel-default {
+    background-color: rgba($color-panel-default, 0.14);
   }
 
   // ******************************************* BUTTONS ******************************************
@@ -77,6 +86,15 @@
   // ********************************************* TEXT *******************************************
   dd {
     margin-left: 20px;
+  }
+
+  .bibl {
+    padding-left: 10px;
+  }
+
+  blockquote {
+    border-left: 2px solid rgba($color-greyscale, 0.2);
+    font-style: italic;
   }
   // ******************************************* IMGs *********************************************
 

@@ -13,6 +13,8 @@ $color-darkest: #000000;
 
 $color-greyscale: #666666;
 
+$color-url: #0088c7;
+
 // for panels
 $color-answer: #c1e8fc;
 $color-log: #fbfbca;
@@ -348,12 +350,12 @@ ol, ul {
 blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
-  border-left: 5px solid #eee;
+  border-left: 5px solid lighten($color-greyscale, 53.5);
 
   cite {
     display: block;
     font-size: 80%;
-    color: #777;
+    color: lighten($color-greyscale, 6.5);
     font-style: italic;
 
     &:before {
@@ -529,9 +531,8 @@ blockquote {
       }
 
       &:hover {
-        color: #0088c7;
+        color: $color-url;
         text-decoration: underline;
-
       }
     }
 
