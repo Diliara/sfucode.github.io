@@ -94,8 +94,15 @@
 
   blockquote {
     border-left: 2px solid rgba($color-greyscale, 0.2);
+    background-color: rgba($color-panel-default, 0.06);
     font-style: italic;
   }
+
+  .highlight-emph {
+    background-color: rgba($color-panel-default, 0.20);
+    @include round(0);
+  }
+
   // ******************************************* IMGs *********************************************
 
 }
