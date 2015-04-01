@@ -377,12 +377,27 @@ blockquote {
   padding: 10px 0;
 }
 
+.text-img {
+  display: inline-block;
+  width: 100%;
+}
+
 .img-right {
   float: right;
-  max-width: 300px;
+  max-width: 220px;
   max-height: 190px;
-  padding: 5px 0 15px 15px;
+  padding: 0 0 5px 15px;
 
+  img {
+    padding-bottom: 8px;
+    float: inherit;
+  }
+  p {
+    float: inherit;
+    font-style: italic;
+    line-height: 1;
+
+  }
 }
 
 .vid {
