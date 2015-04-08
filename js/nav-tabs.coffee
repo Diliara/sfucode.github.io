@@ -29,3 +29,15 @@ if $('.tabs-build')[0]
   buildAndEnableNavigation 'h3', 'tabs-build'
   #jQuery Tabs
   $("#tabs-nav").tabs()
+
+  # grab the url
+  url = document.URL
+
+  # grab the value of the hash
+  hashValue = url.substring(url.indexOf("#")).replace("#", "")
+
+  # check to make sure it is a number
+  # set the active tab
+  $("#tabs").tabs "option", "active", hashValue  unless isNaN(hashValue)
+
+    
