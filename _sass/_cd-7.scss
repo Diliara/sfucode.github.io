@@ -143,7 +143,7 @@
 
   // ******************************************* NAV **********************************************
 
-  .ui-state-active a:hover {
+  .ui-tabs .ui-tabs-nav li.ui-tabs-active a, #tabs-nav .ui-state-active a:hover {
     color: darken($color-base, 15%);
 
   }
