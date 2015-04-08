@@ -233,10 +233,11 @@ h3.icon-large {
   cursor: pointer;
 }
 
-/* default no specific design
 .button-answer {
+  background-color: lighten(adjust_hue($color-secondary, -11%), 5%);
+  color: $color-lightest;
+  border: none;
 }
-*/
 
 // ******************************************* TABLES *******************************************
 
@@ -377,12 +378,27 @@ blockquote {
   padding: 10px 0;
 }
 
+.text-img {
+  display: inline-block;
+  width: 100%;
+}
+
 .img-right {
   float: right;
-  max-width: 300px;
+  max-width: 220px;
   max-height: 190px;
-  padding: 5px 0 15px 15px;
+  padding: 0 0 5px 15px;
 
+  img {
+    padding-bottom: 8px;
+    float: inherit;
+  }
+  p {
+    float: inherit;
+    font-style: italic;
+    line-height: 1;
+
+  }
 }
 
 .vid {
@@ -487,70 +503,34 @@ blockquote {
 
 #tabs-nav {
 
+  margin-top: 10px;
   font-size: inherit;
 
   h3 {
-    /*
-    margin-top: 0;
-    margin-bottom: 10px;
-    */
-  }
+    margin-top: 6px;
+    margin-bottom: 0;
 
-  .ui-state-default, .ui-widget-header .ui-state-default {
-    border: none;
-  }
-
-  .ui-tabs-panel {
-    border: none;
-    padding: 0;
-    margin-top: 10px;
-  }
-
-  .tabs-build {
-    margin-top: 10px;
   }
 
   .ui-tabs-nav {
-    border: none;
     li {
       a {
-        padding: 0;
-      }
-
-      &.ui-tabs-active {
-        border: none;
-        &.ui-state-hover, &:hover {
-          border: none;
-        }
-      }
-      &.ui-state-hover, &:hover {
-        border: none;
+        padding: 1px 3px 1px 3px;
       }
     }
   }
 
   li {
     a {
-      padding-right: 5px;
 
       &:focus {
         outline: none;
       }
-      &:after {
-        content: " | ";
-      }
 
-      &:hover {
-        color: $color-url;
-        text-decoration: underline;
-      }
-    }
-
-    &:last-child a:after {
-      content: "";
     }
 
   }
+
 }
 
 
