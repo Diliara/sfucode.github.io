@@ -512,74 +512,23 @@ blockquote {
 
   }
 
-  /*
-    .ui-state-default, .ui-widget-header .ui-state-default {
-      border: none;
-    }
-
-    .ui-tabs-panel {
-      border: none;
-      padding: 0;
-      margin-top: 10px;
-    }
-
-    .tabs-build {
-      margin-top: 10px;
-    }
-*/
-
   .ui-tabs-nav {
-    /*border: none; */
     li {
       a {
         padding: 1px 3px 1px 3px;
       }
-      /*
-      &.ui-tabs-active {
-        border: none;
-        &.ui-state-hover, &:hover {
-          border: none;
-        }
-      }
-      &.ui-state-hover, &:hover {
-        border: none;
-      }
-      */
     }
   }
 
-  /*
-      .ui-state-active a:hover {
-        text-decoration: none;
-        color: $color-darkest;
-      }
-  */
-
   li {
     a {
-      /*  padding-right: 5px; */
 
       &:focus {
         outline: none;
       }
 
-      /*
-      &:after {
-        content: " | ";
-      }
-
-      &:hover {
-        color: $color-url;
-        text-decoration: underline;
-      }
-      */
     }
 
-    /*
-    &:last-child a:after {
-      content: "";
-    }
-    */
   }
 
 }
