@@ -505,13 +505,6 @@ blockquote {
 
   font-size: inherit;
 
-  h3 {
-    /*
-    margin-top: 0;
-    margin-bottom: 10px;
-    */
-  }
-
   .ui-state-default, .ui-widget-header .ui-state-default {
     border: none;
   }
@@ -560,6 +553,12 @@ blockquote {
         color: $color-url;
         text-decoration: underline;
       }
+    }
+
+    .ui-state-active a:hover {
+      text-decoration: none;
+      color: $color-darkest;
+
     }
 
     &:last-child a:after {
