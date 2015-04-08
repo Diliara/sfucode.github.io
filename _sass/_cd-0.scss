@@ -233,10 +233,11 @@ h3.icon-large {
   cursor: pointer;
 }
 
-/* default no specific design
 .button-answer {
+  background-color: lighten(adjust_hue($color-secondary, -11%), 5%);
+  color: $color-lightest;
+  border: none;
 }
-*/
 
 // ******************************************* TABLES *******************************************
 
