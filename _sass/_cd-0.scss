@@ -538,6 +538,12 @@ blockquote {
     }
   }
 
+  .ui-state-active a:hover {
+    text-decoration: none;
+    color: $color-darkest;
+
+  }
+
   li {
     a {
       padding-right: 5px;
@@ -553,12 +559,6 @@ blockquote {
         color: $color-url;
         text-decoration: underline;
       }
-    }
-
-    .ui-state-active a:hover {
-      text-decoration: none;
-      color: $color-darkest;
-
     }
 
     &:last-child a:after {
