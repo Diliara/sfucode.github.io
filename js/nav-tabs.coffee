@@ -36,6 +36,7 @@ if $('.tabs-build')[0]
     tabSelect = document.location.hash.substr(1, document.location.hash.length)
     console.log "tabSelect is: #{tabSelect}"
     #$("#tabs-nav").tabs "select", tabSelect - 1
+    $("#tabs-nav").tabs()
     $("#tabs-nav").tabs "option", "active", tabSelect
 
   else
