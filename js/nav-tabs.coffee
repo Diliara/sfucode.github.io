@@ -28,12 +28,14 @@ if $('.tabs-build')[0]
   $('.tabs-build').nextAll().andSelf().wrapAll "<div id='tabs-nav' />"
   buildAndEnableNavigation 'h3', 'tabs-build'
   #jQuery Tabs
-  $("#tabs-nav").tabs()
+
 
   unless document.location.hash is ""
 
     #get the index from URL hash
     tabSelect = document.location.hash.substr(1, document.location.hash.length)
-    $("#my-tabs").tabs "select", tabSelect - 1
+    console.log "tabSelect is: #{tabSelect}"
+    $("#tabs-nav").tabs "select", tabSelect - 1
 
-    
+  else
+    $("#tabs-nav").tabs()
