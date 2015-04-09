@@ -514,22 +514,15 @@ blockquote {
 
   .ui-tabs-nav {
     li {
+      border-color: lighten($color-greyscale, 44); //#d6d6d6;
+      background-color: lighten($color-greyscale, 57); //#f7f7f7;
+      color: $color-darkest;
       a {
         padding: 1px 3px 1px 3px;
+        &:focus {
+          outline: none;
+        }
       }
-    }
-  }
-
-  li {
-    border-color: lighten($color-greyscale, 44); //#d6d6d6;
-    background-color: lighten($color-greyscale, 57); //#f7f7f7;
-    color: $color-darkest;
-    a {
-
-      &:focus {
-        outline: none;
-      }
-
     }
   }
 
