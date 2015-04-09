@@ -521,6 +521,7 @@ blockquote {
   }
 
   li {
+    border-color: lighten($color-greyscale, 44); //#d6d6d6;
     a {
 
       &:focus {
@@ -528,7 +529,6 @@ blockquote {
       }
 
     }
-
   }
 
 }
