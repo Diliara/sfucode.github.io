@@ -143,7 +143,7 @@
   // ******************************************* NAV **********************************************
 
   #tabs-nav .ui-tabs-nav li {
-    .ui-tabs-active a, .ui-state-default a:hover {
+    &.ui-tabs-active a, &.ui-state-default a:hover {
       color: darken($color-base, 15%);
     }
   }
