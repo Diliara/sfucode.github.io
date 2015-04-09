@@ -100,10 +100,9 @@
   // ******************************************* BUTTONS ******************************************
 
   .button-answer {
-    background-color: (adjust_hue($color-secondary, -11%), 5%);
-    color: $color-lightest;
-    border: none;
+    background-color: transparentize($color-secondary, 0.1);
   }
+
 
   // ******************************************* TABLES *******************************************
 
