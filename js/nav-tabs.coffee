@@ -30,14 +30,10 @@ if $('.tabs-build')[0]
   #jQuery Tabs
   $("#tabs-nav").tabs()
 
-  # grab the url
-  url = document.URL
+  unless document.location.hash is ""
 
-  # grab the value of the hash
-  hashValue = url.substring(url.indexOf("#")).replace("#", "")
-
-  # check to make sure it is a number
-  # set the active tab
-  $("#tabs").tabs "option", "active", hashValue  unless isNaN(hashValue)
+    #get the index from URL hash
+    tabSelect = document.location.hash.substr(1, document.location.hash.length)
+    $("#my-tabs").tabs "select", tabSelect - 1
 
     
