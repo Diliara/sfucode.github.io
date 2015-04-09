@@ -27,17 +27,13 @@ buildAndEnableNavigation = (sectionsTabs, navPlaceholderTabs) ->
 if $('.tabs-build')[0]
   $('.tabs-build').nextAll().andSelf().wrapAll "<div id='tabs-nav' />"
   buildAndEnableNavigation 'h3', 'tabs-build'
-  #jQuery Tabs
 
+  #jQuery Tabs
+  $("#tabs-nav").tabs()
 
   unless document.location.hash is ""
 
     #get the index from URL hash
     tabSelect = document.location.hash.substr(1, document.location.hash.length)
     console.log "tabSelect is: #{tabSelect}"
-    #$("#tabs-nav").tabs "select", tabSelect - 1
-    $("#tabs-nav").tabs()
     $("#tabs-nav").tabs "option", "active", tabSelect
-
-  else
-    $("#tabs-nav").tabs()
