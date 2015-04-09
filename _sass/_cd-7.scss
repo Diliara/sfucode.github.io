@@ -28,7 +28,6 @@
 
   }
 
-
   //cd-2 uses .nocount,
   //update cd-2 or nav-build.js
   //remove one of them!!!
@@ -94,7 +93,7 @@
 
   // *********************************** PANELS & INFO BOXES **************************************
 
-  .panel-answer {
+  .panel {
     border: none;
   }
 
@@ -143,12 +142,11 @@
 
   // ******************************************* NAV **********************************************
 
-
-  .ui-tabs .ui-tabs-nav li.ui-tabs-active a, #tabs-nav .ui-state-active a:hover {
-    color: darken($color-base, 15%);
-
+  #tabs-nav .ui-tabs-nav li {
+    &.ui-tabs-active a, &.ui-state-default a:hover {
+      color: darken($color-base, 15%);
+    }
   }
-
 
 }
 
