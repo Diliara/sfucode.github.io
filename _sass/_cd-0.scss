@@ -525,7 +525,7 @@ pre {
       background-color: lighten($color-greyscale, 57); //#f7f7f7;
 
       //temp ui for tabs overflow (next 2 lines)
-      border-bottom: 1px solid #d6d6d6 !important; //it is setup as 0 !important in jQuery ui css on canvas
+      border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important; //it is setup as 0 !important in jQuery ui css on canvas
       margin-bottom: 0;
 
       a {
