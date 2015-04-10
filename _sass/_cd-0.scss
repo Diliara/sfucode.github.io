@@ -412,6 +412,7 @@ pre {
   .comment {
     color: $color-greyscale;
     font-style: italic;
+    font-size: 12px;
   }
 
 }
@@ -429,9 +430,6 @@ pre {
   color: $color-comment;
   font-style: italic;
   font-size: 16px;
-  &:before {
-    content: " -- ";
-  }
 }
 
 // ******************************************* FOR JS *******************************************
