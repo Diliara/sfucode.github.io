@@ -408,6 +408,16 @@ blockquote {
 
 // ******************************************* CODE *********************************************
 
+pre {
+  .comment {
+    color: $color-greyscale;
+    font-style: italic;
+    font-size: 12px;
+  }
+
+}
+
+
 // ***************************************** Annotation *****************************************
 
 .highlight-comment {
@@ -420,9 +430,6 @@ blockquote {
   color: $color-comment;
   font-style: italic;
   font-size: 16px;
-  &:before {
-    content: " -- ";
-  }
 }
 
 // ******************************************* FOR JS *******************************************
@@ -516,15 +523,24 @@ blockquote {
     li {
       border-color: lighten($color-greyscale, 44); //#d6d6d6;
       background-color: lighten($color-greyscale, 57); //#f7f7f7;
-       a {
+
+      //temp ui for tabs overflow (next 2 lines)
+      border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important; //it is setup as 0 !important in jQuery ui css on canvas
+      margin-bottom: 0;
+
+      a {
         padding: 1px 3px 1px 3px;
         &:focus {
           outline: none;
+          text-decoration: none;
         }
       }
 
       &.ui-tabs-active {
         background-color: $color-lightest;
+
+        //temp ui for tabs overflow (1 line)
+        border-bottom: 0 !important;
 
       }
 
@@ -533,7 +549,6 @@ blockquote {
 
 
   }
-
 }
 
 
