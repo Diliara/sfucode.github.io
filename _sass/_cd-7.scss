@@ -100,11 +100,16 @@
   // ******************************************* BUTTONS ******************************************
 
   .button-answer {
-    background-color: transparentize($color-secondary, 0.1);
+    background-color: transparentize($color-secondary, 0.05);
   }
 
 
   // ******************************************* TABLES *******************************************
+
+  table caption {
+    font-weight: bold;
+
+  }
 
   // ********************************************* TEXT *******************************************
 
