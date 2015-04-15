@@ -29,7 +29,7 @@ if $('.tabs-build')[0]
   buildAndEnableNavigation 'h3', 'tabs-build'
 
   #jQuery Tabs
-  $("#tabs-nav").tabs()
+  $("#tabs-nav").tabs().addClass "ui-tabs-vertical ui-helper-clearfix"
 
   unless document.location.hash is ""
 
