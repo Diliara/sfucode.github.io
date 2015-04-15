@@ -30,7 +30,7 @@ if $('.tabs-build')[0]
 
   #jQuery Tabs
   $("#tabs-nav").tabs().addClass "ui-tabs-vertical ui-helper-clearfix"
-  $("#tabs-nav li").removeClass("ui-corner-top").addClass "ui-corner-right"
+  $("#tabs-nav li").removeClass("ui-corner-top").addClass "ui-corner-left"
 
   unless document.location.hash is ""
 
