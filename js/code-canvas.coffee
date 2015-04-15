@@ -111,7 +111,7 @@ $ ->
   #                                #
 
   #vendors
-  cachedScript "vendors/jquery-scrollspy.js"
+  #cachedScript "vendors/jquery-scrollspy.js"
 
   #cachedScript "vendors/prism.js"
   #cachedScript "vendors/prism-vb.js"
