@@ -29,7 +29,7 @@ if $('.tabs-build')[0]
   buildAndEnableNavigation 'h3', 'tabs-build'
 
   if $('.vertical')[0]
-    $(".vertical").tabs().addClass "ui-tabs-vertical ui-helper-clearfix"
+    $(".vertical").parent().tabs().addClass "ui-tabs-vertical ui-helper-clearfix"
     $(".vertical li").removeClass("ui-corner-top").addClass "ui-corner-right"
 
   else
