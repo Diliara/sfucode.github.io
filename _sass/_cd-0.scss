@@ -546,6 +546,11 @@ pre {
     }
 
   }
+
+  .ui-widget-content {
+    border: none;
+
+  }
 }
 
 .ui-tabs-vertical {
@@ -578,7 +583,7 @@ pre {
   .ui-tabs-panel {
     padding: 1em;
     float: right;
-    width: 80%;
+    width: 81%;
   }
 
 }
