@@ -28,9 +28,14 @@ if $('.tabs-build')[0]
   $('.tabs-build').nextAll().andSelf().wrapAll "<div id='tabs-nav' />"
   buildAndEnableNavigation 'h3', 'tabs-build'
 
-  #jQuery Tabs
-  $("#tabs-nav").tabs().addClass "ui-tabs-vertical ui-helper-clearfix"
-  $("#tabs-nav li").removeClass("ui-corner-top").addClass "ui-corner-right"
+  if $('.vertical')[0]
+    $(".vertical").tabs().addClass "ui-tabs-vertical ui-helper-clearfix"
+    $(".vertical li").removeClass("ui-corner-top").addClass "ui-corner-right"
+
+  else
+    #jQuery Tabs
+    $("#tabs-nav").tabs()
+
 
   unless document.location.hash is ""
 
