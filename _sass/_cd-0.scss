@@ -547,7 +547,6 @@ pre {
 
   }
 
-
 }
 
 .ui-tabs-vertical {
@@ -589,4 +588,101 @@ pre {
 
 }
 
+@media only screen  and (min-width: 1086px) and (max-width: 1175px) {
 
+  .ui-tabs-vertical {
+
+    .ui-tabs-panel {
+      width: 79%;
+    }
+
+  }
+
+}
+
+@media only screen  and (min-width: 986px) and (max-width: 1085px) {
+
+  .ui-tabs-vertical {
+
+    .ui-tabs-panel {
+      width: 77%;
+    }
+
+  }
+
+}
+
+@media only screen  and (min-width: 935px) and (max-width: 985px) {
+
+  .ui-tabs-vertical {
+
+    .ui-tabs-panel {
+      width: 75%;
+    }
+
+  }
+
+}
+
+@media only screen  and (min-width: 851px) and (max-width: 935px) {
+
+  .ui-tabs-vertical {
+
+    .ui-tabs-panel {
+      width: 72%;
+    }
+
+  }
+
+}
+
+@media only screen  and (min-width: 791px) and (max-width: 850px) {
+
+  .ui-tabs-vertical {
+
+    .ui-tabs-panel {
+      width: 69%;
+    }
+
+  }
+
+}
+
+@media only screen and (min-width: 746px) and (max-width: 790px) {
+
+  .ui-tabs-vertical {
+
+    .ui-tabs-panel {
+      width: 66%;
+    }
+
+  }
+
+}
+
+@media only screen and (min-width: 701px) and (max-width: 745px) {
+
+  .ui-tabs-vertical {
+
+    .ui-tabs-panel {
+      width: 63%;
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+  .ui-tabs-vertical {
+
+    .ui-tabs-panel {
+      width: 100%;
+    }
+
+    .ui-tabs-nav {
+      float: none;
+    }
+  }
+
+}
