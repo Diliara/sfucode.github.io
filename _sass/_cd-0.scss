@@ -563,6 +563,7 @@ pre {
       clear: left;
       width: 100%;
       margin: 0 -1px .2em 0;
+      padding: 3px 1px;
 
       a {
         display: block;
@@ -580,6 +581,7 @@ pre {
 
   .ui-tabs-panel {
     width: 81%;
+    padding: 0 0 0 5px;
   }
 
 }
