@@ -576,7 +576,7 @@ pre {
       }
 
       &:last-child {
-        border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important;
+        border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.50) !important;
       }
 
     }
