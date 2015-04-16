@@ -554,6 +554,8 @@ pre {
   .ui-tabs-nav {
 
     float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
 
     li {
       clear: left;
@@ -570,7 +572,12 @@ pre {
         padding-bottom: 0;
         padding-right: .1em;
         border-left-width: 0;
+
+        &:last-child {
+          border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important;
+        }
       }
+
 
     }
 
