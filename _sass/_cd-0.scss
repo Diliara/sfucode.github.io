@@ -523,8 +523,8 @@ pre {
       border-color: lighten($color-greyscale, 44);
       background-color: lighten($color-greyscale, 57);
 
-      //temp ui for tabs overflow (next 2 lines)
-      border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important; //it is setup as 0 !important in jQuery ui css on canvas
+      /*temp ui for tabs overflow (next 2 lines)
+      border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important; //it is setup as 0 !important in jQuery ui css on canvas */
       margin-bottom: 0;
 
       a {
@@ -538,8 +538,8 @@ pre {
       &.ui-tabs-active {
         background-color: $color-lightest;
 
-        //temp ui for tabs overflow (1 line)
-        border-bottom: 0 !important;
+        /*temp ui for tabs overflow (1 line)
+        border-bottom: 0 !important;*/
 
       }
 
@@ -575,11 +575,13 @@ pre {
 
       }
 
+      /*
       &:last-child {
         &.ui-tabs-active {
-          border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important;
+          border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76);
         }
       }
+      */
 
     }
 
