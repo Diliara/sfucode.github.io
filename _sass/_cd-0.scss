@@ -573,9 +573,10 @@ pre {
         padding-right: .1em;
         border-left-width: 0;
 
-        &:last-child {
-          border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important;
-        }
+      }
+
+      &:last-child {
+        border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important;
       }
 
 
