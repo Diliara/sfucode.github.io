@@ -523,8 +523,8 @@ pre {
       border-color: lighten($color-greyscale, 44);
       background-color: lighten($color-greyscale, 57);
 
-      //temp ui for tabs overflow (next 2 lines)
-      border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important; //it is setup as 0 !important in jQuery ui css on canvas
+      /*temp ui for tabs overflow (next 2 lines)
+      border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important; //it is setup as 0 !important in jQuery ui css on canvas */
       margin-bottom: 0;
 
       a {
@@ -538,8 +538,8 @@ pre {
       &.ui-tabs-active {
         background-color: $color-lightest;
 
-        //temp ui for tabs overflow (1 line)
-        border-bottom: 0 !important;
+        /*temp ui for tabs overflow (1 line)
+        border-bottom: 0 !important;*/
 
       }
 
@@ -554,6 +554,8 @@ pre {
   .ui-tabs-nav {
 
     float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
 
     li {
       clear: left;
@@ -570,6 +572,11 @@ pre {
         padding-bottom: 0;
         padding-right: .1em;
         border-left-width: 0;
+
+      }
+
+      &:last-child {
+        border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.50) !important;
       }
 
     }
@@ -588,7 +595,7 @@ pre {
 
 }
 
-@media only screen  and (min-width: 1086px) and (max-width: 1175px) {
+@media only screen and (min-width: 1086px) and (max-width: 1175px) {
 
   .ui-tabs-vertical {
 
@@ -600,7 +607,7 @@ pre {
 
 }
 
-@media only screen  and (min-width: 986px) and (max-width: 1085px) {
+@media only screen and (min-width: 986px) and (max-width: 1085px) {
 
   .ui-tabs-vertical {
 
@@ -612,7 +619,7 @@ pre {
 
 }
 
-@media only screen  and (min-width: 935px) and (max-width: 985px) {
+@media only screen and (min-width: 935px) and (max-width: 985px) {
 
   .ui-tabs-vertical {
 
@@ -624,7 +631,7 @@ pre {
 
 }
 
-@media only screen  and (min-width: 851px) and (max-width: 935px) {
+@media only screen and (min-width: 851px) and (max-width: 935px) {
 
   .ui-tabs-vertical {
 
@@ -636,7 +643,7 @@ pre {
 
 }
 
-@media only screen  and (min-width: 791px) and (max-width: 850px) {
+@media only screen and (min-width: 791px) and (max-width: 850px) {
 
   .ui-tabs-vertical {
 
@@ -672,6 +679,7 @@ pre {
 
 }
 
+/* mobile */
 @media only screen and (max-width: 700px) {
 
   .ui-tabs-vertical {
@@ -682,7 +690,25 @@ pre {
 
     .ui-tabs-nav {
       float: none;
+      margin-left: 0;
+
+      li {
+
+        &.ui-tabs-active {
+
+          border-left-width: 1px;
+
+        }
+
+        &:last-child {
+          border-bottom: none !important;
+        }
+
+      }
     }
+
   }
 
 }
+
+
