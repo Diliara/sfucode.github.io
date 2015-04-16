@@ -575,11 +575,8 @@ pre {
 
       }
 
-
       &:last-child {
-        &.ui-tabs-active {
-          border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important;
-        }
+        border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important;
       }
 
     }
