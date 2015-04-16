@@ -576,9 +576,10 @@ pre {
       }
 
       &:last-child {
-        border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important;
+        &.ui-tabs-active {
+          border-bottom: 1px solid transparentize(lighten($color-greyscale, 44), 0.76) !important;
+        }
       }
-
 
     }
 
@@ -596,7 +597,7 @@ pre {
 
 }
 
-@media only screen  and (min-width: 1086px) and (max-width: 1175px) {
+@media only screen and (min-width: 1086px) and (max-width: 1175px) {
 
   .ui-tabs-vertical {
 
@@ -608,7 +609,7 @@ pre {
 
 }
 
-@media only screen  and (min-width: 986px) and (max-width: 1085px) {
+@media only screen and (min-width: 986px) and (max-width: 1085px) {
 
   .ui-tabs-vertical {
 
@@ -620,7 +621,7 @@ pre {
 
 }
 
-@media only screen  and (min-width: 935px) and (max-width: 985px) {
+@media only screen and (min-width: 935px) and (max-width: 985px) {
 
   .ui-tabs-vertical {
 
@@ -632,7 +633,7 @@ pre {
 
 }
 
-@media only screen  and (min-width: 851px) and (max-width: 935px) {
+@media only screen and (min-width: 851px) and (max-width: 935px) {
 
   .ui-tabs-vertical {
 
@@ -644,7 +645,7 @@ pre {
 
 }
 
-@media only screen  and (min-width: 791px) and (max-width: 850px) {
+@media only screen and (min-width: 791px) and (max-width: 850px) {
 
   .ui-tabs-vertical {
 
