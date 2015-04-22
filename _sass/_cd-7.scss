@@ -97,6 +97,10 @@
     border: none;
   }
 
+  .panel-border {
+    border: 1px solid transparentize($color-secondary, 0.7);
+  }
+
   // ******************************************* BUTTONS ******************************************
 
   .button-answer {
