@@ -1,6 +1,5 @@
 #SFU CODE CSS/JS Framework 
 ##on canvas-test 
---------
 
 [Diliara/sfucode.github.io](https://github.com/Diliara/sfucode.github.io/tree/gh-pages)
 
@@ -10,7 +9,6 @@
 
 
 ##on canvas 
---------
 
 [sfucode/sfucode.github.io](https://github.com/sfucode/sfucode.github.io)
 
@@ -19,6 +17,5 @@
 
 
 ##before *pull request* to canvas
---------
 
 1. Update code-canvas.coffee hardcoded URLS
