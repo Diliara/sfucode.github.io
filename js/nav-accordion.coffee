@@ -19,11 +19,11 @@ if $('.nav-accordion')[0]
   buildAccordionNavigation 'h3'
 
   if $('.nav-accordion').hasClass 'nav-arrow'
-    $(sectionTitle).each ->
-      $(sectionTitle).addClass "arrow"
+    $('h3').each ->
+      $('h3').addClass "arrow"
 
   if $('.nav-accordion').hasClass 'nav-only-one'
-    $(sectionTitle).each ->
-      $(sectionTitle).addClass "only-one"
+    $('h3').each ->
+      $('h3').addClass "only-one"
 
   $('.nav-accordion').remove();
