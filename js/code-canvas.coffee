@@ -117,6 +117,8 @@ $ ->
   #cachedScript "vendors/prism-vb.js"
 
 
+  #CODE Development
+  cachedScript "nav-accordion.js"
 
   #CODE
   cachedScript "show-hide-btn.js"
@@ -124,8 +126,7 @@ $ ->
   cachedScript "drag-and-drop.js"
   cachedScript "nav-tabs.js"
 
-  #CODE Development
-  cachedScript "nav-accordion.js"
+
 
 
   #CODE Postponed
