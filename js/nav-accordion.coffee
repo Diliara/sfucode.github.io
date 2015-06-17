@@ -8,7 +8,7 @@ buildAccordionNavigation = (sectionTitle) ->
   $(sectionTitle).each ->
     sectionNewTitle = $(@).text()
     #console.log "sectionTitle : #{sectionNewTitle}"
-    $(sectionTitle).addClass "show-hide-btn arrow"
+    $(sectionTitle).addClass "show-hide-btn"
     $(@).nextUntil(sectionTitle).wrapAll "<div class='panel panel-answer'/>"
     $(@).nextUntil(sectionTitle).andSelf().wrapAll "<div />"
 
