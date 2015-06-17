@@ -1,5 +1,5 @@
 ---
-# Works with .nav-accordion .nav-arrow .nav-only-one
+# Works with .nav-accordion [optionally - .nav-arrow .nav-only-one]
 # Automatically builds accordion navigation 
 ---
 
@@ -12,11 +12,10 @@ buildAccordionNavigation = (sectionTitle) ->
     $(@).nextUntil(sectionTitle).wrapAll "<div class='panel panel-answer'/>"
     $(@).nextUntil(sectionTitle).andSelf().wrapAll "<div />"
 
-# for tabbed nav
+
+# if .nav-accordion class exists
 if $('.nav-accordion')[0]
-  #$('.nav-accordion').nextAll().andSelf().wrapAll "<div id='nav-accordion' />"
-  #$( "#nav-accordion").accordion();
-  buildAccordionNavigation 'h3'
+   buildAccordionNavigation 'h3'
 
   if $('.nav-accordion').hasClass 'nav-arrow'
     $('h3').each ->
