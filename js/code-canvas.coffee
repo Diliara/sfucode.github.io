@@ -121,10 +121,11 @@ $ ->
   #CODE
   cachedScript "show-hide-btn.js"
   cachedScript "nav-build.js"
-
-  #CODE Development
   cachedScript "drag-and-drop.js"
   cachedScript "nav-tabs.js"
+
+  #CODE Development
+  cachedScript "nav-accordion.js"
 
 
   #CODE Postponed
