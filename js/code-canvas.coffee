@@ -4,8 +4,8 @@
 ---
 
 switch window.location.hostname
-# when "canvas-test.sfu.ca" then fileLocation = "https://diliara.github.io/sfucode.github.io/js/"
-  when "canvas-test.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
+  when "canvas-test.sfu.ca" then fileLocation = "https://diliara.github.io/sfucode.github.io/js/"
+# when "canvas-test.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
   when "canvas-stage.sfu.ca" then fileLocation = "https://sfucode.github.io/js/"
   when "canvas.sfu.ca" then fileLocation = "https://sfucode.github.io/js/"
   when "repo.code.sfu.ca" then fileLocation = "https://repo.code.sfu.ca/canvas/js/"
@@ -118,7 +118,7 @@ $ ->
 
 
   #CODE Development
-  cachedScript "nav-accordion.js"
+  #cachedScript "nav-accordion.js"
 
   #CODE
   cachedScript "show-hide-btn.js"
