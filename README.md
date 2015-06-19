@@ -18,4 +18,4 @@
 
 ##before *pull request* to canvas
 
-1. Update code-canvas.coffee hardcoded URLS
+1. When repo server is back - update hardcoded URL in code-canvas.coffee
