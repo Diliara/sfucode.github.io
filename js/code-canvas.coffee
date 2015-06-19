@@ -118,7 +118,7 @@ $ ->
 
 
   #CODE Development
-  #cachedScript "nav-accordion.js"
+  cachedScript "nav-accordion.js"
 
   #CODE
   cachedScript "show-hide-btn.js"
