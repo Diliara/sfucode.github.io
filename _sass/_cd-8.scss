@@ -3,7 +3,7 @@
   @import "cd-0"; //default theme
 
   $color-base: #903232;
-  $color-secondary: #867C45;
+  $color-secondary: #19834A; //#867C45;
 
   $color-panel-default: rgb(184, 175, 138);
 
@@ -41,14 +41,12 @@
     color: darken($color-base, 1%);
     border-bottom: 1px solid rgba($color-greyscale, 0.1);
     @include text-border-fix;
-    font-weight: bold;
-  }
+   }
 
   h4 {
     color: $color-secondary;
     padding-top: 10px;
-    font-weight: bold;
-  }
+   }
 
   h5 {
     color: darken($color-secondary, 10%);
