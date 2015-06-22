@@ -43,7 +43,7 @@
 
   h3 {
     color: darken($color-base, 1%);
-    border-bottom: 1px solid rgba($color-greyscale, 0.2);
+    border-bottom: 1px solid rgba($color-greyscale, 0.1);
     @include text-border-fix;
     font-weight: bold;
   }
@@ -66,18 +66,12 @@
   // *********************************** PANELS & INFO BOXES **************************************
 
   .panel {
-
-    /*
     @include round(0);
-
     h5 {
       border-bottom: 1px solid rgba($color-greyscale, 0.2);
     }
-    */
-
     border: none;
   }
-
 
   /*
   .panel-answer {
@@ -88,7 +82,6 @@
   .panel-default {
     background-color: rgba($color-panel-default, 0.14);
   }
-
 
   // ******************************************* BUTTONS ******************************************
 
