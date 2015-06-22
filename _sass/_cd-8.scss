@@ -66,21 +66,27 @@
   // *********************************** PANELS & INFO BOXES **************************************
 
   .panel {
+
+    /*
     @include round(0);
 
     h5 {
       border-bottom: 1px solid rgba($color-greyscale, 0.2);
     }
+    */
 
     border: none;
   }
 
-  .panel-default {
-    background-color: rgba($color-panel-default, 0.14);
-  }
 
+  /*
   .panel-answer {
     border: 1px solid rgba($color-secondary, 0.1);
+  }
+  */
+
+  .panel-default {
+    background-color: rgba($color-panel-default, 0.14);
   }
 
 
@@ -113,5 +119,24 @@
   }
 
   // ******************************************* IMGs *********************************************
+
+  // ******************************************* FOR JS *******************************************
+
+  .open-arrow, .close-arrow {
+    float: right;
+    color: darken($color-secondary, 1%);
+    font-size: 18px;
+    vertical-align: top;
+  }
+
+  h3 {
+    &.show-hide-btn {
+      padding: 10px 10px 5px 10px;
+      &:hover {
+        color: darken($color-secondary, 1%);
+        background-color: transparentize($color-secondary, 0.97);;
+      }
+    }
+  }
 
 }
