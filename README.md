@@ -20,3 +20,8 @@
 ##before *pull request* to canvas
 
 1. When repo server is back - update hardcoded URL in code-canvas.coffee
+2. 
+
+## Adam test
+
+* i think i've fixed it
