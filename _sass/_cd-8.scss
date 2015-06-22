@@ -11,21 +11,18 @@
 
   // ***************************************** HEADINGS *******************************************
 
+  h2 {
+    background-color: darken($color-greyscale, 13%);
+    color: $color-lightest;
+    padding: 12px 30px 10px 0;
+    display: block;
+    text-align: right;
+    margin: 0 0 30px 0;
 
-
-    h2 {
-      background-color: darken($color-greyscale, 13%);
-      color: $color-lightest;
-      padding: 12px 30px 10px 0;
-      display: block;
-      text-align: right;
-      margin: 0 0 30px 0;
-
-      .green {
-        background-color: $color-green;
-      }
+    &.green {
+      background-color: $color-green;
     }
-
+  }
 
   // counter
   counter-reset: h3counter;
@@ -38,10 +35,6 @@
   h3:before {
     content: counter(h3counter) ".\0000a0\0000a0";
     counter-increment: h3counter;
-  }
-
-  h2 {
-    color: $color-base;
   }
 
   h3 {
