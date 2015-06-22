@@ -4,6 +4,8 @@
 
 1. **develop** branch - to test on canvas-test
 1. **master** branch - for production canvas
+1. use [git-flow workflow](http://danielkummer.github.io/git-flow-cheatsheet/) for releases
+
 
 
 ##A workaround repo for canvas-test
