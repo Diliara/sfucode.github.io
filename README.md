@@ -17,4 +17,3 @@
 1. **gh-pages** branch is used to test on canvas-test
 1. push final changes ready for the *pull request* to **develop** branch
 1. ignore **master** branch for canvas-test, but sync it to keep up-to-date with the upstream repo.
-
