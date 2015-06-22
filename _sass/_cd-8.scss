@@ -41,7 +41,7 @@
     color: darken($color-base, 1%);
     border-bottom: 1px solid rgba($color-greyscale, 0.1);
     @include text-border-fix;
-   }
+  }
 
   h4 {
     color: $color-secondary;
@@ -68,15 +68,13 @@
       border-bottom: 1px solid rgba($color-greyscale, 0.2);
     }
     border: none;
+  }
+
+  .panel-answer {
+    /* border: 1px solid rgba($color-secondary, 0.1); */
     padding-top: 0;
     padding-bottom: 0;
   }
-
-  /*
-  .panel-answer {
-    border: 1px solid rgba($color-secondary, 0.1);
-  }
-  */
 
   .panel-default {
     background-color: rgba($color-panel-default, 0.14);
