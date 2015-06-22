@@ -1,22 +1,18 @@
 #SFU CODE CSS/JS Framework
 
-##on canvas
-
 [sfucode/sfucode.github.io](https://github.com/sfucode/sfucode.github.io)
 
-1. **develop** branch WAS used to test on canvas-test. keep it updated
-1. **master** branch is for production canvas
+1. **develop** branch - to test on canvas-test
+1. **master** branch - for production canvas
 
 
-##on canvas-test 
+##A workaround repo for canvas-test
 
 [Diliara/sfucode.github.io](https://github.com/Diliara/sfucode.github.io/tree/gh-pages)
 
+1. When repo server is out of service, this fork can be used.
+1. Update URL include on canvas-test + hardcoded URL in code-canvas.coffee
 1. **gh-pages** branch is used to test on canvas-test
 1. push final changes ready for the *pull request* to **develop** branch
-1. ignore **master** branch for now
+1. ignore **master** branch for canvas-test, but sync it to keep up-to-date with the upstream repo.
 
-
-##before *pull request* to canvas
-
-1. When repo server is back - update hardcoded URL in code-canvas.coffee
